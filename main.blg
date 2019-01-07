@@ -1,11 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
-Illegal, another \bibstyle command---line 260 of file main.aux
+Illegal, another \bibstyle command---line 250 of file main.aux
  : \bibstyle
  :          {unsrt}
 I'm skipping whatever remains of this command
 I couldn't open database file bibliography.bib.bib
----line 261 of file main.aux
+---line 251 of file main.aux
  : \bibdata{bibliography.bib
  :                          }
 I'm skipping whatever remains of this command
@@ -14,14 +14,15 @@ Warning--I didn't find a database entry for "bacherEnergieRespektSchlusselFur201
 Warning--I didn't find a database entry for "birolFutureCooling2018"
 Warning--I didn't find a database entry for "hsluClimaBauPlanenAngesichts2017"
 Warning--I didn't find a database entry for "unitednationspopulationdivisionWorldUrbanizationProspects"
+Warning--I didn't find a database entry for "weberConventionalAdvancedCO22010a"
 Warning--I didn't find a database entry for "lund4thGenerationDistrict2014"
 Warning--I didn't find a database entry for "energieschweizFallbeispieleThermischeNetze2018"
 Warning--I didn't find a database entry for "danfossRefrigerantOptionsNow2017"
 Warning--I didn't find a database entry for "hydrocarbons21.comSwitzerlandIntroduceHFC"
 Warning--I didn't find a database entry for "europeancommissionforclimateactionEULegislationControl2016"
 Warning--I didn't find a database entry for "williamsMigrosDNA2018"
+Warning--I didn't find a database entry for "cavalliniPROPERTIESCO2REFRIGERANT"
 Warning--I didn't find a database entry for "henchozPotentialRefrigerantBased"
-Warning--I didn't find a database entry for "henchozNovelDistrictHeating2017"
 Warning--I didn't find a database entry for "suciuEnergyIntegrationCO22018"
 Warning--I didn't find a database entry for "kruseStatusDevelopmentResearch"
 Warning--I didn't find a database entry for "guoTechnoeconomicComparisonDirect2012"
@@ -34,6 +35,7 @@ Warning--I didn't find a database entry for "eslami-nejadQuasitransientModelTran
 Warning--I didn't find a database entry for "ohFlowBoilingHeat2011"
 Warning--I didn't find a database entry for "wangOverviewHeatTransfer2013"
 Warning--I didn't find a database entry for "mastrulloComparisonR744R134a2009"
+Warning--I didn't find a database entry for "kimPerformanceTranscriticalCO22005"
 Warning--I didn't find a database entry for "girardinEnerGisGeographicalInformation2010"
 Warning--I didn't find a database entry for "veillehydro-meteorologiqueducantondevaudMorgesRiviereDebit"
 Warning--I didn't find a database entry for "jiaReviewEffectiveThermal2019"
