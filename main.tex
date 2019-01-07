@@ -153,9 +153,23 @@ District cooling (DC) networks had a similar development as DH networks, althoug
 % As seen in previous chapter, cooling demand will increase, especially for commercial applications. As for district heating in cold climates, in order to satisfy the future demand, several countries plan to develop the infrastructure for district cooling. For example the city of Dubai, for which air conditioning represents over 70 per cent of electricity consumption, aims to meet 40 per cent of its cooling needs through district
 % cooling by 2030, using 50 per cent less electricity than standard air conditioning.\cite{unitednationsenvironmentprogrammeunepDistrictEnergyCities2015}
 
-\subsection{Fifth generation district energy networks}
+\subsection{Fifth generation district energy networks}\label{ss:5gden}
 The 4th generation of DH technology, has already achieved remarkable success and has been widely applied, especially in Europe. However, the exergy losses of the system are still very high, due to the diversity of heat levels present in the system, limiting its efficiency. Moreover, the integration of DC, which, as it was mentioned beforehand is already important in cities and will become more and more important throughout the next years, needs the installation of a second and separate networks, which leads to high upfront costs. \\
 This has lead to the birth of a new technology that uses an even lower distribution temperature (10-25 \si{\celsius}) to provide heating and cooling. In fact, the transfer fluid acts as cold network for cooling purposes and supplies, at the same time, evaporator heat to decentralized heat pumps. This is what is known as the 5th generation DH networks, also known as District Energy Networks (DEN) or District Heating and Cooling (DHC).\\
+
+\todo{write out that part}
+The benefits of Fifth Generation District Heating and Cooling include:
+\begin{itemize}
+	\item flexibility to scale up
+	\item zero carbon emission and pollution on site
+	\item ability to recycle waste heat
+	\item lower insulation needed 
+	\item lower depth
+	\item economics
+	\item lower capital cost of construction
+	\item lower running costs
+	\item lower maintenance costs
+\end{itemize}
 
 This technology has appeared in Switzerland in 2007, and it's mostly known as \textit{anergy network}, or in german \textit{Anergienetz}. To the authors knowledge, there are seven such systems operating by the end of the year 2018\cite{energieschweizFallbeispieleThermischeNetze2018}. A summary of a selection of four of them is shown in Table \ref{tab:anergieCH_sum}, while more detailed information can be found in the Appendix \ref{as:anergy_suisse}.
 
@@ -186,11 +200,11 @@ The choice of CO2 as a refrigerant relies, besides its thermodynamic properties,
 \end{itemize}
 
 \subsection{CO2 DEN}
-Weber and Favrat \cite{weberConventionalAdvancedCO22010a} proposed a new DEN based on the use of subcritical CO2. 
-Also compared with water and HFO R1234yf and proved it best\cite{henchozPotentialRefrigerantBased}.
-\todo{add anything here?..what?}
 
 \subsubsection{The technology}
+Weber and Favrat \cite{weberConventionalAdvancedCO22010a} proposed a new DEN based on the use of subcritical CO2. 
+Also compared with water and HFO R1234yf and proved it best\cite{henchozPotentialRefrigerantBased}.
+\todo{rewrite this beginning}
 As explained above, a refrigerant based DEN technology allows to store and transfer heat through the latent heat of vaporization of the refrigerant. The operating pressure is chosen in order to obtain the desired temperature in the system. That temperature is selected to be as high as possible to represent a good heat source for the decentralized heating heat pumps - resulting in good COP values -, while still allowing free cooling - avoiding the installation of compression chillers, and thus drastically reduce electricity consumption for space cooling. \\
 The network consists of one saturated liquid pipe and of one saturated vapor pipe, both in a saturated temperature range from 12 to 18 \si{\celsius}\cite{suciuEnergyIntegrationCO22018}.
 The working principle is shown in Figure \ref{fig:CO2schema}. Heating users can extract heat from the network through condensation of the refrigerant, taken from the vapour pipe. Respectively, cooling users take refrigerant from the liquid pipe and evacuate heat by evaporating it. The heat exchanges between the network and the users occur through condenser-evaporators heat exchangers, which keep the different refrigerant loops isolated\cite{henchozPotentialRefrigerantBased}. The synergy between simultaneous heating and cooling users allows the recovery of waste heat. Most of the time, the required heating and cooling capacity will not be equal, which means that there is the need for a centralized balancing power. Indeed, a central plant is responsible to balance the overall network, by exchanging heat with the environment. For instance, a sole/water or a water/water heat pump can be used for this purpose.\\
@@ -208,63 +222,19 @@ The working principle is shown in Figure \ref{fig:CO2schema}. Heating users can 
 \label{fig:CO2schema}
 \end{figure}
 
+One of the big advantages of this technology, with respect to water based DEN, is the pipes sizing. In fact, given the fact that it works on pressure maintenance instead of a fluid flow, no return pipe is necessary, which results in a slightly shorter total length of installed pipes. Moreover, due to the higher energy density of latent heat, the pipes diameter is drastically reduced. Henchoz et al. compared three different working fluid on the same study case, showing that, while CO2 needs pipes of only 280/330mm (liquid/vapor), R123yf would need 270/700mm and water 625/625mm. Given the low operating temperatures, there are much lower requirements for pipes insulation. While water pipes need to be buried deep enough to prevent damage due to water freezing, in case part of the network had to be stopped during winter, CO2 does not freeze and thus does not require a minimum freeze-safe depth. Henchoz et al. have even imagined installing the pipes inside a sidewalk module, which would drastically simplify maintenance and inspection. \cite{henchozPotentialRefrigerantBased} \\
+All the above mentioned advantages of using CO2, result in lower upfront costs, as well as lower maintenance costs.
 
-\subsubsection{Why? /Advantages}
+%\begin{itemize}
+%
+%	\item flexibility to scale up
+%	\item zero carbon emission and pollution on site
+%	\item no chimneys or cooling towers in the city
+%\end{itemize}
 
-\begin{itemize}
-	\item Better energetic performance
-	\item Better economic performance
-	
-	\item Given that no fluids move, only pressure maintenance, no return pipe, length of pipes is half. 
-	\item Smaller pipes (latent, not specific heat)
-	\item low cost available CO2
-	
-	\item Facilitate storage (low temp)
-	\item CO2 pipes allow decentralized CO2 collection from capture in CHP generation (ex. SOFC)
-	\item CO2 ideal for PtG integration (storage and availability)
-	\item integration of daily storage (heat buffer? or through latent heat, kinda buffer in the sist?)
-	\item Second level of flexibility, combined with smart grid
-	
-	\item no risk of freezing
-	
-	\item flexibility to scale up
-	\item zero carbon emission and pollution on site
-	\item no chimneys or cooling towers in the city
-	\item ability to recycle waste heat
-	\item economics
-	\item lower capital cost of construction
-	\item lower running costs
-	\item lower maintenance costs
-\end{itemize}
-
-The benefits of Fifth Generation District Heating and Cooling include:
-\begin{itemize}
-	\item flexibility to scale up
-	\item zero carbon emission and pollution on site
-	\item ability to recycle waste heat
-	\item economics
-	\item lower capital cost of construction
-	\item lower running costs
-	\item lower maintenance costs
-\end{itemize}
- 
-%\textit{Furthermore CO2 does not have a risk of freezing and, therefore, street implantation does not require any significant depth for freeing protection in case of trouble.Like the very low temperature DHC heating and cooling networks based on water and since the temperature level is closed to that of the surrounding ground, insulation can be reduced to minimum allowing a further gain in ditch width requirements.}\cite{henchozNovelDistrictHeating2017}
-
-%\textit{It appears that using decentralized heat pumps to
-%supply heat at a temperature adapted to each user is advantageous from the efficiency point of view, if this temperature is in average lower than the supply temperature from a centralized
-%heat pump.}\cite{henchozPotentialRefrigerantBased}
-
-Disadvantages:
-
-\begin{itemize}
-    \con High operating pressure
-    \con Availability of components/technology
-\end{itemize}
-
-%\textit{The main drawback is the high pressure of the order of 50 bars and the large inventory of CO2 that could cause some safety concerns in case of a major leak. However several hundreds of supermarkets in Europe [8] are already equipped with direct CO2 networks supplying cold at slightly lower pressures of the order of 40 bars with safety valves calibrated at 70 bars.\cite{henchozNovelDistrictHeating2017}}
-
-%\textit{Integration in smart energy system}
-%Such a network gives much more flexibility for DSM etc. but has to be well integrated with a smart grid, global concept.
+The main drawback of this technology is the high operating pressure, which situates at about 50 bars, and the safety concerns that could derive from the large amount of CO2 that could escape in case of a major leakage. Nevertheless, as described in \ref{ss:5gden}, CO2 refrigeration networks are already widely used in supermakets, and the technology is considered as safe. 
+\todo{need more drawbacks? or write more about it?}
+Safety issues analyzed \cite{girardinSafetyIssuesCO2based2016}.
 
 
 \subsubsection{Efficiency gain - Study case Geneva}
@@ -312,13 +282,25 @@ The results are remarkable. In fact, the CO2 based DEN shows a final energy cons
 \cite{henchozPotentialRefrigerantBased}
 
 \subsubsection{Study case PtG}
+%\textit{Integration in smart energy system}
+%Such a network gives much more flexibility for DSM etc. but has to be well integrated with a smart grid, global concept.
+
+%	\item CO2 pipes allow decentralized CO2 collection from capture in CHP generation (ex. SOFC)
+%\item CO2 ideal for PtG integration (storage and availability)
+
+		
+%\item Facilitate storage (low temp)
+%\item integration of daily storage (heat buffer? or through latent heat, kinda buffer in the sist?)
+%\item Second level of flexibility, combined with smart grid
+
 One big challenge in the future, especially in higher latitudes, where seasonal variation are consistent, is to ensure energy supply during winter season, when, due to shorter and weaker solar irradiation, PV panels produce less. It is thus important to find a way to store energy the excess renewable energy during the summer, to the winter.\\
 One solution to do that is power to gas (PtG), which defines the process of transforming electrical power to a gas, like methane, which is easy to store. Methane can be used during the winter to produce electricity and heat, in a combined heat and power plant (CHP), as for example a SOFC, a gas turbine, or a combination of them. For this reason, PtG is widely studied across Europe and many such plants have already been built.\\ 
 A study \cite{suciuEnergyIntegrationCO22018} has been performed on the integration of a CO2 based DEN with decentralized PV and such a PtG system.
 
 \textit{The present work evaluates the integration of CO2 district energy network including power to gas systems on a compact urban block considering heating, cooling, electricity, e-mobility and waste management for different European climatic zones. In order to reach fully autonomous blocks using solar PV and municipal and industrial waste heat, a PV area of 10e35m2/cap would be needed. The rooftop area available appears to be sufficient in areas like Southern Europe, while more area or alternative renewable sources such as wind or hydro are needed for other climatic zones. Regarding the economic feasibility of the system, the results show that an investment of 900e1300 V/cap would be needed, with a payback time between 11 and 14 years, depending on the different climate zones in Europe.}\cite{suciuEnergyIntegrationCO22018}
 
-\subsubsection{Direct-expansion ground source heat pump}\label{ss:dx}
+\subsection{Direct-expansion ground source heat pump}\label{ss:dx}
+\todo{where to put this section?}
 For heat pumps based systems, sourcing heat from the sole, instead of from the ambient air, is a very interesting solution at our latitudes, especially, as it has been seen, for integration of a 5th generation DEN, since it improves heating and cooling COPs, and, to a certain extent, it allows heat storage. In traditional Ground-Source Heat Pumps (GSHP), the heat pump and the ground are connected by means of a closed loop, using water, or a water solution. This system, called the secondary loop GSHP (SL-GSHP), is shown on the right side of Figure \ref{fig:gshp}. However, it has been proved \cite{kruseStatusDevelopmentResearch}\cite{guoTechnoeconomicComparisonDirect2012} that the system efficiency can be improved, by allowing to directly expand the refrigerant into the ground and thus let the ground act as a condenser/evaporator. Shown on the left side of Figure \ref{fig:gshp}, this system is called Direct Expansion GSHP (DX-GSHP). 
 
 \begin{figure}[h!]
