@@ -1,11 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
-Illegal, another \bibstyle command---line 267 of file main.aux
+Illegal, another \bibstyle command---line 283 of file main.aux
  : \bibstyle
  :          {unsrt}
 I'm skipping whatever remains of this command
 I couldn't open database file bibliography.bib.bib
----line 268 of file main.aux
+---line 284 of file main.aux
  : \bibdata{bibliography.bib
  :                          }
 I'm skipping whatever remains of this command
@@ -37,6 +37,7 @@ Warning--I didn't find a database entry for "ohFlowBoilingHeat2011"
 Warning--I didn't find a database entry for "wangOverviewHeatTransfer2013"
 Warning--I didn't find a database entry for "mastrulloComparisonR744R134a2009"
 Warning--I didn't find a database entry for "kimPerformanceTranscriticalCO22005"
+Warning--I didn't find a database entry for "henchozPerformanceProfitabilityPerspectives2015"
 Warning--I didn't find a database entry for "girardinEnerGisGeographicalInformation2010"
 Warning--I didn't find a database entry for "veillehydro-meteorologiqueducantondevaudMorgesRiviereDebit"
 Warning--I didn't find a database entry for "jiaReviewEffectiveThermal2019"

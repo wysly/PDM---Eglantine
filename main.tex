@@ -271,7 +271,7 @@ The results are remarkable. In fact, the CO2 based DEN shows a final energy cons
 
 \textit{\begin{itemize}
 	\item Such networks can reduce consumption by over 80\%
-	\item Exergy efficiences are typically around 40-45\%
+	\item Exergy efficiencies are typically around 40-45\%
 	\item CO2 is the most profitable fluid for district network
 	\item A cold water network is the second best option, although more expensive initially
 	and thus less profitable, it has several advantages in terms of safety and availability of
@@ -331,19 +331,14 @@ Assumed temperatures like in ...
 \subsubsection{MILP}
 Mixed integer linear programming (MILP) is... 
 AMPL a programm, solver using Gurobi, GLPK...
-Opitmization function
+Black box??.....
+State variables $X_{state}$
+Model $F_{X_{state}}$
+Context specification $S_{X_{state}}$
+Inequality constraints $G_{X_{state}}$
+\todo{find cheatsheet of exam MOES to do that}
 
-\begin{align}
-	& min \left( TotalCost \right)  = min \left(  CAPEX + OPEX \right) \\
-	& min \sum_{u}^{U} ... \\
-\end{align}
 
-\begin{align}
-	& min \left( Operating cost \right) \\
-	& min \sum_{u}^{U} \left[ \sum_{t = 1}^{T} \left( c_{u}^{op1} \cdot y_{u,t} + c_{u}^{op2} \cdot f_{u,t} + C_{el}^{-} \cdot \dot{El}_{grid,t}^{-} - C_{el}^{+} \cdot \dot{El}_{grid,t}^{+} \right) \cdot t_{t}^{op} \right] \\
-\end{align}
-
-where $c_{u}^{op1}$ and $c_{u}^{op1}$ are the respectively the fixed and the variable operating cost, and $C_{el}^{-}$ and $C_{el}^{+}$ are the buying and selling price of electricity.
 %\subsubsection{Genetic algorithms}
 %Optimization can be done through empirical algorithms that respect a set of rules. However, it is also possible to explore a space of solutions by reproducing the idea of evolution.
 %
@@ -369,6 +364,53 @@ Creates mod files for ampl optimization
 Postcompute to export
 
 
+Energy conversion technology sizing.
+\begin{align}
+& f_{u,t} \leq f_{u} \forall \qquad \forall u \in U, \ \forall t \in T  \\
+& f_{u}^{min} \cdot y_{u} \leq f_{u} \leq f_{u}^{max} \cdot y_{u} \qquad \forall u \in U\\
+\end{align}
+
+For \textit{process units}, only the houses, $y_{u} = f_{u}^{min} = f_{u}^{max} = 1$
+
+Heat cascade
+A set of equantions, called heat cascade, makes sure that heat is always transferred from a higher temperature to a lower one, also considering the respective minimum approach temperature for each stream.
+\begin{align}
+& \sum_{u}^{U} f_{u,t}  \cdot \dot{Q}_{u,t,k} + \dot{R}_{t,k+1} - \dot{R}_{t,k} = 0 \qquad \forall k \in K, \ \forall t \in T \\
+& \dot{R}_{t,k} \geq 0 \qquad \forall k \in K, \ \forall t \in T  \\
+& \dot{R}_{t,1} = 0 \dot{R}_{t,k+1} = 0 \qquad \forall t \in T  \\
+\end{align}
+\todo{how is third eq rtk+1 = 0???}
+
+Mass balances
+The demand $\dot{m}_{r,u,t}^{+}$ and the supply $\dot{m}_{r,u,t}^{-}$ of resource $r in R$ of each unit $u in U$ is computed.
+\begin{align}
+& \dot{M}_{r,u,t}^{-} = \dot{m}_{r,u,t}^{-} \cdot f_{u,t} \qquad \forall r \in R, \ \forall u \in U, \ \forall t \in T \\
+& \dot{M}_{r,u,t}^{+} = \dot{m}_{r,u,t}^{+} \cdot f_{u,t} \qquad \forall r \in R, \ \forall u \in U, \ \forall t \in T  \\
+\end{align}
+The balance of each resource has to be respected.
+\begin{equation}
+\sum_{u}^{U} \dot{M}_{r,u,t}^{-} = \dot{M}_{r,u,t}^{+} \qquad \forall r \in R, \ \forall t \in T
+\end{equation}
+Electricity is also balanced
+\begin{equation}
+\dot{El}_{houses}^{+} + \dot{El}_{heating}^{+} + \dot{El}_{cooling}^{+} + \dot{El}_{grid}^{+} = \dot{El}_{PV}^{-} + \dot{El}_{grid}^{-}
+\end{equation}
+
+Opitmization function
+
+\begin{align}
+& min \left( TotalCost \right)  = min \left(  CAPEX + OPEX \right) \\
+& min \sum_{u}^{U} ... \\
+\end{align}
+
+\begin{align}
+& min \left( Operating cost \right) \\
+& min \sum_{u}^{U} \left[ \sum_{t = 1}^{T} \left( c_{u}^{op1} \cdot y_{u,t} + c_{u}^{op2} \cdot f_{u,t} + C_{el}^{-} \cdot \dot{El}_{grid,t}^{-} - C_{el}^{+} \cdot \dot{El}_{grid,t}^{+} \right) \cdot t_{t}^{op} \right] \\
+\end{align}
+
+where $c_{u}^{op1}$ and $c_{u}^{op1}$ are the respectively the fixed and the variable operating cost, and $C_{el}^{-}$ and $C_{el}^{+}$ are the buying and selling price of electricity.
+
+
 \section{Methodology}
 
 \subsection{Investment cost function}
@@ -381,11 +423,12 @@ C_{pex} = \frac{I_{t}}{I_{t,ref}} \cdot 10^ {(k_{1,ex} + k_{2,ex} \cdot \log(A_{
 CBM_{ex} = C_{pex} \cdot FBM_{ex} \cdot e 
 \end{equation}
 
-The annuities are given by the following formula assuming a 20 years investment. 
+The annuities are calculated with the annualization factor ($af$) by the following formula, where $n$ is the assumed lifetime of the equipment, and $i$ the interest rate. 
 
-\begin{equation}
-IC_{yearly,ex} = CBM_{ex} \cdot \frac{i \cdot (1 + i)^n}{(1 + i)^n - 1} 
-\end{equation}
+\begin{align}
+	& IC_{yearly,ex} = CBM_{ex} \cdot af 
+	& af = \frac{i \cdot (1 + i)^n}{(1 + i)^n - 1}
+\end{align}
 
 \subsection{Minimum approach temperature}
 Bigger area allows a smaller dTmin, which increases the investment costs but lowers the operating costs, due to the higher COP, and the other way around. So an optimum can be found for each specific application.
@@ -435,45 +478,66 @@ In our case
     & \dot{L} = (1-\eta_{exergy})(\dot{Q}_{cold,r} + \dot{Q}_{hot,a} + \dot{E}_{grid}^{+})
 \end{align}
 
-\subsection{Energy technology models}
+\subsection{Typical days}
+\todo{methodology typical days}
+The optimization of an energy system is commonly performed over the time span of one year, in order to account for the different seasons. However, this requires a very long computing time, given the high number of timesteps. Thus, it is used to group similar days, according to a set of parameters as for example temperature or irradiation, into so called typical days. The days can be clustered in different ways. It can be chosen to compute an average day for each month or some machine learning clustering algorithm can be used to group the days into the desired number of clusters.
+The resulting typical days correspond to a period $p$, with a number of times $t$, as explained in section \todo{missing ss ref}. In order to account for the data compression, a value called $occurrence$ indicates how many times a given typical day occurs, i.e. how many times a given period occurs.
 
-\subsubsection{Heat pumps}\label{ss:hp}
+\subsection{Energy technology models}\label{ss:et}
+
+\subsubsection{Heat pumps - basic (Carnot)}\label{sss:hp_carnot}
 A simple model can be implemented with the following equations:
 Basic Carnot cycle model with efficiency.
 \begin{equation}
     \dot{E}_{compressor} = \frac{\dot{Q}_{evap}}{COP_{real}-1} = \frac{\dot{Q}_{evap}}{COP_{theoretical} \cdot \eta_{COP} - 1} = \frac{\dot{Q}_{evap}}{\eta_{COP} \cdot \frac{T_{c} – T_{h}}{T_{c}} -1} 
 \end{equation}
-where $\eta_{COP}$ is the Carnot efficiency.\\
+where $\eta_{COP}$ is the Carnot efficiency and $\dot{Q}_{evap}$ the heat delivered by the heat pump. \\
 
-However, given the comparison between new and performant technologies, the differences of performance are relatively small and it might be necessary to provide a more accurate model of the heat pumps, that are able to correctly represent and calculate the operating cycles and conditions. This can be done like this...
+
+\subsubsection{Heat pumps - detailed (Thermodyn.)}\label{sss:hp_thermo}
+However, given the comparison between new and efficient technologies, the differences of performance are relatively small and it might be necessary to provide a more accurate model of the heat pumps, that are able to correctly represent and calculate the operating cycles and conditions. This can be done like this...
 Given cycle:
-\missingfigure{hp cycle R134yf}
-\todo{explain procedure and equations for hy cycle model}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{HP_cylce_ref.png}
+	\caption{Temperature–entropy diagram of a R134yf based heat pump system.}
+	\label{fig:hp_ref}
+\end{figure}
+
 Thermodyn model follows following procedure:
-\begin{enumerate}
-    \item fix temp
-    \item calc pressure
-    \item at point same temperature
-    \item overheat
-    \item ...
-\end{enumerate}
+\begin{description}
+    \item[1] calculate state in point (x) knowing the evaporation temperature $T_{evap}$, defined in function of heat source temperature $T_{source}$, and assuming saturated liquid
+    \item[1sc] subcooled, using same P
+    \item[3] calculate state in point (x) knowing the evaporation temperature $T_{cond}$, defined in function of heat demand temperature $T_{heat demand}$, and assuming saturated vapor
+    \item[3sh] superheated at evaporator using same P
+    \item[2] calculate state at valve outlet, assuming isenthalpic expansion, with $H_{1sc}$ and $P_{3}$
+    \item[4is] calculate state for isentropic compression with $P_{1}$ and $S_{3sh}$
+    \item[4] calculate state after real compression, given $P_{1sc}$ and $H_{4} = H_{3sh} + \frac{H_{4is} - H_{3sh}}{\eta_{c,is}}$, where $\eta_{c,is}$ is the compressors isentropic efficiency. 
+\end{description}
 
 In Osmose, these values are calculated with help of \textit{Coolprop}, which is an open-source database of fluid and humid air properties that allows to calculate operating conditions for a large number of fluids and refrigerants. Thanks to a \textit{lua wrapper}, which is a \textit{lua} module that provides an API to the external software, \textit{Coolprop} is called inside Osmose.
 
-\subsubsection{Heat pump CO2}
+with respectively 1 and 2 \si{\celsius} of superheating and subcooling at the outlet of the heat exchanger \cite{}.
+\todo{missing reference for superheat and subcool temp}
+
+\subsubsection{Heat pump CO2}\label{sss:hp_CO2}
 In traditional heat pumps, the heat delivery occurs through condensation of the refrigerant, which happens at a fixed temperature. This originates high exergy losses, especially in processes were a high temperature lift is needed in the gas cooler.\\
 Some refrigerants have the particular property of having a very low critical point. At first sight, this normally results in lower energy efficiency. However, it also allows heat to be exchanged on a varying temperature, and the heat pump can be designed to fit the heat demand stream, optimizing exergy efficiency. This can be seen in Figure \ref{fig:hp_CO2}, where the cycle is represented on the temperature-entropy diagram, between point 2 and 3. The different steps of the process are explained hereafter: 
 \begin{itemize}
-\item 1 - 2 Compression to transcritical pressure
-\item 2 - 3 Gas cooling in transcritical area, to heat water
-\item 3 - 4 Expansion to low pressure
-\item 4 - 5 Evaporation by cooling down the heat source
-\item 5 - 1 Superheating in evaporator
+\item 1 - 2 Expansion to low pressure
+\item 2 - 3 Evaporation by cooling down the heat source
+\item 3 - 3sh Superheating in evaporator
+\item 3sh - 4 Compression to transcritical pressure
+\item 4 - 1 Gas cooling in transcritical area, to heat water
 \end{itemize}
 Note that, as there is no phase change, the heat exchanger is called gas cooler, instead of condenser.\\
+
+\todo{superheating in CO2 hp? how much?}
+
 \begin{figure}[h!]
 \centering
-\includegraphics[width=1\textwidth]{HP_cylce_CO2_schema.png}
+\includegraphics[width=0.6\textwidth]{HP_cylce_CO2.png}
 \caption{Temperature–entropy diagram of a trans-critical CO2 heat pump system for a domestic hot water production. Source: \cite{kimPerformanceTranscriticalCO22005}}
 \label{fig:hp_CO2}
 \end{figure}
@@ -528,22 +592,18 @@ The energy profile of the buildings is calculated according to Minergie standard
 \end{figure}
 
 \todo{cooling demand?}
-\todo{Typical days: in methodology or here?}
+\todo{typical days graph and results, done as explained in methodology}
 
-\subsubsection{Pre-study}
-Some pre-studies have been realized, in order to give, on an indicative basis, the sizing of the energy system. The heat pumps, the geothermal wells, as well as PV have been considered, as shown in Table \ref{tab:ppa_prestudy}.
+\subsubsection{Pre-studies}
+Some pre-studies have been commissioned by the land-owner, in order to give, on an indicative basis, the sizing of the energy system. These studies have been realized by external engineering firms and the results are contained in the call for tender. The studied parameters include the sizing for heat pumps, geothermal wells, as well as PV, and are shown in Table \ref{tab:ppa_prestudy}.
 \input{Tables/ppa_prestudy.tex}
 
-\subsubsection{Task}
-Call for tender asks to design a complete energy system... 
-
-
 \subsection{Reference scenario}
-In order to evaluate the potential of alternative energy systems, a reference scenario is defined. Data about the energy system that will be built in the Eglantine district is not available to the author, and therefore a standard state of the art system is used. It is assumed that the heat demand for space heating and domestic hot water is provided by decentralized geothermal sourced heat pumps. The cooling demand is provided by air cooled vapor compression chillers, also commonly known as air conditioners.
+In order to evaluate the potential of alternative energy systems, a reference scenario is defined. Data about the energy system that will be built in the Eglantine district is not available to the author, and therefore a standard state of the art system is used. It is assumed that the heat demand for space heating and domestic hot water is provided by decentralized geothermal sourced heat pumps. The cooling demand is provided by air cooled vapor compression chillers, also commonly known as air conditioners. The scenario foresees the installation of PV panels on the roof of the buildings.
 
 \subsubsection{Decentralized heat pumps}
 The heating demand is supplied by a set of decentralized geothermal heat pumps, one for domestic hot water and one for space heating in every building. These heat pumps source the ambient heat from a secondary loop, that exchanges heat with the ground through a system of geothermal wells, which is described in the according chapter. \\
-The heat pumps have been modeled with its thermodynamic model, as described in Section \ref{ss:hp}.
+Given the relevance of the heat pumps in this energy system, it has been chosen to use its thermodynamic model, as described in Section \ref{sss:hp_thermo}, which achieves more reliable and precise results.
 The temperatures at the evaporator and condenser are given by the following equations:
 \begin{equation}
     T_{evap} = T_{ground} - \Delta T_{min}^{ref/ground} - \Delta T_{water} - \Delta T_{min}^{ref/water}
@@ -551,9 +611,7 @@ The temperatures at the evaporator and condenser are given by the following equa
 \begin{equation}
     T_{cond} = T_{demand} + \Delta T_{min}^{ref/water}
 \end{equation}
-with respectively 1 \si{\celsius} and 2 superheating 1 \si{\celsius} and subcooling at the outlet of the heat exchanger \cite{}.
-\todo{missing reference for superheat and subcool temp}
-\missingfigure[]{T(Q) graph for heat pump}
+
 
 \subsubsection{Compression chillers}
 Air cooled, vapor compression chillers. Not as relevant in case study, thus basic Carnot cycle model with efficiency, as explained in Section \ref{ss:hp}.\\
@@ -563,12 +621,12 @@ The operating temperatures are defined in the following way:
 \end{equation}
 Where $\Delta T_{air}$ is the temperature difference of the cooling air between the input and the output of the condenser, while $\Delta T_{min}^{ref/air}$ is the minimum approach temperature difference needed for heat transfer between a refrigerant and air.
 
-$\eta_{COP}$ is assumed at \todo{missing value}, from experimental data\cite{girardinEnerGisGeographicalInformation2010}.
+$\eta_{COP}$ is assumed at 0.35, from experimental data\cite{henchozPerformanceProfitabilityPerspectives2015}.
 The fans, needed for the cooling of the condenser, originate parasitic power consumption. This is calculated with help of the following equation\cite{henchozPotentialRefrigerantBased}:
 \begin{equation}
     \dot{E_{fans}} = \frac{0.605 \cdot \dot{Q}_{cond}}{( \Delta T_{air} + \Delta T_{min}^{ref/air})^{0.9937}}
 \end{equation}
-Where $\dot{Q}_{cond}$ is the heat to be delivered to the surroundings by the condenser. Thus, the total energy consumption is a sum of the energy demand of the compressor and the one of the cooling fans.
+Where $\dot{Q}_{cond}$ is the heat to be dissipated in the environment by the condenser. Thus, the total energy consumption is a sum of the energy demand of the compressor and the cooling fans.
 \begin{equation}
     \dot{E} = \dot{E}_{ref} + \dot{E}_{fans}
 \end{equation}
@@ -576,7 +634,7 @@ Where $\dot{Q}_{cond}$ is the heat to be delivered to the surroundings by the co
 \subsubsection{Geo-cooling}
 Geo-cooling is the use of fresh temperatures of the ground for space cooling. This happens by simply circulating a fluid between the buildings, where the heat is extracted, and the geothermal wells, where heat is released into the ground. In practice, this happens by bypassing the heat pumps and making the water of the secondary loop (geothermal loop) directly exchange with the heating water loop. Investment costs are, thus, limited to an additional heat exchanger. As for the other units, the energy needed for circulation pumps is assumed to be negligible. 
 
-\missingfigure{Image necessary explaining geocooling?}
+\missingfigure{Image necessary explaining geo-cooling?}
 
 \subsection{CO2 DEN}
 
@@ -601,7 +659,7 @@ Free cooling has been modeled by a simple heat exchanger that evaporates saturat
 \subsubsection{Central plant}
 As mentioned before, for obvious reasons, heating and cooling loads in the system are not always balanced. Thus, there is the need for a central plant to balance out the system, able to heat and cool. A centralized heat pump is very suitable for this purpose.
 
-Equations and modelling are the same as for the above described heat pumps. Difference consists in heat source, and thus evaporation temperature. Different options have been studied:
+Equations and modeling are the same as for the above described heat pumps. Difference consists in heat source, and thus evaporation temperature. Different options have been studied:
 \begin{itemize}
     \item Lake: sourced from a certain depth, lake water shows an almost constant temperature of around 7.5 \si{\celsius} throughout the year. This solution can be very interesting alternative to geothermal wells, since, if close enough, it might reduce the upfront costs, despite probably slightly increasing the operating costs. In this particular case, the distance to the lake is of 1500 m.
     \item River: as for the lake, river water can be an interesting source of heat, with the difference of seasonal fluctuations. During the winter, river water can have a temperature close to 0, while in the summer it can rise to more than 20 \si{\celsius}. In the case of the Eglantine district, there is a small stream, called Morges, that passes at the eastern border of the land.
@@ -772,7 +830,7 @@ Parameters to study/extrapolate for quick application on other districts:
     \item influence on IC,OC,TC
     \item influence on network temperature $T_net$  
 \end{itemize}
-Varying \% of cooling load, wrt heating load, using typical profiles, as for sh, dhw and ref
+Varying \% of cooling load, wrt heating load, using varying composition of cities, with categories (commercial/residential/...)
 
 
 \section{Results}
