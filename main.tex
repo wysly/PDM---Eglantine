@@ -440,10 +440,11 @@ Then optimization of dTmin in function of total costs minimization, with help of
 \begin{equation}\label{eq:LMTD}
     LMTD= \frac{(T_{Hot,in } - T_{cold,out }) - (T_{Hot,out } - T_{cold,in }) }{ \log{ (\frac{T_{Hot,in } - T_{cold,out }}{T_{Hot,out } - T_{cold,in }} ) }}
 \end{equation}
+And the overall heat transfer coefficient is given by \cite{huExtremumSeekingControl2015}
 \begin{equation}\label{eq:alpha}
-    U= \frac{1}{ \frac{1}{\alpha_{(1)} } + \frac{1}{\alpha_{(2)}} }
+    U= \frac{1}{ \frac{1}{h_{(hot)} } + \frac{\Delta x_{wall}}{k_{wall}} \frac{1}{h_{(cold)}} }
 \end{equation}
-where $\alpha_{(1)}$ and $\alpha_{(2)}$ are the heat transfer coefficient of the hot and cold fluid. Heat resistivity of heat exchanger plates are neglected.
+where $h_{(hot)}$ and $h_{(cold)}$ are the heat transfer coefficient of the hot and cold fluid. Heat resistivity of heat exchanger plates are neglected.
 
 The optimization is done on water refrigerant hp, with values (ic, Q, COP) from space heating. 
 CO2 dTmin is calculated maintaining same Area as for ref hp.
@@ -492,7 +493,8 @@ Basic Carnot cycle model with efficiency.
     \dot{E}_{compressor} = \frac{\dot{Q}_{evap}}{COP_{real}-1} = \frac{\dot{Q}_{evap}}{COP_{theoretical} \cdot \eta_{COP} - 1} = \frac{\dot{Q}_{evap}}{\eta_{COP} \cdot \frac{T_{c} – T_{h}}{T_{c}} -1} 
 \end{equation}
 where $\eta_{COP}$ is the Carnot efficiency and $\dot{Q}_{evap}$ the heat delivered by the heat pump. \\
-
+\todo{table with eta COP values?}
+\todo{how much of this do i have to explain? do i maintain it somewhere in the results to show how much better it is with cycle?}
 
 \subsubsection{Heat pumps - detailed (Thermodyn.)}\label{sss:hp_thermo}
 However, given the comparison between new and efficient technologies, the differences of performance are relatively small and it might be necessary to provide a more accurate model of the heat pumps, that are able to correctly represent and calculate the operating cycles and conditions. This can be done like this...
@@ -521,9 +523,33 @@ In Osmose, these values are calculated with help of \textit{Coolprop}, which is 
 with respectively 1 and 2 \si{\celsius} of superheating and subcooling at the outlet of the heat exchanger \cite{}.
 \todo{missing reference for superheat and subcool temp}
 
+The compressor is a crucial component for the design of a heat pump, since it has the largest share of impact on the energy efficiency. To calculate its efficiency, the model of Hu et al.\cite{huExtremumSeekingControl2015} has been used. The shaft power can be computed in function of the isentropic efficiency ($\eta_{is}$) by:
+\begin{equation}
+W_{shaft} = \frac{\dot{m}(h_{d,is}-h_{s})}{\eta_{is}} 
+\end{equation}
+where $h_{d,is}$ is the isentropic discharge enthalpy and $h_{d}$ is the suction enthalpy. The compressors input power is expressed in function of its mechanical efficiency ($\eta_{is}$) by:
+\begin{equation}
+E_{comp} = \frac{W_{shaft}}{\eta_{mech}}  
+\end{equation}
+The efficiency of the compressor is thus calculated as:
+\begin{equation}
+\eta_{comp} = \frac{\text{isentropic work of compression}}{\text{actual work of compression}} = \frac{\dot{m}(h_{d,is}-h_{s})}{E_{comp}} = \eta_{is}\eta_{mech} 
+\end{equation}
+
+The numerical values of those efficiencies are strongly dependent from the ratio between the pressure of discharge $P_{d}$ and the pressure of suction $P_{s}$ of the compressor.They can be computed with help of the relations obtained by Li et al.\cite{liPerformanceCharacteristicsR1234yf2014}:
+\begin{align}
+& \eta_{mech} = 0.85\\
+& \eta_{is} = 0.874-0.0134\cdot(\frac{P_{d}}{P_{s}})\\
+\end{align}
+		
+The expansion of the refrigerant in the expansion valve is assumed to be isenthalpic. 
+
+
 \subsubsection{Heat pump CO2}\label{sss:hp_CO2}
 In traditional heat pumps, the heat delivery occurs through condensation of the refrigerant, which happens at a fixed temperature. This originates high exergy losses, especially in processes were a high temperature lift is needed in the gas cooler.\\
-Some refrigerants have the particular property of having a very low critical point. At first sight, this normally results in lower energy efficiency. However, it also allows heat to be exchanged on a varying temperature, and the heat pump can be designed to fit the heat demand stream, optimizing exergy efficiency. This can be seen in Figure \ref{fig:hp_CO2}, where the cycle is represented on the temperature-entropy diagram, between point 2 and 3. The different steps of the process are explained hereafter: 
+Some refrigerants have the particular property of having a very low critical point. One very interesting refrigerant, also as explained in Section \ref{label} for environmental reasons, is CO2 - technically know as R744 - which has a critical point at 74 bars and 31 \si{\celsius}\cite{cavalliniPROPERTIESCO2REFRIGERANT}.
+
+The operating cycle can be seen in Figure \ref{fig:hp_CO2}, represented on the temperature-entropy diagram. The different steps of the process are explained hereafter: 
 \begin{itemize}
 \item 1 - 2 Expansion to low pressure
 \item 2 - 3 Evaporation by cooling down the heat source
@@ -531,7 +557,9 @@ Some refrigerants have the particular property of having a very low critical poi
 \item 3sh - 4 Compression to transcritical pressure
 \item 4 - 1 Gas cooling in transcritical area, to heat water
 \end{itemize}
-Note that, as there is no phase change, the heat exchanger is called gas cooler, instead of condenser.\\
+
+Even though the technological development is slowly closing the gap, CO2 compressors have lower isentropic efficiency and lower volumetric efficiency than subcritical ones\cite{sarkarSimulationTranscriticalCO22006}. This comes from the high irreversibility caused by the superheated vapor horn and the high throttling losses\cite{yangTheoreticalExperimentalInvestigation2016}. 
+However, transcritical operation also allows heat to be exchanged on a varying temperature, and the heat pump can be designed to fit the heat demand stream, optimizing exergy efficiency. This is particularly interesting in exchanges that require high temperature lifts, as in the case of domestic hot water heaters. In fact, this can be seen in Figure \ref{fig:hp_CO2}, between point 2 and 3. Note that, as there is no phase change, the heat exchanger is called gas cooler, instead of condenser.\\
 
 \todo{superheating in CO2 hp? how much?}
 
@@ -542,7 +570,14 @@ Note that, as there is no phase change, the heat exchanger is called gas cooler,
 \label{fig:hp_CO2}
 \end{figure}
 
-The operating conditions having a cold stream with a low inlet temperature, as in the case of domestic hot water heaters, are well suited for the use of CO2 as a refrigerant, which has a critical point at 74 bars and 31 \si{\celsius}\cite{cavalliniPROPERTIESCO2REFRIGERANT}.
+For the transcritical CO2 heat pump, the numerical values of the compressor efficiencies computed with help of the relations obtained by Wang et al \cite{wangExperimentalInvestigationAirsource2013}:
+\begin{align}
+	& \eta_{mech} = 0.64107+0.07487\cdot(\frac{P_{d}}{P_{s}})\\
+	& \eta_{is} = 0.8014-0.04842\cdot(\frac{P_{d}}{P_{s}})\\
+\end{align}
+
+Stene shows that COP for CO2 hp stays about the same for SH and DHW, because with supercritical condenstion we have a much higher $\eta_{COP}$.\cite{steneINTEGRATEDCO2HEAT2007}
+
 
 \section{Eglantine}
 In the framework of the collaboration between Romande Energie and IPESE, a case study shall bring a concrete numerical case study into the discussion. For this, Romande Energie has chosen a real life example of a district in the city of Morges. This district is in the planning phase, and Romande Energie had worked on it, in order to participate in the call for tender. This case study shall be fertile ground to discuss the CO2 DEN technology and it's role in the future energy systems in Switzerland and, more particularly, in the future plans of Romande Energie.
@@ -602,8 +637,8 @@ Some pre-studies have been commissioned by the land-owner, in order to give, on 
 In order to evaluate the potential of alternative energy systems, a reference scenario is defined. Data about the energy system that will be built in the Eglantine district is not available to the author, and therefore a standard state of the art system is used. It is assumed that the heat demand for space heating and domestic hot water is provided by decentralized geothermal sourced heat pumps. The cooling demand is provided by air cooled vapor compression chillers, also commonly known as air conditioners. The scenario foresees the installation of PV panels on the roof of the buildings.
 
 \subsubsection{Decentralized heat pumps}
-The heating demand is supplied by a set of decentralized geothermal heat pumps, one for domestic hot water and one for space heating in every building. These heat pumps source the ambient heat from a secondary loop, that exchanges heat with the ground through a system of geothermal wells, which is described in the according chapter. \\
-Given the relevance of the heat pumps in this energy system, it has been chosen to use its thermodynamic model, as described in Section \ref{sss:hp_thermo}, which achieves more reliable and precise results.
+The heating demand is supplied by a set of decentralized geothermal heat pumps, one for domestic hot water and one for space heating in every building. These heat pumps source the ambient heat from a secondary loop, that exchanges heat with the ground through a system of geothermal wells, the SL-GSHP, which is described in Section \ref{ss:dx}. \\
+Given the relevance of the heat pumps in the studied energy system, it has been chosen to use its thermodynamic model, which achieves more reliable and precise results.\\
 The temperatures at the evaporator and condenser are given by the following equations:
 \begin{equation}
     T_{evap} = T_{ground} - \Delta T_{min}^{ref/ground} - \Delta T_{water} - \Delta T_{min}^{ref/water}
@@ -611,6 +646,22 @@ The temperatures at the evaporator and condenser are given by the following equa
 \begin{equation}
     T_{cond} = T_{demand} + \Delta T_{min}^{ref/water}
 \end{equation}
+
+For the space heating heat pump, the refrigerant used is R123yf, as described in Section \ref{sss:hp_thermo}.
+
+For the domestic hot water, it is chosen to use transcritical CO2 heat pumps. As described in Section \ref{sss:hp_CO2}, this technology can achieve very good performances supplying heat that requires a high lift. This is the case in domestic hot water, where the water has to be heated from a temperature of 10 \si{\celsius} to a temperature of 55 \si{\celsius}.
+
+Efficiencies: Equations in Section \ref{sss:hp_CO2} and \ref{sss:hp_thermo} could be implemented in model. For simplicity, those values have been calculated with the operating conditions and input a fixed values:
+Table with compressor efficiencies
+
+\input{Tables/compressors_eff.tex}
+
+These values correspond to what has been used in literature...
+isentropic comp efficiency R123yf = 0.75 \cite{yangTheoreticalExperimentalInvestigation2016}
+isentropic comp efficiency CO2 = 0.8 \cite{joneydishariatzadehComparisonTranscriticalCO22016} /0.65 \cite{yangTheoreticalExperimentalInvestigation2016} / 0.55 \cite{steneINTEGRATEDCO2HEAT2007}
+
+with Coolprop CO2 transcritical cycle calculator COP ~= 5 (4.94-5.13) for $T_evap$ = 2deg and 8.5 (8.36-8.78) with $T_evap$ = 13deg
+isentropic efficiency expansion valve = 0.8\cite{yangTheoreticalExperimentalInvestigation2016}
 
 
 \subsubsection{Compression chillers}
@@ -736,6 +787,9 @@ $dT_{min}^{ref/ground} = 11 \si{\celsius}$
 \label{fig:GTW_temp}
 \end{figure}
 
+$dT_water$ drop in ground loop is 3-5 \si{\celsius} for heating and 5-8 rise for cooling \cite{lundDESIGNCLOSEDLOOPGEOTHERMAL}
+SIA makes an example with 3 \cite{siaSIA384Sondes2010}
+$dT_{min} $ \cite{lundDESIGNCLOSEDLOOPGEOTHERMAL} with 15-16deg
 \subsection{External heat sources}
 The main advantage of a 5th generation district heating network is the ability to recover heat, and exchange it among the diversity of user. In the case of the Eglantine project, inside the district there are only very small heat sources and it is thus necessary to identify potential heat sources, located in the surroundings. 
 Two potential heat sources have been identified:

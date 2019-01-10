@@ -21,34 +21,34 @@
 \contentsline {subsubsection}{\numberline {3.5.1}Heat pumps - basic (Carnot)}{15}{subsubsection.3.5.1}% 
 \contentsline {subsubsection}{\numberline {3.5.2}Heat pumps - detailed (Thermodyn.)}{15}{subsubsection.3.5.2}% 
 \contentsline {subsubsection}{\numberline {3.5.3}Heat pump CO2}{16}{subsubsection.3.5.3}% 
-\contentsline {section}{\numberline {4}Eglantine}{16}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Case-study}{16}{subsection.4.1}% 
-\contentsline {subsubsection}{\numberline {4.1.1}Context}{16}{subsubsection.4.1.1}% 
+\contentsline {section}{\numberline {4}Eglantine}{17}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Case-study}{17}{subsection.4.1}% 
+\contentsline {subsubsection}{\numberline {4.1.1}Context}{17}{subsubsection.4.1.1}% 
 \contentsline {subsubsection}{\numberline {4.1.2}Buildings}{17}{subsubsection.4.1.2}% 
-\contentsline {subsubsection}{\numberline {4.1.3}Pre-studies}{17}{subsubsection.4.1.3}% 
-\contentsline {subsection}{\numberline {4.2}Reference scenario}{17}{subsection.4.2}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Decentralized heat pumps}{18}{subsubsection.4.2.1}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Compression chillers}{19}{subsubsection.4.2.2}% 
-\contentsline {subsubsection}{\numberline {4.2.3}Geo-cooling}{19}{subsubsection.4.2.3}% 
-\contentsline {subsection}{\numberline {4.3}CO2 DEN}{19}{subsection.4.3}% 
-\contentsline {subsubsection}{\numberline {4.3.1}Distributed heat pumps}{19}{subsubsection.4.3.1}% 
-\contentsline {subsubsection}{\numberline {4.3.2}Refrigeration}{19}{subsubsection.4.3.2}% 
-\contentsline {subsubsection}{\numberline {4.3.3}Free cooling}{20}{subsubsection.4.3.3}% 
-\contentsline {subsubsection}{\numberline {4.3.4}Central plant}{20}{subsubsection.4.3.4}% 
-\contentsline {subsubsection}{\numberline {4.3.5}Network}{20}{subsubsection.4.3.5}% 
-\contentsline {subsection}{\numberline {4.4}Heat sources}{21}{subsection.4.4}% 
-\contentsline {subsubsection}{\numberline {4.4.1}Stream}{21}{subsubsection.4.4.1}% 
-\contentsline {subsubsection}{\numberline {4.4.2}Lake}{21}{subsubsection.4.4.2}% 
-\contentsline {subsubsection}{\numberline {4.4.3}Geothermal wells}{21}{subsubsection.4.4.3}% 
-\contentsline {subsection}{\numberline {4.5}External heat sources}{21}{subsection.4.5}% 
-\contentsline {subsubsection}{\numberline {4.5.1}Ice rink}{21}{subsubsection.4.5.1}% 
-\contentsline {subsubsection}{\numberline {4.5.2}Shopping mall}{23}{subsubsection.4.5.2}% 
-\contentsline {subsection}{\numberline {4.6}Analysis/Extrapolation scenario}{23}{subsection.4.6}% 
-\contentsline {section}{\numberline {5}Results}{23}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}Scenario comparison}{23}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}CO2 network temperature control}{23}{subsection.5.2}% 
-\contentsline {subsection}{\numberline {5.3}Sensitivity analysis}{24}{subsection.5.3}% 
-\contentsline {section}{\numberline {6}Discussion}{24}{section.6}% 
-\contentsline {section}{\numberline {7}Outlook}{24}{section.7}% 
-\contentsline {section}{\numberline {8}Conclusion}{24}{section.8}% 
-\contentsline {section}{\numberline {9}Anergy nets Switzerland}{32}{section.9}% 
+\contentsline {subsubsection}{\numberline {4.1.3}Pre-studies}{18}{subsubsection.4.1.3}% 
+\contentsline {subsection}{\numberline {4.2}Reference scenario}{18}{subsection.4.2}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Decentralized heat pumps}{19}{subsubsection.4.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Compression chillers}{20}{subsubsection.4.2.2}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Geo-cooling}{20}{subsubsection.4.2.3}% 
+\contentsline {subsection}{\numberline {4.3}CO2 DEN}{21}{subsection.4.3}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Distributed heat pumps}{21}{subsubsection.4.3.1}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Refrigeration}{21}{subsubsection.4.3.2}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Free cooling}{21}{subsubsection.4.3.3}% 
+\contentsline {subsubsection}{\numberline {4.3.4}Central plant}{21}{subsubsection.4.3.4}% 
+\contentsline {subsubsection}{\numberline {4.3.5}Network}{22}{subsubsection.4.3.5}% 
+\contentsline {subsection}{\numberline {4.4}Heat sources}{22}{subsection.4.4}% 
+\contentsline {subsubsection}{\numberline {4.4.1}Stream}{22}{subsubsection.4.4.1}% 
+\contentsline {subsubsection}{\numberline {4.4.2}Lake}{22}{subsubsection.4.4.2}% 
+\contentsline {subsubsection}{\numberline {4.4.3}Geothermal wells}{22}{subsubsection.4.4.3}% 
+\contentsline {subsection}{\numberline {4.5}External heat sources}{23}{subsection.4.5}% 
+\contentsline {subsubsection}{\numberline {4.5.1}Ice rink}{23}{subsubsection.4.5.1}% 
+\contentsline {subsubsection}{\numberline {4.5.2}Shopping mall}{24}{subsubsection.4.5.2}% 
+\contentsline {subsection}{\numberline {4.6}Analysis/Extrapolation scenario}{24}{subsection.4.6}% 
+\contentsline {section}{\numberline {5}Results}{24}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Scenario comparison}{24}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}CO2 network temperature control}{24}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.3}Sensitivity analysis}{25}{subsection.5.3}% 
+\contentsline {section}{\numberline {6}Discussion}{25}{section.6}% 
+\contentsline {section}{\numberline {7}Outlook}{25}{section.7}% 
+\contentsline {section}{\numberline {8}Conclusion}{26}{section.8}% 
+\contentsline {section}{\numberline {9}Anergy nets Switzerland}{34}{section.9}% 
