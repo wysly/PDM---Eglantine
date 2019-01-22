@@ -88,6 +88,7 @@ AC
 GC
 CP
 ERA
+PV
 HP
 GSHP
 SL-
@@ -125,7 +126,7 @@ Throughout the last decades, human society has developed thanks to energy, most 
 
 One crucial sector is the production of heat, which represents a large share of the total greenhouse emissions. This is especially true for countries at higher latitudes, i.e. with cold climates. For example in Switzerland the energy demand for space heating and hot water demand of buildings, accounts for around 41\% (96.5 TWh) of the total energy demand of the country, and is still strongly dependent from fossil fuels. If we also include process heat, this figure rises to 54\% (123.9 TWh)\cite{bacherEnergieRespektSchlusselFur2014}. 
 
-Also the energy demand related to cooling is experiencing an exponential growth. This is, on the one hand, because it is becoming affordable for more people, as income levels rise. On the other hand, this increase is due to global warming. There are today 1.6 billion air conditioners (AC) in use, and about 50\% of them are distributed in only two countries: China and USA. In some countries, especially in the Middle East, as well as in parts of the USA, during extremely hot days cooling can represent more than 70\% of peak residential electricity demand. A huge problem with respect to this, is the quality of ACs. The majority of ACs that are sold in large markets, have an efficiency, which is only 50\% or lower than the one of the best products available. This engenders, obviously, an important augmentation of the energy demand. Figure \ref{fig:cooling_energy} shows how the energy demand has tripled since 1990, while the share of cooling energy in total energy use in buildings has risen from 2\% to more almost 7\% \cite{birolFutureCooling2018}. 
+Also the energy demand related to cooling is experiencing an exponential growth. This is, on the one hand, because it is becoming affordable for more people, as income levels rise. On the other hand, this increase is due to global warming, which leads worldwide to a higher average temperature, as well as an increase in the frequency of days with extreme temperatures\cite{ipccSummaryPolicymakersIPCC2018}. There are today 1.6 billion air conditioners (AC) in use, and about 50\% of them are distributed in only two countries: China and USA. In some countries, especially in the Middle East, as well as in parts of the USA, during extremely hot days cooling can represent more than 70\% of peak residential electricity demand. A huge problem with respect to this, is the quality of ACs. The majority of ACs that are sold in large markets, have an efficiency, which is only 50\% or lower than the one of the best products available. This engenders, obviously, an important augmentation of the energy demand. Figure \ref{fig:cooling_energy} shows how the energy demand has tripled since 1990, while the share of cooling energy in total energy use in buildings has risen from 2\% to more almost 7\% \cite{birolFutureCooling2018}. 
 
 \begin{figure}[h!]
 	\centering
@@ -138,7 +139,7 @@ A study shows that also in Switzerland cooling demand will strongly increase in 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{climat_CH.JPG}
+	\includegraphics[width=0.7\textwidth]{clima_CH.png}
 	\caption{The evolution of median values of heating (left) and cooling (right) demand of the fours case studies ("Old building", "Old builing protected", "Solid construction", "Hybrid construction") between the reference period "1995" (1980-2009) and the period "2060" (2045-2074) in Basel. The percentage variations can be attributed to climate change. A1B corresponds to a median scenario developed by the IPCC. Source: \cite{hsluClimaBauPlanenAngesichts2017}}
 	\label{fig:climat_CH}
 \end{figure}
@@ -210,19 +211,21 @@ All the anergy networks presented in Table \ref{tab:anergieCH_sum} still base on
 The choice of the refrigerant strongly depends on the application. In function of the operating conditions, three main criteria are evaluated: affordability, safety and environmental impact.
 A summary of the history of refrigerants is shown in Figure \ref{fig:refrigerants}.
 The Montreal protocol, signed in 1987, designed the phase out of HCFC and CFCs, in order to prevent ozone layer depletion. This boosted the use of HFCs, as a replacement. However, not far later, people realized that despite being less damaging to the ozone layer, they were powerful greenhouse gases. Since 2013, a federal ordinance also strongly restricts the use of these last ones in Switzerland\cite{hydrocarbons21.comSwitzerlandIntroduceHFC}. Also Europe has planned the phase-out of HFC in 2014\cite{europeancommissionforclimateactionEULegislationControl2016}. This means that today the choice of refrigerants is essentially limited to natural refrigerants - as for example CO2 (R744), ammonia (R717) or propane (R290) - and the new environmentally friendly HFOs - as for example the fluorinated propane isomer R1234yf.\\
-According to Danfoss\cite{danfossRefrigerantOptionsNow2017}, CO2 will dominate industrial refrigeration, together with ammonia. Already today, this technology is widely used. For instance Migros, Switzerland's largest retail company, opened its first supermarket to use CO2, in a low-temperature subcritical system, in 2002. By today, 411 of the 700 supermarkets in Migros’s portfolio are equipped with transcritical CO2 systems\cite{williamsMigrosDNA2018}.
+
 The choice of CO2 as a refrigerant relies, besides its thermodynamic properties, on the following arguments\cite{cavalliniPROPERTIESCO2REFRIGERANT}:
 \begin{itemize}
-	\item it is very abundant in the environment and is also waste of a multitude of industrial processes, resulting in very low cost
+	\item it is very abundant in the environment and is also waste of a multitude of industrial processes
 	\item it is harmless to the biosphere
 	\item it is non-flammable and non-toxic
 	\item it is an inert gas
 \end{itemize}
 
-%Generally, however, refrigerant based DEN are still at a prototype stage.
+In fact, according to Danfoss\cite{danfossRefrigerantOptionsNow2017}, CO2 will dominate industrial refrigeration, together with ammonia. Already today, this technology is widely used. For instance Migros, Switzerland's largest retail company, opened its first supermarket to use CO2, in a low-temperature subcritical system, in 2002. By today, 411 of the 700 supermarkets in Migros’s portfolio are equipped with transcritical CO2 systems\cite{williamsMigrosDNA2018}.
 
 
 \subsection{CO2 DEN}
+
+%Generally, however, refrigerant based DEN are still at a prototype stage.
 
 \subsubsection{The technology}
 Weber and Favrat \cite{weberConventionalAdvancedCO22010a} compared the performance of a DEN using subcritical CO2, the HFO R1234yf and water. They were able to show that the CO2 network performs best, and has the biggest potential for DEN systems\cite{henchozPotentialRefrigerantBased}. 
@@ -244,7 +247,7 @@ The working principle is shown in Figure \ref{fig:CO2schema}. Heating users can 
 \label{fig:CO2schema}
 \end{figure}
 
-One of the big advantages of this technology, with respect to water based DEN, is the pipes sizing. In fact, given the fact that it works on pressure maintenance instead of a fluid flow, no return pipe is necessary, which results in a slightly shorter total length of installed pipes. Moreover, due to the higher energy density of latent heat, the pipes diameter is drastically reduced. Henchoz et al. compared three different working fluid on the same study case, showing that, while CO2 needs pipes of only 280/330mm (liquid/vapor), R123yf would need 270/700mm and water 625/625mm. Given the low operating temperatures, there are much lower requirements for pipes insulation. While water pipes need to be buried deep enough to prevent damage due to water freezing, in case part of the network had to be stopped during winter, CO2 does not freeze and thus does not require a minimum freeze-safe depth. Henchoz et al. have even imagined installing the pipes inside a sidewalk module, which would drastically simplify maintenance and inspection \cite{henchozPotentialRefrigerantBased}. Given the smaller diameter, it would also be possible to retrofit an old, high temperature district heating network, by placing the CO2 pipes inside the old water pipes. All the above mentioned advantages of using CO2, result in lower upfront costs. \\
+One of the big advantages of this technology, with respect to water based DEN, is the pipes sizing. In fact, given the fact that it works on pressure maintenance instead of a fluid flow, no return pipe is necessary, which results in a slightly shorter total length of installed pipes. Moreover, due to the higher energy density of latent heat, the pipes diameter is drastically reduced. Henchoz et al. \cite{henchozPotentialRefrigerantBased} compared three different working fluid on the same study case, showing that, while CO2 needs pipes of only 280/330mm (liquid/vapor), R123yf would need 270/700mm and water 625/625mm. Given the low operating temperatures, there are much lower requirements for pipes insulation. While water pipes need to be buried deep enough to prevent damage due to water freezing, in case part of the network had to be stopped during winter, CO2 does not freeze and thus does not require a minimum freeze-safe depth. Henchoz et al. have even imagined installing the pipes inside a sidewalk module, which would drastically simplify maintenance and inspection. Given the smaller diameter, it would also be possible to retrofit an old, high temperature district heating network, by placing the CO2 pipes inside the old water pipes. All the above mentioned advantages of using CO2, result in lower upfront costs. \\
 %Another advantage is the possibility of up-scaling a network. Indeed, to upscale a water based anergy network would require 
 \todo{CO2den: necessary to talk about the advantage of expanding network with additional compressor easier than for water??}
 
@@ -258,13 +261,14 @@ Henchoz et al.\cite{henchozPotentialRefrigerantBased} performed an analysis of t
 
 \begin{figure}[!htb]
 	\centering
-	\begin{minipage}{.5\textwidth}
+	\begin{minipage}{.45\textwidth}
 		\centering
 		\includegraphics[width=\textwidth,height=0.2\textheight]{henchoz_gva.JPG}
 		\caption{Representation of the the studied area and of its subdivision into 32 zones. Source: \cite{henchozPotentialRefrigerantBased}}
 		\label{fig:henchoz_gva}
 	\end{minipage}%
-	\begin{minipage}{0.5\textwidth}
+\hspace{1cm}
+	\begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[width=\textwidth,height=0.2\textheight]{henchoz_energydemand.JPG}
 		\caption{Energy demand for the area studied over the year 2012. Source: \cite{henchozPotentialRefrigerantBased}}
@@ -314,9 +318,9 @@ With the vast success of heat pumps throughout the last decade, the control of e
 
 On one hand, it simplifies the deployment of a smart control of the heat pumps, which can strongly contribute in the DSM. The decentralized heat pumps can make use of a buildings thermal inertia to adapt electricity use to energy availability. CO2 vapor and liquid storage can act as a buffer, enabling load-shifting also for the central plant of the DEN. Sizing of these storage capacities will determine the possible time-span that the shift can achieve. Given the low distribution temperature, this approach also facilitates the storing of heat, as for example in a geothermal field.
 
-On the other hand, the use of CO2 as a refrigerant for the network could improve the integration of a power to gas (PtG) system. Indeed, one big challenge in the future, especially in higher latitudes, where seasonal variation are consistent, is to ensure energy supply during winter season, when, due to shorter and weaker solar irradiation, PV panels produce less. It is thus important to find a way to store energy the excess renewable energy during the summer, to the winter.
+On the other hand, the use of CO2 as a refrigerant for the network could improve the integration of a power to gas (PtG) system. Indeed, one big challenge in the future, especially in higher latitudes, where seasonal variation are consistent, is to ensure energy supply during winter season, when, due to shorter and weaker solar irradiation, PV panels produce less. It is thus important to find a way to store the excess of renewable energy production during the summer, in order to use it in the winter.
 One solution to do that is PtG, which defines the process of transforming electrical power to a gas, like methane, which is easy to store. To do so, electricity is used to produce hydrogen, which can be combined with CO2 to form Methane, in a process called methanization. Methane can be used during the winter to produce electricity and heat, in a combined heat and power plant (CHP), as for example a SOFC, a gas turbine, or a combination of them. For this reason, PtG is widely studied across Europe and many such plants have already been built.\\ 
-Suciu et al. \cite{suciuEnergyIntegrationCO22018} studied the synergy between a CO2 based DEN, decentralized PV and such a PtG system. The CO2 network could be used to store the carbon dioxide, which is captured from CHPs or industrial processes during winter, needed for methanization. At the same time, the DEN can directly use and dispatch the heat produced from the CHPs. In their work, they analyzed the PV area, and thus the investment, required to achieve a completely autonomous energy system, for different European climatic zones. The results showed that decarbonized autonomous energy systems based on DENs and PtG tecnologies are possible, along with a very broad deployment of solar energy.
+Suciu et al. \cite{suciuEnergyIntegrationCO22018} studied the synergy between a CO2 based DEN, decentralized PV and such a PtG system. The CO2 network could be used to store the carbon dioxide, which is captured from CHPs or industrial processes during winter, needed for methanization. At the same time, the DEN can directly use and dispatch the heat produced from the CHPs. In their work, they analyzed the PV area, and thus the investment, required to achieve a completely autonomous energy system, for different European climatic zones. The results showed that decarbonized autonomous energy systems based on DENs and PtG tecnologies are possible, along with a very broad deployment of solar energy. It is also shown that the payback time of such a system is between 11 and 14 years, which makes it very attractive also from an economic point of view.
 
 \subsection{Direct-expansion ground source heat pump}\label{ss:dx}
 \todo{where to put this section?}
@@ -434,8 +438,31 @@ The needed parameters are:
 
 \section{Methodology}
 
-\subsection{Investment cost function}
-To calculate the investment cost for a given technology, it is possible to interpolate data from available products on the market. However, it is also possible to evaluate a cost function, according to a procedure described by Marechal\cite{Lecturenotes}.\todo{missingreference lecturenotes Marechal}
+\subsection{Energy demand / Typical days}
+According to SIA standards
+
+Threshold temperature for heating or cooling
+
+
+
+The optimization of an energy system is commonly performed over the time span of one year, in order to account for the different seasons. However, this requires a very long computing time, given the high number of timesteps. Thus, it is used to group similar days, according to a set of parameters as for example temperature or irradiation, into so called typical days. The days can be clustered in different ways. It can be chosen to compute an average day for each month or some machine learning clustering algorithm can be used to group the days into the desired number of clusters.
+The resulting typical days correspond to a period $p$, with a number of times $t$, as explained in section \ref{ss:osmose}. In order to account for the data compression, a value called $occurrence$ indicates how many times a given typical day occurs, i.e. how many times a given period occurs.\\
+
+Two additional days with the two opposite extreme temperature conditions are added to the typical days, in order for the model to account for them in the equipment sizing. To avoid a bias of the operation results, those days are set with an occurrence of zero.
+
+
+\subsection{Geothermal wells}\label{ss:gtw}
+
+The most important parameter in geothermal wells is the soil temperature, which is normally constant throughout the year. In fact, only the first 10 meters are influenced by the temperature of the air\cite{hanSensitivityAnalysisVertical2016}. Moreover, the temperature increases with depth. According to the SIA norm SIA384\cite{siaSIA384Sondes2010}, the mean temperature in a geothermal well can be calculated by:
+\begin{equation}
+T_{g, mean} = T_{g,sup} + \frac{L_{w} \cdot \nabla T_{g}}{2}
+\end{equation}
+where $T_{g,sup}$ is the ground temperature at the surface, $L_{w}$ is the length of the well and $ \nabla T_{g}$ is the temperature gradient of the soil.\\
+
+As for other technologies, the energy demand of the circulating pumps is assumed to be negligible. 
+
+\subsection{Investment cost function}\label{ss:ic}
+To calculate the investment cost for a given technology, it is possible to interpolate data from available products on the market. However, it is also possible to evaluate a cost function, according to a standard procedure in industrial processes\cite{turtonrichardc.bailierichardwhitingwallace.AnalysisSynthesisDesign2003}.
 
 First, it is necessary to calculate the cost of purchase of the unit, in function of its size, given by the sizing power, which can be the electrical power $E$, the delivered heat $Q$ or the area of a heat exchanger $A$.
 
@@ -465,8 +492,8 @@ This investment cost function is not a linear function. However, as described in
 	\label{fig:lin}
 \end{figure}
 
-\subsection{Minimum approach temperature}
-The critical sizing parameter for a heat exchange is the minimum approach temperature $\Delta T_{min}$, which corresponds to the smallest temperature difference in the heat exchanger between the hot and the cold stream, as shown in Figure \ref{fig:dtmin}. This value is strongly dependent from the heat exchanger area $A_{ex}$ and the heat transfer coefficients of the exchanging fluids. 
+\subsection{Minimum approach temperature}\label{ss:dtmin}
+The critical sizing parameter for a heat exchange is the minimum approach temperature $\Delta T_{min}$, which corresponds to the smallest temperature difference in the heat exchanger between the hot and the cold stream, as shown in Figure \ref{fig:dtmin}. This value is strongly dependent from the heat exchanger area $A_{ex}$ and the heat transfer coefficients $h$ of the exchanging fluids. They are correlated in the following way: 
 
 \begin{equation}\label{eq:HEX_area}
 A_{ex} = \frac{Q_{ex}}{U \cdot LMTD}
@@ -474,9 +501,12 @@ A_{ex} = \frac{Q_{ex}}{U \cdot LMTD}
 \begin{equation}\label{eq:LMTD}
 LMTD= \frac{(T_{Hot,in } - T_{cold,out }) - (T_{Hot,out } - T_{cold,in }) }{ \log{ (\frac{T_{Hot,in } - T_{cold,out }}{T_{Hot,out } - T_{cold,in }} ) }}
 \end{equation}
-where T are the temperatures of the hot and cold streams, as shown in Figure \ref{fig:dtmin}. The overall heat transfer coefficient is given by \cite{huExtremumSeekingControl2015}:
+\begin{equation}
+	T_{Hot,in } = T_{cold,out} + \Delta T_{min}
+\end{equation}
+where  $LMTD$ id the logarithmic mean temperature difference and T are the inlet and outlet temperatures of the hot and cold streams, as shown in Figure \ref{fig:dtmin}. The overall heat transfer coefficient is given by \cite{huExtremumSeekingControl2015}:
 \begin{equation}\label{eq:alpha}
-U= \frac{1}{ \frac{1}{h_{(hot)} } + \frac{\Delta x_{wall}}{k_{wall}} \frac{1}{h_{(cold)}} }
+U= \frac{1}{ \frac{1}{h_{(hot)} } + \frac{\Delta x_{wall}}{k_{wall}} + \frac{1}{h_{(cold)}} }
 \end{equation}
 where $h_{(hot)}$ and $h_{(cold)}$ are the heat transfer coefficient of the hot and cold fluid, while $\Delta x_{wall}$ and $k_{wall}$ are respectively the thickness and the thermal conductivity of the heat exchanger plates.
 
@@ -488,16 +518,18 @@ where $h_{(hot)}$ and $h_{(cold)}$ are the heat transfer coefficient of the hot 
 \end{figure}
 
 A bigger $A_{ex}$ allows a smaller $\Delta T_{min}$, which increases the investment costs but lowers the operating costs, and the other way around. Therefore, an optimum can be found for each specific application. 
-The optimization is done by minimizing the total cost, which include the operating costs of a heat pump whose COP depends on the $\Delta T_{min}$, and the investment costs of the heat exchanger and of the HP.\\
-\todo{dtmin: finish when clear how it has been done}
-The optimization is done on water refrigerant hp, with values (ic, Q, COP) from space heating. 
-CO2 $\Delta T_{min}$ is calculated maintaining same Area as for ref hp.
+The optimization is done by minimizing the total cost, which include the operating costs of a heat pump - whose COP decreases with $\Delta T_{min}$ -, and the investment costs of the heat exchanger and of the HP:
+\begin{equation}
+	\min_{\Delta T_{min}}\left\lbrace OC(\Delta T_{min}) + IC(\Delta T_{min}) \right\rbrace 
+\end{equation}
 
-for CO2 from this paper\cite{ohFlowBoilingHeat2011}.
-Validated also by 
-This paper shows R134a and R134yf have same heat transfer coefficient\cite{wangOverviewHeatTransfer2013}, comparison with CO2 done in \cite{mastrulloComparisonR744R134a2009}.
-Values are for a diameter and heat flux that could correspond (d = 4.5mm and 20kW/m2)
-Also a list of previous studies
+\todo{dtmin finish rewriting this last part}
+Heat transfer coefficients used are shown in Table \ref{tab:alphas}.
+The values for for R134yf \cite{wangOverviewHeatTransfer2013}
+
+while for CO2 from this paper\cite{ohFlowBoilingHeat2011}.
+Validated also by comparison between the two\cite{mastrulloComparisonR744R134a2009}. 
+\\
 
 \input{Tables/heatTransfCoeff.tex}
 
@@ -523,16 +555,10 @@ In our case
 \end{align}
 where $\dot{Q}_{hot,a}$ and $\dot{Q}_{hot,r}$...?
 
-\subsection{Typical days}
-
-The optimization of an energy system is commonly performed over the time span of one year, in order to account for the different seasons. However, this requires a very long computing time, given the high number of timesteps. Thus, it is used to group similar days, according to a set of parameters as for example temperature or irradiation, into so called typical days. The days can be clustered in different ways. It can be chosen to compute an average day for each month or some machine learning clustering algorithm can be used to group the days into the desired number of clusters.
-The resulting typical days correspond to a period $p$, with a number of times $t$, as explained in section \ref{ss:osmose}. In order to account for the data compression, a value called $occurrence$ indicates how many times a given typical day occurs, i.e. how many times a given period occurs.\\
-
-Two additional days with the two opposite extreme temperature conditions are added to the typical days, in order for the model to account for them in the equipment sizing. To avoid a bias of the operation results, those days are set with an occurrence of zero.
-
 \subsection{Energy technology models}\label{ss:et}
-The models for the energy technologies are adapted from the source code written by Suciu Raluca.\todo{cite anything, or name is enough?}\todo{other names?}
-
+The models for the energy technologies are adapted from the source code written by Suciu Raluca.\todo{cite anything, or name is enough?}\\
+thermodyn cycle from\cite{demierreModelingExperimentalInvestigation2014}\\
+\todo{other names?}
 \subsubsection{Heat pumps - basic (Carnot)}\label{sss:hp_carnot}
 Heat pumps can be modeled in a simple way, using the principle of the Carnot cycle, with help of the following equations:
 \begin{align}
@@ -647,14 +673,19 @@ The procedure to evaluate the operating conditions of the heat pump is the follo
 
 The equations to calculate electrical power of the heat pump and its COP, are the same as in Section \ref{sss:hp_thermo}.
 
+\subsubsection{Cooling tower / Air cooler}\label{sss:cooling_tower}
+A cooling tower is an equipment used to cool down a stream through the ambient air. This is used for example in air conditioning systems, to evacuate the heat into the environment. It consists of a set of fans that blow the air through a heat exchanger. These fans originate a parasitic power consumption that can be calculated with help of the following equation\cite{henchozPotentialRefrigerantBased}:
+\begin{equation}
+\dot{E_{fans}} = \frac{0.605 \cdot \dot{Q}_{cond}}{( \Delta T_{air} + \Delta T_{min}^{ref/air})^{0.9937}}
+\end{equation}
+Where $\dot{Q}_{cond}$ is the heat to be dissipated in the environment by the condenser. 
+
+
 \subsubsection{Geo-cooling}
 Geo-cooling is the use of fresh temperatures of the ground for space cooling. This happens by simply circulating a fluid between the buildings, where the heat is extracted, and the geothermal wells, where heat is released into the ground. In practice, this happens by bypassing the heat pumps and making the water of the secondary loop (geothermal loop) directly exchange with the heating water loop. Investment costs are, thus, limited to an additional heat exchanger. As for the other units, the energy needed for circulation pumps is assumed to be negligible. 
 
 \missingfigure{Image necessary explaining geo-cooling?}
 
-\subsubsection{Geothermal wells}
-Energy for circulating pumps assumed to be negligible. 
-\todo{anything to explain here? numerical applications and research about dtmins in Eglantine Section...?}
 
 \subsubsection{PV}
 The efficiency of the PV panels $\eta_{PV}$ is given by the following equation:
@@ -676,10 +707,35 @@ The area of installed PV $A_{PV}$ is limited by the maximum available roof area 
 \end{equation}
 
 
-\section{Eglantine}
+\subsubsection{Network}\label{sss:net}
+The length is calculated, according to a simplified method\cite{girardinEnerGisGeographicalInformation2010}, with the following equations:
+\begin{equation}
+L = 2(n_{b}-1)K\sqrt{\frac{S}{n_{b}}}
+\end{equation}
+with $S$ being the land area, $n_{b}$ the number of buildings. The constant $K$ is chosen at 0.5.
+And diameter of the pipes:
+\begin{equation}
+d = \sqrt{\frac{4\cdot \dot{m}}{\pi v_{s} \rho}}
+\end{equation}
+assuming a sizing velocity $v_{s}$ of 3 m/s.
+The investment costs are calculated accordingly:
+\begin{equation}
+C = \sum_{k=1}^{n_{b}} \frac{L}{n_{b}} (c_{1} d \sqrt{n_{b}+1-k} + c_{2})
+\end{equation}
+where $c_{1} =5670 $ and $c_{2} = 613 $.\\
+
+Operating temperature is assumed to be 13/15 \si{\celsius}.
+\todo{how has this temperature been chosen? is there a paper? see henchoz with other T}
+Henchoz\cite{henchozPotentialRefrigerantBased} has 10-12.5 for summer and 22.5 for winter!!! 
+
+The pressure losses, and thus the energy needed for the maintaining of the pressure, are assumed to be negligible.
+
+
+\section{Application}
+
+\subsection{Case-study Eglantine}
 In the framework of the collaboration between Romande Energie and IPESE, a case study shall bring a concrete numerical case study into the discussion. For this, Romande Energie has chosen a real life example of a district in the city of Morges. This district is in the planning phase, and Romande Energie had worked on it, in order to participate in the call for tender. This case study shall be fertile ground to discuss the CO2 DEN technology and it's role in the future energy systems in Switzerland and, more particularly, in the future plans of Romande Energie.
 
-\subsection{Case-study}
 \subsubsection{Context}
 
 \begin{figure}[htp]
@@ -704,7 +760,7 @@ The district, which will host around 1'500 people, is composed of thirteen build
 
 \input{Tables/ppa_summary.tex}
 
-The call for tender includes also information about the end use of the buildings, which is shown in Table \ref{tab:ppa_buildinguse}. It can be seen that the buildings include, beside the residential use, also a small share of commercial and catering use, which are associated with different energy needs. Moreover, there is even a small swimming pool, located in building one. 
+The call for tender includes also information about the end use of the buildings, which is shown in Table \ref{tab:ppa_buildinguse}. It can be seen that the buildings include, beside the residential use (multidwelling), also a small share of retail and restaurant services use, which are associated with different energy needs. Moreover, there is even a small indoor swimming pool, located in building one. 
 
 \input{Tables/ppa_buildinguse.tex}
 
@@ -724,98 +780,244 @@ The energy profile of the buildings is calculated according to Minergie standard
 \label{fig:ppa_energydemand}
 \end{figure}
 
-\todo{cooling demand?}
-\todo{typical days graph and results, done as explained in methodology}
-
 \subsubsection{Pre-studies}
 Some pre-studies have been commissioned by the land-owner, in order to give, on an indicative basis, the sizing of the energy system. These studies have been realized by external engineering firms and the results are contained in the call for tender. The studied parameters include the sizing for heat pumps, geothermal wells, as well as PV, and are shown in Table \ref{tab:ppa_prestudy}. They estimate a PV potential on the building roofs of $570 kWp$, and the need for an installed heating power of $1'258 kW$, using 77 geothermal wells of an average length of $271 m$
 \input{Tables/ppa_prestudy.tex}
 
-\subsection{Reference scenario}
-\todo{reference Suciu for Osmose models}
-In order to evaluate the potential of alternative energy systems, a reference scenario is defined. Data about the energy system that will be built in the Eglantine district is not available to the author, and therefore a standard state of the art system is used. It is assumed that the heat demand for space heating and domestic hot water is provided by decentralized geothermal sourced heat pumps. The cooling demand is provided by air cooled vapor compression chillers, also commonly known as air conditioners. The scenario foresees the installation of PV panels on the roof of the buildings.
+\subsubsection{Calculations/Energy demand/Typical days}
+\todo{write section eglantine calculations/energy demand}
 
-\subsubsection{Decentralized heat pumps}
-The heating demand is supplied by a set of decentralized geothermal heat pumps, one for domestic hot water and one for space heating in every building. These heat pumps source the ambient heat from a secondary loop, that exchanges heat with the ground through a system of geothermal wells, the SL-GSHP, which is described in Section \ref{ss:dx}. \\
+\begin{itemize}
+	\item typical days resulting profile
+	\item cooling demand deduced from SIa or minergie
+	\item ...
+\end{itemize}
+
+Figure \ref{fig:energyDemand}, including occurrencies. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{energy_demand.png}
+	\caption{Total energy demand of the Eglantine district}
+	\label{fig:energyDemand}
+\end{figure}
+
+
+\subsection{Heat sources}
+The heat pumps in a system can source heat from various sources. Depending on the case, it is more convenient to use one or the other, given the varying temperatures and investment costs.
+
+\subsubsection{Stream}
+A small stream flows along the eastern boundary of the area, on which the Eglantine district is being built. The official numbers of the canton Vaud \cite{veillehydro-meteorologiqueducantondevaudMorgesRiviereDebit} are shown in Figure \ref{fig:river}, in which the Temperature and the water flow are plotted. These values represent the average over a period of several years (7 for the temperature, and 12 for the flow rates). 
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{river.JPG}
+	\caption{Temperature and flow of the Morges river}
+	\label{fig:river}
+\end{figure}
+
+According to this graph, it could be thought of using this river as a heat source for the heat pumps. However, what is not displayed is the minimum values. In fact, during droughts, the flow rate would not be sufficient to cover the heating/cooling demand. In fact, the lowest value has been reached in August 2004 with $0.017 m^3/s$, and even in December 2005 the lowest daily flow was of $0.057 m^3/s$. \\
+For this reason, the stream has been excluded from further analysis and has not been considered as a viable solution.
+
+\subsubsection{Lake}
+Through a pipe, the water is pumped from the lake, at a depth of around 70 m, to the central plant, located in the district area. 
+
+The massflow of the water is calculated in order to satisfy a drop/rise in the water stream of $\Delta T_{water}  = 4 \si{\celsius}$.
+
+The cost function is calculated as for the CO2 pipes (see Section \ref{sss:net}), considering the needed diameter to satisfy the heating/cooling demand, which depend on the different heat capacity and massflow of the water.
+
+
+\subsubsection{Geothermal wells}
+The average temperature of a geothermal well is calculated according to Section \ref{ss:gtw}. The temperature gradient in the lemanic region is found in experimental data from the canton Geneva\cite{gadzEvaluationPotentielGeothermique2011}:
+\begin{equation}
+\nabla T_{g} = 0.03 [K/m]
+\end{equation}
+This value also corresponds to the average gradient found in the Swiss plateau\cite{siaSIA384Sondes2010}.
+
+The average surface temperature depends mainly on the latitude and on the altitude. Standard values for different regions of Switzerland can be found in the SIA norm 384\cite{siaSIA384Sondes2010}. Experimental measurements\cite{gadzEvaluationPotentielGeothermique2011} show that the surface temperature in the lemanic region is:
+\begin{equation}
+T_{g,s} = 11 \si{\celsius}
+\end{equation}
+The depth of the geothermal wells is found in the pre-studies given in the call for tender:
+\begin{equation}
+L_{gtw} = 267
+\end{equation}
+The mean temperature in the geothermal well can then be calculated:
+\begin{equation}
+T_{g, mean} = 15 \si{\celsius}
+\end{equation}
+\todo{add images of gradient and surface temperature from PGG report?}
+
+It is assumed that the geothermal wells are well sized, in order to respect the natural recharge rate. The recharge rate is strongly dependent on the type of soil and is very important to ensure a sustainable use of the ground heat throughout the years. \\
+
+\todo{Assume a dt of x C around the well? dynamic curve of use}
+
+
+To determine the minimum approach temperature in the well, follow procedure described in Section \ref{ss:dtmin} using the following values:
+
+The exchange area can be estimated, taking a typical diameter of diameter  = 32 mm\cite{siaSIA384Sondes2010, kruseStatusDevelopmentResearcha}\\
+cylinder lateral surface\\
+
+The overall heat transfer coefficient of the well, including the fluid, the bore wall and the soil, is assumed to be $9.3 kW/m^2K$ for a brine loop and $17.1 kW/m^2K$ for the CO2 direct expansion\cite{kruseStatusDevelopmentResearcha}.\\
+
+\todo{this paragraph here or in values?}
+The price for boreholes in Switzerland is found to be around $c_{wells} = 80$ [CHF/m] \cite{bawos.chMitErdsondenbohrungenKosten2018}. In order to provide the model with an energy dependent cost function, this value is transformed with help of the data from Table \ref{tab:ppa_prestudy}:
+\begin{align}
+&  L_{wells}^{tot} = n_{wells} * L_{well}^{average} \\
+& 	\text{Cost function [CHF/kW]} = c_{wells} \frac{L_{wells}^{tot}}{P_{hp}^{tot}}
+\end{align}
+where $L_{wells}$ is the length and $n_{wells}$ the number of boreholes, and $P_{hp}$ is the total power of heat pumps installed.\\
+
+
+result dTmin water ground = 14 and dtmin co2ground = 6.8.
+This value is similar to values found in literature \cite{siaSIA384Sondes2010, lamarcheReviewMethodsEvaluate2010}\\
+
+The water drop in the ground loop is assumed to be 4 \si{\celsius}$dT_{water}$ \cite{lundDESIGNCLOSEDLOOPGEOTHERMAL}
+
+\subsection{External heat sources}
+The main advantage of a 5th generation district heating network is the ability to recover heat, and exchange it among the diversity of user. In the case of the Eglantine project, inside the district there are only very small heat sources and it is thus necessary to identify potential heat sources, located in the surroundings. 
+Two potential heat sources have been identified in the surroundings of the Eglantine district: the ice rink and a shopping mall.
+
+\subsubsection{Ice rink}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=1\textwidth]{IR_schema.JPG}
+	\caption{Energy system of a typical ice rink \cite{gronqvistComparativeLifecycleCost}}
+	\label{fig:IR_schema}
+\end{figure}
+
+An ice rink is a place where people can ice skate and play winter sports. The ice surface is normally inside an arena, which ensures comfortable temperatures for the people on the ice, as well as for the public, throughout the season. This also allows to extend the season, avoiding ice melt, when temperatures are warmer outside.\\
+
+A study, conducted on more than one hundred ice rinks in Sweden, shows that the refrigeration system used to cool the ice surface has the largest share in total energy consumption, 43\% (in average) as indicated in Figure \ref{fig:IR_energyDemand} \cite{karampourMEASUREMENTMODELLINGICE}. 
+However, the ice rink often also includes changing rooms with showers, and a cafeteria or a restaurant, which also present heating demand. According to Figure \ref{fig:IR_energyDemand}, the average share of heating in the total energy demand is 26\%.
+Last but not least, the ice surface has to be constantly illuminated, which requires a powerful lightning system. The global system is shown in Figure \ref{fig:IR_schema}.\\
+
+However, for practicality reasons, it is assumed that only the refrigeration system is connected to the CO2 network, while the heating and electricity demand is supplied by the existing system, and are thus not considered in this model.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{IR_energyDemand.JPG}
+	\caption{Energy demand of a typical ice rink \cite{karampourMEASUREMENTMODELLINGICE}}
+	\label{fig:IR_energyDemand}
+\end{figure}
+
+Ice rinks are conventionally cooled with indirect systems, as shown in the right part of Figure \ref{fig:IR_refSystem}, based on a ammonia (NH3) vapor compression chiller, exchanging with a secondary brine loop that extracts the heat from the ice surface. The waste heat is normally, or at least in older systems, exchanged with the environment, with help of cooling towers. Connecting it to a 5th generation district heating network, would allow recovering this heat and use it to cover the heat demand of other users. The connection to the CO2 network is shown in the left part of Figure \ref{fig:IR_refSystem}.\\
+
+This presents a high energy and exergy efficiency gain, since the refrigeration system can be driven on a lower and constant condensation temperature.
+\todo{insert equations for temperatures with dTmins?}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=1\textwidth]{IceRink_refrigeration.png}
+	\caption{Refrigeration systems for ice rinks}
+	\label{fig:IR_refSystem}
+\end{figure}
+
+The calculation of the cooling demand of the ice rink is based on the following assumptions:
+\begin{itemize}
+	\item Constant load profile throughout the ice season
+	\item Ice season: 1st of August - 1st of April
+	\item $COP_{ref} = 4$ \cite{karampourMEASUREMENTMODELLINGICE}
+	\item Total waste heat = $ 450 MWh/year$ \cite{kolasniewskiEvaluationModellingIce}
+	\item $dT_{min}(refrigerant-ice) = 1 \si{\celsius}$
+	\item $dT_{min}(refrigerant-refrigerant) = 3 \si{\celsius}$
+\end{itemize}
+
+The daily cooling demand profile of the ice rink, is based on the required ice temperature, which varies throughout the day\cite{karampourMEASUREMENTMODELLINGICE}, as shown in Table \ref{tab:IR_profile}.
+
+\input{Tables/IR_profile.tex}
+
+Thus the computed energy demand is shown in Figure...
+\missingfigure{add figure with load profile}
+
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.7\textwidth]{energy_demand.png}
+%	\caption{Total energy demand of the Eglantine district}
+%	\label{fig:energyDemand}
+%\end{figure}
+
+The refrigeration system is modeled the same way as in the reference scenario, taking the lower heat delivery temperatures into account.
+
+\subsubsection{Shopping mall}
+
+
+\subsection{Reference scenario}
+In order to evaluate the potential of alternative energy systems, a reference scenario is defined. Data about the energy system that will be built in the Eglantine district is not available to the author, and therefore a standard state of the art system is used. It is assumed that the heat demand for space heating and domestic hot water is provided by decentralized geothermal sourced heat pumps. The cooling demand is provided by air cooled vapor 
+
+ chillers, also commonly known as air conditioners. The scenario foresees the installation of PV panels on the roof of the buildings.
+
+\missingfigure{energy schema ref scenario}
+
+\subsubsection{Heating}
+The heating demand is supplied by a set of decentralized geothermal heat pumps, one for domestic hot water and one for space heating in every building. These heat pumps source the ambient heat from a secondary loop that exchanges heat with the ground through a system of geothermal wells, the SL-GSHP, which is described in Section \ref{ss:dx}. 
+
 Given the relevance of the heat pumps in the studied energy system, it has been chosen to use its thermodynamic model, which achieves more reliable and precise results.\\
+
 The temperatures at the evaporator and condenser are given by the following equations:
 \begin{equation}
-    T_{evap} = T_{ground} - \Delta T_{min}^{ref/ground} - \Delta T_{water} - \Delta T_{min}^{ref/water}
+    T_{evap} = T_{ground} - \Delta T_{min}^{ground/water} - \Delta T_{water} - \Delta T_{min}^{ref/water}
 \end{equation}
 \begin{equation}
     T_{cond} = T_{demand} + \Delta T_{min}^{ref/water}
 \end{equation}
+where $\Delta T_{min}$ are the corresponding minimum approach temperatures, and $\Delta T_{water}$ is the temperature rise in the secondary water loop exchanging with the ground.
 
-For the space heating heat pump, the refrigerant used is R123yf, as described in Section \ref{sss:hp_thermo}.
+For the space heating heat pump, the refrigerant used is R123yf, as described in Section \ref{sss:hp_thermo}.\\
 
 For the domestic hot water, it is chosen to use transcritical CO2 heat pumps. As described in Section \ref{sss:hp_CO2}, this technology can achieve very good performances supplying heat that requires a high lift. This is the case in domestic hot water, where the water has to be heated from a temperature of 10 \si{\celsius} to a temperature of 55 \si{\celsius}.
 
-Efficiencies: Equations in Section \ref{sss:hp_CO2} and \ref{sss:hp_thermo} could be directly implemented in model. For simplicity, those values have been pre-calculated in function of the operating conditions and are shown in Table \ref{tab:eta_comp}.
+\subsubsection{Cooling}
+Given the availability of geothermal wells, it has been chosen to implement geo-cooling for space cooling. The system is providing cooling at the ground temperature, corrected with the minimum approach temperature $\Delta Tmin_{ground/water}$ and the temperature rise in the water loop $\Delta T_{water}$.
+\begin{equation}
+T_{geo-cooling} = T_{ground} + \Delta T_{min}^{ground/water} + \Delta T_{water}
+\end{equation}
 
-\input{Tables/compressors_eff.tex}
+\subsubsection{Refrigeration}
+The refrigeration is achieved with a set of decentralized air cooled vapor compression chillers, which present the same working principle as heat pumps. Given that energy demand for refrigeration is not as relevant in the case study, it has been chosen to use the basic Carnot cycle model, as explained in Section \ref{sss:hp_carnot}. The heat is evacuated into the environment with help of cooling towers, as described in Section \ref{sss:cooling_tower}.
 
-%Other used values in literature...
-%isentropic comp efficiency R123yf = 0.75 \cite{yangTheoreticalExperimentalInvestigation2016}
-%isentropic comp efficiency CO2 = 0.8 \cite{joneydishariatzadehComparisonTranscriticalCO22016} /0.65 \cite{yangTheoreticalExperimentalInvestigation2016} / 0.55 \cite{steneINTEGRATEDCO2HEAT2007}
+Thus, the total energy consumption is a sum of the energy demand of the compressor and the cooling fans.
+\begin{equation}
+\dot{E} = \dot{E}_{ref} + \dot{E}_{fans}
+\end{equation}
 
-%with Coolprop CO2 transcritical cycle calculator COP ~= 5 (4.94-5.13) for $T_evap$ = 2deg and 8.5 (8.36-8.78) with $T_evap$ = 13deg
-%isentropic efficiency expansion valve = 0.8\cite{yangTheoreticalExperimentalInvestigation2016}
-
-
-\subsubsection{Compression chillers}
-Air cooled, vapor compression chillers. Not as relevant in case study, thus basic Carnot cycle model with efficiency, as explained in Section \ref{ss:hp}.\\
-The operating temperatures are defined in the following way:
+and the operating temperatures are defined in the following way:
 \begin{equation}
     T_{cond} = T_{ext} + \Delta T_{air} + \Delta T_{min}^{ref/air}
 \end{equation}
-Where $\Delta T_{air}$ is the temperature difference of the cooling air between the input and the output of the condenser, while $\Delta T_{min}^{ref/air}$ is the minimum approach temperature difference needed for heat transfer between a refrigerant and air.
-
-$\eta_{COP}$ is assumed at 0.35, from experimental data\cite{henchozPerformanceProfitabilityPerspectives2015}.
-The fans, needed for the cooling of the condenser, originate parasitic power consumption. This is calculated with help of the following equation\cite{henchozPotentialRefrigerantBased}:
-\begin{equation}
-    \dot{E_{fans}} = \frac{0.605 \cdot \dot{Q}_{cond}}{( \Delta T_{air} + \Delta T_{min}^{ref/air})^{0.9937}}
-\end{equation}
-Where $\dot{Q}_{cond}$ is the heat to be dissipated in the environment by the condenser. Thus, the total energy consumption is a sum of the energy demand of the compressor and the cooling fans.
-\begin{equation}
-    \dot{E} = \dot{E}_{ref} + \dot{E}_{fans}
-\end{equation}
-
-\subsubsection{Geo-cooling}
-Given the availability of geothermal wells, it has been chosen to implement geo-cooling for space cooling. The system is providing cooling at the ground temperature, corrected with the minimum approach temperature $\Delta Tmin_{ground/water}$ and the temperature rise in the water loop $\Delta T_{water}$.
-\begin{equation}
-	T_{geo-cooling} = T_{ground} + \Delta Tmin_{ground/water} + \Delta T_{water}
-\end{equation}
+where $\Delta T_{air}$ is the temperature difference of the cooling air between the input and the output of the condenser, while $\Delta T_{min}^{ref/air}$ is the minimum approach temperature difference needed for heat transfer between a refrigerant and air.\\
 
 \subsection{CO2 DEN}
+CO2 network energy system showed in Figure...
+\missingfigure{energy syst schema CO2 DEN}
 
-\subsubsection{Distributed heat pumps}
-For space heating and domestic hot water.
-Same model as for heat pumps in reference scenario. 
-Difference is evaporation temperature, since exchange with CO2 network, and thus:
+\subsubsection{Heating}
+For space heating and domestic hot water, the same model as for the heat pumps in reference scenario are used. Sicne in this case the HP sources heat from the CO2 network instead of the geothermal wells, the mayor difference lies in the evaporation temperature, which corresponds to temperatuer in the CO2 vapor pipe ($T_{CO2,g}$):
 \begin{equation}
     T_{evap} = T_{CO2,g} - \Delta T_{min}^{ref/ref}
 \end{equation}
 
 \subsubsection{Refrigeration}
-Cooling heat pump, same as in ref scenario.
-Difference is at the condenser, which is not cooled by air flow and fans, but by direct exchange with the CO2 network:
+As for the reference scenario, refrigeration is achieved through decentralized vapor compression chillers. However, in this case they are not air cooled, but they exchange directly with the CO2 network. Thus, the temperature in the condenser is given by:
 \begin{equation}
-    T_{cond} = T_{CO2,l} + \Delta T_{min}^{ref/ref}
+    T_{cond} = T_{CO2,l} + \Delta T_{min}^{ref/CO2}
 \end{equation}
 
-\subsubsection{Free cooling}
-Free cooling has been modeled by a simple heat exchanger that evaporates saturated liquid CO2, which is injected back into the network in a superheated vapor state with $\Delta T_{superheating} = 1K$. The mass flow of the CO2 is adapted to satisfy the cooling demand. It is assumed that pressure and temperature losses are negligible.
+\subsubsection{Cooling}
+Free cooling has been modeled by a simple heat exchanger that evaporates saturated liquid CO2, which is then injected back into the network in a superheated vapor state with $\Delta T_{superheating} = 1K$. The mass flow of the CO2 is adapted to satisfy the cooling demand. It is assumed that pressure and temperature losses are negligible.
 
 \subsubsection{Central plant}
 As mentioned before, for obvious reasons, heating and cooling loads in the system are not always balanced. Thus, there is the need for a central plant to balance out the system, able to heat and cool. A centralized heat pump is very suitable for this purpose.
 
 Equations and modeling are the same as for the above described heat pumps. Difference consists in heat source, and thus evaporation temperature. Different options have been studied:
 \begin{itemize}
-    \item Lake: sourced from a certain depth, lake water shows an almost constant temperature of around 7.5 \si{\celsius} throughout the year. This solution can be very interesting alternative to geothermal wells, since, if close enough, it might reduce the upfront costs, despite probably slightly increasing the operating costs. In this particular case, the distance to the lake is of 1500 m.
     \item River: as for the lake, river water can be an interesting source of heat, with the difference of seasonal fluctuations. During the winter, river water can have a temperature close to 0, while in the summer it can rise to more than 20 \si{\celsius}. In the case of the Eglantine district, there is a small stream, called Morges, that passes at the eastern border of the land.
+    \item Lake: sourced from a certain depth, lake water shows an almost constant temperature of around 7.5 \si{\celsius} throughout the year. This solution can be very interesting alternative to geothermal wells, since, if close enough, it might reduce the upfront costs, despite probably slightly increasing the operating costs. In this particular case, the distance to the lake is of 1500 m.
     \item Geothermal wells: after a certain depth, the ground presents a constant and very interesting temperature throughout the year. This heat can be exchanged with help of a secondary loop or through direct expansion of the refrigerant into the ground coils.
 \end{itemize}
 
+\todo{explain lake=ref, geoth=DHX CO2}
 Direct expansion system is assumed (see Section \ref{ss:dx}).
 So the CO2 DEN with DX-GSHP technology is shown in Figure \ref{fig:co2_gshp}
 
@@ -828,31 +1030,12 @@ So the CO2 DEN with DX-GSHP technology is shown in Figure \ref{fig:co2_gshp}
 
 The operating temperatures are calculating the following way.
 \begin{equation}
-    T_{evap} = T_{source} - \Delta T_{min}^{ref/source}
+    T_{evap} = T_{source} - \Delta T_{min}^{CO2/source}
 \end{equation}
 The operating pressure is calculated with help of \textit{Coolprop}. The results are shown in Table \ref{tab:cp_source}.
 \input{Tables/cp_source.tex}
+\todo{summary table needed here (Ts, dTmin, Tevap, P...)? wrong values now}
 
-\subsubsection{Network}
-The length is calculated, according to a simplified method\cite{girardinEnerGisGeographicalInformation2010}, with the following equations:
-\begin{equation}
-    L = 2(n_{b}-1)K\sqrt{\frac{S}{n_{b}}}
-\end{equation}
-with $S$ being the land area, $n_{b}$ the number of buildings. The constant $K$ is chosen at 0.5.
-And diameter of the pipes:
-\begin{equation}
-    d = \sqrt{\frac{4\cdot \dot{m}}{\pi v_{s} \rho}}
-\end{equation}
-assuming a sizing velocity $v_{s}$ of 3 m/s.
-The investment costs are calculated accordingly:
-\begin{equation}
-    C = \sum_{k=1}^{n_{b}} \frac{L}{n_{b}} (c_{1} d \sqrt{n_{b}+1-k} + c_{2})
-\end{equation}
-Operating temperature is assumed to be 13/15 \si{\celsius}.
-\todo{how has this temperature been chosen? is there a paper? see henchoz with other T}
-Henchoz\cite{henchozPotentialRefrigerantBased} has 10-12.5 for summer and 22.5 for winter!!! 
-
-The pressure losses, and thus the energy needed for the maintaining of the pressure, are assumed to be negligible.
 
 \subsection{Values/typical days/...}
 \todo{Table with values}
@@ -865,193 +1048,183 @@ The pressure losses, and thus the energy needed for the maintaining of the press
 	\item ...
 \end{itemize}
 
+\subsubsection{Investment cost functions}
 
-Thus following $\Delta T_{min}$ are have been calculated and used for heat exchanges in the model.
+As described in Section \ref{ss:osmose}, the model need investment cost parameters that can be calculated with the procedure explained in Section \ref{ss:ic}.
+
+Values for the heat pumps are given in Henchoz et al., obtained by linearizing commercial products\cite{henchozPerformanceProfitabilityPerspectives2015}. Cost function for heat exchangers has been interpolated in order to have a function dependent on the exchanged heat.
+
+\input{Tables/ic.tex}
+
+Values are summarized in Table \ref{tab:ic}.
+
+
+\subsubsection{Compressor efficiencies}
+Efficiencies: Equations in Section \ref{sss:hp_CO2} and \ref{sss:hp_thermo} could be directly implemented in model. For simplicity, those values have been pre-calculated in function of the operating conditions and are shown in Table \ref{tab:eta_comp}.
+
+\input{Tables/compressors_eff.tex}
+
+Compare with values from literature?\\
+
+%Other used values in literature...
+%isentropic comp efficiency R123yf = 0.75 \cite{yangTheoreticalExperimentalInvestigation2016}
+%isentropic comp efficiency CO2 = 0.8 \cite{joneydishariatzadehComparisonTranscriticalCO22016} /0.65 \cite{yangTheoreticalExperimentalInvestigation2016} / 0.55 \cite{steneINTEGRATEDCO2HEAT2007}
+
+
+\subsubsection{Minimum approach temperature}
+\todo{rewrite chapter}
+To show the difference in performance between the CO2 (higher \textit{h}) and conventional refrigerants:...
+
+\begin{itemize}
+	\item maintain area with lower dT (lower $OC_{hp}$)
+	\item same dT and lower area (lower $IC_{ex}$)
+\end{itemize}
+
+The optimization is done on water/refrigerant hp, since values well known (ic, Q, COP). 
+
+CO2 $\Delta T_{min}$ is then calculated maintaining same Area as for ref hp. equation solved on \textit{Matlab} with help of function \textit{solve(equation \ref{eq:HEX_area}, $\Delta T_{min}$)}.
+
+Thus following $\Delta T_{min}$ are have been calculated and used for heat exchanges in the model, shown in Table \ref{tab:dtmins}.
 \input{Tables/dTmins.tex}
-\todo{fill in table with correct values}
-
-\subsection{Heat sources}
-The heat pumps in a system can source heat from various sources. Depending on the case, it is more convenient to use one or the other, given the varying temperatures and investment costs.
-
-\subsubsection{Stream}
-A small stream flows along the eastern boundary of the area, on which the Eglantine district is being built. The official numbers of the canton Vaud \cite{veillehydro-meteorologiqueducantondevaudMorgesRiviereDebit} are shown in Figure \ref{fig:river}, in which the Temperature and the water flow are plotted. These values represent the average over a period of several years (7 for the temperature, and 12 for the flow rates). 
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.5\textwidth]{river.JPG}
-\caption{Temperature and flow of the Morges river}
-\label{fig:river}
-\end{figure}
-
-According to this graph, it could be thought of using this river as a heat source for the heat pumps. However, what is not displayed is the minimum values. In fact, during droughts, the flow rate would not be sufficient to cover the heating/cooling demand. In fact, the lowest value has been reached in August 2004 with $0.017 m^3/s$, and even in December 2005 the lowest daily flow was of $0.057 m^3/s$. \\
-For this reason, the stream has been excluded from further analysis and has not been considered as a viable solution.
-
-\subsubsection{Lake}
-
-\subsubsection{Geothermal wells}
-Geothermal
-Ground temperature shown in Figure \ref{fig:GTW_temp}.
-Extracting power
-
-100 CHF/m
-http://bawos.ch/erdsondenbohrungen-kosten-und-planung-zur-gewinnung-von-umgebungswaerme/ 
-https://www.energieheld.ch/heizung/waermepumpe/sole-wasser-erdwaerme 
-Average 30 W/m
-Heating 100/30 = 3600 CHF/kW
-Th conductivity = 2.5 W/mk (between 2-5 \cite{jiaReviewEffectiveThermal2019})
-papers 
-
-$dT_{min}^{ref/ground} = 11 \si{\celsius}$
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.6\textwidth]{GTW_temp.jpg}
-\caption{Graphical representation of ground temperature, for different months of the year. Source: \cite{hanSensitivityAnalysisVertical2016}}
-\label{fig:GTW_temp}
-\end{figure}
-
-$dT_water$ drop in ground loop is 3-5 \si{\celsius} for heating and 5-8 rise for cooling \cite{lundDESIGNCLOSEDLOOPGEOTHERMAL}
-SIA makes an example with 3 \cite{siaSIA384Sondes2010}
-$dT_{min} $ \cite{lundDESIGNCLOSEDLOOPGEOTHERMAL} with 15-16deg
-$dT_{min} $ \cite{lamarcheReviewMethodsEvaluate2010} with 10deg (very complete review of equations for borehole resistance)
-
-\todo{DX: choose dTmin for CO2.. arguments against or from articles}
-
-(9) 4/7 for 13 groundT in https://www.sciencedirect.com/science/article/pii/S019689041630975X 
-14\si{\celsius}\cite{ghazizade-ahsaeeEnergyExergyInvestigation2018} and \cite{austinParametricStudyPerformance2011}
 
 
-\subsection{External heat sources}
-The main advantage of a 5th generation district heating network is the ability to recover heat, and exchange it among the diversity of user. In the case of the Eglantine project, inside the district there are only very small heat sources and it is thus necessary to identify potential heat sources, located in the surroundings. 
-Two potential heat sources have been identified:
+\subsection{Energy Use optim model}
+
+Model is implemented to let solver optimize the composition of the district. The available uses are:
 \begin{itemize}
-    \item The ice rink
-    \item The shopping mall
+	\item Residential (Multidwelling)
+	\item Retail
+	\item Restaurant services
 \end{itemize}
 
-\subsubsection{Ice rink}
+To do so, an additional set of constraint has to be added to the model. The first constraint ensures that the optimizer finds a composition that is maintained throughout all the timesteps:
+\begin{equation}
+Mult_{h,t} = Mult_{h,t+1} \ \forall \ t \in T, \ h \in H
+\end{equation}
+where H is a subset of units U, corresponding to the three type of buildings.
 
-\begin{figure}[htp]
-\centering
-\includegraphics[width=1\textwidth]{IR_schema.JPG}
-\caption{Energy system of a typical ice rink \cite{gronqvistComparativeLifecycleCost}}
-\label{fig:IR_schema}
-\end{figure}
-
-An ice rink is a place where people can ice skate and play winter sports. The ice surface is normally inside an arena, which ensures comfortable temperatures for the people on the ice, as well as for the public, throughout the season. This also allows to extend the season, avoiding ice melt, when temperatures are warmer outside. A refrigeration system is responsible for the cooling of the ice surface. However, the ice rink often also includes changing rooms with showers, and a cafeteria or a restaurant. Thus, there is also need for heating. Furthermore, the ice surface has to be constantly illuminated, which requires a powerful lightning system. The global system is shown in Figure \ref{fig:IR_schema}.\\
-
-The refrigeration of the ice surface leads to a high amount of waste heat, which is normally, or at least in older systems, exchanged with the environment. Connecting it to a 5th generation district heating network, would enable to recover this heat and use it to cover heat demand of other users.\\
-
-The energy consumption of the ice rink has been estimated through a comparison of existing ice rinks in Sweden, which seems to be the only country for which the data is available and has been studied thoroughly.
+Every unit h in H has been sized to the total ERA of the Eglantine district. Thus, the next constraint ensures that the share of all h sum up to the size of the Eglantine district:
+\begin{equation}
+\sum_{h}^{H} Mult_{h,t} = 1 \ \forall \ t \in T, \ h \in H
+\end{equation}
+\todo{use y instead of mult?}
 
 
-Ice rinks normally cooled with indirect system, which is shown in the right part of Figure \ref{fig:IR_refSystem}
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=1\textwidth]{IceRink_refrigeration.png}
-\caption{Refrigeration systems for ice rinks}
-\label{fig:IR_refSystem}
-\end{figure}
-
-this allows to use any refrigerant, since it won't come close to human activity. The most common refrigerant, at least in installed systems, is NH3, ammonia. Natural refrigerants, as for example CO2, are also becoming more common in new installations. 
-The connection to the CO2 network is shown in the left part of Figure \ref{fig:IR_refSystem}.
-
-A study, conducted on more than one hundred ice rinks in Sweden, shows that the refrigeration system has the largest share in total energy consumption, 43\% (in average) as indicated in Figure 8. (Rogstam (a), 2010) Heating with 26\% share is the second biggest energy consumer.
-\cite{karampourMEASUREMENTMODELLINGICE}
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.7\textwidth]{IR_energyDemand.JPG}
-\caption{Energy demand of a typical ice rink \cite{karampourMEASUREMENTMODELLINGICE}}
-\label{fig:IR_energyDemand}
-\end{figure}
-
-The energy demand depends on the temperature of the ice. A typical temperature profile is shown in Table \ref{tab:IR_profile} \cite{karampourMEASUREMENTMODELLINGICE}.
-\begin{table}[h]
-\centering
-\label{tab:IR_profile}
-\caption{Ice rink refrigeration profile}\vspace{2mm} 
-\begin{tabular}{lll}
-\toprule
-\textbf{Period} & \textbf{Rink function} & \textbf{\begin{tabular}[c]{@{}l@{}}$T_{ice}$\\ {[}\si{\celsius}{]}\end{tabular}} \\
-\midrule 
-0.00-6:00   & Night setback   & -1     \\
-6:00-8:00   & Ice maintenance & -1     \\
-8:00-16:00  & Low load        & -3     \\
-16:00-18:00 & Figure skating  & -4     \\
-18:00-24:00 & Hockey          & -6    \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-From sources we have estimated a refrigeration profile shown in Figure ...
-With the following assumptions:
-\begin{itemize}
-    \item Constant load profile throughout the ice season
-    \item Ice season: 1st of August - 1st of April
-    \item $COP_{ref} = 4$ \cite{karampourMEASUREMENTMODELLINGICE}
-    \item Total waste heat = $ 1000 MWh/year$ \cite{kolasniewskiEvaluationModellingIce}
-    \item $dT_{min}(refrigerant-ice) = 1 \si{\celsius}$
-    \item $dT_{min}(refrigerant-refrigerant) = 3 \si{\celsius}$
-\end{itemize}
-
-\missingfigure{add figure with load profile... superpose temperature on second axis?}
-% \begin{figure}[h!]
-% \centering
-% \includegraphics[width=0.7\textwidth]{IR_energyDemand.JPG}
-% \caption{Energy demand of a typical ice rink \cite{karampourMEASUREMENTMODELLINGICE}}
-% \label{fig:IR_energyDemand}
-% \end{figure}
-
-An new and efficient cooling system, together with an intelligent (weather, use, conditions...) management system, can drastically reduce energy consumption. This should be considered in the inclusion of the ice rink as heat source, since the renovation of the existing ice rink, or the construction of a new ice rink, would considerably reduce the amount of available waste heat.
-
-\subsubsection{Shopping mall}
-
-\subsection{Analysis/Extrapolation scenario}
-A scenario to study parameters independently from Eglantine.
-Parameters to study/extrapolate for quick application on other districts:
-\begin{itemize}
-    \item influence on IC,OC,TC
-    \item influence on network temperature $T_net$  
-\end{itemize}
-Varying \% of cooling load, wrt heating load, using varying composition of cities, with categories (commercial/residential/...)
+%\subsection{Analysis/Extrapolation scenario}
+%A scenario to study parameters independently from Eglantine.
+%Parameters to study/extrapolate for quick application on other districts:
+%\begin{itemize}
+%    \item influence on IC,OC,TC
+%    \item influence on network temperature $T_net$  
+%\end{itemize}
+%Varying \% of cooling load, wrt heating load, using varying composition of cities, with categories (commercial/residential/...)
 
 
 \section{Results}
 
 \subsection{Scenario comparison}
+A comparison is made at the Eglantine conditions, for the defined scenarios.
+
+Results are shown:
+
 \missingfigure[]{IC, OC, el consumption...}
+
+\subsubsection{COPs/Exergy}
+
+
+\subsubsection{CAPEX}
 Comparison with existing anergy networks, shown in Table \ref{tab:anergynets_IC}.
 \input{Tables/anergynets_IC.tex}
 
+Percentages similar, but geothermal higher. 
+
+\subsection{Model improvement - thermodyn cycle}
 \todo{do i maintain results with simple cycles somewhere in the results to show how much better it is with cycle?}
 
-\subsection{CO2 network temperature control}
-An optimum for the temperature of the CO2 network has been defined \todo{missing ref}.
-The question arises if this temperature might vary in function of the operating condition of the network, i.e. the balance of heating and cooling load, the heat source temperature...\\
-A model has been implemented to study this, by leaving the optimizer choose the optimal operating temperature of the network for every given timestep.\\
-The results show that...
-\missingfigure{graph of $Temp_net(time)$}
-Then a simple representative scenario has been modeled, with a typical building, and a typical refrigeration, and varying \% of cooling load, wrt heating load.
-\missingfigure{graph of $Temp_net$(\% of cooling/heating)}
+Comparison of results with simple Carnot model and with thermodyn model. Show difference in COPs\\
 
-\subsection{Sensitivity analysis}
-Perform sensitivity analysis on:
-\begin{itemize}
-    \item PV area
-    \item distance of lake
-    \item size of Heat source (IceRink)
-    \item distance of IceRink
-    \item other ideas?
-\end{itemize}
+Recalculation of $\eta_{COP}$ for all ETs. From the real COP calculated with help of coolprop and the thermodynamic cycle of the heat pump, the COP efficiency can easily be calculated
+\begin{equation}
+	\eta_{COP} = \frac{COP_{real}}{COP_{theoretical}}
+\end{equation}
+
+Values are higher. Too high?\\
+
+Table with new eta cop values.\\
+
+COP Comparison with values from literature?\\
+
+%with Coolprop CO2 transcritical cycle calculator COP ~= 5 (4.94-5.13) for $T_evap$ = 2deg and 8.5 (8.36-8.78) with $T_evap$ = 13deg
+%isentropic efficiency expansion valve = 0.8\cite{yangTheoreticalExperimentalInvestigation2016}
+
+
+
+\subsection{Ground temperature}
+Sensitivity analysis is done on ground temperature.
+
+This would correspond to a geographical location, since ground has different temperatures in different latitudes and countries.
+
+In Switzerland this would correspond to different well depth. To study this thoroughly it would be necessary to have a model for the geothermal well, taking into account the temperature gradient in function of depth, as well as the varying heat transfer coefficient for the CO2 vapor on the upward pipe. This model should also account for the recharge rate of the soil, which would improve the equipment sizing.
+
+\subsection{DX Vs. SL-GSHP}
+As discussed in Section \ref{ss:dx}, there is the possibility to directly expand the CO2 into the geothermal well, instead of exchanging with help of a secondary water loop. 
+
+Results of simulation, show the difference in performance, \ref{tab:dxVSsl}.
+
+\input{Tables/cp_comparison.tex}
+\todo{complete table with exergy efficiencies}
+
+CO2 heat pump has lower efficiencies (see Table \ref{tab:eta_comp}) thus $\eta_{COP}$ but much lower temperature difference to cover.
+
+So much higher COP and exergy efficiency!
+
+\subsection{Lake distance}
+Lake presents a lower average temperature than ground, but also smaller minimum approach temperature needed. 
+
+In comparison 7.5 - 4dTwater - 4dTminwr = -0.5 VS 15 - 6.8dTmingr = 8.2
+
+this results in higher OC. The main advantage can be the reduction of upfront costs, by avoiding geothermal drilling. Pressure losses as well as the energy for pumping have been neglected, so the cost of the water pipes is mainly dependent on the distance of the lake water. Thus the threshold distance can be calculated, for the choice between lake or geothermal:
+
+\missingfigure{distLake threshold in TC/OC/IC graph}
+
+A sensitivity analysis has been performed on this threshold, in function of the ground temperature, since it is a crucial parameter for different climates.
+
+\missingfigure{distLake threshold (Tground)}
+
+
+\subsection{External heat source}
+The integration of external heat sources, big as for example the ice rink in Eglantine case, is very interesting for this technology. However, this always depends on the ratio between the IC and the OC. In this case, this can be calculated with the ratio between the additional meters of pipes that have to be installed, wrt the amount of heat that can be recovered per year.
+\todo{good thing to do?}
+
+
+An new and efficient cooling system, together with an intelligent (weather, use, conditions...) management system, can drastically reduce energy consumption. This should be considered in the inclusion of the ice rink as heat source, since the renovation of the existing ice rink, or the construction of a new ice rink, would considerably reduce the amount of available waste heat.
+
+
+\subsection{others}
+\todo{do something on PV? Cant see what could be interesting in our case}
+
+
+%\subsection{CO2 network temperature control}
+%An optimum for the temperature of the CO2 network has been defined \todo{missing ref}.
+%The question arises if this temperature might vary in function of the operating condition of the network, i.e. the balance of heating and cooling load, the heat source temperature...\\
+%A model has been implemented to study this, by leaving the optimizer choose the optimal operating temperature of the network for every given timestep.\\
+%The results show that...
+%\missingfigure{graph of $Temp_net(time)$}
+%Then a simple representative scenario has been modeled, with a typical building, and a typical refrigeration, and varying \% of cooling load, wrt heating load.
+%\missingfigure{graph of $Temp_net$(\% of cooling/heating)}
+
 
 \section{Discussion}
 
 \section{Outlook}
 This and this has been analyzed and results have shown.\\
+
 However, it would be very interesting to make detailed analysis of...\\
-This model should be improved...\\
+
+This model should be improved...
+
+Geothermal model: In Switzerland this would correspond to different well depth. To study this thoroughly it would be necessary to have a model for the geothermal well, taking into account the temperature gradient in function of depth, as well as the varying heat transfer coefficient for the CO2 vapor on the upward pipe. This model should also account for the recharge rate of the soil, which would improve the equipment sizing. And thus storage, or gain through restoring/injecting heat.\\
+
 This new thing could be integrated...\\
 
 \section{Conclusion}

@@ -13,46 +13,57 @@
 \contentsline {subsubsection}{\numberline {2.5.1}MILP}{11}{subsubsection.2.5.1}% 
 \contentsline {subsection}{\numberline {2.6}Osmose}{11}{subsection.2.6}% 
 \contentsline {section}{\numberline {3}Methodology}{12}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}Investment cost function}{12}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Minimum approach temperature}{13}{subsection.3.2}% 
-\contentsline {subsection}{\numberline {3.3}Exergy}{14}{subsection.3.3}% 
-\contentsline {subsection}{\numberline {3.4}Typical days}{15}{subsection.3.4}% 
-\contentsline {subsection}{\numberline {3.5}Energy technology models}{15}{subsection.3.5}% 
-\contentsline {subsubsection}{\numberline {3.5.1}Heat pumps - basic (Carnot)}{15}{subsubsection.3.5.1}% 
-\contentsline {subsubsection}{\numberline {3.5.2}Heat pumps - detailed (Thermodyn.)}{15}{subsubsection.3.5.2}% 
-\contentsline {subsubsection}{\numberline {3.5.3}Heat pump - supercritical CO2}{17}{subsubsection.3.5.3}% 
-\contentsline {subsubsection}{\numberline {3.5.4}Geo-cooling}{19}{subsubsection.3.5.4}% 
-\contentsline {subsubsection}{\numberline {3.5.5}Geothermal wells}{19}{subsubsection.3.5.5}% 
-\contentsline {subsubsection}{\numberline {3.5.6}PV}{19}{subsubsection.3.5.6}% 
-\contentsline {section}{\numberline {4}Eglantine}{19}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Case-study}{19}{subsection.4.1}% 
-\contentsline {subsubsection}{\numberline {4.1.1}Context}{19}{subsubsection.4.1.1}% 
-\contentsline {subsubsection}{\numberline {4.1.2}Buildings}{21}{subsubsection.4.1.2}% 
-\contentsline {subsubsection}{\numberline {4.1.3}Pre-studies}{22}{subsubsection.4.1.3}% 
-\contentsline {subsection}{\numberline {4.2}Reference scenario}{24}{subsection.4.2}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Decentralized heat pumps}{24}{subsubsection.4.2.1}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Compression chillers}{24}{subsubsection.4.2.2}% 
-\contentsline {subsubsection}{\numberline {4.2.3}Geo-cooling}{25}{subsubsection.4.2.3}% 
-\contentsline {subsection}{\numberline {4.3}CO2 DEN}{25}{subsection.4.3}% 
-\contentsline {subsubsection}{\numberline {4.3.1}Distributed heat pumps}{25}{subsubsection.4.3.1}% 
-\contentsline {subsubsection}{\numberline {4.3.2}Refrigeration}{25}{subsubsection.4.3.2}% 
-\contentsline {subsubsection}{\numberline {4.3.3}Free cooling}{25}{subsubsection.4.3.3}% 
-\contentsline {subsubsection}{\numberline {4.3.4}Central plant}{25}{subsubsection.4.3.4}% 
-\contentsline {subsubsection}{\numberline {4.3.5}Network}{26}{subsubsection.4.3.5}% 
-\contentsline {subsection}{\numberline {4.4}Values/typical days/...}{27}{subsection.4.4}% 
-\contentsline {subsection}{\numberline {4.5}Heat sources}{27}{subsection.4.5}% 
-\contentsline {subsubsection}{\numberline {4.5.1}Stream}{27}{subsubsection.4.5.1}% 
-\contentsline {subsubsection}{\numberline {4.5.2}Lake}{28}{subsubsection.4.5.2}% 
-\contentsline {subsubsection}{\numberline {4.5.3}Geothermal wells}{28}{subsubsection.4.5.3}% 
-\contentsline {subsection}{\numberline {4.6}External heat sources}{28}{subsection.4.6}% 
-\contentsline {subsubsection}{\numberline {4.6.1}Ice rink}{28}{subsubsection.4.6.1}% 
-\contentsline {subsubsection}{\numberline {4.6.2}Shopping mall}{31}{subsubsection.4.6.2}% 
-\contentsline {subsection}{\numberline {4.7}Analysis/Extrapolation scenario}{31}{subsection.4.7}% 
-\contentsline {section}{\numberline {5}Results}{31}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}Scenario comparison}{31}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}CO2 network temperature control}{32}{subsection.5.2}% 
-\contentsline {subsection}{\numberline {5.3}Sensitivity analysis}{32}{subsection.5.3}% 
-\contentsline {section}{\numberline {6}Discussion}{33}{section.6}% 
-\contentsline {section}{\numberline {7}Outlook}{33}{section.7}% 
-\contentsline {section}{\numberline {8}Conclusion}{33}{section.8}% 
-\contentsline {section}{\numberline {9}Anergy nets Switzerland}{35}{section.9}% 
+\contentsline {subsection}{\numberline {3.1}Energy demand / Typical days}{12}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Geothermal wells}{13}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}Investment cost function}{13}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.4}Minimum approach temperature}{14}{subsection.3.4}% 
+\contentsline {subsection}{\numberline {3.5}Exergy}{15}{subsection.3.5}% 
+\contentsline {subsection}{\numberline {3.6}Energy technology models}{15}{subsection.3.6}% 
+\contentsline {subsubsection}{\numberline {3.6.1}Heat pumps - basic (Carnot)}{16}{subsubsection.3.6.1}% 
+\contentsline {subsubsection}{\numberline {3.6.2}Heat pumps - detailed (Thermodyn.)}{16}{subsubsection.3.6.2}% 
+\contentsline {subsubsection}{\numberline {3.6.3}Heat pump - supercritical CO2}{18}{subsubsection.3.6.3}% 
+\contentsline {subsubsection}{\numberline {3.6.4}Cooling tower / Air cooler}{19}{subsubsection.3.6.4}% 
+\contentsline {subsubsection}{\numberline {3.6.5}Geo-cooling}{20}{subsubsection.3.6.5}% 
+\contentsline {subsubsection}{\numberline {3.6.6}PV}{20}{subsubsection.3.6.6}% 
+\contentsline {section}{\numberline {4}Application}{20}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Case-study Eglantine}{20}{subsection.4.1}% 
+\contentsline {subsubsection}{\numberline {4.1.1}Context}{20}{subsubsection.4.1.1}% 
+\contentsline {subsubsection}{\numberline {4.1.2}Buildings}{22}{subsubsection.4.1.2}% 
+\contentsline {subsubsection}{\numberline {4.1.3}Pre-studies}{24}{subsubsection.4.1.3}% 
+\contentsline {subsubsection}{\numberline {4.1.4}Calculations/Energy demand/Typical days}{24}{subsubsection.4.1.4}% 
+\contentsline {subsection}{\numberline {4.2}Heat sources}{25}{subsection.4.2}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Stream}{25}{subsubsection.4.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Lake}{26}{subsubsection.4.2.2}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Geothermal wells}{26}{subsubsection.4.2.3}% 
+\contentsline {subsection}{\numberline {4.3}External heat sources}{27}{subsection.4.3}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Ice rink}{27}{subsubsection.4.3.1}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Shopping mall}{29}{subsubsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.4}Reference scenario}{29}{subsection.4.4}% 
+\contentsline {subsubsection}{\numberline {4.4.1}Heating}{30}{subsubsection.4.4.1}% 
+\contentsline {subsubsection}{\numberline {4.4.2}Cooling}{30}{subsubsection.4.4.2}% 
+\contentsline {subsubsection}{\numberline {4.4.3}Refrigeration}{30}{subsubsection.4.4.3}% 
+\contentsline {subsection}{\numberline {4.5}CO2 DEN}{30}{subsection.4.5}% 
+\contentsline {subsubsection}{\numberline {4.5.1}Heating}{31}{subsubsection.4.5.1}% 
+\contentsline {subsubsection}{\numberline {4.5.2}Refrigeration}{31}{subsubsection.4.5.2}% 
+\contentsline {subsubsection}{\numberline {4.5.3}Cooling}{31}{subsubsection.4.5.3}% 
+\contentsline {subsubsection}{\numberline {4.5.4}Central plant}{31}{subsubsection.4.5.4}% 
+\contentsline {subsubsection}{\numberline {4.5.5}Network}{32}{subsubsection.4.5.5}% 
+\contentsline {subsection}{\numberline {4.6}Values/typical days/...}{33}{subsection.4.6}% 
+\contentsline {subsubsection}{\numberline {4.6.1}Investment cost functions}{33}{subsubsection.4.6.1}% 
+\contentsline {subsubsection}{\numberline {4.6.2}Compressor efficiencies}{33}{subsubsection.4.6.2}% 
+\contentsline {subsubsection}{\numberline {4.6.3}Minimum approach temperature}{34}{subsubsection.4.6.3}% 
+\contentsline {subsection}{\numberline {4.7}Energy Use optim model}{34}{subsection.4.7}% 
+\contentsline {section}{\numberline {5}Results}{34}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Scenario comparison}{34}{subsection.5.1}% 
+\contentsline {subsubsection}{\numberline {5.1.1}COPs/Exergy}{35}{subsubsection.5.1.1}% 
+\contentsline {subsubsection}{\numberline {5.1.2}CAPEX}{35}{subsubsection.5.1.2}% 
+\contentsline {subsection}{\numberline {5.2}Model improvement - thermodyn cycle}{35}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.3}Ground temperature}{35}{subsection.5.3}% 
+\contentsline {subsection}{\numberline {5.4}DX Vs. SL-GSHP}{36}{subsection.5.4}% 
+\contentsline {subsection}{\numberline {5.5}Lake distance}{36}{subsection.5.5}% 
+\contentsline {subsection}{\numberline {5.6}External heat source}{37}{subsection.5.6}% 
+\contentsline {subsection}{\numberline {5.7}others}{37}{subsection.5.7}% 
+\contentsline {section}{\numberline {6}Discussion}{37}{section.6}% 
+\contentsline {section}{\numberline {7}Outlook}{37}{section.7}% 
+\contentsline {section}{\numberline {8}Conclusion}{37}{section.8}% 
+\contentsline {section}{\numberline {9}Anergy nets Switzerland}{39}{section.9}% 

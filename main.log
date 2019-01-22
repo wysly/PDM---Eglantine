@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.4)  16 JAN 2019 18:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.4)  22 JAN 2019 16:43
 entering extended mode
 **./main.tex
 (main.tex
@@ -1151,7 +1151,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex.exe (file ./Images/Logos/logo_epfl-eps-converted-to.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Logos/logo_epfl-eps-converted-to.pdf, id=262, 142.5325pt x 68.255pt>
+<Images/Logos/logo_epfl-eps-converted-to.pdf, id=306, 142.5325pt x 68.255pt>
 File: Images/Logos/logo_epfl-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/Logos/logo_epfl-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Logos/logo_epfl-eps-converted-to.pdf  used on i
@@ -1172,7 +1172,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex.exe (file ./Images/Logos/logo_ipese-eps-converted-to.p
 df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Logos/logo_ipese-eps-converted-to.pdf, id=263, 1576.89125pt x 566.115pt
+<Images/Logos/logo_ipese-eps-converted-to.pdf, id=307, 1576.89125pt x 566.115pt
 >
 File: Images/Logos/logo_ipese-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/Logos/logo_ipese-eps-converted-to.pdf>
@@ -1206,76 +1206,80 @@ l.80 \newpage
               [1]
 
 LaTeX Warning: Citation `ipccSummaryPolicymakersIPCC2018' on page 2 undefined o
-n input line 124.
+n input line 125.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
 
 LaTeX Warning: Citation `bacherEnergieRespektSchlusselFur2014' on page 2 undefi
-ned on input line 126.
+ned on input line 127.
+
+
+LaTeX Warning: Citation `ipccSummaryPolicymakersIPCC2018' on page 2 undefined o
+n input line 129.
 
 
 LaTeX Warning: Citation `birolFutureCooling2018' on page 2 undefined on input l
-ine 128.
+ine 129.
 
-<Images/cooling_energy.JPG, id=433, 510.40688pt x 181.42781pt>
+<Images/cooling_energy.JPG, id=497, 510.40688pt x 181.42781pt>
 File: Images/cooling_energy.JPG Graphic file (type jpg)
 <use Images/cooling_energy.JPG>
-Package pdftex.def Info: Images/cooling_energy.JPG  used on input line 132.
+Package pdftex.def Info: Images/cooling_energy.JPG  used on input line 133.
 (pdftex.def)             Requested size: 298.75264pt x 106.19989pt.
 
 LaTeX Warning: Citation `birolFutureCooling2018' on page 2 undefined on input l
-ine 133.
+ine 134.
 
 
 LaTeX Warning: Citation `hsluClimaBauPlanenAngesichts2017' on page 2 undefined 
-on input line 137.
+on input line 138.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
-<Images/climat_CH.JPG, id=435, 574.39594pt x 230.36063pt>
-File: Images/climat_CH.JPG Graphic file (type jpg)
-<use Images/climat_CH.JPG>
-Package pdftex.def Info: Images/climat_CH.JPG  used on input line 141.
-(pdftex.def)             Requested size: 298.75264pt x 119.81631pt.
+<Images/clima_CH.png, id=499, 977.90344pt x 392.21532pt>
+File: Images/clima_CH.png Graphic file (type png)
+<use Images/clima_CH.png>
+Package pdftex.def Info: Images/clima_CH.png  used on input line 142.
+(pdftex.def)             Requested size: 298.75264pt x 119.82597pt.
 
 LaTeX Warning: Citation `hsluClimaBauPlanenAngesichts2017' on page 2 undefined 
-on input line 142.
+on input line 143.
 
 
 LaTeX Warning: Citation `hsluClimaBauPlanenAngesichts2017' on page 2 undefined 
-on input line 142.
+on input line 143.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: Citation `unitednationspopulationdivisionWorldUrbanizationProspe
-cts' on page 2 undefined on input line 146.
+cts' on page 2 undefined on input line 147.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.148 
+l.149 
        [2 <./Images/cooling_energy.JPG>]
 
 LaTeX Warning: Citation `weberConventionalAdvancedCO22010a' on page 3 undefined
- on input line 165.
+ on input line 166.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--167
+Underfull \hbox (badness 10000) in paragraph at lines 166--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
@@ -1283,24 +1287,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.178 
-       [3 <./Images/climat_CH.JPG>]
-<Images/4GDH.jpg, id=450, 484.7846pt x 381.81584pt>
+l.179 
+       [3 <./Images/clima_CH.png>]
+<Images/4GDH.jpg, id=516, 484.7846pt x 381.81584pt>
 File: Images/4GDH.jpg Graphic file (type jpg)
 <use Images/4GDH.jpg>
-Package pdftex.def Info: Images/4GDH.jpg  used on input line 183.
+Package pdftex.def Info: Images/4GDH.jpg  used on input line 184.
 (pdftex.def)             Requested size: 426.79135pt x 336.13881pt.
 
 
 LaTeX Warning: Citation `lund4thGenerationDistrict2014' on page 4 undefined on 
-input line 184.
+input line 185.
 
 
 LaTeX Warning: Citation `lund4thGenerationDistrict2014' on page 4 undefined on 
-input line 184.
+input line 185.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
@@ -1308,394 +1312,420 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.196 
+l.197 
        [4 <./Images/4GDH.jpg>]
 
 LaTeX Warning: Citation `energieschweizFallbeispieleThermischeNetze2018' on pag
-e 5 undefined on input line 197.
+e 5 undefined on input line 198.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
 (Tables/anergynets_summary.tex
-Overfull \hbox (59.252pt too wide) in paragraph at lines 5--32
+Overfull \hbox (37.15398pt too wide) in paragraph at lines 5--32
  [][] 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
-<Images/refrigerants.JPG, id=457, 573.64313pt x 406.51875pt>
+[5]
+<Images/refrigerants.JPG, id=529, 573.64313pt x 406.51875pt>
 File: Images/refrigerants.JPG Graphic file (type jpg)
 <use Images/refrigerants.JPG>
-Package pdftex.def Info: Images/refrigerants.JPG  used on input line 205.
+Package pdftex.def Info: Images/refrigerants.JPG  used on input line 206.
 (pdftex.def)             Requested size: 256.07741pt x 181.47404pt.
 
-LaTeX Warning: Citation `danfossRefrigerantOptionsNow2017' on page 5 undefined 
-on input line 206.
+
+LaTeX Warning: Citation `danfossRefrigerantOptionsNow2017' on page 6 undefined 
+on input line 207.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Citation `hydrocarbons21.comSwitzerlandIntroduceHFC' on page 5 u
-ndefined on input line 212.
+LaTeX Warning: Citation `hydrocarbons21.comSwitzerlandIntroduceHFC' on page 6 u
+ndefined on input line 213.
 
 
 LaTeX Warning: Citation `europeancommissionforclimateactionEULegislationControl
-2016' on page 5 undefined on input line 212.
+2016' on page 6 undefined on input line 213.
 
 
-LaTeX Warning: Citation `danfossRefrigerantOptionsNow2017' on page 5 undefined 
-on input line 213.
-
-
-LaTeX Warning: Citation `williamsMigrosDNA2018' on page 5 undefined on input li
-ne 213.
-
-
-LaTeX Warning: Citation `cavalliniPROPERTIESCO2REFRIGERANT' on page 5 undefined
- on input line 214.
-
-[5]
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 216.
-
-
-LaTeX Warning: Citation `weberConventionalAdvancedCO22010a' on page 6 undefined
- on input line 228.
-
-
-LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 6 undefined 
-on input line 228.
-
-
-LaTeX Warning: Citation `suciuEnergyIntegrationCO22018' on page 6 undefined on 
-input line 231.
-
-
-LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 6 undefined 
-on input line 232.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--233
+Underfull \hbox (badness 10000) in paragraph at lines 211--214
 
  []
 
+
+LaTeX Warning: Citation `cavalliniPROPERTIESCO2REFRIGERANT' on page 6 undefined
+ on input line 215.
+
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 217.
+
+LaTeX Warning: Citation `danfossRefrigerantOptionsNow2017' on page 6 undefined 
+on input line 223.
+
+
+LaTeX Warning: Citation `williamsMigrosDNA2018' on page 6 undefined on input li
+ne 223.
+
+
+LaTeX Warning: Citation `weberConventionalAdvancedCO22010a' on page 6 undefined
+ on input line 231.
+
+
+LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 6 undefined 
+on input line 231.
+
 [6 <./Images/refrigerants.JPG>]
-<Images/CO2schema.JPG, id=472, 629.35126pt x 341.02406pt>
+
+LaTeX Warning: Citation `suciuEnergyIntegrationCO22018' on page 7 undefined on 
+input line 234.
+
+
+LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 7 undefined 
+on input line 235.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
+
+ []
+
+<Images/CO2schema.JPG, id=538, 629.35126pt x 341.02406pt>
 File: Images/CO2schema.JPG Graphic file (type jpg)
 <use Images/CO2schema.JPG>
-Package pdftex.def Info: Images/CO2schema.JPG  used on input line 242.
+Package pdftex.def Info: Images/CO2schema.JPG  used on input line 245.
 (pdftex.def)             Requested size: 426.79135pt x 231.26366pt.
 
-
 LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 7 undefined 
-on input line 243.
-
-
-LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 7 undefined 
-on input line 243.
+on input line 246.
 
 
 LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 7 undefined 
-on input line 247.
+on input line 246.
+
+
+LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 7 undefined 
+on input line 250.
 
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 249.
+ine 252.
+[7 <./Images/CO2schema.JPG>]
 
-LaTeX Warning: Marginpar on page 7 moved.
+LaTeX Warning: Marginpar on page 8 moved.
 
 
-LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 7 undefined 
-on input line 257.
+LaTeX Warning: Marginpar on page 8 moved.
 
-<Images/henchoz_gva.JPG, id=475, 561.59813pt x 294.34969pt>
+
+LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 8 undefined 
+on input line 260.
+
+<Images/henchoz_gva.JPG, id=546, 561.59813pt x 294.34969pt>
 File: Images/henchoz_gva.JPG Graphic file (type jpg)
 <use Images/henchoz_gva.JPG>
-Package pdftex.def Info: Images/henchoz_gva.JPG  used on input line 263.
-(pdftex.def)             Requested size: 213.39236pt x 134.86353pt.
+Package pdftex.def Info: Images/henchoz_gva.JPG  used on input line 266.
+(pdftex.def)             Requested size: 192.05484pt x 134.86353pt.
 
-LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 7 undefined 
-on input line 264.
+LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 8 undefined 
+on input line 267.
 
 
-LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 7 undefined 
-on input line 264.
+LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 8 undefined 
+on input line 267.
 
-<Images/henchoz_energydemand.JPG, id=476, 445.665pt x 341.77687pt>
+<Images/henchoz_energydemand.JPG, id=547, 445.665pt x 341.77687pt>
 File: Images/henchoz_energydemand.JPG Graphic file (type jpg)
 <use Images/henchoz_energydemand.JPG>
-Package pdftex.def Info: Images/henchoz_energydemand.JPG  used on input line 26
-9.
-(pdftex.def)             Requested size: 213.39314pt x 134.86739pt.
+Package pdftex.def Info: Images/henchoz_energydemand.JPG  used on input line 27
+3.
+(pdftex.def)             Requested size: 192.05383pt x 134.86739pt.
 
-LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 7 undefined 
-on input line 270.
+LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 8 undefined 
+on input line 274.
 
 
-LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 7 undefined 
-on input line 270.
+LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 8 undefined 
+on input line 274.
 
-[7 <./Images/CO2schema.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
 
  []
 
 (Tables/henchoz_area.tex)
-<Images/henchoz_costs.JPG, id=485, 377.15906pt x 259.7203pt>
+<Images/henchoz_costs.JPG, id=552, 377.15906pt x 259.7203pt>
 File: Images/henchoz_costs.JPG Graphic file (type jpg)
 <use Images/henchoz_costs.JPG>
-Package pdftex.def Info: Images/henchoz_costs.JPG  used on input line 304.
+Package pdftex.def Info: Images/henchoz_costs.JPG  used on input line 308.
 (pdftex.def)             Requested size: 213.39568pt x 146.94832pt.
 
 
 LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 8 undefined 
-on input line 305.
+on input line 309.
 
 
 LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 8 undefined 
-on input line 305.
+on input line 309.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
 [8 <./Images/henchoz_gva.JPG> <./Images/henchoz_energydemand.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
+
+ []
+
 
 LaTeX Warning: Citation `suciuEnergyIntegrationCO22018' on page 9 undefined on 
-input line 319.
+input line 323.
 
 
 LaTeX Warning: Citation `kruseStatusDevelopmentResearch' on page 9 undefined on
- input line 324.
+ input line 328.
 
 
 LaTeX Warning: Citation `guoTechnoeconomicComparisonDirect2012' on page 9 undef
-ined on input line 324.
+ined on input line 328.
 
-<Images/GSHP.png, id=497, 764.8575pt x 770.88pt>
+[9 <./Images/henchoz_costs.JPG>]
+<Images/GSHP.png, id=568, 764.8575pt x 770.88pt>
 File: Images/GSHP.png Graphic file (type png)
 <use Images/GSHP.png>
-Package pdftex.def Info: Images/GSHP.png  used on input line 328.
+Package pdftex.def Info: Images/GSHP.png  used on input line 332.
 (pdftex.def)             Requested size: 426.79135pt x 430.14896pt.
-[9 <./Images/henchoz_costs.JPG>]
+
 
 LaTeX Warning: Citation `eslami-nejadModelingTwophaseCO2filled2014a' on page 10
- undefined on input line 333.
+ undefined on input line 337.
 
 
 LaTeX Warning: Citation `ghazizade-ahsaeeEnergyExergyInvestigation2018' on page
- 10 undefined on input line 333.
+ 10 undefined on input line 337.
 
 
 LaTeX Warning: Citation `austinParametricStudyPerformance2011' on page 10 undef
-ined on input line 333.
+ined on input line 337.
 
 
 LaTeX Warning: Citation `eslami-nejadQuasitransientModelTranscritical2015' on p
-age 10 undefined on input line 333.
+age 10 undefined on input line 337.
 
 
 LaTeX Warning: Citation `eslami-nejadDetailedTheoreticalCharacterization2018' o
-n page 10 undefined on input line 333.
+n page 10 undefined on input line 337.
 
 
 LaTeX Warning: Citation `badacheExperimentalStudyCarbon2018' on page 10 undefin
-ed on input line 333.
+ed on input line 337.
 
 
 LaTeX Warning: Citation `guoTechnoeconomicComparisonDirect2012' on page 10 unde
-fined on input line 333.
+fined on input line 337.
 
 [10 <./Images/GSHP.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
 [11]
+Underfull \hbox (badness 10000) in paragraph at lines 448--450
 
-LaTeX Warning: Citation `Lecturenotes' on page 12 undefined on input line 438.
-
-
-Overfull \hbox (13.88899pt too wide) in paragraph at lines 438--438
-[][][][]\OT1/cmr/m/n/10 missingreference 
- []
-
-
-Overfull \hbox (13.88899pt too wide) in paragraph at lines 438--438
-[][][][]\OT1/cmr/m/n/10 missingreference 
  []
 
 [12]
-<Images/linearization_expl.jpg, id=544, 492.33937pt x 331.99031pt>
+
+LaTeX Warning: Citation `hanSensitivityAnalysisVertical2016' on page 13 undefin
+ed on input line 456.
+
+
+LaTeX Warning: Citation `siaSIA384Sondes2010' on page 13 undefined on input lin
+e 456.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--461
+
+ []
+
+
+LaTeX Warning: Citation `turtonrichardc.bailierichardwhitingwallace.AnalysisSyn
+thesisDesign2003' on page 13 undefined on input line 465.
+
+<Images/linearization_expl.jpg, id=609, 492.33937pt x 331.99031pt>
 File: Images/linearization_expl.jpg Graphic file (type jpg)
 <use Images/linearization_expl.jpg>
-Package pdftex.def Info: Images/linearization_expl.jpg  used on input line 463.
+Package pdftex.def Info: Images/linearization_expl.jpg  used on input line 490.
 
 (pdftex.def)             Requested size: 295.40588pt x 199.19571pt.
+[13]
 
+LaTeX Warning: Citation `huExtremumSeekingControl2015' on page 14 undefined on 
+input line 507.
 
-LaTeX Warning: Citation `huExtremumSeekingControl2015' on page 13 undefined on 
-input line 477.
-
-<Images/dtmin.png, id=547, 282.05376pt x 238.8925pt>
+<Images/dtmin.png, id=621, 282.05376pt x 238.8925pt>
 File: Images/dtmin.png Graphic file (type png)
 <use Images/dtmin.png>
-Package pdftex.def Info: Images/dtmin.png  used on input line 485.
+Package pdftex.def Info: Images/dtmin.png  used on input line 515.
 (pdftex.def)             Requested size: 169.23355pt x 143.3366pt.
-[13 <./Images/linearization_expl.jpg>]
-
-LaTeX Warning: Citation `ohFlowBoilingHeat2011' on page 14 undefined on input l
-ine 496.
-
 
 LaTeX Warning: Citation `wangOverviewHeatTransfer2013' on page 14 undefined on 
-input line 498.
+input line 528.
+
+
+LaTeX Warning: Citation `ohFlowBoilingHeat2011' on page 14 undefined on input l
+ine 530.
 
 
 LaTeX Warning: Citation `mastrulloComparisonR744R134a2009' on page 14 undefined
- on input line 498.
-
-(Tables/heatTransfCoeff.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 507--508
-
- []
+ on input line 531.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--530
+Underfull \hbox (badness 10000) in paragraph at lines 530--533
 
  []
 
-[14 <./Images/dtmin.png>]
+(Tables/heatTransfCoeff.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 539--540
+
+ []
+
+[14 <./Images/linearization_expl.jpg>]
+
+LaTeX Warning: Citation `demierreModelingExperimentalInvestigation2014' on page
+ 15 undefined on input line 560.
+
 
 LaTeX Warning: Marginpar on page 15 moved.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 542.
+LaTeX Warning: Command \textendash invalid in math mode on input line 568.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 542.
+LaTeX Warning: Command \textendash invalid in math mode on input line 568.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 542.
+LaTeX Warning: Command \textendash invalid in math mode on input line 568.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 542.
+LaTeX Warning: Command \textendash invalid in math mode on input line 568.
+
+[15 <./Images/dtmin.png>]
+
+LaTeX Warning: Citation `girardinEnerGisGeographicalInformation2010' on page 16
+ undefined on input line 569.
 
 
-LaTeX Warning: Citation `girardinEnerGisGeographicalInformation2010' on page 15
- undefined on input line 543.
+LaTeX Warning: Citation `NTBBuchsInstitut' on page 16 undefined on input line 5
+69.
 
 
-LaTeX Warning: Citation `NTBBuchsInstitut' on page 15 undefined on input line 5
-43.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 542--544
+Underfull \hbox (badness 10000) in paragraph at lines 568--570
 
  []
 
 (Tables/etaCOP.tex)
-<Images/HP_cylce_ref.png, id=570, 572.1375pt x 548.0475pt>
+<Images/HP_cylce_ref.png, id=645, 572.1375pt x 548.0475pt>
 File: Images/HP_cylce_ref.png Graphic file (type png)
 <use Images/HP_cylce_ref.png>
-Package pdftex.def Info: Images/HP_cylce_ref.png  used on input line 551.
+Package pdftex.def Info: Images/HP_cylce_ref.png  used on input line 577.
 (pdftex.def)             Requested size: 213.39568pt x 204.41345pt.
- [15]
+ [16 <./Images/HP_cylce_ref.png>]
 
-LaTeX Warning: Citation `huExtremumSeekingControl2015' on page 16 undefined on 
-input line 566.
-
-
-LaTeX Warning: Citation `liPerformanceCharacteristicsR1234yf2014' on page 16 un
-defined on input line 579.
+LaTeX Warning: Citation `huExtremumSeekingControl2015' on page 17 undefined on 
+input line 592.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 585--586
+LaTeX Warning: Citation `liPerformanceCharacteristicsR1234yf2014' on page 17 un
+defined on input line 605.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 611--612
 
  []
 
-[16 <./Images/HP_cylce_ref.png>]
-<Images/HP_cylce_CO2.png, id=592, 567.11874pt x 543.02875pt>
+[17]
+<Images/HP_cylce_CO2.png, id=673, 567.11874pt x 543.02875pt>
 File: Images/HP_cylce_CO2.png Graphic file (type png)
 <use Images/HP_cylce_CO2.png>
-Package pdftex.def Info: Images/HP_cylce_CO2.png  used on input line 613.
+Package pdftex.def Info: Images/HP_cylce_CO2.png  used on input line 639.
 (pdftex.def)             Requested size: 213.39568pt x 204.33128pt.
 
 
-LaTeX Warning: Citation `kimPerformanceTranscriticalCO22005' on page 17 undefin
-ed on input line 614.
+LaTeX Warning: Citation `kimPerformanceTranscriticalCO22005' on page 18 undefin
+ed on input line 640.
 
 
-LaTeX Warning: Citation `kimPerformanceTranscriticalCO22005' on page 17 undefin
-ed on input line 614.
+LaTeX Warning: Citation `kimPerformanceTranscriticalCO22005' on page 18 undefin
+ed on input line 640.
 
 
-LaTeX Warning: Citation `cavalliniPROPERTIESCO2REFRIGERANT' on page 17 undefine
-d on input line 618.
+LaTeX Warning: Citation `cavalliniPROPERTIESCO2REFRIGERANT' on page 18 undefine
+d on input line 644.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 618--619
+Underfull \hbox (badness 10000) in paragraph at lines 644--645
 
  []
 
-[17 <./Images/HP_cylce_CO2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 628--629
+
+Underfull \hbox (badness 10000) in paragraph at lines 654--655
 
  []
 
 
 LaTeX Warning: Citation `sarkarSimulationTranscriticalCO22006' on page 18 undef
-ined on input line 630.
+ined on input line 656.
 
 
 LaTeX Warning: Citation `yangTheoreticalExperimentalInvestigation2016' on page 
-18 undefined on input line 630.
+18 undefined on input line 656.
 
 
 LaTeX Warning: Citation `steneINTEGRATEDCO2HEAT2007' on page 18 undefined on in
-put line 631.
+put line 657.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 630--632
+Underfull \hbox (badness 10000) in paragraph at lines 656--658
 
  []
 
+[18 <./Images/HP_cylce_CO2.png>]
 
-LaTeX Warning: Citation `wangExperimentalInvestigationAirsource2013' on page 18
- undefined on input line 633.
+LaTeX Warning: Citation `wangExperimentalInvestigationAirsource2013' on page 19
+ undefined on input line 659.
 
 
 LaTeX Warning: Citation `henchozPerformanceProfitabilityPerspectives2015' on pa
-ge 18 undefined on input line 641.
+ge 19 undefined on input line 667.
 
-[18]
-<Images/morges.png, id=624, 739.563pt x 544.434pt>
+
+LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 19 undefined
+ on input line 677.
+
+[19]
+<Images/morges.png, id=700, 739.563pt x 544.434pt>
 File: Images/morges.png Graphic file (type png)
 <use Images/morges.png>
-Package pdftex.def Info: Images/morges.png  used on input line 687.
+Package pdftex.def Info: Images/morges.png  used on input line 719.
 (pdftex.def)             Requested size: 426.79135pt x 314.19353pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--693
+Underfull \hbox (badness 10000) in paragraph at lines 724--725
 
  []
 
-[19] [20 <./Images/morges.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 703--704
+[20] [21 <./Images/morges.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 735--736
 
  []
 
@@ -1704,200 +1734,263 @@ Underfull \hbox (badness 10000) in paragraph at lines 703--704
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
-<Images/ppa_buildings.JPG, id=645, 302.63063pt x 356.0803pt>
+<Images/ppa_buildings.JPG, id=721, 302.63063pt x 356.0803pt>
 File: Images/ppa_buildings.JPG Graphic file (type jpg)
 <use Images/ppa_buildings.JPG>
-Package pdftex.def Info: Images/ppa_buildings.JPG  used on input line 713.
+Package pdftex.def Info: Images/ppa_buildings.JPG  used on input line 745.
 (pdftex.def)             Requested size: 192.0548pt x 225.97807pt.
- [21]
-<Images/ppa_energydemand.JPG, id=655, 389.20406pt x 188.20313pt>
+<Images/ppa_energydemand.JPG, id=724, 389.20406pt x 188.20313pt>
 File: Images/ppa_energydemand.JPG Graphic file (type jpg)
 <use Images/ppa_energydemand.JPG>
-Package pdftex.def Info: Images/ppa_energydemand.JPG  used on input line 722.
+Package pdftex.def Info: Images/ppa_energydemand.JPG  used on input line 754.
 (pdftex.def)             Requested size: 298.75264pt x 144.46884pt.
+ (Tables/ppa_prestudy.tex) [22] [23 <./Images/ppa_buildings.JPG> <./Images/ppa_
+energydemand.JPG>] [24]
+<Images/energy_demand.png, id=744, 409.53pt x 266.9975pt>
+File: Images/energy_demand.png Graphic file (type png)
+<use Images/energy_demand.png>
+Package pdftex.def Info: Images/energy_demand.png  used on input line 776.
+(pdftex.def)             Requested size: 298.75264pt x 194.78839pt.
 
-
-LaTeX Warning: Marginpar on page 22 moved.
-
-(Tables/ppa_prestudy.tex) [22] [23 <./Images/ppa_buildings.JPG> <./Images/ppa_e
-nergydemand.JPG>] (Tables/compressors_eff.tex)
-
-LaTeX Warning: Reference `ss:hp' on page 24 undefined on input line 766.
-
-
-LaTeX Warning: Citation `henchozPerformanceProfitabilityPerspectives2015' on pa
-ge 24 undefined on input line 773.
-
-
-LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 24 undefined
- on input line 774.
-
-[24] [25]
-<Images/CO2-DX-GSHP.png, id=692, 457.71pt x 747.79375pt>
-File: Images/CO2-DX-GSHP.png Graphic file (type png)
-<use Images/CO2-DX-GSHP.png>
-Package pdftex.def Info: Images/CO2-DX-GSHP.png  used on input line 824.
-(pdftex.def)             Requested size: 128.0387pt x 209.18684pt.
- (Tables/cp_source.tex)
-
-LaTeX Warning: Citation `girardinEnerGisGeographicalInformation2010' on page 26
- undefined on input line 837.
-
-
-LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 26 undefined
- on input line 853.
-
-[26 <./Images/CO2-DX-GSHP.png>] (Tables/dTmins.tex
-Overfull \hbox (52.22752pt too wide) in paragraph at lines 5--12
- [][] 
- []
-
-)
 
 LaTeX Warning: Citation `veillehydro-meteorologiqueducantondevaudMorgesRiviereD
-ebit' on page 27 undefined on input line 877.
+ebit' on page 25 undefined on input line 786.
 
-<Images/river.JPG, id=707, 353.82187pt x 204.765pt>
+<Images/river.JPG, id=746, 353.82187pt x 204.765pt>
 File: Images/river.JPG Graphic file (type jpg)
 <use Images/river.JPG>
-Package pdftex.def Info: Images/river.JPG  used on input line 881.
+Package pdftex.def Info: Images/river.JPG  used on input line 790.
 (pdftex.def)             Requested size: 213.39568pt x 123.49731pt.
-[27 <./Images/river.JPG>]
+[25 <./Images/energy_demand.png> <./Images/river.JPG>]
 
-LaTeX Warning: Citation `jiaReviewEffectiveThermal2019' on page 28 undefined on
- input line 901.
+LaTeX Warning: Citation `gadzEvaluationPotentielGeothermique2011' on page 26 un
+defined on input line 807.
 
 
-Overfull \hbox (72.84853pt too wide) in paragraph at lines 896--903
-[]\OT1/cmr/m/n/10 100 CHF/m http://bawos.ch/erdsondenbohrungen-kosten-und-planu
-ng-zur-gewinnung-von-umgebungswaerme/
+LaTeX Warning: Citation `siaSIA384Sondes2010' on page 26 undefined on input lin
+e 811.
+
+
+LaTeX Warning: Citation `siaSIA384Sondes2010' on page 26 undefined on input lin
+e 813.
+
+
+LaTeX Warning: Citation `gadzEvaluationPotentielGeothermique2011' on page 26 un
+defined on input line 813.
+
+
+LaTeX Warning: Marginpar on page 26 moved.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 828--829
+
  []
 
 
-Overfull \hbox (5.54268pt too wide) in paragraph at lines 896--903
-\OT1/cmr/m/n/10 https://www.energieheld.ch/heizung/waermepumpe/sole-wasser-erdw
-aerme Av-er-age 30 W/m Heat-
+LaTeX Warning: Marginpar on page 26 moved.
+
+
+LaTeX Warning: Citation `siaSIA384Sondes2010' on page 26 undefined on input lin
+e 835.
+
+
+LaTeX Warning: Citation `kruseStatusDevelopmentResearcha' on page 26 undefined 
+on input line 835.
+
+
+LaTeX Warning: Citation `kruseStatusDevelopmentResearcha' on page 26 undefined 
+on input line 837.
+
+
+LaTeX Warning: Marginpar on page 26 moved.
+
+
+LaTeX Warning: Citation `bawos.chMitErdsondenbohrungenKosten2018' on page 26 un
+defined on input line 840.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--846
+
  []
 
-<Images/GTW_temp.jpg, id=715, 235.99672pt x 190.58813pt>
-File: Images/GTW_temp.jpg Graphic file (type jpg)
-<use Images/GTW_temp.jpg>
-Package pdftex.def Info: Images/GTW_temp.jpg  used on input line 908.
-(pdftex.def)             Requested size: 256.07741pt x 206.82668pt.
 
-LaTeX Warning: Citation `hanSensitivityAnalysisVertical2016' on page 28 undefin
-ed on input line 909.
+LaTeX Warning: Citation `siaSIA384Sondes2010' on page 26 undefined on input lin
+e 849.
 
 
-LaTeX Warning: Citation `hanSensitivityAnalysisVertical2016' on page 28 undefin
-ed on input line 909.
+LaTeX Warning: Citation `lamarcheReviewMethodsEvaluate2010' on page 26 undefine
+d on input line 849.
 
 
-LaTeX Warning: Citation `lundDESIGNCLOSEDLOOPGEOTHERMAL' on page 28 undefined o
-n input line 913.
+Underfull \hbox (badness 10000) in paragraph at lines 848--850
 
-
-LaTeX Warning: Citation `siaSIA384Sondes2010' on page 28 undefined on input lin
-e 914.
-
-
-LaTeX Warning: Citation `lundDESIGNCLOSEDLOOPGEOTHERMAL' on page 28 undefined o
-n input line 915.
-
-
-LaTeX Warning: Citation `lamarcheReviewMethodsEvaluate2010' on page 28 undefine
-d on input line 916.
-
-
-LaTeX Warning: Citation `ghazizade-ahsaeeEnergyExergyInvestigation2018' on page
- 28 undefined on input line 921.
-
-
-LaTeX Warning: Citation `austinParametricStudyPerformance2011' on page 28 undef
-ined on input line 921.
-
-
-Overfull \hbox (9.31952pt too wide) in paragraph at lines 920--922
-[]\OT1/cmr/m/n/10 (9) 4/7 for 13 groundT in https://www.sciencedirect.com/scien
-ce/article/pii/S019689041630975X
  []
 
-<Images/IR_schema.JPG, id=716, 520.94624pt x 255.20343pt>
+
+LaTeX Warning: Citation `lundDESIGNCLOSEDLOOPGEOTHERMAL' on page 26 undefined o
+n input line 851.
+
+[26]
+<Images/IR_schema.JPG, id=768, 520.94624pt x 255.20343pt>
 File: Images/IR_schema.JPG Graphic file (type jpg)
 <use Images/IR_schema.JPG>
-Package pdftex.def Info: Images/IR_schema.JPG  used on input line 936.
+Package pdftex.def Info: Images/IR_schema.JPG  used on input line 861.
 (pdftex.def)             Requested size: 426.79135pt x 209.08124pt.
 
-LaTeX Warning: Citation `gronqvistComparativeLifecycleCost' on page 28 undefine
-d on input line 937.
+
+LaTeX Warning: Citation `gronqvistComparativeLifecycleCost' on page 27 undefine
+d on input line 862.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 941--942
+Underfull \hbox (badness 10000) in paragraph at lines 866--867
 
  []
 
-[28 <./Images/GTW_temp.jpg>]
+
+LaTeX Warning: Citation `karampourMEASUREMENTMODELLINGICE' on page 27 undefined
+ on input line 868.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 868--871
+
+ []
+
+<Images/IR_energyDemand.JPG, id=772, 349.305pt x 151.3153pt>
+File: Images/IR_energyDemand.JPG Graphic file (type jpg)
+<use Images/IR_energyDemand.JPG>
+Package pdftex.def Info: Images/IR_energyDemand.JPG  used on input line 876.
+(pdftex.def)             Requested size: 298.75264pt x 129.42441pt.
+
+LaTeX Warning: Citation `karampourMEASUREMENTMODELLINGICE' on page 27 undefined
+ on input line 877.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 881--882
+
+ []
+
+<Images/IceRink_refrigeration.png, id=775, 990.70125pt x 594.22pt>
+File: Images/IceRink_refrigeration.png Graphic file (type png)
+<use Images/IceRink_refrigeration.png>
+Package pdftex.def Info: Images/IceRink_refrigeration.png  used on input line 8
+88.
+(pdftex.def)             Requested size: 426.79135pt x 255.99017pt.
+[27 <./Images/IR_schema.JPG>] [28 <./Images/IR_energyDemand.JPG> <./Images/IceR
+ink_refrigeration.png>]
+
+LaTeX Warning: Citation `karampourMEASUREMENTMODELLINGICE' on page 29 undefined
+ on input line 897.
+
+
+LaTeX Warning: Citation `kolasniewskiEvaluationModellingIce' on page 29 undefin
+ed on input line 898.
+
+
+LaTeX Warning: Citation `karampourMEASUREMENTMODELLINGICE' on page 29 undefined
+ on input line 903.
+
+(Tables/IR_profile.tex) [29]
+Underfull \hbox (badness 10000) in paragraph at lines 932--933
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 943--944
 
  []
 
-<Images/IceRink_refrigeration.png, id=724, 990.70125pt x 594.22pt>
-File: Images/IceRink_refrigeration.png Graphic file (type png)
-<use Images/IceRink_refrigeration.png>
-Package pdftex.def Info: Images/IceRink_refrigeration.png  used on input line 9
-52.
-(pdftex.def)             Requested size: 426.79135pt x 255.99017pt.
 
-LaTeX Warning: Citation `karampourMEASUREMENTMODELLINGICE' on page 29 undefined
- on input line 961.
+Underfull \hbox (badness 10000) in paragraph at lines 964--966
 
-<Images/IR_energyDemand.JPG, id=726, 349.305pt x 151.3153pt>
-File: Images/IR_energyDemand.JPG Graphic file (type jpg)
-<use Images/IR_energyDemand.JPG>
-Package pdftex.def Info: Images/IR_energyDemand.JPG  used on input line 965.
-(pdftex.def)             Requested size: 298.75264pt x 129.42441pt.
+ []
 
-LaTeX Warning: Citation `karampourMEASUREMENTMODELLINGICE' on page 29 undefined
- on input line 966.
+[30]
+<Images/CO2-DX-GSHP.png, id=809, 457.71pt x 747.79375pt>
+File: Images/CO2-DX-GSHP.png Graphic file (type png)
+<use Images/CO2-DX-GSHP.png>
+Package pdftex.def Info: Images/CO2-DX-GSHP.png  used on input line 1002.
+(pdftex.def)             Requested size: 128.0387pt x 209.18684pt.
+ [31] (Tables/cp_source.tex)
+
+LaTeX Warning: Citation `girardinEnerGisGeographicalInformation2010' on page 32
+ undefined on input line 1016.
 
 
-LaTeX Warning: Citation `karampourMEASUREMENTMODELLINGICE' on page 29 undefined
- on input line 970.
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1031
 
-[29 <./Images/IR_schema.JPG>] [30 <./Images/IceRink_refrigeration.png> <./Image
-s/IR_energyDemand.JPG>]
-
-LaTeX Warning: Citation `karampourMEASUREMENTMODELLINGICE' on page 31 undefined
- on input line 993.
+ []
 
 
-LaTeX Warning: Citation `kolasniewskiEvaluationModellingIce' on page 31 undefin
-ed on input line 994.
+LaTeX Warning: Citation `henchozPotentialRefrigerantBased' on page 32 undefined
+ on input line 1034.
 
-(Tables/anergynets_IC.tex
+[32 <./Images/CO2-DX-GSHP.png>]
+
+LaTeX Warning: Citation `henchozPerformanceProfitabilityPerspectives2015' on pa
+ge 33 undefined on input line 1055.
+
+(Tables/ic.tex) (Tables/compressors_eff.tex
+Overfull \hbox (2.86835pt too wide) in paragraph at lines 5--15
+ [][] 
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1068
+
+ []
+
+[33] (Tables/dTmins.tex) [34] (Tables/anergynets_IC.tex
 Overfull \hbox (25.80435pt too wide) in paragraph at lines 5--14
  [][] 
  []
 
 )
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Marginpar on page 31 moved.
-
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 1052--1056
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1145
 
  []
 
-[32] [33] (main.bbl
+
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1153--1154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1156
+
+ []
+
+[35] (Tables/cp_comparison.tex) [36]
+Underfull \hbox (badness 10000) in paragraph at lines 1220--1221
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1226--1227
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1229
+
+ []
+
+[37] (main.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [34
+) [38
 
-] (appendix.tex (Tables/anergynets1.tex [35
+] (appendix.tex (Tables/anergynets1.tex [39
 
 ]
 Overfull \hbox (73.26906pt too wide) in paragraph at lines 6--35
@@ -1910,35 +2003,35 @@ LaTeX Warning: Float too large for page by 62.01277pt on input line 35.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[36]) (Tables/anergynets2.tex
+[40]) (Tables/anergynets2.tex
 Overfull \hbox (35.38727pt too wide) in paragraph at lines 6--27
  [][] 
  []
 
-[37
+[41
 
 
 
 ]))
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1071.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1071.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1244.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1244.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1071.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1071.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1244.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1244.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A203A49C7B76FBC6CB0004F0F4CEC912;3990.
+(rerunfilecheck)             Checksum: C6036CDF100DBDE5C6CF46E44CE7E592;4794.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1071.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1244.
  ) 
 Here is how much of TeX's memory you used:
- 29540 strings out of 492946
- 588811 string characters out of 3127155
- 649121 words of memory out of 3000000
- 32752 multiletter control sequences out of 15000+200000
+ 29640 strings out of 492946
+ 590795 string characters out of 3127155
+ 651912 words of memory out of 3000000
+ 32809 multiletter control sequences out of 15000+200000
  543419 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,22n,80p,1385b,1038s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1965,9 +2058,9 @@ s/cm/cmsy7.pfb><C:/Users/Tob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmsy8.pfb><C:/Users/Tob/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Tob/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (42 pages, 3214228 bytes).
+Output written on main.pdf (46 pages, 3547637 bytes).
 PDF statistics:
- 889 PDF objects out of 1000 (max. 8388607)
- 230 named destinations out of 1000 (max. 500000)
- 693 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1011 PDF objects out of 1200 (max. 8388607)
+ 264 named destinations out of 1000 (max. 500000)
+ 781 words of extra memory for PDF output out of 10000 (max. 10000000)
 
