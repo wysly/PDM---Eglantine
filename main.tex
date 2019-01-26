@@ -445,7 +445,7 @@ Threshold temperature for heating or cooling
 
 
 
-The optimization of an energy system is commonly performed over the time span of one year, in order to account for the different seasons. However, this requires a very long computing time, given the high number of timesteps. Thus, it is used to group similar days, according to a set of parameters as for example temperature or irradiation, into so called typical days. The days can be clustered in different ways. It can be chosen to compute an average day for each month or some machine learning clustering algorithm can be used to group the days into the desired number of clusters.
+The optimization of an energy system is commonly performed over the time span of one year, in order to account for the different seasons. However, this requires a very long computing time, given the high number of timesteps. Thus, it is used to group similar days, according to a set of parameters as for example temperature or irradiation, into so called typical days. The days can be clustered in different ways. It can be chosen to compute an average day for each month or some machine learning clustering algorithm - as for example K-means, DBSCAN or GMM - can be used to group the days into the desired number of clusters.
 The resulting typical days correspond to a period $p$, with a number of times $t$, as explained in section \ref{ss:osmose}. In order to account for the data compression, a value called $occurrence$ indicates how many times a given typical day occurs, i.e. how many times a given period occurs.\\
 
 Two additional days with the two opposite extreme temperature conditions are added to the typical days, in order for the model to account for them in the equipment sizing. To avoid a bias of the operation results, those days are set with an occurrence of zero.
@@ -733,7 +733,7 @@ The pressure losses, and thus the energy needed for the maintaining of the press
 
 \section{Application}
 
-\subsection{Case-study Eglantine}
+\subsection{Case-study Eglantine}\label{ss:Eglantine}
 In the framework of the collaboration between Romande Energie and IPESE, a case study shall bring a concrete numerical case study into the discussion. For this, Romande Energie has chosen a real life example of a district in the city of Morges. This district is in the planning phase, and Romande Energie had worked on it, in order to participate in the call for tender. This case study shall be fertile ground to discuss the CO2 DEN technology and it's role in the future energy systems in Switzerland and, more particularly, in the future plans of Romande Energie.
 
 \subsubsection{Context}
@@ -830,50 +830,65 @@ The cost function is calculated as for the CO2 pipes (see Section \ref{sss:net})
 \subsubsection{Geothermal wells}
 The average temperature of a geothermal well is calculated according to Section \ref{ss:gtw}. The temperature gradient in the lemanic region is found in experimental data from the canton Geneva\cite{gadzEvaluationPotentielGeothermique2011}:
 \begin{equation}
-\nabla T_{g} = 0.03 [K/m]
+	\nabla T_{g} = 0.03 [K/m]
 \end{equation}
 This value also corresponds to the average gradient found in the Swiss plateau\cite{siaSIA384Sondes2010}.
 
-The average surface temperature depends mainly on the latitude and on the altitude. Standard values for different regions of Switzerland can be found in the SIA norm 384\cite{siaSIA384Sondes2010}. Experimental measurements\cite{gadzEvaluationPotentielGeothermique2011} show that the surface temperature in the lemanic region is:
+The average surface temperature depends mainly on the latitude and on the altitude. Standard values for different regions of Switzerland can be found in the SIA norm 384\cite{siaSIA384Sondes2010}. Experimental measurements\cite{gadzEvaluationPotentielGeothermique2011} show that the surface temperature in the lemanic region is:\todo{add images of gradient and surface temperature from PGG report?}
 \begin{equation}
-T_{g,s} = 11 \si{\celsius}
+	T_{g,s} = 11 \si{\celsius}
 \end{equation}
-The depth of the geothermal wells is found in the pre-studies given in the call for tender:
+Knowing the average depth of the geothermal wells, which is found to be $L_{gtw} = 267$ (see Section \ref{ss:Eglantine}), the mean temperature in the geothermal well corresponds to:
 \begin{equation}
-L_{gtw} = 267
+	T_{g, mean} = 15 \si{\celsius}
 \end{equation}
-The mean temperature in the geothermal well can then be calculated:
+
+It is assumed that the geothermal wells are well sized, in order to respect the natural recharge rate, which is strongly dependent on the type of soil. The sizing of the boreholes is very important to ensure a sustainable use of the ground heat throughout the years. \\
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{GTW_T_profile.png}
+	\caption{Steady state temperature difference in borehole, due to heat extraction}
+	\label{fig:GTW_T}
+\end{figure}
+
+Nevertheless, there is a temperature gradient that will form around the borehole at any time heat is extracted, as shown in Figure \ref{fig:GTW_T}, in the steady state that depends of the heat extraction rate and the conductivity of the soil. This temperature difference ($\Delta T_{steady state}$) is assumed to be 3 \si{\celsius} \cite{guoTechnoeconomicComparisonDirect2012,hanSensitivityAnalysisVertical2016}.
+Thus the mean useful temperature of the borehole over its depth is given by:
 \begin{equation}
-T_{g, mean} = 15 \si{\celsius}
+	T_{b, mean} = T_{g, mean} -\Delta T_{Steady State} = 12 \si{\celsius}
 \end{equation}
-\todo{add images of gradient and surface temperature from PGG report?}
 
-It is assumed that the geothermal wells are well sized, in order to respect the natural recharge rate. The recharge rate is strongly dependent on the type of soil and is very important to ensure a sustainable use of the ground heat throughout the years. \\
+The minimum approach temperature necessary to exchange heat with the soil can be determined with help of the procedure described in Section \ref{ss:dtmin}. 
 
-\todo{Assume a dt of x C around the well? dynamic curve of use}
+The price for boreholes in Switzerland is found to be around $80 CHF/m$ \cite{bawos.chMitErdsondenbohrungenKosten2018}. 
+Assuming a typical pipe diameter of $32 mm$\cite{siaSIA384Sondes2010, kruseStatusDevelopmentResearcha}, the corresponding cost of the heat exchange area of the borehole calculated.
+
+To perform the $\Delta T_{min}$ optimization, the overall heat transfer coefficients of the well - including the fluid, the bore wall and the soil - are assumed to be\cite{kruseStatusDevelopmentResearcha}:
+\begin{align}
+	& U^{g/water} = 9.3 kW/m^2K
+	& U^{g/CO2} = 17.1 kW/m^2K
+\end{align}
+
+The resulting minimum approach temperatures in ground heat exchanges are:
+\begin{align}
+	&\Delta T_{min}^{g/water} = 14 \si{\celsius}
+	&\Delta T_{min}^{g/CO2} = 6.8 \si{\celsius}
+\end{align}
+These values are similar to experimental or standard values found in literature \cite{siaSIA384Sondes2010, lamarcheReviewMethodsEvaluate2010}.\\
+
+The water rise/drop in the water ground loop is assumed to be $dT_{water} = 4 \si{\celsius}$ \cite{lundDESIGNCLOSEDLOOPGEOTHERMAL}\\
 
 
-To determine the minimum approach temperature in the well, follow procedure described in Section \ref{ss:dtmin} using the following values:
-
-The exchange area can be estimated, taking a typical diameter of diameter  = 32 mm\cite{siaSIA384Sondes2010, kruseStatusDevelopmentResearcha}\\
-cylinder lateral surface\\
-
-The overall heat transfer coefficient of the well, including the fluid, the bore wall and the soil, is assumed to be $9.3 kW/m^2K$ for a brine loop and $17.1 kW/m^2K$ for the CO2 direct expansion\cite{kruseStatusDevelopmentResearcha}.\\
-
-\todo{this paragraph here or in values?}
-The price for boreholes in Switzerland is found to be around $c_{wells} = 80$ [CHF/m] \cite{bawos.chMitErdsondenbohrungenKosten2018}. In order to provide the model with an energy dependent cost function, this value is transformed with help of the data from Table \ref{tab:ppa_prestudy}:
+\todo{this cost function here?}
+The price for boreholes in Switzerland is found to be around $c_{wells} = 80$ [CHF/m] \cite{bawos.chMitErdsondenbohrungenKosten2018}. 
+In order to provide the model with an energy dependent cost function, this value is transformed with help of the data from Table \ref{tab:ppa_prestudy}:
 \begin{align}
 &  L_{wells}^{tot} = n_{wells} * L_{well}^{average} \\
 & 	\text{Cost function [CHF/kW]} = c_{wells} \frac{L_{wells}^{tot}}{P_{hp}^{tot}}
 \end{align}
 where $L_{wells}$ is the length and $n_{wells}$ the number of boreholes, and $P_{hp}$ is the total power of heat pumps installed.\\
 
-
-result dTmin water ground = 14 and dtmin co2ground = 6.8.
-This value is similar to values found in literature \cite{siaSIA384Sondes2010, lamarcheReviewMethodsEvaluate2010}\\
-
-The water drop in the ground loop is assumed to be 4 \si{\celsius}$dT_{water}$ \cite{lundDESIGNCLOSEDLOOPGEOTHERMAL}
-
+inv cost is given by the Qwinter-Qsummer
 \subsection{External heat sources}
 The main advantage of a 5th generation district heating network is the ability to recover heat, and exchange it among the diversity of user. In the case of the Eglantine project, inside the district there are only very small heat sources and it is thus necessary to identify potential heat sources, located in the surroundings. 
 Two potential heat sources have been identified in the surroundings of the Eglantine district: the ice rink and a shopping mall.
@@ -942,6 +957,46 @@ The refrigeration system is modeled the same way as in the reference scenario, t
 
 \subsubsection{Shopping mall}
 
+\subsection{Variants / Scenarios}
+
+\subsubsection{Heating}
+The heating demand is supplied by a set of decentralized geothermal heat pumps, one for domestic hot water and one for space heating in every building. These heat pumps source the ambient heat from a secondary loop that exchanges heat with the ground through a system of geothermal wells, the SL-GSHP, which is described in Section \ref{ss:dx}. 
+
+Given the relevance of the heat pumps in the studied energy system, it has been chosen to use its thermodynamic model, which achieves more reliable and precise results.\\
+
+The temperatures at the evaporator and condenser are given by the following equations:
+\begin{equation}
+T_{evap} = T_{ground} - \Delta T_{min}^{ground/water} - \Delta T_{water} - \Delta T_{min}^{ref/water}
+\end{equation}
+\begin{equation}
+T_{cond} = T_{demand} + \Delta T_{min}^{ref/water}
+\end{equation}
+where $\Delta T_{min}$ are the corresponding minimum approach temperatures, and $\Delta T_{water}$ is the temperature rise in the secondary water loop exchanging with the ground.
+
+For the space heating heat pump, the refrigerant used is R123yf, as described in Section \ref{sss:hp_thermo}.\\
+
+For the domestic hot water, it is chosen to use transcritical CO2 heat pumps. As described in Section \ref{sss:hp_CO2}, this technology can achieve very good performances supplying heat that requires a high lift. This is the case in domestic hot water, where the water has to be heated from a temperature of 10 \si{\celsius} to a temperature of 55 \si{\celsius}.
+
+\subsubsection{Cooling}
+Given the availability of geothermal wells, it has been chosen to implement geo-cooling for space cooling. The system is providing cooling at the ground temperature, corrected with the minimum approach temperature $\Delta Tmin_{ground/water}$ and the temperature rise in the water loop $\Delta T_{water}$.
+\begin{equation}
+T_{geo-cooling} = T_{ground} + \Delta T_{min}^{ground/water} + \Delta T_{water}
+\end{equation}
+
+\subsubsection{Refrigeration}
+The refrigeration is achieved with a set of decentralized air cooled vapor compression chillers, which present the same working principle as heat pumps. Given that energy demand for refrigeration is not as relevant in the case study, it has been chosen to use the basic Carnot cycle model, as explained in Section \ref{sss:hp_carnot}. The heat is evacuated into the environment with help of cooling towers, as described in Section \ref{sss:cooling_tower}.
+
+Thus, the total energy consumption is a sum of the energy demand of the compressor and the cooling fans.
+\begin{equation}
+\dot{E} = \dot{E}_{ref} + \dot{E}_{fans}
+\end{equation}
+
+and the operating temperatures are defined in the following way:
+\begin{equation}
+T_{cond} = T_{ext} + \Delta T_{air} + \Delta T_{min}^{ref/air}
+\end{equation}
+where $\Delta T_{air}$ is the temperature difference of the cooling air between the input and the output of the condenser, while $\Delta T_{min}^{ref/air}$ is the minimum approach temperature difference needed for heat transfer between a refrigerant and air.\\
+
 
 \subsection{Reference scenario}
 In order to evaluate the potential of alternative energy systems, a reference scenario is defined. Data about the energy system that will be built in the Eglantine district is not available to the author, and therefore a standard state of the art system is used. It is assumed that the heat demand for space heating and domestic hot water is provided by decentralized geothermal sourced heat pumps. The cooling demand is provided by air cooled vapor 
@@ -949,6 +1004,9 @@ In order to evaluate the potential of alternative energy systems, a reference sc
  chillers, also commonly known as air conditioners. The scenario foresees the installation of PV panels on the roof of the buildings.
 
 \missingfigure{energy schema ref scenario}
+
+The main resource flows are shown in Table \ref{tab:layers_ref}.
+\input{Tables/layers_ref.tex}
 
 \subsubsection{Heating}
 The heating demand is supplied by a set of decentralized geothermal heat pumps, one for domestic hot water and one for space heating in every building. These heat pumps source the ambient heat from a secondary loop that exchanges heat with the ground through a system of geothermal wells, the SL-GSHP, which is described in Section \ref{ss:dx}. 
@@ -991,6 +1049,9 @@ where $\Delta T_{air}$ is the temperature difference of the cooling air between 
 \subsection{CO2 DEN}
 CO2 network energy system showed in Figure...
 \missingfigure{energy syst schema CO2 DEN}
+
+The main resource flows are shown in Table \ref{tab:layers_CO2}.
+\input{Tables/layers_CO2.tex}
 
 \subsubsection{Heating}
 For space heating and domestic hot water, the same model as for the heat pumps in reference scenario are used. Sicne in this case the HP sources heat from the CO2 network instead of the geothermal wells, the mayor difference lies in the evaporation temperature, which corresponds to temperatuer in the CO2 vapor pipe ($T_{CO2,g}$):
@@ -1058,6 +1119,26 @@ Values for the heat pumps are given in Henchoz et al., obtained by linearizing c
 
 Values are summarized in Table \ref{tab:ic}.
 
+\subsubsection{Minimum approach temperature}
+As seen in Table \ref{tab:alphas}, CO2 (R744) has a higher heat transfer coefficient than other conventional refrigerants, as for example R1234yf. This has to be taken into account in the energy system through a different minimum approach temperature. To do so, there are two possible approaches:
+\begin{itemize}
+	\item calculate a new, lower, $\Delta T_{min}^{R744}$, maintaining the same heat exchange area $A_{ex}$. This results in higher COP for the heat pump and thus lower operating costs $OC_{hp}$
+	\item calculate a new, smaller, heat exchange area  $A_{ex}$, maintaining the same $\Delta T_{min}$. This leads to lower upfront costs $IC_{ex}$
+\end{itemize}
+
+It is chosen to use different $\Delta T_{min}^{R744}$, maintaining the same heat exchange area, for which the procedure is the following:
+\begin{enumerate}
+	\item Calculate $U_{R1234yf/X}$ with Equation \ref{eq:alpha}
+	\item Optimize $\Delta T_{min}^{R1234yf/X}$ with numerical values from the Eglantine district, as described in Section \ref{ss:dtmin}
+	\item Calculate  $U_{R744/X}$ 
+	\item Solve Equation \ref{eq:HEX_area} in function of $\Delta T$, using $U_{R744/X}$ and the $A_{ex}$ resulting from the previous step.
+\end{enumerate}
+This procedure is repeated for the various fluids ($X$) the refrigerants have to exchange with.\\
+
+The implementation of this algorithm has been solved on \textit{Matlab} with help of function \textit{solve(equation \ref{eq:HEX_area}, $\Delta T_{min}$)}.
+Thus resulting $\Delta T_{min}$ values shown in Table \ref{tab:dtmins}.
+\input{Tables/dTmins.tex}
+
 
 \subsubsection{Compressor efficiencies}
 Efficiencies: Equations in Section \ref{sss:hp_CO2} and \ref{sss:hp_thermo} could be directly implemented in model. For simplicity, those values have been pre-calculated in function of the operating conditions and are shown in Table \ref{tab:eta_comp}.
@@ -1070,22 +1151,6 @@ Compare with values from literature?\\
 %isentropic comp efficiency R123yf = 0.75 \cite{yangTheoreticalExperimentalInvestigation2016}
 %isentropic comp efficiency CO2 = 0.8 \cite{joneydishariatzadehComparisonTranscriticalCO22016} /0.65 \cite{yangTheoreticalExperimentalInvestigation2016} / 0.55 \cite{steneINTEGRATEDCO2HEAT2007}
 
-
-\subsubsection{Minimum approach temperature}
-\todo{rewrite chapter}
-To show the difference in performance between the CO2 (higher \textit{h}) and conventional refrigerants:...
-
-\begin{itemize}
-	\item maintain area with lower dT (lower $OC_{hp}$)
-	\item same dT and lower area (lower $IC_{ex}$)
-\end{itemize}
-
-The optimization is done on water/refrigerant hp, since values well known (ic, Q, COP). 
-
-CO2 $\Delta T_{min}$ is then calculated maintaining same Area as for ref hp. equation solved on \textit{Matlab} with help of function \textit{solve(equation \ref{eq:HEX_area}, $\Delta T_{min}$)}.
-
-Thus following $\Delta T_{min}$ are have been calculated and used for heat exchanges in the model, shown in Table \ref{tab:dtmins}.
-\input{Tables/dTmins.tex}
 
 
 \subsection{Energy Use optim model}
@@ -1122,21 +1187,76 @@ Every unit h in H has been sized to the total ERA of the Eglantine district. Thu
 
 \section{Results}
 
+\subsection{Variants}
+
+\subsubsection{Reference energy system}
+A parametric optimization of the costs of the reference energy system is shown in Figure \ref{fig:V_G_PO}.
+
+It can be seen that the biggest difference in investment and operating cost is due to the sizing of the PV. In fact, when constraining the investment costs, the model installs only a small share of PV, which increases the operational costs. On the contrary, a high share of PV increases the systems rate of auto-sufficiency, lowering the operational costs. 
+
+On the far right, the maximum share of PV - set to twice the total roof area, which accounts for potential facades and free space PV - the operational cost kept falling. This is due to a different handling of peak consumption. The optimal system installs a small share of electrical heater ($R_{el}$) to cover peak demand, which allows to optimally size the heating heat pumps. In the last column on the right, the system chose not to install the electrical heater but installing larger heat pumps, which strongly increases upfront costs, but allows to further reduce the operational costs.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=1\textwidth]{V_G_PO.png}
+	\caption{Parametric optimization of the reference energy system, showing the detailed investment costs, the operational cost and the total cost}
+	\label{fig:V_G_PO}
+\end{figure}
+
+\subsubsection{CO2 DEN on geothermal wells}
+
+
+
+\subsubsection{CO2 DEN on lake water}
+
+
+
 \subsection{Scenario comparison}
 A comparison is made at the Eglantine conditions, for the defined scenarios.
 
-Results are shown:
+Results are shown in Figure \ref{fig:V_costs}.\\
 
-\missingfigure[]{IC, OC, el consumption...}
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{V_costs.PNG}
+	\caption{Cost comparison for the three different energy systems variants}
+	\label{fig:V_costs}
+\end{figure}
+
+OC of lake are slightly lower than CO2 geoth, even if tevap lower, since its a R1234yf HP with higher efficiencies... \\
+
+
+
 
 \subsubsection{COPs/Exergy}
+Table \ref{tab:V_cops}.
 
+\input{Tables/V_cops.tex}
 
 \subsubsection{CAPEX}
 Comparison with existing anergy networks, shown in Table \ref{tab:anergynets_IC}.
 \input{Tables/anergynets_IC.tex}
 
 Percentages similar, but geothermal higher. 
+
+
+\subsection{DX Vs. SL-GSHP}
+As discussed in Section \ref{ss:dx}, there is the possibility to directly expand the CO2 into the geothermal well, instead of exchanging with help of a secondary water loop. The different temperature levels are shown in Figure \ref{fig:Qt_dx}. 
+
+Results of simulation, show the difference in performance, \ref{tab:dxVSsl}.
+
+\input{Tables/cp_comparison.tex}
+
+CO2 heat pump has lower efficiencies (see Table \ref{tab:eta_comp}) thus $\eta_{COP}$ but much lower temperature difference to cover. Thus, its real coefficient of performance, as well as the exergy efficiency, are clearly higher than for the SL-GSHP. In fact, the DX-GSHP results being about twice as good.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Qt_dx.png}
+	\caption{Schematic representation of heat exchanges and minimum approach temperatures for the central plant HP, comparing SL- and DX-GSHP}
+	\label{fig:Qt_dx}
+\end{figure}
+
+It has to be noted that this specific heat pump globally presents very low  exergy values. This is due to ratio between the relatively high minimum approach temperatures and the very low temperature difference between the source temperature $T_{b}$ and the heat demand temperature $T_{vap}^{CO2}$.
 
 \subsection{Model improvement - thermodyn cycle}
 \todo{do i maintain results with simple cycles somewhere in the results to show how much better it is with cycle?}
@@ -1157,6 +1277,68 @@ COP Comparison with values from literature?\\
 %with Coolprop CO2 transcritical cycle calculator COP ~= 5 (4.94-5.13) for $T_evap$ = 2deg and 8.5 (8.36-8.78) with $T_evap$ = 13deg
 %isentropic efficiency expansion valve = 0.8\cite{yangTheoreticalExperimentalInvestigation2016}
 
+\subsection{Optimization of energy demand}
+
+The big question is in function of what conditions does the CO2 net works best.
+Chosen most different and representative type of building use:
+\begin{itemize}
+	\item Collective housing (multidwelling)
+	\item Retail
+\end{itemize}
+In order to have comparable results, the total ERA corresponds to the total ERA of the Eglantine district.\\
+
+Sensitivity analysis performed:
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{CU_Edemand.png}
+	\caption{Comparison of the energy demand (power) for the different use of buildings throughout the year}
+	\label{fig:CU_E}
+\end{figure}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{CU_gtw.png}
+	\caption{Comparison of the energy demand (power) of heat extracted (WINTER) of injected (SUMMER) into the boreholes}
+	\label{fig:CU_gtw}
+\end{figure}
+
+The resulting total costs are shown in Figures \ref{fig:CU_TC}, operating costs in Figure \ref{fig:CU_OC} and investment costs in Figure \ref{fig:CU_IC}.
+
+%\begin{figure}[htp]
+%	\centering
+%	\includegraphics[width=0.75\textwidth]{CU_TC.png}
+%	\caption{Total cost for each combination of buildings use}
+%	\label{fig:CU_TC}
+%\end{figure}
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{CU_OC.png}
+	\caption{Operating  cost for each combination of buildings use}
+	\label{fig:CU_OC}
+\end{figure}
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{CU_IC.png}
+	\caption{Investment cost for each combination of buildings use}
+	\label{fig:CU_IC}
+\end{figure}
+
+The combination presenting lowest operating cost is found to be at:
+\begin{align}
+	& Use_{Retail} = 0.134
+	& Use_{Housing} = 0.866
+\end{align}
+
+\todo{redo this image properly}
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{CU_el.png}
+	\caption{Comparison of the total electricity demand per unit}
+	\label{fig:CU_el}
+\end{figure}
+
+However, from it is clear from Figure \ref{fig:CU_OC} that there is small difference in operating costs. This is due to... as shown in Figure \ref{fig:CU_el}.
 
 
 \subsection{Ground temperature}
@@ -1166,31 +1348,53 @@ This would correspond to a geographical location, since ground has different tem
 
 In Switzerland this would correspond to different well depth. To study this thoroughly it would be necessary to have a model for the geothermal well, taking into account the temperature gradient in function of depth, as well as the varying heat transfer coefficient for the CO2 vapor on the upward pipe. This model should also account for the recharge rate of the soil, which would improve the equipment sizing.
 
-\subsection{DX Vs. SL-GSHP}
-As discussed in Section \ref{ss:dx}, there is the possibility to directly expand the CO2 into the geothermal well, instead of exchanging with help of a secondary water loop. 
+Assuming uniform soil, to maintain a constant heat capacity, a higher borehole temperature mean deeper wells, in a smaller number (maintain total meters).
 
-Results of simulation, show the difference in performance, \ref{tab:dxVSsl}.
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{V_SA_Tg.png}
+	\caption{Cost comparison of variants in function of the borehole temperature}
+	\label{fig:V_SA_Tg}
+\end{figure}
 
-\input{Tables/cp_comparison.tex}
-\todo{complete table with exergy efficiencies}
+\subsection{Ground/CU}
 
-CO2 heat pump has lower efficiencies (see Table \ref{tab:eta_comp}) thus $\eta_{COP}$ but much lower temperature difference to cover.
-
-So much higher COP and exergy efficiency!
+\begin{figure}[!htb]
+	\centering
+	\begin{minipage}{.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{SA_CU_Tg_OC_py.png}
+		\caption{Operating costs in function of the borehole temperature and the building use in the district}
+		\label{fig:CU_Tg_OC}
+	\end{minipage}%
+	\hspace{1cm}
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{SA_CU_Tg_IC_py.png}
+		\caption{Investment costs in function of the borehole temperature and the building use in the district}
+		\label{fig:CU_Tg_IC}
+	\end{minipage}
+\end{figure}
 
 \subsection{Lake distance}
 Lake presents a lower average temperature than ground, but also smaller minimum approach temperature needed. 
 
 In comparison 7.5 - 4dTwater - 4dTminwr = -0.5 VS 15 - 6.8dTmingr = 8.2
 
-this results in higher OC. The main advantage can be the reduction of upfront costs, by avoiding geothermal drilling. Pressure losses as well as the energy for pumping have been neglected, so the cost of the water pipes is mainly dependent on the distance of the lake water. Thus the threshold distance can be calculated, for the choice between lake or geothermal:
+this results in higher OC. The main advantage can be the reduction of upfront costs, by avoiding geothermal drilling. Pressure losses as well as the energy for pumping have been neglected, so the cost of the water pipes is mainly dependent on the distance of the lake water. Thus the threshold for the distance of the lake can be calculated, for which the CO2-LS system to present a lower total cost than the CO2-GS system. 
 
-\missingfigure{distLake threshold in TC/OC/IC graph}
+A sensitivity analysis has been performed on this threshold, in function of the ground temperature. This helps choosing between using the lake or the soil as a heat source, knowing the mean ground temperature and the distance from the lake water.
 
-A sensitivity analysis has been performed on this threshold, in function of the ground temperature, since it is a crucial parameter for different climates.
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{lakeDist.png}
+	\caption{Maximum distance of lake $d_{lake}$, in order to achieve a lower total costs with respect to the CO2-GS system, in function of the ground temperature $T_{borehole}$}
+	\label{fig:lakeDist}
+\end{figure}
 
-\missingfigure{distLake threshold (Tground)}
+%\input{Tables/lakeDist.tex}
 
+It can be seen that lake water very competitive, as long as the lake is located in a radius of around one kilometer. At $T_{borehole} = 12 \si{\celsius}$, as in the Eglantine district, the CO2-LS is a financially interesting solution, i.e. having a lower total cost, with respect to the geothermal solution, if the distance to the lake is shorter than 1125 m.
 
 \subsection{External heat source}
 The integration of external heat sources, big as for example the ice rink in Eglantine case, is very interesting for this technology. However, this always depends on the ratio between the IC and the OC. In this case, this can be calculated with the ratio between the additional meters of pipes that have to be installed, wrt the amount of heat that can be recovered per year.
@@ -1223,8 +1427,8 @@ However, it would be very interesting to make detailed analysis of...\\
 
 This model should be improved...
 
-Geothermal model: In Switzerland this would correspond to different well depth. To study this thoroughly it would be necessary to have a model for the geothermal well, taking into account the temperature gradient in function of depth, as well as the varying heat transfer coefficient for the CO2 vapor on the upward pipe. This model should also account for the recharge rate of the soil, which would improve the equipment sizing. And thus storage, or gain through restoring/injecting heat.\\
-
+Geothermal model: In Switzerland this would correspond to different well depth. To study this thoroughly it would be necessary to have a model for the geothermal well, taking into account the temperature gradient in function of depth, as well as the varying heat transfer coefficient for the CO2 vapor on the upward pipe\cite{badacheExperimentalStudyCarbon2018,lamarcheReviewMethodsEvaluate2010}. This model should also account for the recharge rate of the soil, which would improve the equipment sizing. And thus storage, or gain through restoring/injecting heat.\\
+Conductivity models \cite{jiaReviewEffectiveThermal2019,lamarcheReviewMethodsEvaluate2010,zengHeatTransferAnalysis2003a}
 This new thing could be integrated...\\
 
 \section{Conclusion}

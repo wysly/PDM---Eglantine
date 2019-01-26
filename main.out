@@ -25,45 +25,55 @@
 \BOOKMARK [3][-]{subsubsection.3.6.4}{Cooling tower / Air cooler}{subsection.3.6}% 25
 \BOOKMARK [3][-]{subsubsection.3.6.5}{Geo-cooling}{subsection.3.6}% 26
 \BOOKMARK [3][-]{subsubsection.3.6.6}{PV}{subsection.3.6}% 27
-\BOOKMARK [1][-]{section.4}{Application}{}% 28
-\BOOKMARK [2][-]{subsection.4.1}{Case-study Eglantine}{section.4}% 29
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Context}{subsection.4.1}% 30
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Buildings}{subsection.4.1}% 31
-\BOOKMARK [3][-]{subsubsection.4.1.3}{Pre-studies}{subsection.4.1}% 32
-\BOOKMARK [3][-]{subsubsection.4.1.4}{Calculations/Energy demand/Typical days}{subsection.4.1}% 33
-\BOOKMARK [2][-]{subsection.4.2}{Heat sources}{section.4}% 34
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Stream}{subsection.4.2}% 35
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Lake}{subsection.4.2}% 36
-\BOOKMARK [3][-]{subsubsection.4.2.3}{Geothermal wells}{subsection.4.2}% 37
-\BOOKMARK [2][-]{subsection.4.3}{External heat sources}{section.4}% 38
-\BOOKMARK [3][-]{subsubsection.4.3.1}{Ice rink}{subsection.4.3}% 39
-\BOOKMARK [3][-]{subsubsection.4.3.2}{Shopping mall}{subsection.4.3}% 40
-\BOOKMARK [2][-]{subsection.4.4}{Reference scenario}{section.4}% 41
-\BOOKMARK [3][-]{subsubsection.4.4.1}{Heating}{subsection.4.4}% 42
-\BOOKMARK [3][-]{subsubsection.4.4.2}{Cooling}{subsection.4.4}% 43
-\BOOKMARK [3][-]{subsubsection.4.4.3}{Refrigeration}{subsection.4.4}% 44
-\BOOKMARK [2][-]{subsection.4.5}{CO2 DEN}{section.4}% 45
-\BOOKMARK [3][-]{subsubsection.4.5.1}{Heating}{subsection.4.5}% 46
-\BOOKMARK [3][-]{subsubsection.4.5.2}{Refrigeration}{subsection.4.5}% 47
-\BOOKMARK [3][-]{subsubsection.4.5.3}{Cooling}{subsection.4.5}% 48
-\BOOKMARK [3][-]{subsubsection.4.5.4}{Central plant}{subsection.4.5}% 49
-\BOOKMARK [3][-]{subsubsection.4.5.5}{Network}{subsection.4.5}% 50
-\BOOKMARK [2][-]{subsection.4.6}{Values/typical days/...}{section.4}% 51
-\BOOKMARK [3][-]{subsubsection.4.6.1}{Investment cost functions}{subsection.4.6}% 52
-\BOOKMARK [3][-]{subsubsection.4.6.2}{Compressor efficiencies}{subsection.4.6}% 53
-\BOOKMARK [3][-]{subsubsection.4.6.3}{Minimum approach temperature}{subsection.4.6}% 54
-\BOOKMARK [2][-]{subsection.4.7}{Energy Use optim model}{section.4}% 55
-\BOOKMARK [1][-]{section.5}{Results}{}% 56
-\BOOKMARK [2][-]{subsection.5.1}{Scenario comparison}{section.5}% 57
-\BOOKMARK [3][-]{subsubsection.5.1.1}{COPs/Exergy}{subsection.5.1}% 58
-\BOOKMARK [3][-]{subsubsection.5.1.2}{CAPEX}{subsection.5.1}% 59
-\BOOKMARK [2][-]{subsection.5.2}{Model improvement - thermodyn cycle}{section.5}% 60
-\BOOKMARK [2][-]{subsection.5.3}{Ground temperature}{section.5}% 61
-\BOOKMARK [2][-]{subsection.5.4}{DX Vs. SL-GSHP}{section.5}% 62
-\BOOKMARK [2][-]{subsection.5.5}{Lake distance}{section.5}% 63
-\BOOKMARK [2][-]{subsection.5.6}{External heat source}{section.5}% 64
-\BOOKMARK [2][-]{subsection.5.7}{others}{section.5}% 65
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 66
-\BOOKMARK [1][-]{section.7}{Outlook}{}% 67
-\BOOKMARK [1][-]{section.8}{Conclusion}{}% 68
-\BOOKMARK [1][-]{section.9}{Anergy nets Switzerland}{}% 69
+\BOOKMARK [3][-]{subsubsection.3.6.7}{Network}{subsection.3.6}% 28
+\BOOKMARK [1][-]{section.4}{Application}{}% 29
+\BOOKMARK [2][-]{subsection.4.1}{Case-study Eglantine}{section.4}% 30
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Context}{subsection.4.1}% 31
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Buildings}{subsection.4.1}% 32
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Pre-studies}{subsection.4.1}% 33
+\BOOKMARK [3][-]{subsubsection.4.1.4}{Calculations/Energy demand/Typical days}{subsection.4.1}% 34
+\BOOKMARK [2][-]{subsection.4.2}{Heat sources}{section.4}% 35
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Stream}{subsection.4.2}% 36
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Lake}{subsection.4.2}% 37
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Geothermal wells}{subsection.4.2}% 38
+\BOOKMARK [2][-]{subsection.4.3}{External heat sources}{section.4}% 39
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Ice rink}{subsection.4.3}% 40
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Shopping mall}{subsection.4.3}% 41
+\BOOKMARK [2][-]{subsection.4.4}{Variants / Scenarios}{section.4}% 42
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Heating}{subsection.4.4}% 43
+\BOOKMARK [3][-]{subsubsection.4.4.2}{Cooling}{subsection.4.4}% 44
+\BOOKMARK [3][-]{subsubsection.4.4.3}{Refrigeration}{subsection.4.4}% 45
+\BOOKMARK [2][-]{subsection.4.5}{Reference scenario}{section.4}% 46
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Heating}{subsection.4.5}% 47
+\BOOKMARK [3][-]{subsubsection.4.5.2}{Cooling}{subsection.4.5}% 48
+\BOOKMARK [3][-]{subsubsection.4.5.3}{Refrigeration}{subsection.4.5}% 49
+\BOOKMARK [2][-]{subsection.4.6}{CO2 DEN}{section.4}% 50
+\BOOKMARK [3][-]{subsubsection.4.6.1}{Heating}{subsection.4.6}% 51
+\BOOKMARK [3][-]{subsubsection.4.6.2}{Refrigeration}{subsection.4.6}% 52
+\BOOKMARK [3][-]{subsubsection.4.6.3}{Cooling}{subsection.4.6}% 53
+\BOOKMARK [3][-]{subsubsection.4.6.4}{Central plant}{subsection.4.6}% 54
+\BOOKMARK [2][-]{subsection.4.7}{Values/typical days/...}{section.4}% 55
+\BOOKMARK [3][-]{subsubsection.4.7.1}{Investment cost functions}{subsection.4.7}% 56
+\BOOKMARK [3][-]{subsubsection.4.7.2}{Minimum approach temperature}{subsection.4.7}% 57
+\BOOKMARK [3][-]{subsubsection.4.7.3}{Compressor efficiencies}{subsection.4.7}% 58
+\BOOKMARK [2][-]{subsection.4.8}{Energy Use optim model}{section.4}% 59
+\BOOKMARK [1][-]{section.5}{Results}{}% 60
+\BOOKMARK [2][-]{subsection.5.1}{Variants}{section.5}% 61
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Reference energy system}{subsection.5.1}% 62
+\BOOKMARK [3][-]{subsubsection.5.1.2}{CO2 DEN on geothermal wells}{subsection.5.1}% 63
+\BOOKMARK [3][-]{subsubsection.5.1.3}{CO2 DEN on lake water}{subsection.5.1}% 64
+\BOOKMARK [2][-]{subsection.5.2}{Scenario comparison}{section.5}% 65
+\BOOKMARK [3][-]{subsubsection.5.2.1}{COPs/Exergy}{subsection.5.2}% 66
+\BOOKMARK [3][-]{subsubsection.5.2.2}{CAPEX}{subsection.5.2}% 67
+\BOOKMARK [2][-]{subsection.5.3}{DX Vs. SL-GSHP}{section.5}% 68
+\BOOKMARK [2][-]{subsection.5.4}{Model improvement - thermodyn cycle}{section.5}% 69
+\BOOKMARK [2][-]{subsection.5.5}{Optimization of energy demand}{section.5}% 70
+\BOOKMARK [2][-]{subsection.5.6}{Ground temperature}{section.5}% 71
+\BOOKMARK [2][-]{subsection.5.7}{Ground/CU}{section.5}% 72
+\BOOKMARK [2][-]{subsection.5.8}{Lake distance}{section.5}% 73
+\BOOKMARK [2][-]{subsection.5.9}{External heat source}{section.5}% 74
+\BOOKMARK [2][-]{subsection.5.10}{others}{section.5}% 75
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 76
+\BOOKMARK [1][-]{section.7}{Outlook}{}% 77
+\BOOKMARK [1][-]{section.8}{Conclusion}{}% 78
+\BOOKMARK [1][-]{section.9}{Anergy nets Switzerland}{}% 79
