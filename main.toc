@@ -65,10 +65,10 @@
 \contentsline {subsubsection}{\numberline {5.1.2}CO2 DEN on geothermal wells}{39}{subsubsection.5.1.2}% 
 \contentsline {subsection}{\numberline {5.2}Scenario comparison}{40}{subsection.5.2}% 
 \contentsline {subsection}{\numberline {5.3}Ground temperature}{40}{subsection.5.3}% 
-\contentsline {subsection}{\numberline {5.4}Lake distance}{43}{subsection.5.4}% 
-\contentsline {subsection}{\numberline {5.5}Optimization of energy demand}{43}{subsection.5.5}% 
-\contentsline {subsubsection}{\numberline {5.5.1}Ground/CU}{46}{subsubsection.5.5.1}% 
-\contentsline {subsection}{\numberline {5.6}External heat source}{46}{subsection.5.6}% 
-\contentsline {section}{\numberline {6}Outlook}{46}{section.6}% 
-\contentsline {section}{\numberline {7}Conclusion}{47}{section.7}% 
-\contentsline {section}{\numberline {8}Anergy nets Switzerland}{49}{section.8}% 
+\contentsline {subsection}{\numberline {5.4}Lake distance}{44}{subsection.5.4}% 
+\contentsline {subsection}{\numberline {5.5}Optimization of energy demand}{44}{subsection.5.5}% 
+\contentsline {subsubsection}{\numberline {5.5.1}Ground/CU}{47}{subsubsection.5.5.1}% 
+\contentsline {subsection}{\numberline {5.6}External heat source}{47}{subsection.5.6}% 
+\contentsline {section}{\numberline {6}Outlook}{47}{section.6}% 
+\contentsline {section}{\numberline {7}Conclusion}{48}{section.7}% 
+\contentsline {section}{\numberline {8}Anergy nets Switzerland}{50}{section.8}% 

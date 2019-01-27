@@ -534,26 +534,26 @@ Validated also by comparison between the two\cite{mastrulloComparisonR744R134a20
 \input{Tables/heatTransfCoeff.tex}
 
 
-\subsection{Exergy}
-\todo{Exergy: chapter not finished}
-The exergy of a heat transfer is defined as the maximum amount of work that can be extracted from it, through reversible transformations that exchange with the environment. Thus the calculation of exergy losses is a very interesting indicator to analyze a given process or system, since it expresses the quality and the efficiency with which the system operates, with respect to the maximum possible. Therefore, these values are always lower than 100 \%. \\
+\subsection{Exergy}\label{ss:exergy}
+The exergy of an energy transfer is defined as the maximum amount of work that can be extracted from it, through reversible transformations that exchange with the environment. Thus the calculation of exergy losses is a very interesting indicator to analyze a given process or system, since it expresses the quality and the efficiency with which the system operates, with respect to the maximum possible. Therefore, other as for the coefficient of performance, these values are always lower than 100 \%. \\
 
-The maximum work that can be extracted is derived from the first two thermodynamic principles, and is given by the following formula:
+The exergy value, i.e. the maximum work that can be extracted from an energy transfer, is derived from the first two thermodynamic principles, and is given by the following formula:
 \begin{equation}
     \dot{E}^{-}_{max} = \sum_{i} \dot{Q_i}^{+} (1 - \frac{T_{a}}{T_i} ) + \sum_{r} \dot{M}_{r}^{+} (h_{r} - T_{a} s_{r})    
 \end{equation}
 
-In order to compute the exergy losses the general approach that can be used is the following:
-\begin{equation}
-    \dot{L} = \dot{E}^{-}_{max} - \sum_{j}\dot{E}^{-}_{j} \geq 0
-\end{equation}
-
-In our case
+The exergy losses are thus given by the difference between the exergy value and the energy furnished to the system:
 \begin{align}
-    & \eta_{exergy} =  \frac{\dot{Q}_{cold,a} + \dot{Q}_{hot,r} + \dot{E}_{grid}^{-}}{\dot{Q}_{cold,r} + \dot{Q}_{hot,a} + \dot{E}_{grid}^{+}}  \\
-    & \dot{L} = (1-\eta_{exergy})(\dot{Q}_{cold,r} + \dot{Q}_{hot,a} + \dot{E}_{grid}^{+})
+	&    \dot{L} = \dot{E}^{-}_{max} - \sum_{j}\dot{E}^{-}_{j} \geq 0 \\
+	& 	\dot{L} = (1-\eta_{exergy})\dot{E}^{-}_{max}
 \end{align}
-where $\dot{Q}_{hot,a}$ and $\dot{Q}_{hot,r}$...?
+
+In our case this can be written as:
+\begin{align}
+    & \eta_{exergy} =  \frac{\dot{E}q_{cold,a} + \dot{E}q_{hot,r} + \dot{E}_{grid}^{-}}{\dot{Q}q_{cold,r} + \dot{Q}_{hot,a} + \dot{E}_{grid}^{+}}  \\
+    & \dot{L} = (1-\eta_{exergy})(\dot{E}q_{cold,r} + \dot{E}q_{hot,a} + \dot{E}_{grid}^{+})
+\end{align}
+where $\dot{E}q$ are the exergy value of hot and cold streams, respectively above (a) and below (r) the ambient temperature. $\dot{E}_{grid}^{+}$ and $\dot{E}_{grid}^{-}$ are the electricity bought from and sold to the grid.
 
 \subsection{Energy technology models}\label{ss:et}
 The models for the energy technologies are adapted from the source code written by Suciu Raluca.\todo{cite anything, or name is enough?}\\
@@ -1229,7 +1229,7 @@ COP Comparison with values from literature?\\
 
 \section{Results and discussion}
 
-\subsection{Variants}
+\subsection{Conversion technologies}
 
 \begin{enumerate}
 	\item GS-HP: decentralized ground sourced heat pumps
@@ -1258,6 +1258,14 @@ The optimum, with respect to the total cost of the energy system, is in the very
 \subsubsection{CO2 DEN on geothermal wells}
 A parametric optimization of the costs of the CO2 district energy system with ground sourced central plant (GS-CO2DEN) is shown in Figure \ref{fig:V_CO2_G_PO}.
 
+\begin{figure}[tph]
+	\centering
+	\includegraphics[width=0.5\linewidth]{Images/V_CO2_eldem_sorted}
+	\caption{Electricity demand of GS-CO2DEN system grouped in categories, sorted in decreasing order}
+	\label{fig:gsco2_el}
+\end{figure}
+
+
 The response of this system to the parametric optimization is very similar to the one of the GS-HP system. This means that the biggest difference in investment and operating cost is due to the sizing of the PV, while the extreme cases are determined by the ration between the electrical heater (R-EL) and the heating heat pumps (HP-SH, HP-DHW).
 
 Also in this case the lowest total cost of the energy system is to be found in the very middle of the graph, between column 2 and 3. The optimum is analyzed in the following chapters.
@@ -1280,7 +1288,7 @@ One reason for this difference is most likely the size difference between the en
 On the other hand, it is not trivial to estimate the cost of building the CO2 network, given the lack of examples in the real world, and the resulting costs could be proven to be inaccurate. Also the sizing of the geothermal well, in order to account for yearly energy balance and recharge rate, and for the specific cost, according to depth and soil type would have to be verified and confirmed through further studies and simulations.
 
 
-\subsection{Scenario comparison}
+\subsection{Comparison}
 A comparison is made at the Eglantine conditions, for the defined scenarios.
 
 Results are shown in Figure \ref{fig:V_costs}.\\
@@ -1291,17 +1299,37 @@ Results are shown in Figure \ref{fig:V_costs}.\\
 	\caption{Cost comparison for the three different energy systems variants}
 	\label{fig:V_costs}
 \end{figure}
-\todo{no TC in legend}
-\todo{take out LS?}
-\todo{add exergy values}
-\todo{autarchy and autoconsumption values?}
 
 OC of lake are slightly lower than CO2 geoth, even if tevap lower, since its a R1234yf HP with higher efficiencies... \\
+Self consumption and autarchy do not vary much, because no storage technology has been taken into account. This would enable to adapt the consumption to profit from the cheap domestic produced energy. Definitely one of the next steps to improve the model!!!
 
 Table \ref{tab:V_cops}.
-\todo{graph with COP_t from JPNB}
 
 \input{Tables/V_cops.tex}
+
+The exergy values of supply and demand have been calculated for each conversion technology, as explained in Section \ref{ss:exergy}. This analysis shows the real thermodynamic value of the required energy services, since not only the amount of heat is considered, but also the temperature level at which it happens. The exergy value of the demand is thus calculated in function of the varying ambient temperature and is the same for all technologies.\\
+
+The difference in the exergy efficiency between the different conversion technologies is shown in Figure \ref{fig:v_exe}. On the left hand, the values are calculated without taking into account the domestic PV production of renewable electricity, while on the left hand this has been included in the calculation. It is clear to see that the GS-HP performs worse than than the CO2 DEN. The average exergy efficiency is of 17\%, against 35\% of the GS-CO2DEN. As it can be seen in Table \ref{tab:V_exergy}, the exergy losses $\dot{L}_{\Delta T_{min}}$ due to the minimum approach temperature between the heat demand and the supply are small compared to the exergy losses occurring in the heat pumps $\dot{L}_{HP}$. The latter accounts for the COP of the heat pumps, which is as well dependent from the approach temperature with their respective heat sources. This explains the lower exergy efficiency of the GS-HP, for which its heat pumps require a much lower evaporation temperature, as discussed previously.\\
+
+Even if for obvious reasons the exergy efficiency is considerably higher including the domestic PV production, the difference in performance between the different technologies does not change. This is explained by the fact that the self consumption values are very similar, as it can be seen in Figure \ref{fig:V_costs} in purple, and the increase of efficiency is thus shared among all technologies. 
+
+
+\input{Tables/V_exergy.tex}
+
+\begin{figure}[tph]
+	\centering
+	\includegraphics[width=0.875\linewidth]{Images/V_EXE}
+	\caption{Comparison of exergy efficiencies calculated in each timestep - sorted in decreasing order - with the entire electricity demand on the left, and only with electricity bought from the grid on the right}
+	\label{fig:v_exe}
+\end{figure}
+
+\begin{figure}[tph]
+	\centering
+	\includegraphics[width=1\linewidth]{Images/V_COP}
+	\caption{Comparison of COP values for each timestep t and unit. The \textit{cooling } and the \textit{global} COP are not displayed for praticality reasons, given their very high values during free cooling}
+	\label{fig:v_cop}
+\end{figure}
+
 
 
 \subsection{Ground temperature}
@@ -1349,7 +1377,7 @@ A sensitivity analysis has been performed on this threshold, in function of the 
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=0.45\textwidth]{lakeDist.png}
+	\includegraphics[width=0.4\textwidth]{lakeDist.png}
 	\caption{Maximum distance of lake for which the total costs are lower than the two other energy systems, in function of the ground temperature $T_{borehole}$}
 	\label{fig:lakeDist}
 \end{figure}
@@ -1496,6 +1524,9 @@ Geothermal model: In Switzerland this would correspond to different well depth. 
 Conductivity models \cite{jiaReviewEffectiveThermal2019,lamarcheReviewMethodsEvaluate2010,zengHeatTransferAnalysis2003a}
 This new thing could be integrated...\\
 
+ no storage technology has been taken into account. This would enable to adapt the consumption to profit from the cheap domestic produced energy. Definitely one of the next steps to improve the model!!!
+ 
+ 
 \section{Conclusion}
 
 
