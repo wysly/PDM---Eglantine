@@ -5,25 +5,32 @@
 \contentsline {todo}{Figure: graph Q(T) for DX-GSHP}{11}{figure.9}% 
 \contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ find cheatsheet of exam MOES to do that}{11}{section*.8}% 
 \contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ is third eq rtk+1 = 0 correct???}{11}{section*.9}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ dtmin finish rewriting this last part}{14}{section*.10}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Exergy: chapter not finished}{15}{section*.11}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ cite anything, or name is enough?}{15}{section*.12}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ other names?}{15}{section*.13}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ add this paragraph}{12}{section*.10}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ dtmin finish rewriting this last part}{14}{section*.11}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Exergy: chapter not finished}{15}{section*.12}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ cite anything, or name is enough?}{15}{section*.13}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ other names?}{15}{section*.14}% 
 \contentsline {todo}{Figure: Image necessary explaining geo-cooling?}{20}{subsubsection.3.6.5}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ how has this temperature been chosen? is there a paper? see henchoz with other T}{20}{section*.14}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ write section eglantine calculations/energy demand}{24}{section*.15}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ add images of gradient and surface temperature from PGG report?}{26}{section*.16}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ this cost function here?}{27}{section*.17}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ insert equations for temperatures with dTmins?}{29}{section*.18}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ how has this temperature been chosen? is there a paper? see henchoz with other T}{20}{section*.15}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ write section eglantine calculations/energy demand}{24}{section*.16}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ add images of gradient and surface temperature from PGG report?}{26}{section*.17}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ this cost function here?}{27}{section*.18}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ insert equations for temperatures with dTmins?}{29}{section*.19}% 
 \contentsline {todo}{Figure: add figure with load profile}{29}{table.8}% 
 \contentsline {todo}{Figure: energy schema ref scenario}{31}{subsection.4.5}% 
-\contentsline {todo}{Figure: energy syst schema CO2 DEN}{32}{subsection.4.6}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ explain lake=ref, geoth=DHX CO2}{34}{section*.19}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ summary table needed here (Ts, dTmin, Tevap, P...)? wrong values now}{34}{section*.20}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Table with values}{35}{section*.21}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ missing reference for superheat and subcool temp}{35}{section*.22}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ use y instead of mult?}{36}{section*.23}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ do i maintain results with simple cycles somewhere in the results to show how much better it is with cycle?}{40}{section*.24}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ redo this image properly}{40}{section*.25}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ good thing to do?}{42}{section*.26}% 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ do something on PV? Cant see what could be interesting in our case}{44}{section*.27}% 
+\contentsline {todo}{Figure: energy syst schema CO2 DEN}{33}{subsection.4.6}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ explain lake=ref, geoth=DHX CO2}{34}{section*.20}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ summary table needed here (Ts, dTmin, Tevap, P...)? wrong values now}{34}{section*.21}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Table with values}{34}{section*.22}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ missing reference for superheat and subcool temp}{35}{section*.23}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ not sure where to put that...}{37}{section*.24}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ do i maintain results with simple cycles somewhere in the results to show how much better it is with cycle?}{38}{section*.25}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ no TC in legend}{40}{section*.26}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ take out LS?}{40}{section*.27}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ add exergy values}{40}{section*.28}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ autarchy and autoconsumption values?}{40}{section*.29}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ wrapfigure}{40}{section*.30}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ write and reference model with if conditions}{42}{section*.31}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ wrapfig}{43}{section*.32}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ needed figure of source?}{44}{section*.33}% 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ good thing to do?}{46}{section*.34}% 

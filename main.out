@@ -56,24 +56,19 @@
 \BOOKMARK [3][-]{subsubsection.4.7.1}{Investment cost functions}{subsection.4.7}% 56
 \BOOKMARK [3][-]{subsubsection.4.7.2}{Minimum approach temperature}{subsection.4.7}% 57
 \BOOKMARK [3][-]{subsubsection.4.7.3}{Compressor efficiencies}{subsection.4.7}% 58
-\BOOKMARK [2][-]{subsection.4.8}{Energy Use optim model}{section.4}% 59
-\BOOKMARK [1][-]{section.5}{Results}{}% 60
-\BOOKMARK [2][-]{subsection.5.1}{Variants}{section.5}% 61
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Reference energy system}{subsection.5.1}% 62
-\BOOKMARK [3][-]{subsubsection.5.1.2}{CO2 DEN on geothermal wells}{subsection.5.1}% 63
-\BOOKMARK [3][-]{subsubsection.5.1.3}{CO2 DEN on lake water}{subsection.5.1}% 64
-\BOOKMARK [2][-]{subsection.5.2}{Scenario comparison}{section.5}% 65
-\BOOKMARK [3][-]{subsubsection.5.2.1}{COPs/Exergy}{subsection.5.2}% 66
-\BOOKMARK [3][-]{subsubsection.5.2.2}{CAPEX}{subsection.5.2}% 67
-\BOOKMARK [2][-]{subsection.5.3}{DX Vs. SL-GSHP}{section.5}% 68
-\BOOKMARK [2][-]{subsection.5.4}{Model improvement - thermodyn cycle}{section.5}% 69
-\BOOKMARK [2][-]{subsection.5.5}{Optimization of energy demand}{section.5}% 70
-\BOOKMARK [2][-]{subsection.5.6}{Ground temperature}{section.5}% 71
-\BOOKMARK [2][-]{subsection.5.7}{Ground/CU}{section.5}% 72
-\BOOKMARK [2][-]{subsection.5.8}{Lake distance}{section.5}% 73
-\BOOKMARK [2][-]{subsection.5.9}{External heat source}{section.5}% 74
-\BOOKMARK [2][-]{subsection.5.10}{others}{section.5}% 75
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 76
-\BOOKMARK [1][-]{section.7}{Outlook}{}% 77
-\BOOKMARK [1][-]{section.8}{Conclusion}{}% 78
-\BOOKMARK [1][-]{section.9}{Anergy nets Switzerland}{}% 79
+\BOOKMARK [2][-]{subsection.4.8}{CP with if conditions}{section.4}% 59
+\BOOKMARK [2][-]{subsection.4.9}{DX Vs. SL-GSHP}{section.4}% 60
+\BOOKMARK [2][-]{subsection.4.10}{Model improvement - thermodyn cycle}{section.4}% 61
+\BOOKMARK [1][-]{section.5}{Results and discussion}{}% 62
+\BOOKMARK [2][-]{subsection.5.1}{Variants}{section.5}% 63
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Reference energy system}{subsection.5.1}% 64
+\BOOKMARK [3][-]{subsubsection.5.1.2}{CO2 DEN on geothermal wells}{subsection.5.1}% 65
+\BOOKMARK [2][-]{subsection.5.2}{Scenario comparison}{section.5}% 66
+\BOOKMARK [2][-]{subsection.5.3}{Ground temperature}{section.5}% 67
+\BOOKMARK [2][-]{subsection.5.4}{Lake distance}{section.5}% 68
+\BOOKMARK [2][-]{subsection.5.5}{Optimization of energy demand}{section.5}% 69
+\BOOKMARK [3][-]{subsubsection.5.5.1}{Ground/CU}{subsection.5.5}% 70
+\BOOKMARK [2][-]{subsection.5.6}{External heat source}{section.5}% 71
+\BOOKMARK [1][-]{section.6}{Outlook}{}% 72
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 73
+\BOOKMARK [1][-]{section.8}{Anergy nets Switzerland}{}% 74

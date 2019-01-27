@@ -2,9 +2,9 @@
 	\centering
 	\caption{Resource flows for the CO2 DEN ((-): flow in / (+): flow out))}\vspace{2mm}
 	\label{tab:layers_CO2} 
-	\begin{tabular}{llllll}
+	\begin{tabular}{lccccc} \toprule
 		\multicolumn{1}{c}{-} & \multicolumn{5}{c}{Resource flows}                                          \\
-		Units                 & Electricity & $CO2_{liq}$ & $CO2_{vap}$ & $Source_{hot}$ & $Source_{cold}$ \\
+		Units                 & Electricity & $CO2_{liq}$ & $CO2_{vap}$ & $Source_{hot}$ & $Source_{cold}$ \\ \midrule
 		$HP_{cp}^{winter}$    & -           & -           & +           & -              & +               \\
 		$HP_{cp}^{summer}$    &             & +           & -           & +              & -               \\
 		$HP_{sh}$             & -           & +           & -           &                &                 \\
@@ -14,6 +14,6 @@
 		Elec. Heater          & -           &             &             &                &                 \\
 		PV                    & +           &             &             &                &                 \\
 		$GTW_{winter}$        &             &             &             & +              & -               \\
-		$GTW_{summer}$        &             &             &             & -              & +              
+		$GTW_{summer}$        &             &             &             & -              & +         \\ \bottomrule     
 	\end{tabular}
 \end{table}
