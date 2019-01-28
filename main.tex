@@ -25,6 +25,9 @@
 \graphicspath{ {Images/} }
 \usepackage{subfigure}
 \usepackage{wrapfig}
+%\usepackage{floatrow}
+%% Table float box with bottom caption, box width adjusted to content
+%\newfloatcommand{capbtabbox}{table}[][\FBwidth]
 
 % Tables 
 \usepackage{booktabs}
@@ -51,7 +54,7 @@
 \listoftodos
 \newpage
 
-%%%%%%%%% Contents %%%%%%%%%
+%%%%%%%%% Abstract %%%%%%%%%
 \begin{abstract}
 Many countries and cities in the world have pledged to drastically reduce their CO2 emissions during the next decades. Given the high degree of urbanization in occidental society, district energy systems present a high potential to increase the efficiency of heating and cooling systems. 
 The present work focuses on a specific type of district network, base on CO2 as a working fluid. Through condensation and evaporation it allows to exchange heat at low temperatures, increasing the potential of heat recovery, and thus the energy and exergy efficiency of the global system. Previous studies have shown that very high efficiencies can be reach with the use of heat pumps to supply heat to the buildings, as well as to harvest heat from environment. The aim of this work is to study the performance of such a system, based on a case study, the Eglantine district located near Lausanne. Specifically it has been looked at evaluating the integration of a geothermal field, as a heat source. The main research questions that will be tried to answer are:\\
@@ -63,8 +66,32 @@ The present work focuses on a specific type of district network, base on CO2 as 
 A comparative analysis shows that...\\
 Conclusions here
 
-
 \end{abstract}
+\thispagestyle{empty}
+
+%%%%%%%%% Empty page %%%%%%%%%
+\newpage
+\null
+\thispagestyle{empty} % to have a page without page number
+\clearpage
+
+%%%%%%%%% Acknowledgments %%%%%%%%%
+\newpage
+\renewcommand{\abstractname }{Acknowledgments}
+\begin{abstract}
+	I would like to thank prof. Marechal to have given me the opportunity to do my master thesis in his research group IPESE, on a subject and in a mindset that i appreciate a lot.\\ 
+	
+	I had the chance to work with Amoedo Rafael and Luise Middelhauve, who i thank for having supervised me and, most importantly, for having given me a good support and structure. A special thanks goes to Luc Girardin for the useful and interesting discussions we had, but also for the time he accorded me and the guidance given me throughout this project. \\
+	
+	I also thank all the doctor students and researchers at IPESE that might have answered some of my questions, or simply greeted me in the morning. It was a pleasure!
+\end{abstract}
+\thispagestyle{empty}
+
+%%%%%%%%% Empty page %%%%%%%%%
+\newpage
+\null
+\thispagestyle{empty} % to have a page without page number
+\clearpage
 
 %%%%%%%%% Contents %%%%%%%%%
 \newpage
@@ -88,44 +115,6 @@ Conclusions here
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% CONTENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Glossary}
-SH
-DHW
-REF
-AC
-GC
-CP
-ERA
-PV
-HP
-GSHP
-SL-
-DX-
-SIA
-PV
-DEN
-HEX
-DH
-DHC
-CHP
-is
-mech
-comp
-ex
-evap 
-cond
-MILP
-PtG
-DSM
-HFC
-HCFC
-CFC
-HFO
-IC
-OC
-TC
-CAPEX
-OPEX
 
 \section{Introduction}
 
@@ -256,11 +245,9 @@ The working principle is shown in Figure \ref{fig:CO2schema}. Heating users can 
 \end{figure}
 
 One of the big advantages of this technology, with respect to water based DEN, is the pipes sizing. In fact, given the fact that it works on pressure maintenance instead of a fluid flow, no return pipe is necessary, which results in a slightly shorter total length of installed pipes. Moreover, due to the higher energy density of latent heat, the pipes diameter is drastically reduced. Henchoz et al. \cite{henchozPotentialRefrigerantBased} compared three different working fluid on the same study case, showing that, while CO2 needs pipes of only 280/330mm (liquid/vapor), R123yf would need 270/700mm and water 625/625mm. Given the low operating temperatures, there are much lower requirements for pipes insulation. While water pipes need to be buried deep enough to prevent damage due to water freezing, in case part of the network had to be stopped during winter, CO2 does not freeze and thus does not require a minimum freeze-safe depth. Henchoz et al. have even imagined installing the pipes inside a sidewalk module, which would drastically simplify maintenance and inspection. Given the smaller diameter, it would also be possible to retrofit an old, high temperature district heating network, by placing the CO2 pipes inside the old water pipes. All the above mentioned advantages of using CO2, result in lower upfront costs. \\
-%Another advantage is the possibility of up-scaling a network. Indeed, to upscale a water based anergy network would require 
-\todo{CO2den: necessary to talk about the advantage of expanding network with additional compressor easier than for water??}
 
 The main drawback of this technology is the high operating pressure, which situates at about 50 bars, and the safety concerns that could derive from the large amount of CO2 that could escape in case of a major leakage. Nevertheless, as described in \ref{ss:5gden}, CO2 refrigeration networks are already widely used in supermakets, and the technology is considered as safe. \\
-\todo{CO2den: need more drawbacks? or write more about it?}
+
 %\textit{Safety issues analyzed \cite{girardinSafetyIssuesCO2based2016}.\\}
 %\textit{A cold water network is the second best option, although more expensive initially and thus less profitable, it has several advantages in terms of safety and availability of components.}
 
@@ -347,48 +334,31 @@ So far, this technology is not so widely spread, mostly because of a more demand
 On of the main reasons for this efficiency gain is the elimination of the temperature lift of the water loop, which is replaced by a constant temperature phase-change, as well as the elimination of the minimum approach temperature necessary to exchange heat between the SL and the heat pump. This results in a higher COP for the heat pumps. 
 Moreover, CO2 presents a higher heat transfer coefficient, which again allows to either reduce the minimum approach temperature, or extract a higher power with respect to an equal exchange surface. The minimum approach temperature has to be determined in function of the thermal permeability of soil and is correlated to the length and total surface of the geothermal probes, as well as the refrigerant flow rate.
 
-\missingfigure{graph Q(T) for DX-GSHP}
- 
-
-\subsection{optimization}
-
-\subsubsection{MILP}
-Mixed integer linear programming (MILP) is... \\
-AMPL a programm, solver using Gurobi, GLPK...\\
-Black box??.....\\
-State variables $X_{state}$\\
-Model $F_{X_{state}}$\\
-Context specification $S_{X_{state}}$\\
-Inequality constraints $G_{X_{state}}$\\
-\todo{find cheatsheet of exam MOES to do that}
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Qt_dx.png}
+	\caption{Schematic representation of heat exchanges and minimum approach temperatures for the central plant HP, comparing SL- and DX-GSHP}
+	\label{fig:Qt_dx}
+\end{figure}
 
 
-%\subsubsection{Genetic algorithms}
-%Optimization can be done through empirical algorithms that respect a set of rules. However, it is also possible to explore a space of solutions by reproducing the idea of evolution.
-%
-%\begin{enumerate}
-%\item Create the population
-%\item Determine fitness
-%\item Select the mating pool
-%\item Breed
-%\item Mutate
-%\item Repeat
-%\end{enumerate}
-%
-%https://blog.sicara.com/getting-started-genetic-algorithms-python-tutorial-81ffa1dd72f9
-%https://towardsdatascience.com/evolution-of-a-salesman-a-complete-genetic-algorithm-tutorial-for-python-6fe5d2b3ca35
+\subsection{MILP and Osmose}\label{ss:osmose}
 
+Mixed integer linear programming (MILP) is a mathematical optimization, in which some variables are restricted to be integers, while other are discrete. A MILP model can be written with AMPL (A Mathematical Programming Language), which is a modeling language specifically designed to describe and solve optimization problems. Once defined the model, this is passed to a solver, as for example Gurobi or GLPK, which solves the given problem.\\
 
-\subsection{Osmose}\label{ss:osmose}
-IPESE developed in-house software for this
-Lua language
-Layers, ETs...
-Equations (mass balances, resource balances, heat cascade...)
-Creates mod files for ampl optimization
-Postcompute to export
+Osmose is a platform developed at IPESE for the study and the design of complex integrated energy systems. Its aim is to allow the user to model and compute an optimization problem using the same platform, which would normally require to access and transfer data between several programs. The coding language is \textit{lua}.
 
+Osmose allows to define a model for the different energy conversion technologies that want to be analyzed. It will then prepare the files that will be handed over to AMPL. After the solving is complete, the results are post-processed, allowing to run sensitivity analysis, multi-objective optimizations or simply calculate performance indicators.\\
 
-Energy conversion technology sizing.
+In first place, energy technologies have to be defined, with its set of equations that determine the supply and the demand of the unit. Moreover it is necessary to furnish the following cost parameters:
+\begin{itemize}
+	\item cinv1: fixed part of the IC, given in $[CHF/year]$. This can be found in figure \ref{fig:lin};
+	\item cinv2: variable part of the IC, given in $[CHF/year]$. This can be found in figure \ref{fig:lin};
+	\item cop1: fixed part of the OC, which corresponds to maintenance and service costs. 
+	\item cop2: variable part of the OC. This is calculated by the solver, also in $[CHF/h]$.
+\end{itemize}
+
+The sizing of the energy conversion technologies is constrained with the following equations\cite{suciuEnergyIntegrationCO22018a}:
 \begin{align}
 & f_{u,t} \leq f_{u} \forall \qquad \forall u \in U, \ \forall t \in T  \\
 & f_{u}^{min} \cdot y_{u} \leq f_{u} \leq f_{u}^{max} \cdot y_{u} \qquad \forall u \in U\\
@@ -396,35 +366,31 @@ Energy conversion technology sizing.
 
 For \textit{process units}, only the houses, $y_{u} = f_{u}^{min} = f_{u}^{max} = 1$\\
 
-Heat cascade
-A set of equantions, called heat cascade, makes sure that heat is always transferred from a higher temperature to a lower one, also considering the respective minimum approach temperature for each stream.
+A set of equations, called heat cascade, makes sure that heat is always transferred from a higher temperature to a lower one, also considering the respective minimum approach temperature for each stream.
 \begin{align}
 & \sum_{u}^{U} f_{u,t}  \cdot \dot{Q}_{u,t,k} + \dot{R}_{t,k+1} - \dot{R}_{t,k} = 0 \qquad \forall k \in K, \ \forall t \in T \\
 & \dot{R}_{t,k} \geq 0 \qquad \forall k \in K, \ \forall t \in T  \\
 & \dot{R}_{t,1} = \dot{R}_{t,k+1} = 0 \qquad \forall t \in T  \\
 \end{align}
-\todo{is third eq rtk+1 = 0 correct???}
 
-Mass balances
-The demand $\dot{m}_{r,u,t}^{+}$ and the supply $\dot{m}_{r,u,t}^{-}$ of resource $r \in R$ of each unit $u \in U$ is computed.
+The demand $\dot{m}_{r,u,t}^{+}$ and the supply $\dot{m}_{r,u,t}^{-}$ of resource $r \in R$ of each unit $u \in U$ is computed:
 \begin{align}
 & \dot{M}_{r,u,t}^{-} = \dot{m}_{r,u,t}^{-} \cdot f_{u,t} \qquad \forall r \in R, \ \forall u \in U, \ \forall t \in T \\
 & \dot{M}_{r,u,t}^{+} = \dot{m}_{r,u,t}^{+} \cdot f_{u,t} \qquad \forall r \in R, \ \forall u \in U, \ \forall t \in T  \\
 \end{align}
-The balance of each resource has to be respected.
+The balance of each resource has to be respected:
 \begin{equation}
 \sum_{u}^{U} \dot{M}_{r,u,t}^{-} = \dot{M}_{r,u,t}^{+} \qquad \forall r \in R, \ \forall t \in T
 \end{equation}
-Electricity is also balanced
+Electricity is also balanced:
 \begin{equation}
 \dot{El}_{houses}^{+} + \dot{El}_{heating}^{+} + \dot{El}_{cooling}^{+} + \dot{El}_{grid}^{+} = \dot{El}_{PV}^{-} + \dot{El}_{grid}^{-}
 \end{equation}
 
-Opitmization function
+The optimization of a system is done in function of an objective function, which is chosen depending on the purpose. A possibility is to optimize the total cost of the system:
 
 \begin{align}
-& min \left( TotalCost \right)  = min \left(  CAPEX + OPEX \right) \\
-& min \sum_{u}^{U} ... \\
+& min \left( TotalCost \right)  = min \left(  CAPEX + OPEX \right) 
 \end{align}
 
 \begin{align}
@@ -434,27 +400,14 @@ Opitmization function
 
 where $c_{u}^{op1}$ and $c_{u}^{op1}$ are the respectively the fixed and the variable operating cost, and $C_{el}^{-}$ and $C_{el}^{+}$ are the buying and selling price of electricity.
 
-ET energy technologies:
-
-The needed parameters are:
-\begin{itemize}
-	\item cinv1: fixed part of the IC, given in $[CHF/year]$. This can be found in figure \ref{fig:lin};
-	\item cinv2: variable part of the IC, given in $[CHF/year]$. This can be found in figure \ref{fig:lin};
-	\item cop1: fixed part of the OC, which corresponds to maintenance and service costs. 
-	\item cop2: variable part of the OC. This is calculated by the solver, also in $[CHF/h]$.
-\end{itemize}
 
 \section{Methodology}
 
 \subsection{Energy demand / Typical days}
-According to SIA standards
-
-Threshold temperature for heating or cooling
-\todo{add this paragraph}
-
+The energy demand profile is calculated as a function of the ambient temperature\cite{girardinEnerGisGeographicalInformation2010}, using a threshold temperature for heating of $T_{th}^{heat} = 14\si{\celsius}$ and for cooling of $T_{th}^{cool} = 18 \si{\celsius}$. Specific energy requirements per square meter in function of the typology of the building are taken from SIA standards.\\
 
 The optimization of an energy system is commonly performed over the time span of one year, in order to account for the different seasons. However, this requires a very long computing time, given the high number of timesteps. Thus, it is used to group similar days, according to a set of parameters as for example temperature or irradiation, into so called typical days. The days can be clustered in different ways. It can be chosen to compute an average day for each month or some machine learning clustering algorithm - as for example K-means, DBSCAN or GMM - can be used to group the days into the desired number of clusters.
-The resulting typical days correspond to a period $p$, with a number of times $t$, as explained in section \ref{ss:osmose}. In order to account for the data compression, a value called $occurrence$ indicates how many times a given typical day occurs, i.e. how many times a given period occurs.\\
+The resulting typical days correspond to a period $p$, with a number of times $t$, as explained in section \ref{ss:osmose}. In order to account for the data compression, a value called $occurrence$ indicates how many times a given typical day occurs, i.e. how many times a given period occurs.
 
 Two additional days with the two opposite extreme temperature conditions are added to the typical days, in order for the model to account for them in the equipment sizing. To avoid a bias of the operation results, those days are set with an occurrence of zero.
 
@@ -558,9 +511,8 @@ In our case this can be written as:
 where $\dot{E}q$ are the exergy value of hot and cold streams, respectively above (a) and below (r) the ambient temperature. $\dot{E}_{grid}^{+}$ and $\dot{E}_{grid}^{-}$ are the electricity bought from and sold to the grid.
 
 \subsection{Energy technology models}\label{ss:et}
-The models for the energy technologies are adapted from the source code written by Suciu Raluca.\todo{cite anything, or name is enough?}\\
-thermodyn cycle from\cite{demierreModelingExperimentalInvestigation2014}\\
-\todo{other names?}
+The models for the energy technologies are adapted from an existing source code \cite{suciuEnergyautonomousCitiesUsing2016a}
+
 \subsubsection{Heat pumps - basic (Carnot)}\label{sss:hp_carnot}
 Heat pumps can be modeled in a simple way, using the principle of the Carnot cycle, with help of the following equations:
 \begin{align}
@@ -581,7 +533,7 @@ where $\dot{Q}_{cond}$ is the heat delivered and $\dot{Q}_{evap}$ the heat sourc
 	\label{fig:hp_ref}
 \end{figure}
 
-Given the comparison between new and efficient technologies, the differences of performance are relatively small and it might be necessary to provide a more accurate model of the heat pumps, that are able to correctly represent and calculate the operating cycles and conditions. This can be done by modeling the thermodynamic cycle, represented in Figure \ref{fig:hp_ref}:
+Given the comparison between new and efficient technologies, the differences of performance are relatively small and it might be necessary to provide a more accurate model of the heat pumps, that are able to correctly represent and calculate the operating cycles and conditions. This can be done by modeling the thermodynamic cycle\cite{demierreModelingExperimentalInvestigation2014}, represented in Figure \ref{fig:hp_ref}:
 
 \begin{description}
 	\item [1 - 2]: Expansion to low pressure level
@@ -690,7 +642,7 @@ Geo-cooling is the use of fresh temperatures of the ground for space cooling. Th
 
 
 \subsubsection{PV}
-The efficiency of the PV panels $\eta_{PV}$ is given by the following equation:
+The efficiency of the PV panels $\eta_{PV}$ is given by the following equation\cite{stadlerModelbasedOptimizationDistributed2016}:
 \begin{equation}
 	\eta_{PV} = \eta_{ref} - \eta_{var} (T_{panel}-T_{ref})
 \end{equation}
@@ -899,7 +851,7 @@ Two potential heat sources have been identified in the surroundings of the Eglan
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=1\textwidth]{IR_schema.JPG}
+	\includegraphics[width=0.8\textwidth]{IR_schema.JPG}
 	\caption{Energy system of a typical ice rink \cite{gronqvistComparativeLifecycleCost}}
 	\label{fig:IR_schema}
 \end{figure}
@@ -938,19 +890,44 @@ The calculation of the cooling demand of the ice rink is based on the following 
 	\item $dT_{min}(refrigerant-refrigerant) = 3 \si{\celsius}$
 \end{itemize}
 
-The daily cooling demand profile of the ice rink, is based on the required ice temperature, which varies throughout the day\cite{karampourMEASUREMENTMODELLINGICE}, as shown in Table \ref{tab:IR_profile}.
+The daily cooling demand profile of the ice rink, is based on the required ice temperature, which varies throughout the day\cite{karampourMEASUREMENTMODELLINGICE}, as shown in Table \ref{fig:IR_profile}. Thus the computed ice cooling load profile is shown in Figure \ref{fig:IR_load}.
 
-\input{Tables/IR_profile.tex}
+\begin{figure}[!htb]
+	\centering
+	\begin{minipage}{.45\textwidth}
+		\centering		
+		\begin{tabular}{lll}
+			\toprule
+			\textbf{Period} & \textbf{Rink function} & \textbf{\begin{tabular}[c]{@{}l@{}}$T_{ice}$\\ {[}\si{\celsius}{]}\end{tabular}} \\
+			\midrule 
+			0.00-6:00   & Night setback   & -1     \\
+			6:00-8:00   & Ice maintenance & -1     \\
+			8:00-16:00  & Low load        & -3     \\
+			16:00-18:00 & Figure skating  & -4     \\
+			18:00-24:00 & Hockey          & -6    \\
+			\bottomrule
+		\end{tabular}
+		\caption{Ice rink refrigeration profile}\vspace{2mm}
+		\label{fig:IR_load}
+	\end{minipage}%
+	\hspace{1cm}
+	\begin{minipage}{0.45\textwidth}
+		 \centering
+		 \includegraphics[width=\linewidth]{Images/IR_profile}
+		 \caption{Ice cooling load profle of the ice rink, for a typical day}
+		 \label{fig:IR_profile}
+	\end{minipage}
+\end{figure}
 
-Thus the computed energy demand is shown in Figure...
-\missingfigure{add figure with load profile}
+%\input{Tables/IR_profile.tex}
 
-%\begin{figure}[h!]
+%\begin{figure}[tph]
 %	\centering
-%	\includegraphics[width=0.7\textwidth]{energy_demand.png}
-%	\caption{Total energy demand of the Eglantine district}
-%	\label{fig:energyDemand}
+%	\includegraphics[width=0.45\linewidth]{Images/IR_profile}
+%	\caption{Ice cooling load profle of the ice rink, for a typical day}
+%	\label{fig:IR_profile}
 %\end{figure}
+
 
 \subsection{Variants / Scenarios}
 
@@ -1514,38 +1491,33 @@ The combination presenting the lowest total cost is found to be at:
 $$f_{Retail} = 0.134$$
 $$f_{Housing} = 0.866$$
 
-
-\subsubsection{Ground/CU}
-Now one could ask how this building use solution depends on Tground. Done a sensitivity analysis, with very interesting results.
+Now that the response to a variation in the ground temperature has been studied, and that the performance of the system has been studied in function of different energy demands, it would be very interesting to know how the two parameters might be correlated between each other. In other words, it would be interesting to study the variation of the optimum combination of building use, in function of the borehole temperature. 
+To do so, a sensitivity analysis has been performed on those two parameters, for the GS-HP and for the GS-CO2DEN. 
 
 \begin{figure}[!htb]
 	\centering
 	\begin{minipage}{.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{SA_CU_Tg_OC_py.png}
-		\caption{Operating costs in function of the borehole temperature and the building use in the district}
-		\label{fig:CU_Tg_OC}
+		\includegraphics[width=\textwidth]{CUTg_SA_OC.png}
+		\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-HP technology}
+		\label{fig:CUTg_OC}
 	\end{minipage}%
 	\hspace{1cm}
 	\begin{minipage}{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{SA_CU_Tg_IC_py.png}
-		\caption{Investment costs in function of the borehole temperature and the building use in the district}
-		\label{fig:CU_Tg_IC}
+		\includegraphics[width=\textwidth]{CUTg_SA_CO2_OC.png}
+		\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-CO2DEN technology}
+		\label{fig:CUTg_CO2_OC}
 	\end{minipage}
 \end{figure}
 
-Very intersting results, but again this shows that the cost model of GTW has to be optimized, since the difference seems to big.
+To evaluate the system's performance, it has been chosen to analyze the operating costs. Given that they are directly proportional with the global COP of the energy system, they give a very good indicator of the operating conditions. To do so, the electricity consumption of the houses has been neglected. The results are shown in Figures \ref{fig:CUTg_OC} and \ref{fig:CUTg_CO2_OC}. It has to be noted that, for sake of visibility, the axis have been inverted between the two graphs. Moreover, the z axis is scaled differently.\\
 
-%\subsection{CO2 network temperature control}
-%An optimum for the temperature of the CO2 network has been defined \todo{missing ref}.
-%The question arises if this temperature might vary in function of the operating condition of the network, i.e. the balance of heating and cooling load, the heat source temperature...\\
-%A model has been implemented to study this, by leaving the optimizer choose the optimal operating temperature of the network for every given timestep.\\
-%The results show that...
-%\missingfigure{graph of $Temp_net(time)$}
-%Then a simple representative scenario has been modeled, with a typical building, and a typical refrigeration, and varying \% of cooling load, wrt heating load.
-%\missingfigure{graph of $Temp_net$(\% of cooling/heating)}
+Let's start looking at \ref{fig:CUTg_OC}, the performance of the GS-HP. The temperature response to a \textit{housing} composition is linearly decreasing with the temperature increase. This is due to the increase of COP in the decentralized HP, given the lower temperature rise to harvest heat from the ground. When moving towards a \textit{retail} composition, i.e. introducing an increasing space cooling demand while lowering heating demand, the general plane has a decreasing slope, due to the lower heating demand. However, a strong increase appears for temperatures above 14 \si{\celsius}. The reason for that, is that the free cooling temperature threshold has been reached, requiring the use of the air cooled refrigeration system instead. This obviously engenders a considerable increase in electricity consumption, reflected in the operating cost.
 
+The GS-CO2DEN, shown in Figure \ref{fig:CUTg_CO2_OC}, shows a similar response to the temperature increase for \textit{retail} composition, with a stronger drop once the temperature rises to the free heating threshold. This scenario had already been discussed in the previous sections. Now it is interesting to see what happens when moving towards \textit{retail}. The COP at very low $T_{borehole}$ increases - thus the OC decrease - linearly with the decreasing share of heating demand and the increasing demand of free cooling. At very high $T_{borehole}$, on the contrary, the COP decreases - and OC increase - linearly with the increasing temperature drop that the refrigeration system has to perform in order to satisfy the cooling demand, which can not be free cooled. Nevertheless, the originated electricity consumption in this point is drastically lower than for the GS-HP, due to the much lower condensation temperature. In the temperature response for a purely \textit{retail} district, it is very easy to see the different operating conditions of the CP, described in Section  \ref{ss:cp}\todo{ref section CP}. 
+
+In general, the GS-CO2DEN achieves the highest energy performance, by being as close as possible to the free heating/cooling threshold temperatures, without crossing it. Depending on the demand, it will be more efficient to be on one side or the other of the thresholds, in order to use the more needed free energy. It has to be noted that the GS-CO2DEN performs better than the GS-HP for any given combination. 
 
 \section{Conclusion and outlook}
 District energy systems have a high potential to improve the energy and exergy efficiency of urban heating and cooling systems. 

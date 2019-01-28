@@ -1,11 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
-Illegal, another \bibstyle command---line 412 of file main.aux
+Illegal, another \bibstyle command---line 391 of file main.aux
  : \bibstyle
  :          {unsrt}
 I'm skipping whatever remains of this command
 I couldn't open database file bibliography.bib.bib
----line 413 of file main.aux
+---line 392 of file main.aux
  : \bibdata{bibliography.bib
  :                          }
 I'm skipping whatever remains of this command
@@ -33,6 +33,8 @@ Warning--I didn't find a database entry for "austinParametricStudyPerformance201
 Warning--I didn't find a database entry for "eslami-nejadQuasitransientModelTranscritical2015"
 Warning--I didn't find a database entry for "eslami-nejadDetailedTheoreticalCharacterization2018"
 Warning--I didn't find a database entry for "badacheExperimentalStudyCarbon2018"
+Warning--I didn't find a database entry for "suciuEnergyIntegrationCO22018a"
+Warning--I didn't find a database entry for "girardinEnerGisGeographicalInformation2010"
 Warning--I didn't find a database entry for "hanSensitivityAnalysisVertical2016"
 Warning--I didn't find a database entry for "siaSIA384Sondes2010"
 Warning--I didn't find a database entry for "turtonrichardc.bailierichardwhitingwallace.AnalysisSynthesisDesign2003"
@@ -40,9 +42,9 @@ Warning--I didn't find a database entry for "huExtremumSeekingControl2015"
 Warning--I didn't find a database entry for "wangOverviewHeatTransfer2013"
 Warning--I didn't find a database entry for "ohFlowBoilingHeat2011"
 Warning--I didn't find a database entry for "mastrulloComparisonR744R134a2009"
-Warning--I didn't find a database entry for "demierreModelingExperimentalInvestigation2014"
-Warning--I didn't find a database entry for "girardinEnerGisGeographicalInformation2010"
+Warning--I didn't find a database entry for "suciuEnergyautonomousCitiesUsing2016a"
 Warning--I didn't find a database entry for "NTBBuchsInstitut"
+Warning--I didn't find a database entry for "demierreModelingExperimentalInvestigation2014"
 Warning--I didn't find a database entry for "liPerformanceCharacteristicsR1234yf2014"
 Warning--I didn't find a database entry for "kimPerformanceTranscriticalCO22005"
 Warning--I didn't find a database entry for "sarkarSimulationTranscriticalCO22006"
@@ -50,6 +52,7 @@ Warning--I didn't find a database entry for "yangTheoreticalExperimentalInvestig
 Warning--I didn't find a database entry for "steneINTEGRATEDCO2HEAT2007"
 Warning--I didn't find a database entry for "wangExperimentalInvestigationAirsource2013"
 Warning--I didn't find a database entry for "henchozPerformanceProfitabilityPerspectives2015"
+Warning--I didn't find a database entry for "stadlerModelbasedOptimizationDistributed2016"
 Warning--I didn't find a database entry for "veillehydro-meteorologiqueducantondevaudMorgesRiviereDebit"
 Warning--I didn't find a database entry for "gadzEvaluationPotentielGeothermique2011"
 Warning--I didn't find a database entry for "bawos.chMitErdsondenbohrungenKosten2018"
