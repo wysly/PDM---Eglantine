@@ -57,16 +57,15 @@
 %%%%%%%%% Abstract %%%%%%%%%
 \begin{abstract}
 Many countries and cities in the world have pledged to drastically reduce their CO2 emissions during the next decades. Given the high degree of urbanization in occidental society, district energy systems present a high potential to increase the efficiency of heating and cooling systems. 
-The present work focuses on a specific type of district network, base on CO2 as a working fluid. Through condensation and evaporation it allows to exchange heat at low temperatures, increasing the potential of heat recovery, and thus the energy and exergy efficiency of the global system. Previous studies have shown that very high efficiencies can be reach with the use of heat pumps to supply heat to the buildings, as well as to harvest heat from environment. The aim of this work is to study the performance of such a system, based on a case study, the Eglantine district located near Lausanne. Specifically it has been looked at evaluating the integration of a geothermal field, as a heat source. The main research questions that will be tried to answer are:\\
+The present work focuses on a specific type of district network, based on CO2 as a working fluid, which allows to exchange heat through condensation and evaporation. The low distribution temperature increases the potential of heat recovery, and thus the energy and exergy efficiency of the global system. Previous studies have shown that very high efficiencies can be reach with the use of heat pumps to supply heat to the buildings, and harvesting heat from lake water. The aim of this work is to study the performance of such a system, based on a case study, the Eglantine district located near Lausanne. Specifically it has been looked at evaluating the integration of a geothermal field, as a heat source. The main research questions that will be tried to answer are:\\
 
-\textit{How does the CO2 district energy network perform - energetically as well as financially - in the Eglantine district, harvesting heat from a geothermal field, and under which conditions does it perform better than concurrent solutions?}\\
+\textit{How does the CO2 district energy network perform - energetically as well as financially - in the Eglantine district, and under which conditions does it perform better than concurrent solutions?}\\
 
 \textit{What are the characteristics of a typical district that favor the choice of the CO2 district energy network technology?}\\
 
-The CO2 network technology has been modeled and analyzed exchanging heat with a geothermal field and the lake water, and it has been compared to a state of the art decentralized geothermal heat pump system. 
-The geothermal CO2 network showed a global COP of 6.1 and an exergy efficiency of 22\%, outperforming the other technologies, thanks to the implementation of a direct expansion system of CO2 into the ground. The performance increases even more when an external heat source is integrated.
-
-It has been shown that the CO2 technology performs best in this type of district.
+The simulations show a very high energy and exergy performance ($COP_{global}$ of 6.1)for the CO2 network that is combined with a geothermal field, which is considerably higher than for the conventional GS-HP system ($COP_{global}$ of 4.6). The difference is principally explained by the use of a direct expansion system of CO2 into the ground.
+Moreover, it is shown that for different uses of the buildings there is an optimal ground temperature, or in other words an optimal borehole depth, and the other way around.
+This work identifies the key parameters that the CO2 network technology can leverage to compete against modern, well performing, heat pump systems.
 
 
 \end{abstract}
@@ -183,7 +182,7 @@ The scope of this project is to pursue the study of the application of the CO2 b
 
 \textit{What are the characteristics of a typical district that favor the choice of the CO2 district energy network technology?}
 
-
+\newpage
 \section{State of the art}
 
 \subsection{District heating}
@@ -236,7 +235,7 @@ The choice of CO2 as a refrigerant relies, besides its thermodynamic properties,
 In fact, according to Danfoss\cite{danfossRefrigerantOptionsNow2017}, CO2 will dominate industrial refrigeration, together with ammonia. Already today, this technology is widely used. For instance Migros, Switzerland's largest retail company, opened its first supermarket to use CO2, in a low-temperature subcritical system, in 2002. By today, 411 of the 700 supermarkets in Migros’s portfolio are equipped with transcritical CO2 systems\cite{williamsMigrosDNA2018}.
 
 
-\subsection{CO2 DEN}
+\subsection{CO2 district energy network}
 
 %Generally, however, refrigerant based DEN are still at a prototype stage.
 
@@ -338,17 +337,6 @@ Suciu et al. \cite{suciuEnergyIntegrationCO22018} studied the synergy between a 
 
 For heat pumps based systems, sourcing heat from the sole, instead of from the ambient air, is a very interesting solution at our latitudes, especially, as it has been seen, for integration of a 5th generation DEN, since it improves heating and cooling COPs, and, to a certain extent, it allows heat storage. In traditional Ground-Source Heat Pumps (GSHP), the heat pump and the ground are connected by means of a closed loop, using water, or a water solution. This system, called the secondary loop GSHP (SL-GSHP), is shown on the right side of Figure \ref{fig:gshp}. However, it has been proved \cite{kruseStatusDevelopmentResearch, guoTechnoeconomicComparisonDirect2012} that the system efficiency can be improved, by allowing to directly expand the refrigerant into the ground and thus let the ground act as a condenser/evaporator. Shown on the left side of Figure \ref{fig:gshp}, this system is called Direct Expansion GSHP (DX-GSHP). 
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=1\textwidth]{GSHP.png}
-\caption{A simplified schematics of the two GSHP technologies}
-\label{fig:gshp}
-\end{figure}
-
-So far, this technology is not so widely spread, mostly because of a more demanding system design and, because of the risk of environmental pollution, when non-natural refrigerants are used. Indeed, literature about DX-GSHP is still scarce, especially for CO2 as a refrigerant. The are only few numerical CO2-DX-GSHP studies \cite{eslami-nejadModelingTwophaseCO2filled2014a,ghazizade-ahsaeeEnergyExergyInvestigation2018,austinParametricStudyPerformance2011,eslami-nejadQuasitransientModelTranscritical2015}, which are not yet sufficient to obtain a scientific appreciation of the technology. Nevertheless several prototypes and experimental set-ups have been built and analyzed \cite{eslami-nejadDetailedTheoreticalCharacterization2018, badacheExperimentalStudyCarbon2018, guoTechnoeconomicComparisonDirect2012}, proving a higher efficiency of the DX, with respect to a SL.
-
-On of the main reasons for this efficiency gain is the elimination of the temperature lift of the water loop, which is replaced by a constant temperature phase-change, as well as the elimination of the minimum approach temperature necessary to exchange heat between the SL and the heat pump. This results in a higher COP for the heat pumps. 
-Moreover, CO2 presents a higher heat transfer coefficient, which again allows to either reduce the minimum approach temperature, or extract a higher power with respect to an equal exchange surface. The minimum approach temperature has to be determined in function of the thermal permeability of soil and is correlated to the length and total surface of the geothermal probes, as well as the refrigerant flow rate.
 
 \begin{figure}[htp]
 	\centering
@@ -358,20 +346,33 @@ Moreover, CO2 presents a higher heat transfer coefficient, which again allows to
 \end{figure}
 
 
-\subsection{MILP and Osmose}\label{ss:osmose}
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.8\textwidth]{GSHP.png}
+\caption{A simplified schematics of the two GSHP technologies}
+\label{fig:gshp}
+\end{figure}
+
+So far, this technology is not so widely spread, mostly because of a more demanding system design and because of the risk of environmental pollution, when non-natural refrigerants are used. Indeed, literature about DX-GSHP is still scarce, especially for CO2 as a refrigerant. The are only few numerical CO2-DX-GSHP studies \cite{eslami-nejadModelingTwophaseCO2filled2014a,ghazizade-ahsaeeEnergyExergyInvestigation2018,austinParametricStudyPerformance2011,eslami-nejadQuasitransientModelTranscritical2015}, which are not yet sufficient to obtain a scientific appreciation of the technology. Nevertheless several prototypes and experimental set-ups have been built and analyzed \cite{eslami-nejadDetailedTheoreticalCharacterization2018, badacheExperimentalStudyCarbon2018, guoTechnoeconomicComparisonDirect2012}, showing that higher efficiencies can be reached through DX, with respect to a SL.
+
+On of the main reasons for this efficiency gain is the elimination of the temperature lift of the water loop, which is replaced by a constant temperature phase-change, as well as the elimination of the minimum approach temperature necessary to exchange heat between the SL and the heat pump, as shown in Figure \ref{fig:Qt_dx}. The resulting temperature rise for the DX-GSHP $\Delta T_{HP}^{DX}$ is much lower than $\Delta T_{HP}^{SL}$ for the SL-GSHP, leads to a higher COP for the heat pump. 
+Moreover, CO2 presents a higher heat transfer coefficient, which again allows to either reduce the minimum approach temperature, or extract a higher power with respect to an equal exchange surface. The minimum approach temperature has to be determined in function of the thermal permeability of soil and is correlated to the length and total surface of the geothermal probes, as well as the refrigerant flow rate.
+
+
+\subsection{MILP optimization and Osmose}\label{ss:osmose}
 
 Mixed integer linear programming (MILP) is a mathematical optimization, in which some variables are restricted to be integers, while other are discrete. A MILP model can be written with AMPL (A Mathematical Programming Language), which is a modeling language specifically designed to describe and solve optimization problems. Once defined the model, this is passed to a solver, as for example Gurobi or GLPK, which solves the given problem.\\
 
 Osmose is a platform developed at IPESE for the study and the design of complex integrated energy systems. Its aim is to allow the user to model and compute an optimization problem using the same platform, which would normally require to access and transfer data between several programs. The coding language is \textit{lua}.
 
-Osmose allows to define a model for the different energy conversion technologies that want to be analyzed. It will then prepare the files that will be handed over to AMPL. After the solving is complete, the results are post-processed, allowing to run sensitivity analysis, multi-objective optimizations or simply calculate performance indicators.\\
+Osmose allows to define a model for the different energy conversion technologies that want to be analyzed. It will then prepare the necessary files for the optimization of the energy system that will be handed over to AMPL. After the solving is complete, the results sent back to Osmose, allowing to post-process the data to run sensitivity analysis, multi-objective optimizations or simply calculate performance indicators.\\
 
 In first place, energy technologies have to be defined, with its set of equations that determine the supply and the demand of the unit. Moreover it is necessary to furnish the following cost parameters:
 \begin{itemize}
-	\item cinv1: fixed part of the IC, given in $[CHF/year]$. This can be found in figure \ref{fig:lin};
-	\item cinv2: variable part of the IC, given in $[CHF/year]$. This can be found in figure \ref{fig:lin};
-	\item cop1: fixed part of the OC, which corresponds to maintenance and service costs. 
-	\item cop2: variable part of the OC. This is calculated by the solver, also in $[CHF/h]$.
+	\item $c^{cinv1}$: fixed part of the IC, given in $[CHF/year]$. This can be found in figure \ref{fig:lin};
+	\item $c^{cinv2}$: variable part of the IC, given in $[CHF/year]$. This can be found in figure \ref{fig:lin};
+	\item $c^{cop1}$: fixed part of the OC, which corresponds to maintenance and service costs. 
+	\item $c^{cop2}$: variable part of the OC. This is calculated by the solver, also in $[CHF/h]$.
 \end{itemize}
 
 The sizing of the energy conversion technologies is constrained with the following equations\cite{suciuEnergyIntegrationCO22018a}:
@@ -416,11 +417,11 @@ The optimization of a system is done in function of an objective function, which
 
 where $c_{u}^{op1}$ and $c_{u}^{op1}$ are the respectively the fixed and the variable operating cost, and $C_{el}^{-}$ and $C_{el}^{+}$ are the buying and selling price of electricity.
 
-
+\newpage
 \section{Methodology}
 
-\subsection{Energy demand / Typical days}
-The energy demand profile is calculated as a function of the ambient temperature\cite{girardinEnerGisGeographicalInformation2010}, using a threshold temperature for heating of $T_{th}^{heat} = 14\si{\celsius}$ and for cooling of $T_{th}^{cool} = 18 \si{\celsius}$. Specific energy requirements per square meter in function of the typology of the building are taken from SIA standards.\\
+\subsection{Energy demand - Typical days}\label{ss:typicalDays}
+The energy demand profile for space heating and cooling is calculated as a a linear function of the temperature difference with the ambient temperature\cite{girardinEnerGisGeographicalInformation2010}. Specific energy requirements per square meter in function of the typology of the building are taken from SIA standards.\\
 
 The optimization of an energy system is commonly performed over the time span of one year, in order to account for the different seasons. However, this requires a very long computing time, given the high number of timesteps. Thus, it is used to group similar days, according to a set of parameters as for example temperature or irradiation, into so called typical days. The days can be clustered in different ways. It can be chosen to compute an average day for each month or some machine learning clustering algorithm - as for example K-means, DBSCAN or GMM - can be used to group the days into the desired number of clusters.
 The resulting typical days correspond to a period $p$, with a number of times $t$, as explained in section \ref{ss:osmose}. In order to account for the data compression, a value called $occurrence$ indicates how many times a given typical day occurs, i.e. how many times a given period occurs.
@@ -529,7 +530,7 @@ where $\dot{E}q$ are the exergy value of hot and cold streams, respectively abov
 \subsection{Energy technology models}\label{ss:et}
 The models for the energy technologies are adapted from an existing source code \cite{suciuEnergyautonomousCitiesUsing2016a}
 
-\subsubsection{Heat pumps - basic (Carnot)}\label{sss:hp_carnot}
+\subsubsection{Heat pump - Carnot cycle}\label{sss:hp_carnot}
 Heat pumps can be modeled in a simple way, using the principle of the Carnot cycle, with help of the following equations:
 \begin{align}
     & \dot{E}_{compressor} = \frac{\dot{Q}_{cond}}{COP_{real}} = \frac{\dot{Q}_{evap}}{\eta_{COP} \cdot COP_{theoretical}} \\
@@ -540,7 +541,7 @@ where $\dot{Q}_{cond}$ is the heat delivered and $\dot{Q}_{evap}$ the heat sourc
 
 \input{Tables/etaCOP.tex}
 
-\subsubsection{Heat pumps - detailed (Thermodyn.)}\label{sss:hp_thermo}
+\subsubsection{Heat pump - Thermodynamic cycle}\label{sss:hp_thermo}
 
 \begin{figure}[htp]
 	\centering
@@ -549,7 +550,7 @@ where $\dot{Q}_{cond}$ is the heat delivered and $\dot{Q}_{evap}$ the heat sourc
 	\label{fig:hp_ref}
 \end{figure}
 
-Given the comparison between new and efficient technologies, the differences of performance are relatively small and it might be necessary to provide a more accurate model of the heat pumps, that are able to correctly represent and calculate the operating cycles and conditions. This can be done by modeling the thermodynamic cycle\cite{demierreModelingExperimentalInvestigation2014}, represented in Figure \ref{fig:hp_ref}:
+A more accurate model of the heat pumps, that is able to correctly represent and calculate the operating cycles and conditions, is achieved by modeling its thermodynamic cycle\cite{demierreModelingExperimentalInvestigation2014}, represented in Figure \ref{fig:hp_ref}:
 
 \begin{description}
 	\item [1 - 2]: Expansion to low pressure level
@@ -566,10 +567,6 @@ W_{shaft} = \frac{\dot{m}(h_{d,is}-h_{s})}{\eta_{is}}
 where $h_{d,is}$ is the isentropic discharge enthalpy and $h_{d}$ is the suction enthalpy. The compressors input power is expressed in function of its mechanical efficiency ($\eta_{is}$) by:
 \begin{equation}
 E_{comp} = \frac{W_{shaft}}{\eta_{mech}}  
-\end{equation}
-The efficiency of the compressor is thus calculated as:
-\begin{equation}
-\eta_{comp} = \frac{\text{isentropic work of compression}}{\text{actual work of compression}} = \frac{\dot{m}(h_{d,is}-h_{s})}{E_{comp}} = \eta_{is}\eta_{mech} 
 \end{equation}
 
 The numerical values of those efficiencies are strongly dependent from the ratio between the pressure of discharge $P_{d}$ and the pressure of suction $P_{s}$ of the compressor.They can be computed inside the model with help of the relations obtained by Li et al.\cite{liPerformanceCharacteristicsR1234yf2014}:
@@ -603,7 +600,7 @@ The electrical power of the heat pump and its COP, are then calculated by:
 where $m_{ref}$ is the massflow of refrigerant in the heat pump.
 
 
-\subsubsection{Heat pump - supercritical CO2}\label{sss:hp_CO2}
+\subsubsection{Heat pump - Supercritical CO2}\label{sss:hp_CO2}
 
 \begin{figure}[htp]
 	\centering
@@ -645,7 +642,7 @@ The procedure to evaluate the operating conditions of the heat pump is the follo
 
 The equations to calculate electrical power of the heat pump and its COP, are the same as in Section \ref{sss:hp_thermo}.
 
-\subsubsection{Cooling tower / Air cooler}\label{sss:cooling_tower}
+\subsubsection{Cooling tower}\label{sss:cooling_tower}
 A cooling tower is an equipment used to cool down a stream through the ambient air. This is used for example in air conditioning systems, to evacuate the heat into the environment. It consists of a set of fans that blow the air through a heat exchanger. These fans originate a parasitic power consumption that can be calculated with help of the following equation\cite{henchozPotentialRefrigerantBased}:
 \begin{equation}
 \dot{E_{fans}} = \frac{0.605 \cdot \dot{Q}_{cond}}{( \Delta T_{air} + \Delta T_{min}^{ref/air})^{0.9937}}
@@ -654,7 +651,9 @@ Where $\dot{Q}_{cond}$ is the heat to be dissipated in the environment by the co
 
 
 \subsubsection{Geo-cooling}
-Geo-cooling is the use of fresh temperatures of the ground for space cooling. This happens by simply circulating a fluid between the buildings, where the heat is extracted, and the geothermal wells, where heat is released into the ground. In practice, this happens by bypassing the heat pumps and making the water of the secondary loop (geothermal loop) directly exchange with the heating water loop. Investment costs are, thus, limited to an additional heat exchanger. As for the other units, the energy needed for circulation pumps is assumed to be negligible. 
+Geo-cooling is the use of fresh temperatures of the ground for space cooling. This happens by simply circulating a fluid between the buildings, where the heat is extracted, and the geothermal wells, where heat is released into the ground. In practice, this happens by bypassing the heat pumps and making the water of the secondary loop (geothermal loop) directly exchange with the heating water loop. Investment costs are, thus, limited to an additional heat exchanger. 
+
+As for the other units, the energy needed for circulation pumps is assumed to be negligible. 
 
 
 \subsubsection{PV}
@@ -694,13 +693,11 @@ C = \sum_{k=1}^{n_{b}} \frac{L}{n_{b}} (c_{1} d \sqrt{n_{b}+1-k} + c_{2})
 \end{equation}
 where $c_{1} =5670 $ and $c_{2} = 613 $.\\
 
-Operating temperature is assumed to be 13/15 \si{\celsius}.
-\todo{how has this temperature been chosen? is there a paper? see henchoz with other T}
-Henchoz\cite{henchozPotentialRefrigerantBased} has 10-12.5 for summer and 22.5 for winter!!! 
+Operating temperature is assumed to be 13 \si{\celsius} for the liquid pipe and 15 \si{\celsius} for the vapor pipe\cite{suciuEnergyautonomousCitiesUsing2016}.\\
 
 The pressure losses, and thus the energy needed for the maintaining of the pressure, are assumed to be negligible.
 
-
+\newpage
 \section{Application}
 
 \subsection{Case-study Eglantine}\label{ss:Eglantine}
@@ -725,23 +722,16 @@ The call for tender requires the development of a complete energy system, includ
     \item Installed power values are calculated according to SIA 2024 norm
 \end{itemize}
 
-\subsubsection{Buildings}
-The district, which will host around 1'500 people, is composed of thirteen buildings, as shown in Figure \ref{fig:ppa_buildings}, which account for a total energy reference area (ERA) of around $47'000 m^{2}$. The details are shown in Table \ref{tab:ppa_summary}. According to the Minergie standard, the district will require about $1.40 MWh/yr$ for SH and $0.95 MWh/yr$ for DHW.\\
+\subsubsection{Available data}
+The district, which will host around 1'500 people, is composed of thirteen buildings, as shown in Appendix \ref{as:eglantine}, which account for a total energy reference area (ERA) of around $47'000 m^{2}$. The details are shown in Table \ref{tab:ppa_summary_tot}. According to the Minergie standard, the district will require about $1.40 MWh/yr$ for SH and $0.95 MWh/yr$ for DHW.\\
 
-\input{Tables/ppa_summary.tex}
+\input{Tables/ppa_summary_tot.tex}
 
-The call for tender includes also information about the end use of the buildings, which is shown in Table \ref{tab:ppa_buildinguse}. It can be seen that the buildings include, beside the residential use (multidwelling), also a small share of retail and restaurant services use, which are associated with different energy needs. Moreover, there is even a small indoor swimming pool, located in building one. 
+The call for tender includes also information about the end use of the buildings, which is shown in Table \ref{tab:ppa_buildinguse_tot}. It can be seen that the buildings include, beside the residential use, also a small share of retail and restaurant services use, which are associated with different energy needs. Moreover, there is even a small indoor swimming pool, located in building one. 
 
-\input{Tables/ppa_buildinguse.tex}
+\input{Tables/ppa_buildinguse_tot.tex}
 
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.45\textwidth]{ppa_buildings.JPG}
-\caption{Map of the planned Eglantine district}
-\label{fig:ppa_buildings}
-\end{figure}
-
-The energy profile of the buildings is calculated according to Minergie standard, as well as the SIA norms. Given the annual energy demand for space heating and hot water, as shown in Table \ref{tab:ppa_summary}, the monthly profile is shown in Figure \ref{fig:ppa_energydemand}.
+The energy profile of the buildings is calculated according to Minergie standard, as well as the SIA norms. Given the annual energy demand for space heating and hot water, as shown in Table \ref{tab:ppa_summary_tot}, the monthly profile is shown in Figure \ref{fig:ppa_energydemand}.
 
 \begin{figure}[htp]
 \centering
@@ -750,11 +740,15 @@ The energy profile of the buildings is calculated according to Minergie standard
 \label{fig:ppa_energydemand}
 \end{figure}
 
-\subsubsection{Pre-studies}
-Some pre-studies have been commissioned by the land-owner, in order to give, on an indicative basis, the sizing of the energy system. These studies have been realized by external engineering firms and the results are contained in the call for tender. The studied parameters include the sizing for heat pumps, geothermal wells, as well as PV, and are shown in Table \ref{tab:ppa_prestudy}. They estimate a PV potential on the building roofs of $570 kWp$, and the need for an installed heating power of $1'258 kW$, using 77 geothermal wells of an average length of $271 m$
-\input{Tables/ppa_prestudy.tex}
+Some pre-studies have been commissioned by the land-owner, in order to give, on an indicative basis, the sizing of the energy system. These studies have been realized by external engineering firms and the results are contained in the call for tender. The studied parameters include the sizing for heat pumps, geothermal wells, as well as PV, and are shown in Table \ref{tab:ppa_prestudy_tot}. They estimate a PV potential on the building roofs of $570 kWp$, and the need for an installed heating power of $1'258 kW$, using 77 geothermal wells of an average length of $271 m$
 
-\subsubsection{Calculations/Energy demand/Typical days}
+\input{Tables/ppa_prestudy_tot.tex}
+
+Detailed data from the call for tender can be found in the Appendix \ref{as:eglantine}.
+
+\subsubsection{Energy demand - Typical days}
+As per Section \ref{ss:typicalDays},
+using a threshold temperature for heating of $T_{th}^{heat} = 14\si{\celsius}$ and for cooling of $T_{th}^{cool} = 18 \si{\celsius}$
 \todo{write section eglantine calculations/energy demand}
 
 \begin{itemize}
@@ -777,24 +771,32 @@ Figure \ref{fig:energyDemand}, including occurrencies.
 The heat pumps in a system can source heat from various sources. Depending on the case, it is more convenient to use one or the other, given the varying temperatures and investment costs.
 
 \subsubsection{Stream}
-A small stream flows along the eastern boundary of the area, on which the Eglantine district is being built. The official numbers of the canton Vaud \cite{veillehydro-meteorologiqueducantondevaudMorgesRiviereDebit} are shown in Figure \ref{fig:river}, in which the Temperature and the water flow are plotted. These values represent the average over a period of several years (7 for the temperature, and 12 for the flow rates). 
-
-\begin{figure}[htp]
+\begin{wrapfigure}{R}{0.42\textwidth} 
+	\vspace{-20pt}
 	\centering
-	\includegraphics[width=0.5\textwidth]{river.JPG}
+	\includegraphics[width=0.4\textwidth]{river.png}
 	\caption{Temperature and flow of the Morges river}
 	\label{fig:river}
-\end{figure}
+	\vspace{-10pt}
+\end{wrapfigure}
+
+A small stream flows along the eastern boundary of the area, on which the Eglantine district is being built. The official numbers of the canton Vaud \cite{veillehydro-meteorologiqueducantondevaudMorgesRiviereDebit} are shown in Figure \ref{fig:river}, in which the Temperature and the water flow are plotted. These values represent the average over a period of several years (7 for the temperature, and 12 for the flow rates). 
+
+%\begin{figure}[htp]
+%	\centering
+%	\includegraphics[width=0.4\textwidth]{river.png}
+%	\caption{Temperature and flow of the Morges river}
+%	\label{fig:river}
+%\end{figure}
+
 
 According to this graph, it could be thought of using this river as a heat source for the heat pumps. However, what is not displayed is the minimum values. In fact, during droughts, the flow rate would not be sufficient to cover the heating/cooling demand. In fact, the lowest value has been reached in August 2004 with $0.017 m^3/s$, and even in December 2005 the lowest daily flow was of $0.057 m^3/s$. \\
 For this reason, the stream has been excluded from further analysis and has not been considered as a viable solution.
 
 \subsubsection{Lake}
-Through a pipe, the water is pumped from the lake, at a depth of around 70 m, to the central plant, located in the district area. 
+Lake water is commonly sourced at a depth of around 70 m, where the a constant temperature of 7.5\si{\celsius} is found throughout the year. This water is led to the central pump through a water pipe. The massflow of the water is calculated in order to satisfy a drop/rise in the water stream of $\Delta T_{water}  = 4 \si{\celsius}$.
 
-The massflow of the water is calculated in order to satisfy a drop/rise in the water stream of $\Delta T_{water}  = 4 \si{\celsius}$.
-
-The cost function is calculated as for the CO2 pipes (see Section \ref{sss:net}), considering the needed diameter to satisfy the heating/cooling demand, which depend on the different heat capacity and massflow of the water.
+The cost function is calculated as for the CO2 pipes (see Section \ref{sss:net}), considering the needed diameter to satisfy the heating/cooling demand, which depend on the different heat capacity and massflow of the water. The length of the pipes, which is measured on a GIS software, is of 1'500 m.
 
 
 \subsubsection{Geothermal wells}
@@ -804,7 +806,7 @@ The average temperature of a geothermal well is calculated according to Section 
 \end{equation}
 This value also corresponds to the average gradient found in the Swiss plateau\cite{siaSIA384Sondes2010}.
 
-The average surface temperature depends mainly on the latitude and on the altitude. Standard values for different regions of Switzerland can be found in the SIA norm 384\cite{siaSIA384Sondes2010}. Experimental measurements\cite{gadzEvaluationPotentielGeothermique2011} show that the surface temperature in the lemanic region is:\todo{add images of gradient and surface temperature from PGG report?}
+The average surface temperature depends mainly on the latitude and on the altitude. Standard values for different regions of Switzerland can be found in the SIA norm 384\cite{siaSIA384Sondes2010}. Experimental measurements\cite{gadzEvaluationPotentielGeothermique2011} show that the surface temperature in the lemanic region is:
 \begin{equation}
 	T_{g,s} = 11 \si{\celsius}
 \end{equation}
@@ -828,12 +830,22 @@ Thus the mean useful temperature of the borehole over its depth is given by:
 	T_{b, mean} = T_{g, mean} -\Delta T_{Steady State} = 12 \si{\celsius}
 \end{equation}
 
-The minimum approach temperature necessary to exchange heat with the soil can be determined with help of the procedure described in Section \ref{ss:dtmin}. 
+The price for boreholes in Switzerland is found to be around $c_{wells} = 80$ [CHF/m] \cite{bawos.chMitErdsondenbohrungenKosten2018}. 
+In order to provide the model with an energy dependent cost function, this value is transformed with help of the data from Table \ref{tab:ppa_prestudy}:
+\begin{align}
+&  L_{wells}^{tot} = n_{wells} * L_{well}^{average} \\
+& 	\text{Cost function [CHF/kW]} = c_{wells} \frac{L_{wells}^{tot}}{P_{hp}^{tot}}
+\end{align}
+where $L_{wells}$ is the length and $n_{wells}$ the number of boreholes, and $P_{hp}$ is the total power of heat pumps installed. 
 
-The price for boreholes in Switzerland is found to be around $80 CHF/m$ \cite{bawos.chMitErdsondenbohrungenKosten2018}. 
-Assuming a typical pipe diameter of $32 mm$\cite{siaSIA384Sondes2010, kruseStatusDevelopmentResearcha}, the corresponding cost of the heat exchange area of the borehole calculated.
+The investment cost is calculated for summer use - the heat dissipated - as well as for the winter use - heat extracted, in function of the peak load of heating/cooling required. However, in reality the system is accounting twice for the same borehole, since the one for winter use will be the same used in winter use. Thus, the total cost for the geothermal wells is chosen as the larger value between the two:
+\begin{equation}
+IC_{GTW} = 	\max \left( IC_{GTW}^{summer}, IC_{GTW}^{winter} \right) 
+\end{equation}
 
-To perform the $\Delta T_{min}$ optimization, the overall heat transfer coefficients of the well - including the fluid, the bore wall and the soil - are assumed to be\cite{kruseStatusDevelopmentResearcha}:
+The minimum approach temperature, necessary to exchange heat with the soil, can be determined with help of the procedure described in Section \ref{ss:dtmin}. 
+The cost of the heat exchange area of the borehole calculated assuming a standard pipe diameter of $32 mm$\cite{siaSIA384Sondes2010, kruseStatusDevelopmentResearcha}.
+The overall heat transfer coefficients of the well - including the fluid, the bore wall and the soil - are assumed to be\cite{kruseStatusDevelopmentResearcha}:
 \begin{align}
 	& U^{g/water} = 9.3 kW/m^2K
 	& U^{g/CO2} = 17.1 kW/m^2K
@@ -846,19 +858,9 @@ The resulting minimum approach temperatures in ground heat exchanges are:
 \end{align}
 These values are similar to experimental or standard values found in literature \cite{siaSIA384Sondes2010, lamarcheReviewMethodsEvaluate2010}.\\
 
-The water rise/drop in the water ground loop is assumed to be $dT_{water} = 4 \si{\celsius}$ \cite{lundDESIGNCLOSEDLOOPGEOTHERMAL}\\
+The water rise/drop in the water ground loop is assumed to be $dT_{water} = 4 \si{\celsius}$ \cite{siaSIA384Sondes2010}\\
 
 
-\todo{this cost function here?}
-The price for boreholes in Switzerland is found to be around $c_{wells} = 80$ [CHF/m] \cite{bawos.chMitErdsondenbohrungenKosten2018}. 
-In order to provide the model with an energy dependent cost function, this value is transformed with help of the data from Table \ref{tab:ppa_prestudy}:
-\begin{align}
-&  L_{wells}^{tot} = n_{wells} * L_{well}^{average} \\
-& 	\text{Cost function [CHF/kW]} = c_{wells} \frac{L_{wells}^{tot}}{P_{hp}^{tot}}
-\end{align}
-where $L_{wells}$ is the length and $n_{wells}$ the number of boreholes, and $P_{hp}$ is the total power of heat pumps installed.\\
-
-inv cost is given by the Qwinter-Qsummer
 \subsection{External heat sources}
 The main advantage of a 5th generation district heating network is the ability to recover heat, and exchange it among the diversity of user. In the case of the Eglantine project, inside the district there are only very small heat sources and it is thus necessary to identify potential heat sources, located in the surroundings. 
 Two potential heat sources have been identified in the surroundings of the Eglantine district: the ice rink and a shopping mall. For the scope of this work, only the ice rink has been considered and studied.
@@ -945,58 +947,22 @@ The daily cooling demand profile of the ice rink, is based on the required ice t
 %\end{figure}
 
 
-\subsection{Variants / Scenarios}
+\subsection{Energy conversion technologies}
 
-\subsubsection{Heating}
-The heating demand is supplied by a set of decentralized geothermal heat pumps, one for domestic hot water and one for space heating in every building. These heat pumps source the ambient heat from a secondary loop that exchanges heat with the ground through a system of geothermal wells, the SL-GSHP, which is described in Section \ref{ss:dx}. 
+In order to evaluate the potential of alternative energy systems, three energy systems have been defined:
+\begin{enumerate}
+	\item GS-HP: a set of decentralized geothermal heat pumps for heating, geo-cooling for space cooling and air-cooled compression chillers for refrigeration
+	\item GS-CO2DEN: CO2 based district energy network, with a central plant exchanging heat with the environment through a geothermal field
+	\item LS-CO2DEN: CO2 based district energy network, with a central plant exchanging heat with the environment through lake water
+\end{enumerate}
 
-Given the relevance of the heat pumps in the studied energy system, it has been chosen to use its thermodynamic model, which achieves more reliable and precise results.\\
-
-The temperatures at the evaporator and condenser are given by the following equations:
-\begin{equation}
-T_{evap} = T_{ground} - \Delta T_{min}^{ground/water} - \Delta T_{water} - \Delta T_{min}^{ref/water}
-\end{equation}
-\begin{equation}
-T_{cond} = T_{demand} + \Delta T_{min}^{ref/water}
-\end{equation}
-where $\Delta T_{min}$ are the corresponding minimum approach temperatures, and $\Delta T_{water}$ is the temperature rise in the secondary water loop exchanging with the ground.
-
-For the space heating heat pump, the refrigerant used is R123yf, as described in Section \ref{sss:hp_thermo}.\\
-
-For the domestic hot water, it is chosen to use transcritical CO2 heat pumps. As described in Section \ref{sss:hp_CO2}, this technology can achieve very good performances supplying heat that requires a high lift. This is the case in domestic hot water, where the water has to be heated from a temperature of 10 \si{\celsius} to a temperature of 55 \si{\celsius}.
-
-\subsubsection{Cooling}
-Given the availability of geothermal wells, it has been chosen to implement geo-cooling for space cooling. The system is providing cooling at the ground temperature, corrected with the minimum approach temperature $\Delta Tmin_{ground/water}$ and the temperature rise in the water loop $\Delta T_{water}$.
-\begin{equation}
-T_{geo-cooling} = T_{ground} + \Delta T_{min}^{ground/water} + \Delta T_{water}
-\end{equation}
-
-\subsubsection{Refrigeration}
-The refrigeration is achieved with a set of decentralized air cooled vapor compression chillers, which present the same working principle as heat pumps. Given that energy demand for refrigeration is not as relevant in the case study, it has been chosen to use the basic Carnot cycle model, as explained in Section \ref{sss:hp_carnot}. The heat is evacuated into the environment with help of cooling towers, as described in Section \ref{sss:cooling_tower}.
-
-Thus, the total energy consumption is a sum of the energy demand of the compressor and the cooling fans.
-\begin{equation}
-\dot{E} = \dot{E}_{ref} + \dot{E}_{fans}
-\end{equation}
-
-and the operating temperatures are defined in the following way:
-\begin{equation}
-T_{cond} = T_{amb} + \Delta T_{air} + \Delta T_{min}^{ref/air}
-\end{equation}
-where $T_{amb}$ is the ambient temperature, $\Delta T_{air}$ is the temperature difference of the cooling air between the input and the output of the condenser, while $\Delta T_{min}^{ref/air}$ is the minimum approach temperature difference needed for heat transfer between a refrigerant and air.\\
-
-
-\subsection{Reference scenario}
-In order to evaluate the potential of alternative energy systems, a reference scenario is defined. Data about the energy system that will be built in the Eglantine district is not available to the author, and therefore a standard state of the art system is used. It is assumed that the heat demand for space heating and domestic hot water is provided by decentralized geothermal sourced heat pumps. The cooling demand is provided by air cooled vapor 
-
- chillers, also commonly known as air conditioners. The scenario foresees the installation of PV panels on the roof of the buildings.
-
-\missingfigure{energy schema ref scenario}
-
-The main resource flows are shown in Table \ref{tab:layers_ref}.
+\subsubsection{GS-HP}
+The resource flows of the different units in the system are shown in Table \ref{tab:layers_ref}.
 \input{Tables/layers_ref.tex}
 
-\subsubsection{Heating}
+This energy conversion technology corresponds to a state of the art energy system for buildings and district, which is widespread in new buildings.
+\missingfigure{energy schema ref scenario}
+
 The heating demand is supplied by a set of decentralized geothermal heat pumps, one for domestic hot water and one for space heating in every building. These heat pumps source the ambient heat from a secondary loop that exchanges heat with the ground through a system of geothermal wells, the SL-GSHP, which is described in Section \ref{ss:dx}. 
 
 Given the relevance of the heat pumps in the studied energy system, it has been chosen to use its thermodynamic model, which achieves more reliable and precise results.\\
@@ -1010,83 +976,74 @@ The temperatures at the evaporator and condenser are given by the following equa
 \end{equation}
 where $\Delta T_{min}$ are the corresponding minimum approach temperatures, and $\Delta T_{water}$ is the temperature rise in the secondary water loop exchanging with the ground.
 
-For the space heating heat pump, the refrigerant used is R123yf, as described in Section \ref{sss:hp_thermo}.\\
+For the space heating heat pump, the refrigerant used is R123yf, as described in Section \ref{sss:hp_thermo}.
 
-For the domestic hot water, it is chosen to use transcritical CO2 heat pumps. As described in Section \ref{sss:hp_CO2}, this technology can achieve very good performances supplying heat that requires a high lift. This is the case in domestic hot water, where the water has to be heated from a temperature of 10 \si{\celsius} to a temperature of 55 \si{\celsius}.
+For the domestic hot water, it is chosen to use transcritical CO2 heat pumps. As described in Section \ref{sss:hp_CO2}, this technology can achieve very good performances supplying heat that requires a high lift. This is the case in domestic hot water, where the water has to be heated from a temperature of 10 \si{\celsius} to a temperature of 55 \si{\celsius}.\\
 
-\subsubsection{Cooling}
 Given the availability of geothermal wells, it has been chosen to implement geo-cooling for space cooling. The system is providing cooling at the ground temperature, corrected with the minimum approach temperature $\Delta Tmin_{ground/water}$ and the temperature rise in the water loop $\Delta T_{water}$.
 \begin{equation}
 T_{geo-cooling} = T_{ground} + \Delta T_{min}^{ground/water} + \Delta T_{water}
 \end{equation}
 
-\subsubsection{Refrigeration}
-The refrigeration is achieved with a set of decentralized air cooled vapor compression chillers, which present the same working principle as heat pumps. Given that energy demand for refrigeration is not as relevant in the case study, it has been chosen to use the basic Carnot cycle model, as explained in Section \ref{sss:hp_carnot}. The heat is evacuated into the environment with help of cooling towers, as described in Section \ref{sss:cooling_tower}.
-
-Thus, the total energy consumption is a sum of the energy demand of the compressor and the cooling fans.
+The refrigeration is achieved with a set of decentralized air cooled vapor compression chillers, which present the same working principle as heat pumps. The heat is evacuated into the environment with help of cooling towers, as described in Section \ref{sss:cooling_tower}.
+The total energy consumption of the chillers is thus a sum of the energy demand of the compressor and the cooling fans:
 \begin{equation}
 \dot{E} = \dot{E}_{ref} + \dot{E}_{fans}
 \end{equation}
-
 and the operating temperatures are defined in the following way:
 \begin{equation}
     T_{cond} = T_{amb} + \Delta T_{air} + \Delta T_{min}^{ref/air}
 \end{equation}
 where $T_{amb}$ is the ambient temperature, $\Delta T_{air}$ is the temperature difference of the cooling air between the input and the output of the condenser, while $\Delta T_{min}^{ref/air}$ is the minimum approach temperature difference needed for heat transfer between a refrigerant and air.\\
 
-\subsection{CO2 DEN}
+\subsubsection{CO2DEN}\label{sss:CO2DEN}
 CO2 network energy system showed in Figure...
 \missingfigure{energy syst schema CO2 DEN}
 
 The main resource flows are shown in Table \ref{tab:layers_CO2}.
 \input{Tables/layers_CO2.tex}
 
-\subsubsection{Heating}
-For space heating and domestic hot water, the same model as for the heat pumps in reference scenario are used. Sicne in this case the HP sources heat from the CO2 network instead of the geothermal wells, the mayor difference lies in the evaporation temperature, which corresponds to temperatuer in the CO2 vapor pipe ($T_{CO2,g}$):
+For space heating and domestic hot water, the same model as for the heat pumps in GS-HP are used. Since in this case the HP sources heat from the CO2 network instead of the geothermal wells, the mayor difference lies in the evaporation temperature, which corresponds to temperature in the CO2 vapor pipe ($T_{CO2,g}$):
 \begin{equation}
     T_{evap} = T_{CO2,g} - \Delta T_{min}^{ref/ref}
 \end{equation}
 
-\subsubsection{Refrigeration}
-As for the reference scenario, refrigeration is achieved through decentralized vapor compression chillers. However, in this case they are not air cooled, but they exchange directly with the CO2 network. Thus, the temperature in the condenser is given by:
+As for GS-HP, refrigeration is achieved through decentralized vapor compression chillers. However, in this case they are not air cooled, but they exchange directly with the CO2 network. Thus, the temperature in the condenser is given by:
 \begin{equation}
     T_{cond} = T_{CO2,l} + \Delta T_{min}^{ref/CO2}
 \end{equation}
 
-\subsubsection{Cooling}
-Free cooling has been modeled by a simple heat exchanger that evaporates saturated liquid CO2, which is then injected back into the network in a superheated vapor state with $\Delta T_{superheating} = 1K$. The mass flow of the CO2 is adapted to satisfy the cooling demand. It is assumed that pressure and temperature losses are negligible.
+Space cooling is provided by free-cooling, modeled by a simple heat exchanger that evaporates saturated liquid CO2, which is then injected back into the network in a superheated vapor state. The mass flow of the CO2 is adapted to satisfy the cooling demand. It is assumed that pressure and temperature losses are negligible.\\
 
-\subsubsection{Central plant}
-As mentioned before, for obvious reasons, heating and cooling loads in the system are not always balanced. Thus, there is the need for a central plant to balance out the system, able to heat and cool. A centralized heat pump is very suitable for this purpose.
+As mentioned before, for obvious reasons, heating and cooling loads in the system are not always balanced. Thus, there is the need for a central plant (CP) to balance out the system, able to heat and cool. A centralized heat pump is very suitable for this purpose. This HP has been modeled with its thermodynamic model (see Section \ref{sss:hp_thermo}).
+In order to have a HP model for the central plant, which is able to handle different source temperatures, different cases have been implemented, with help of if conditions. Otherwise, computation problems arise when the source temperatures reaches the condensation temperature of the heating part of the CP, which corresponds to the temperature of the CO2 network. In the same way, this higher source temperature also precludes the possibility of free-cooling. However, if the temperatures is higher than the CO2 network, the central pump might be able to source heat without operating a heat pump (free-heating). The model includes two operating modes - heat pump HP or heat exchanger HE - for each part of the central plant, the heating part (CP-winter) and the cooling part (CP-summer). The parameters that vary in function of the operating modes are the electricity consumed $E_{cp}$ and the investment cost parameters. 
 
-Equations and modeling are the same as for the above described heat pumps. Difference consists in heat source, and thus evaporation temperature. Different options have been studied:
-\begin{itemize}
-    \item River: as for the lake, river water can be an interesting source of heat, with the difference of seasonal fluctuations. During the winter, river water can have a temperature close to 0, while in the summer it can rise to more than 20 \si{\celsius}. In the case of the Eglantine district, there is a small stream, called Morges, that passes at the eastern border of the land.
-    \item Lake: sourced from a certain depth, lake water shows an almost constant temperature of around 7.5 \si{\celsius} throughout the year. This solution can be very interesting alternative to geothermal wells, since, if close enough, it might reduce the upfront costs, despite probably slightly increasing the operating costs. In this particular case, the distance to the lake is of 1500 m.
-    \item Geothermal wells: after a certain depth, the ground presents a constant and very interesting temperature throughout the year. This heat can be exchanged with help of a secondary loop or through direct expansion of the refrigerant into the ground coils.
-\end{itemize}
+The thresholds temperatures are set in the following way:
+\begin{align}
+& T_{thresh}^{free-cooling} = T_{CO2} - \Delta T \\
+& T_{thresh}^{free-heating} = T_{CO2} + \Delta T 
+\end{align}
+where $\Delta T$ is the minimum temperature difference needed for the specific heat exchange.
 
-\todo{explain lake=ref, geoth=DHX CO2}
-Direct expansion system is assumed (see Section \ref{ss:dx}).
-So the CO2 DEN with DX-GSHP technology is shown in Figure \ref{fig:co2_gshp}
-
-\begin{figure}[htp]
-	\centering
-	\includegraphics[width=0.3\textwidth]{CO2-DX-GSHP.png}
-	\caption{A simplified schematics of the CO2 DEN with DX-GSHP technology}
-	\label{fig:co2_gshp}
-\end{figure}
-
-The operating temperatures are calculating the following way.
-\begin{equation}
-    T_{evap} = T_{source} - \Delta T_{min}^{CO2/source}
-\end{equation}
-The operating pressure is calculated with help of \textit{Coolprop}. The results are shown in Table \ref{tab:cp_source}.
-\input{Tables/cp_source.tex}
-\todo{summary table needed here (Ts, dTmin, Tevap, P...)? wrong values now}
+The truth table is shown in Table \ref{tab:CP_tt}.
+\input{Tables/CP_tt.tex}
 
 
-\subsection{Values...}
+Two different heat sources have been considered for this energy conversion technology: the lake and a geothermal field.
+
+%\subsubsection{Ground-sourced CP}
+Equations and modeling are the same as for the above described heat pumps. Direct expansion system is assumed (see Section \ref{ss:dx}).
+A schematic representation of the CO2 DEN with DX-GSHP technology is shown in Figure \ref{fig:co2_gshp}, in the Appendix \ref{as:co2den}.
+
+%\subsubsection{Lake-sourced CP}
+Equations and modeling are the same as for the above described heat pumps. R1234yf HP used
+
+
+%\input{Tables/cp_source.tex}
+\todo{summary table needed here (Ts, dTmin, Tevap, P...)? for cp or for CO2DEN or for Both scenarios???}
+
+
+\subsection{Numerical application}
 
 \subsubsection{Cost functions}
 
@@ -1145,7 +1102,7 @@ As example, Figure \ref{fig:dtmin_wr} and Figure \ref{fig:dtmin_gtw} show the re
 \end{figure}
 
 \subsubsection{Compressor efficiencies}
-The compressor efficiencies are directly calculated in the model, according to the equations in Section \ref{sss:hp_CO2} and \ref{sss:hp_thermo}. could be directly implemented in model. Table \ref{tab:eta_comp} shows the resulting efficiencies in standard operating conditions, for the different heat pumps used in this work.
+The compressor efficiencies are directly calculated in the model, according to the equations in Section \ref{sss:hp_CO2} and \ref{sss:hp_thermo}. Table \ref{tab:eta_comp} shows the resulting efficiencies in standard operating conditions, for the different heat pumps used in this work.
 
 \input{Tables/compressors_eff.tex}
 
@@ -1161,42 +1118,18 @@ These values are similar to reference values found by Yang et al.\cite{yangTheor
 %\end{itemize}
 %Varying \% of cooling load, wrt heating load, using varying composition of cities, with categories (commercial/residential/...)
 
-\subsection{CP with if conditions}
-\todo{not sure where to put that...}
-In order to have a HP model for the central plant, which is able to handle different source temperatures, different cases have been implemented, with help of if conditions. Indeed, computation problems arise when the source temperatures reaches the condensation temperature of the heating part of the CP, which corresponds to the temperature of the CO2 network. In the same way, this higher source temperature also precludes the possibility of free-cooling. However, if the temperatures is higher than the CO2 network, the central pump might be able to source heat without operating a heat pump (free-heating).
 
-The model includes two operating modes for each part of the central plant, the heating part (CP-winter) and the cooling part (CP-summer). The thresholds are set in the following way:
-\begin{align}
-	& T_{thresh}^{free-cooling} = T_{CO2} - \Delta T \\
-	& T_{thresh}^{free-heating} = T_{CO2} + \Delta T 
-\end{align}
-where $\Delta T$ is the minimum temperature difference needed for the specific heat exchange.
-
-The truth table is shown in Table \ref{tab:CP_tt}.
-\input{Tables/CP_tt.tex}
-
-The parameters that vary through the if conditions are the electricity consumed $E_{cp}$ and the investment cost parameters. 
-
-\subsection{DX Vs. SL-GSHP}
-As discussed in Section \ref{ss:dx}, there is the possibility to directly expand the CO2 into the geothermal well, instead of exchanging with help of a secondary water loop. The different temperature levels are shown in Figure \ref{fig:Qt_dx}. 
-
-Results of simulation, show the difference in performance, \ref{tab:dxVSsl}.
+\subsubsection{Direct expansion HP}\label{sss:DX}
+As discussed in Section \ref{ss:dx}, there is the possibility to directly expand the CO2 into the geothermal well, instead of exchanging with help of a secondary water loop. To grasp the increase in performance, a simulation is performed on the CP of the CO2DEN technology. The used parameters, refrigerants and temperatures are shown in Table \ref{tab:dxVSsl}. The CO2 heat pump has lower efficiencies (see Table \ref{tab:eta_comp}), which results in a lower $\eta_{COP}$. However it has a much lower temperature difference to cover, thanks to the direct expansion of the CO2.
 
 \input{Tables/cp_comparison.tex}
 
-CO2 heat pump has lower efficiencies (see Table \ref{tab:eta_comp}) thus $\eta_{COP}$ but much lower temperature difference to cover. Thus, its real coefficient of performance, as well as the exergy efficiency, are clearly higher than for the SL-GSHP. In fact, the DX-GSHP results being about twice as good.
+The simulation shows remarkable results. In fact, the real coefficient of performance, as well as the exergy efficiency, are clearly higher - about twice as much - for the DX-GSHP than for the SL-GSHP. 
 
-\begin{figure}[htp]
-	\centering
-	\includegraphics[width=0.6\textwidth]{Qt_dx.png}
-	\caption{Schematic representation of heat exchanges and minimum approach temperatures for the central plant HP, comparing SL- and DX-GSHP}
-	\label{fig:Qt_dx}
-\end{figure}
-
-It has to be noted that this specific heat pump globally presents very low  exergy values. This is due to ratio between the relatively high minimum approach temperatures and the very low temperature difference between the source temperature $T_{b}$ and the heat demand temperature $T_{vap}^{CO2}$.
+It has to be noted that this specific heat pump globally presents very low  exergy values. This is due to ratio between the high minimum approach temperatures and the very low temperature difference between the source temperature $T_{b} = 12 \si{\celsius}$ and the heat demand temperature $T_{vap}^{CO2} = 15 \si{\celsius}$.
 
 \subsection{Model improvement - thermodyn cycle}
-
+\todo{what todo with this section?}
 Comparison of results with simple Carnot model and with thermodyn model. Show difference in COPs\\
 
 Recalculation of $\eta_{COP}$ for all ETs. From the real COP calculated with help of coolprop and the thermodynamic cycle of the heat pump, the COP efficiency can easily be calculated
@@ -1211,10 +1144,16 @@ COP Comparison with values from literature?\\
 %with Coolprop CO2 transcritical cycle calculator COP ~= 5 (4.94-5.13) for $T_evap$ = 2deg and 8.5 (8.36-8.78) with $T_evap$ = 13deg
 %isentropic efficiency expansion valve = 0.8\cite{yangTheoreticalExperimentalInvestigation2016}
 
-
+\newpage
 \section{Results and discussion}
 
 \subsection{Energy and exergy performance}
+
+A direct way to compare the performance of the different conversion technologies is the coefficient of performance, which is simply given by the ration between the delivered heat $Q$ and the consumed electricity $E$. If the temperatures of evaporation and condensation of a heat pump are fixed, the operating cycle is also fixed, and thus the COP value. However, modern HP can adapt the operating cycle to fit the varying heat demand temperature. This allows to strongly improve the COP, as well as the exergy efficiency. The COP values, calculated in each timestep, are shown in Figure \ref{fig:v_cop}. 
+The heating heat pumps for SH and DHW are considerably higher in the CO2DEN. This is due to the "two stages" of the conversion technology: the heat is first furnished to the CO2 network by the CP and then brought up to the required temperature by the decentralized HP. 
+The COP of the central plant is higher in the GS CO2DEN, being the evaporation temperature higher than in the heat exchange with the lake. 
+The SH HP has COP that varies between 6 and 14. This is due to the fact that the temperature of the heat demand rises with the amount of heat required. Thus the COP of the HP is lower during winter.
+Moreover, the compression chillers in the GS-HP perform worse during summer, when they have to deliver heat to a higher ambient temperature, while the COP of refrigeration in the CO2DEN are constant, since heat is delivered the whole year to the CO2 network, which has at constant temperature.
 
 \begin{figure}[tph]
 	\centering
@@ -1223,13 +1162,7 @@ COP Comparison with values from literature?\\
 	\label{fig:v_cop}
 \end{figure}
 
-A direct way to compare the performance of the different conversion technologies is the coefficient of performance, which is simply given by the ration between the delivered heat $Q$ and the consumed electricity $E$. If the temperatures of evaporation and condensation of a heat pump are fixed, the operating cycle is also fixed, and thus the COP value. However, modern HP can adapt the operating cycle to fit the varying heat demand temperature. This allows to strongly improve the COP, as well as the exergy efficiency. The COP values, calculated in each timestep, are shown in Figure \ref{fig:v_cop}. 
-The heating heat pumps for SH and DHW are considerably higher in the CO2DEN. This is due to the "two stages" of the conversion technology: the heat is first furnished to the CO2 network by the CP and then brought up to the required temperature by the decentralized HP. 
-The COP of the central plant is higher in the GS CO2DEN, being the evaporation temperature higher than in the heat exchange with the lake. 
-The SH HP has COP that varies between 6 and 14. This is due to the fact that the temperature of the heat demand rises with the amount of heat required. Thus the COP of the HP is lower during winter.
-Moreover, the compression chillers in the GS-HP perform worse during summer, when they have to deliver heat to a higher ambient temperature, while the COP of refrigeration in the CO2DEN are constant, since heat is delivered the whole year to the CO2 network, which has at constant temperature.
-
-The mean COP values for each technology are shown in Table \ref{tab:V_cops}. The GS-CO2DEN shows the best performance with a global COP of 6.1. The LS-CO2DEN follows with 5.6 and the GS-HP with 4.6. All the conversion technologies perform well, but the combination of the DX-GSHP central plant with the decentralized HP in the GS-CO2DEN obtains excellent results.
+The mean COP values for each technology are shown in Table \ref{tab:V_cops}. The GS-CO2DEN shows the best performance with a global COP of 6.1. The LS-CO2DEN follows with 5.6 and the GS-HP with 4.6. All the conversion technologies perform well, but the combination of the DX-GSHP central plant with the decentralized HP in the GS-CO2DEN obtains excellent results. The increase in COP corresponds to a reduction of electricity consumption. With respect to the GS-HP, the GS-CO2DEN achieves a reduction of 24\%, and the LS-CO2DEN 17\%.
 
 \input{Tables/V_cops.tex}
 
@@ -1244,21 +1177,12 @@ The exergy values of supply and demand have been calculated for each conversion 
 
 The difference in the exergy efficiency between the different conversion technologies is shown in Figure \ref{fig:v_exe}. On the left hand, the values are calculated without taking into account the domestic PV production of renewable electricity, while on the left hand this has been included in the calculation. It is clear to see that the GS-HP performs worse than than the CO2 DEN. The average exergy efficiency is of 17\%, against 35\% of the GS-CO2DEN. As it can be seen in Table \ref{tab:V_exergy}, the exergy losses $\dot{L}_{\Delta T_{min}}$ due to the minimum approach temperature between the heat demand and the supply are small compared to the exergy losses occurring in the heat pumps $\dot{L}_{HP}$. The latter accounts for the COP of the heat pumps, which is as well dependent from the approach temperature with their respective heat sources. This explains the lower exergy efficiency of the GS-HP, for which its heat pumps require a much lower evaporation temperature, as discussed previously.\\
 
-The reason for the high performance of the GS-CO2DEN, despite having two stages and thus some additional losses due to $\Delta T_{min}$ values, is the direct expansion of CO2. As shown in Section \todo{ref section}, the energy and exergy gain, with respect to the conventional system based on a secondary water loop, are indeed remarkable.\\
-
-Even if for obvious reasons the exergy efficiency is considerably higher including the domestic PV production, the difference in performance between the different technologies does not change. This is explained by the fact that the self consumption values are very similar, as it can be seen in Figure \ref{fig:V_costs} in purple, and the increase of efficiency is thus shared among all technologies. In this case the average exergy efficiency for the GS-HP is 27\%, against 35\% and 33\% for respectively the GS- andn the LS-CO2DEN.
-
 \input{Tables/V_exergy.tex}
 
+The reason for the high performance of the GS-CO2DEN, despite having two stages and thus some additional losses due to $\Delta T_{min}$ values, is the direct expansion of CO2. As shown in Section \ref{sss:DX}, the energy and exergy gain, with respect to the conventional system based on a secondary water loop, are indeed remarkable.\\
 
-\begin{figure}[tph]
-	\centering
-	\includegraphics[width=0.5\linewidth]{Images/V_CO2_eldem_sorted}
-	\caption{Electricity demand of GS-CO2DEN system grouped in categories, sorted in decreasing order}
-	\label{fig:gsco2_el}
-\end{figure}
-\todo{percentage of elcons reduction between technologies??}
-Figure \ref{fig:gsco2_el} shows the shares of electricity consumption, on a sorted time axis. What is interesting to note is the repartition of electricity consumption between the CP and the decentralized HP. $E_{cp}$ represents around 10\% of the global electricity consumption, and around 30\% of the $E_{heat/cool}$.
+Even if for obvious reasons the exergy efficiency is considerably higher including the domestic PV production, the difference in performance between the different technologies does not change. This is explained by the fact that the self consumption values are very similar, as it can be seen in Figure \ref{fig:V_costs} in purple, and the increase of efficiency is thus shared among all technologies. In this case the average exergy efficiency for the GS-HP is 27\%, against 35\% and 33\% for respectively the GS- and the LS-CO2DEN.
+
 
 \subsection{Financial analysis}
 
@@ -1270,9 +1194,9 @@ The investment costs are shown more in detail in the clustered columns. It is ea
 
 Despite the lower OC for the CO2DEN technologies, the total cost is clearly following the tendency of the IC, which present a larger difference. The GS-HP ends up being the cheapest variant with $470'717 [Euro/yr]$, followed by the GS-CO2DEN with an only slightly higher cost of $485'819 [Euro/yr]$. The SL-CO2DEN is the most expensive solution with $580'831 [Euro/yr]$.\\
 
-Self consumption and autarchy do not vary much between the technologies, because no storage technology has been taken into account. Indeed, any kind of storage - thermal, electrical or CO2 - would enable to adapt the consumption to profit from the cheap domestic produced energy, as well as to reduce peak demands. Moreover, despite of the optimizer choosing install the maximum possible amount of PV - which corresponds to the roof surface - for the three technologies, in order to reduce the OC, the amount of electricity produced is seldom larger than the total electricity demand of the district. Thus, the three systems have an autarchy of about 25 \%, and a self consumption rate of around 75 \%.
+Self consumption and autarchy do not vary much between the technologies, because no storage technology has been taken into account. Indeed, any kind of storage - thermal, electrical or CO2 - would enable to adapt the consumption to profit from the cheap domestic produced energy, as well as to reduce peak demands. Moreover, despite of the optimizer choosing install the maximum possible amount of PV - which corresponds to the roof surface - for the three technologies, in order to reduce the OC, the amount of electricity produced is seldom larger than the total electricity demand of the district. Thus, the three systems have an autarchy of about 25 \%, and a self consumption rate of around 75 \%.\\
 
-\todo{might be other reasons deciding, like space issue...}
+For what has been seen in this section, the CO2 network showed an excellent energy performance. However, the reasons to opt for such a technology will have to go beyond financial arguments, since it remains a more expensive solution, even it this could quickly change if the price of electricity rises, which is not such a far-fetched scenario. Another strong argument in favor of this technology is the space planning. A city center might first of all not have the space for, but also not want everyone to drill boreholes under its house. The CO2 network would allow to profit from its benefits, while outsourcing and give flexibility to the planning and realization of the geothermal field.
 
 \begin{figure}[htp]
 	\centering
@@ -1282,14 +1206,14 @@ Self consumption and autarchy do not vary much between the technologies, because
 \end{figure}
 
 
-\subsubsection{GS-HP}
-A parametric optimization of the costs of the reference energy system (GS-HP) is shown in Figure \ref{fig:V_G_PO}.
+\subsubsection{Parametric optimization of GS-HP}
+A parametric optimization of the costs of the reference energy system (GS-HP) is shown in Figure \ref{fig:V_G_PO}. The optimizer is let to optimize the operating costs, while step-wise constraining the investment cost. This is a help for decision making.
 
 It can be seen that the biggest difference in investment and operating cost is due to the sizing of the PV. In fact, when constraining the investment costs, the model installs only a small share of PV, which increases the operational costs. On the contrary, a high share of PV increases the systems rate of auto-sufficiency, lowering the operational costs. 
 
-On the far right, the maximum allowed share of photovoltaic (PV) - set to twice the total roof area, which accounts for potential facades and free space PV - is reached. The operational are lowered thanks to a different handling of peak consumption. The optimal system installs a small share of electrical heater (R-EL) to cover peak demand, which allows to optimally size the heating heat pumps (HP-S, HP-DHW). In the last column on the right, the system chose not to install the electrical heater but installing larger heat pumps, which strongly increases upfront costs, but allows to further reduce the operational costs.
+On the far right, the maximum allowed share of photovoltaic (PV) - set to twice the total roof area, which accounts for potential facades and free space PV - is reached. The operational are lowered thanks to a different handling of peak consumption. The optimal system installs a small share of electrical heater (R-EL) to cover peak demand, which allows to optimally size the heating heat pumps (HP-SH, HP-DHW). In the last column on the right, the system chose not to install the electrical heater but installing larger heat pumps, which strongly increases upfront costs, but allows to further reduce the operational costs.
 
-On the far left, the opposite phenomenon happens. To reduce upfront costs, the system chose to cover the heat demand almost entirely with help of the electric heater (R-EL), minimizing the size of the heating heat pumps (HP-SH, HP-DHW).
+On the far left, the opposite phenomenon happens. To reduce upfront costs, the system chose to cover the heat demand almost entirely with help of the electric heater, minimizing the size of the heating heat pumps.
 
 The optimum, with respect to the total cost of the energy system, is in the very middle of the graph, between column 2 and 3. The optimum is analyzed in the following chapters.
 
@@ -1300,10 +1224,10 @@ The optimum, with respect to the total cost of the energy system, is in the very
 	\label{fig:V_G_PO}
 \end{figure}
 
-\subsubsection{GS-CO2DEN}
-A parametric optimization of the costs of the CO2 district energy system with ground sourced central plant (GS-CO2DEN) is shown in Figure \ref{fig:V_CO2_G_PO}.
+\subsubsection{Parametric optimization of GS-CO2DEN}
+A parametric optimization of the costs of the CO2 district energy system with ground sourced central plant (GS-CO2DEN) is shown in Figure \ref{fig:V_CO2_G_PO}. The optimizer is let to optimize the operating costs, while step-wise constraining the investment cost. This is a help for decision making.
 
-The response of this system to the parametric optimization is very similar to the one of the GS-HP system. This means that the biggest difference in investment and operating cost is due to the sizing of the PV, while the extreme cases are determined by the ration between the electrical heater (R-EL) and the heating heat pumps (HP-SH, HP-DHW).
+The response of this system to the parametric optimization is very similar to the one of the GS-HP system. This means that the biggest difference in investment and operating cost is due to the sizing of the PV, while the extreme cases are determined by the ration between the electrical heater and the heating heat pumps.
 
 Also in this case the lowest total cost of the energy system is to be found in the very middle of the graph, between column 2 and 3. The optimum is analyzed in the following chapters.
 
@@ -1314,8 +1238,8 @@ Also in this case the lowest total cost of the energy system is to be found in t
 	\label{fig:V_CO2_G_PO}
 \end{figure}
 
-If we take the stable middle, isolate PV costs we obtain a share of network and HP correposnding to... This is shown in  Table \ref{tab:anergynets_IC}, in comparison with existing anergy networks in Switzerland.
-
+If we take the stable middle, isolate PV costs we obtain a share of network and HP corresponding to... This is shown in  Table \ref{tab:anergynets_IC}, in comparison with existing anergy networks in Switzerland.
+\todo{rephrase}
 \input{Tables/anergynets_IC.tex}
 
 It can be seen that the GS-CO2DEN system in the Eglantine district presents a much lower percentage of the investment cost  $IC_{Heating/cooling}$ attributed to the heating and cooling equipment (HP-SH, HP-DHW, HP-REF, HE-AC) than two reference anergy networks in Switzerland. 
@@ -1356,16 +1280,24 @@ From an exergy point of view, the integration of the external heat source replac
 	\label{fig:V_IR_cost}
 \end{figure}
 
-However, as it had been analyzed in Figure \ref{gsco2_el}, the electricity demand of the CP corresponds to about 30\% of the demand of the heating/cooling facilities. This means that even a system having a perfectly balanced heating and cooling demand would not be able to reduce its OC of more than 30\%, since, as far as the temperature of the CO2 network remains constant, the operating conditions of the decentralized heat pumps remain unchanged too.\\
 
-An analysis of the economic differences caused by the integration of the ice rink is shown in Figure \ref{fig:V_IR_cost}. As discussed above, the additional heat reduces the required heat from the GTW, reducing its IC, and reduces the workload of the CP, resulting in lower OC. On the other hand, the integration of the external heat source requires the installation of additional CO2 pipes, which has an impact on the upfront costs. In this particular case, it can be seen that the balance of these difference is negative, i.e. the total cost of the GS-CO2DEN is lower if the ice rink is connected.\\
+\begin{figure}[tph]
+	\centering
+	\includegraphics[width=0.5\linewidth]{Images/V_CO2_eldem_sorted}
+	\caption{Electricity demand of GS-CO2DEN system grouped in categories, sorted in decreasing order}
+	\label{fig:gsco2_el}
+\end{figure}
+\todo{integrate figure and text}
+Figure \ref{fig:gsco2_el} shows the shares of electricity consumption, on a sorted time axis. What is interesting to note is the shares of electricity consumption between the CP and the decentralized HP. $E_{cp}$ represents around 10\% of the global electricity consumption, and around 30\% of the $E_{heat/cool}$.
+
+However, as it had been analyzed in Figure \ref{fig:gsco2_el}, the electricity demand of the CP corresponds to about 30\% of the demand of the heating/cooling facilities. This means that even a system having a perfectly balanced heating and cooling demand would not be able to reduce its OC of more than 30\%, since, as far as the temperature of the CO2 network remains constant, the operating conditions of the decentralized heat pumps remain unchanged too.\\
+
+An analysis of the economic differences caused by the integration of the ice rink is shown in Figure \ref{fig:V_IR_cost}. As discussed above, the additional heat reduces the required heat from the GTW, reducing its IC, and reduces the workload of the CP, resulting in lower OC. On the other hand, the integration of the external heat source requires the installation of additional CO2 pipes, which has an impact on the upfront costs. In this particular case, it can be seen that the balance of these difference is negative, i.e. the total cost of the GS-CO2DEN is lower if the ice rink is connected, by about 4'000 [Euro/yr]. This is not yet sufficient to have a lower cost than the GS-HP, but its reducing the gap to about 10'000 [Euro/yr].\\
 
 Nevertheless, it is important to account for uncertainties bound to the external heat source. For example for an ice rink, the replacement of the obsolete and inefficient cooling facility, or an improvement in the facility management, can drastically reduce its energy. Same for other potential heat sources as industrial processes, which can be improved or replaced over time. This should be considered in the inclusion of external heat source, since a reduction, or the absence, of the additional heat could threaten the functioning of the system.
 
-\todo{still not enough to have lower TC, but better}
 
-
-\subsection{Ground temperature}
+\subsection{Ground temperature response}
 
 %\begin{figure}[htp]
 %	\centering
@@ -1388,7 +1320,7 @@ A critical parameter for the efficiency of a ground sourced energy system is the
 
 The GS-HP energy system seems to responds in a linear way to the temperature raise, as it can be expected, thanks to the lower required temperature raise for heating, which increases the COP of the system. In reality a small step can be identified between 14 and 15 \si{\celsius}, at which the IC drop and the OC rise. This step happens when the ground is not cool enough anymore to offer the option of free-cooling. The system is forced to use a refrigeration system instead, which increases the OC. However this utility is already installed, and thus the increase of $IC_{HP-REF}$ is lower than the reduction of the obsolete $IC_{HE-AC}$.
 
-The GS-CO2DEN energy system presents a more evident step in its response to the ground temperature. The reason lies in the use of the central plant, which, as described in Section \todo{write and reference model with if conditions}, has different operating modes for cooling and heating. In fact, if the temperatures are either high or low enough, it can operate free-cooling or free-heating. In any other case, it operates in cooling and/or heating HP mode. In this case the step happens at $T_{b} \geq 16 \si{\celsius}$, for which the CP can source heat directly from the ground without the need of a heat pump, which drastically reduces the operational costs.
+The GS-CO2DEN energy system presents a more evident step in its response to the ground temperature. The reason lies in the use of the central plant, which, as described in Section \ref{sss:CO2DEN}, has different operating modes for cooling and heating. In fact, if the temperatures are either high or low enough, it can operate free-cooling or free-heating. In any other case, it operates in cooling and/or heating HP mode. In this case the step happens at $T_{b} \geq 16 \si{\celsius}$, for which the CP can source heat directly from the ground without the need of a heat pump, which drastically reduces the operational costs.
 
 For obvious reason, while GS-CO2DEN and GSHP respond similarly to the variation in the bore temperature, the LS-CO2DEN presents constant costs. In fact the system is not dependent from the ground temperature and is represented on the graph for sake of comparison. It can be seen that $OC_{LS-CO2DEN}$ performs better, in terms of operating costs, than the GS-HP at any ground temperature in the studied interval. It also performs better than the GS-CO2DEN for temperatures below 10 \si{\celsius}. The lake distance in the Eglantine district is 1500m , which results in very high investment costs, precluding the competitiveness of this solution, in the given conditions.\\
 
@@ -1399,26 +1331,26 @@ Nevertheless, this sensitivity analysis gives an idea of the global behavior res
 
 \subsection{Lake distance}
 
-%\begin{wrapfigure}{R}{0.45\textwidth} 
-%	\vspace{-20pt}
-%	\centering
-%	\includegraphics[width=0.4\textwidth]{lakeDist.png}
-%	\caption{Maximum distance of lake for which the total costs are lower than the two other energy systems, in function of the ground temperature $T_{borehole}$}
-%	\label{fig:lakeDist}
-%	\vspace{-10pt}
-%\end{wrapfigure}
+\begin{wrapfigure}{R}{0.45\textwidth} 
+	\vspace{-20pt}
+	\centering
+	\includegraphics[width=0.4\textwidth]{lakeDist.png}
+	\caption{Maximum distance of lake for which the total costs are lower than the two other energy systems, in function of the ground temperature $T_{borehole}$}
+	\label{fig:lakeDist}
+	\vspace{-10pt}
+\end{wrapfigure}
 
 As it has been seen in the previous paragraphs, the LS-CO2DEN presents competitive OC. Avoiding geothermal drilling can thus represent a big advantage, through the reduction of upfront costs. Pressure losses as well as the energy for pumping have been neglected, so the cost of the water pipes is mainly dependent on the distance of the lake water. Thus the threshold for the distance of the lake can be calculated, for which the LS-CO2DEN system to present a lower total cost than the GS-CO2DEN system. 
 
 This threshold temperature varies in function of the ground temperature, and it has been calculated accordingly. The resulting thresholds are plotted on Figure \ref{fig:lakeDist}. This helps choosing between using the lake or the soil as a heat source, knowing the mean ground temperature and the distance from the lake water.
 
-\begin{figure}[htp]
-	\centering
-	\includegraphics[width=0.4\textwidth]{lakeDist.png}
-	\caption{Maximum distance of lake for which the total costs are lower than the two other energy systems, in function of the ground temperature $T_{borehole}$}
-	\label{fig:lakeDist}
-\end{figure}
-\todo{wrapfig}
+%\begin{figure}[htp]
+%	\centering
+%	\includegraphics[width=0.4\textwidth]{lakeDist.png}
+%	\caption{Maximum distance of lake for which the total costs are lower than the two other energy systems, in function of the ground temperature $T_{borehole}$}
+%	\label{fig:lakeDist}
+%\end{figure}
+%\todo{wrapfig}
 
 At $T_{borehole} = 12 \si{\celsius}$, as in the Eglantine district, the LS-CO2DEN would be a financially interesting solution against  GS-HP and GS-CO2DEN if the distance to the lake is respectively shorter than 328 and 484 meters.
 
@@ -1452,18 +1384,16 @@ A sensitivity analysis has been performed on a district composed by those two ca
 	\caption{Comparison of the energy demand (power) of heat extracted (WINTER) of injected (SUMMER) into the boreholes}
 	\label{fig:CU_gtw}
 \end{figure}
-\todo{needed figure of source?}
 
 
 \begin{figure}[tph]
 	\centering
-	\includegraphics[width=0.45\linewidth]{Images/CU_el}
+	\includegraphics[width=0.65\linewidth]{Images/CU_el}
 	\caption{Electricity demand in function of the building use composition}
 	\label{fig:CU_el}
 \end{figure}
-\todo{wrapfig}
 
-Table \ref{tab:CU_energy} shows the COP values for the energy system throughout the different combinations of buildings use. The $COP_{heating}$ increase is due to the decreasing share of DHW, which is heated with a lower COP. The increase in cooling, and thus the strong increase in the global coefficient of performance is due to the fact that the biggest share of the cooling demand can be satisfied with free-cooling. These variations are reflected in the decrease of electricity consumption, shown in Figure \ref{fig:CU_E}.
+Table \ref{tab:CU_energy} shows the COP values for the energy system throughout the different combinations of buildings use. The $COP_{heating}$ increase is due to the decreasing share of DHW, which is heated with a lower COP. The increase in cooling, and thus the strong increase in the global coefficient of performance is due to the fact that the biggest share of the cooling demand can be satisfied with free-cooling. These variations are reflected in the decrease of electricity consumption, shown in Figure \ref{fig:CU_E}. The resulting heat exchange with the geothermal wells is shown in Figure \ref{fig:CU_gtw}.
 
 
 %\begin{figure}[!htb]
@@ -1514,63 +1444,73 @@ $$f_{Housing} = 0.866$$
 Now that the response to a variation in the ground temperature has been studied, and that the performance of the system has been studied in function of different energy demands, it would be very interesting to know how the two parameters might be correlated between each other. In other words, it would be interesting to study the variation of the optimum combination of building use, in function of the borehole temperature. 
 To do so, a sensitivity analysis has been performed on those two parameters, for the GS-HP and for the GS-CO2DEN. 
 
-\begin{figure}[!htb]
-	\centering
-	\begin{minipage}{.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{CUTg_SA_OC.png}
-		\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-HP technology}
-		\label{fig:CUTg_OC}
-	\end{minipage}%
-	\hspace{1cm}
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{CUTg_SA_CO2_OC.png}
-		\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-CO2DEN technology}
-		\label{fig:CUTg_CO2_OC}
-	\end{minipage}
-\end{figure}
+%\begin{figure}[!htb]
+%	\centering
+%	\begin{minipage}{.45\textwidth}
+%		\centering
+%		\includegraphics[width=\textwidth]{CUTg_SA_OC.png}
+%		\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-HP technology}
+%		\label{fig:CUTg_OC}
+%	\end{minipage}%
+%	\hspace{1cm}
+%	\begin{minipage}{0.45\textwidth}
+%		\centering
+%		\includegraphics[width=\textwidth]{CUTg_SA_CO2_OC.png}
+%		\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-CO2DEN technology}
+%		\label{fig:CUTg_CO2_OC}
+%	\end{minipage}
+%\end{figure}
 
 To evaluate the system's performance, it has been chosen to analyze the operating costs. Given that they are directly proportional with the global COP of the energy system, they give a very good indicator of the operating conditions. To do so, the electricity consumption of the houses has been neglected. The results are shown in Figures \ref{fig:CUTg_OC} and \ref{fig:CUTg_CO2_OC}. It has to be noted that, for sake of visibility, the axis have been inverted between the two graphs. Moreover, the z axis is scaled differently.\\
 
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=\textwidth]{CUTg_SA_OC.png}
+	\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-HP technology}
+	\label{fig:CUTg_OC}
+\end{figure}
+
 Let's start looking at \ref{fig:CUTg_OC}, the performance of the GS-HP. The temperature response to a \textit{housing} composition is linearly decreasing with the temperature increase. This is due to the increase of COP in the decentralized HP, given the lower temperature rise to harvest heat from the ground. When moving towards a \textit{retail} composition, i.e. introducing an increasing space cooling demand while lowering heating demand, the general plane has a decreasing slope, due to the lower heating demand. However, a strong increase appears for temperatures above 14 \si{\celsius}. The reason for that, is that the free cooling temperature threshold has been reached, requiring the use of the air cooled refrigeration system instead. This obviously engenders a considerable increase in electricity consumption, reflected in the operating cost.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=\textwidth]{CUTg_SA_CO2_OC.png}
+	\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-CO2DEN technology}
+	\label{fig:CUTg_CO2_OC}
+\end{figure}
 
 The GS-CO2DEN, shown in Figure \ref{fig:CUTg_CO2_OC}, shows a similar response to the temperature increase for \textit{retail} composition, with a stronger drop once the temperature rises to the free heating threshold. This scenario had already been discussed in the previous sections. Now it is interesting to see what happens when moving towards \textit{retail}. The COP at very low $T_{borehole}$ increases - thus the OC decrease - linearly with the decreasing share of heating demand and the increasing demand of free cooling. At very high $T_{borehole}$, on the contrary, the COP decreases - and OC increase - linearly with the increasing temperature drop that the refrigeration system has to perform in order to satisfy the cooling demand, which can not be free cooled. Nevertheless, the originated electricity consumption in this point is drastically lower than for the GS-HP, due to the much lower condensation temperature. In the temperature response for a purely \textit{retail} district, it is very easy to see the different operating conditions of the CP, described in Section  \ref{ss:cp}\todo{ref section CP}. 
 
 In general, the GS-CO2DEN achieves the highest energy performance, by being as close as possible to the free heating/cooling threshold temperatures, without crossing it. Depending on the demand, it will be more efficient to be on one side or the other of the thresholds, in order to use the more needed free energy. It has to be noted that the GS-CO2DEN performs better than the GS-HP for any given combination. 
 
+\newpage
 \section{Conclusion and outlook}
-District energy systems have a high potential to improve the energy and exergy efficiency of urban heating and cooling systems. A particularly promising technology uses CO2 as a working fluid to exchange heat between buildings and a network of conversion technologies. A thermo-economic analysis of the technology has been performed, focusing on a test case district near Lausanne, the Eglantine district. This district composed of 13 buildings, with a total ERA of  43'350 $m^2$, and will host around 1'500 people. The building use is per 97\% dedicated to housing, presenting a total heating demand of 2'350 MWh/yr.
+District energy systems have a high potential to improve the energy and exergy efficiency of urban heating and cooling systems. A particularly promising technology uses CO2 as a working fluid to exchange heat between buildings and a network of conversion technologies. A thermo-economic analysis of the technology has been performed, focusing on a test case district near Lausanne, the Eglantine district, which is composed of 13 buildings with a total ERA of  43'350 $m^2$, and will host around 1'500 people. The building use is per 97\% dedicated to housing, presenting a total heating demand of 2'350 [MWh/yr].
 
 Three main energy conversion technologies have been considered, for the supply of the heating and cooling demand. The first one consist in a state of the art, modern energy system, based on decentralized geothermal heat pumps (GS-HP), in combination with geo-cooling and air-cooled refrigerators. This is a common choice among new built district and houses. The other two, are CO2 based district energy networks, connected to a set of decentralized heat pumps, and a centralized heat pump to balance out the heat of the network with the environment. One of them has the central pump exchanging heat with a geothermal field (GS-CO2DEN), while the other exchanges heat with the lake water (SL-CO2DEN). The different technologies have been modeled accurately, in order to have the most realistic and impartial evaluation and comparison. Moreover, the heat pump model has been improved with dynamical calculation of the compressor efficiencies.\\
 
-Results showed that the best performing technology is the GS-CO2DEN, with a global COP of 6.1 and an exergy efficiency of 22\%, which is a considerable improvement with respect to the GS-HP that has a global COP of 4.6 and an exergy efficiency of 17\%. This improvement is mainly due to the technology chosen for the central plant. In fact traditional geothermal heat pumps exchange heat with the ground through a secondary water loop, which is the case in the GS-HP. The CO2 network offers the possibility to expand the refrigerant directly into the ground. This cuts the need of an additional heat exchanger and, through the use of latent heat, avoids the additional temperature rise needed in the water loop. At last, but probably most relevant, liquid CO2 presents a much greater heat tranfer coefficient than water, reducing the needed minimum approach temperature to exchange with the ground from 14\si{\celsius} to 6.8 \si{\celsius}. Despite the lower compressor efficiencies for CO2, these measures considerably reduce exergy losses and improve the COP. The LS-CO2DEN has a slightly lower performance - global COP of 5.6 and exergy efficiency of 21\% -, due to the lower temperature of the heat source.
+Results showed that the best performing technology is the GS-CO2DEN, with a global COP of 6.1 and an exergy efficiency of 22\%, which is a considerable improvement with respect to the GS-HP that has a global COP of 4.6 and an exergy efficiency of 17\%. This improvement is mainly due to the technology chosen for the central plant. In fact traditional geothermal heat pumps exchange heat with the ground through a secondary water loop, which is the case in the GS-HP. The CO2 network offers the possibility to expand the refrigerant directly into the ground. This cuts the need of an additional heat exchanger and, through the use of latent heat, avoids the additional temperature rise needed in the water loop. At last, but probably most relevant, liquid CO2 presents a much greater heat tranfer coefficient than water, reducing the needed minimum approach temperature to exchange with the ground from 14\si{\celsius} to 6.8 \si{\celsius}. Despite the lower compressor efficiencies for CO2, these measures considerably reduce exergy losses and improve the COP. The LS-CO2DEN has a slightly lower performance then the GS-CO2DEN - global COP of 5.6 and exergy efficiency of 21\% -, due to the lower temperature of the heat source.
 
 Despite having the lowest COP, and thus the highest operating cost, the GS-HP presents the lowest total cost, with 470'717[Euro/yr]. The reason is straightforward: the reduction in operating cost do not compensate the upfront cost of the CO2 network, which has a total cost of 485'819 [Euro/yr]. Given the high distance to the lake (1'500 [m]), the LS-CO2DEN presents the highest total cost, with 580'831 [Euro/yr]. A sensitivity analysis on the lake distance has shown that this technology is cheaper than the others, if the lake water is at less than 328 [m]. Thus the arguments to opt for a CO2 network technology might not be purely financial. In fact, in cities an important argument is that often it might not be possible to drill boreholes for each building, since the space is simply not available.
 
-One of the advantages of the CO2 network is to recover heat from any kind of heat source. Thus, the integration of an ice rink, located close to the district, has been analyzed, showing that it induces a reduction in the electricity consumption of 8\%, which results in a increase in the global COP from 6.12 to 6.73. On a financial level, this reduces the needed size of the geothermal wells, but adds upfront costs for the CO2 pipes. Summed with the reduction in operating cost, the integration of the ice rink reduces the total cost of around 4'000 [Euro/yr].\\
+One of the advantages of the CO2 network is to recover heat from any kind of heat source. It has been shown that the integration of an ice rink, located close to the district, induces a reduction in the electricity consumption of 8\%, which results in a increase in the global COP from 6.12 to 6.73. On a financial level, this reduces the needed size of the geothermal wells, but adds upfront costs for the CO2 pipes. Summed with the reduction in operating cost, the integration of the ice rink reduces the total cost of around 4'000 [Euro/yr].\\
 
-In the last part, it has been tried to find out how the CO2 network perform in function of different building uses.
+Moreover, it has been shown that for different uses of the buildings, there is an optimal ground temperature, or in other words an optimal borehole depth, which obviously also depend on the parameter that is optimized. For instance, the GS-CO2DEN at Eglantine conditions performs best, energetically as well as financially, at the borehole temperature of 16\si{\celsius}. The resasoning works also the other way around. For example, it has been shown that, for a borehole temperature of 12 \si{\celsius}, the lowest total cost is given by a district composed by 85\% of buildings dedicated to housing, and 15\% to retail.\\
 
-The response to the ground temperature, i.e. to the depth of the boreholes, has also been analyzed.
+This work identifies the key parameters that the CO2 network technology can leverage, in order to compete against modern and well performing heat pump systems. The first, and probably the most important one, is a well designed integration of the geothermal field. The second is the knowledge and understanding of the system's performance response to the different type of energy demand.\\
 
-The results show that, at the Eglantine conditions, optimum operating costs are found with a purely \textit{retail} district, due to the lower heating demand. However, the higher cooling demand, covered by free-cooling, strongly increases the investment costs for the geothermal wells. The optimum for the total cost, situates thus around 15\% retail and 85\% housing.\\
+To extend and improve these analysis, it would be necessary to implement storage technologies. In fact, in the actual model no storage technologies have been taken into account. This would enable to improve the sizing of the equipment, and also the integration with the domestic PV production. Especially, it would be interesting to analyze the possibility to store vapor and liquid CO2, which achieves the same effect as a battery or another heat storage. If investment cost and required storage volume are proved to be feasible and competitive, this form of storage could represent a key argument in favor of the CO2DEN technology.
 
-
-
-To extend and improve these analysis, it would be necessary to implement storage technologies. In fact, in the actual model no storage technologies have been taken into account. This would enable to improve the sizing of the equipment, and also the integration with the domestic PV production. Especially, it would be interesting to analyze the possibility to store vapor and liquid CO2, which achieves the same effect as a battery or another heat storage. If investment cost and required storage volume are proved to be feasible and competitive, this form of storage could represent a key argument in favor of the CO2DEN technology.\\
-
-Moreover, another crucial aspect for the improvement of the presented model, are the geothermal wells. 
+Another crucial aspect for the improvement of the presented model, are the geothermal wells. 
 Ideally, a model should be developed, capable of accounting for the temperature gradient of the soil in function of depth, as well as the varying heat transfer coefficient of CO2 during the different phases of the evaporation in the ground pipe \cite{badacheExperimentalStudyCarbon2018,lamarcheReviewMethodsEvaluate2010}.
-This model should also account for heat capacity of the soil and its recharge rate\cite{jiaReviewEffectiveThermal2019,lamarcheReviewMethodsEvaluate2010,zengHeatTransferAnalysis2003a}, which would allow for geothermal heat storage or borehole regeneration.
-
+This model should also include the dependency on the heat capacity of the soil and its recharge rate\cite{jiaReviewEffectiveThermal2019,lamarcheReviewMethodsEvaluate2010,zengHeatTransferAnalysis2003a}, which would allow to account for geothermal heat storage or borehole regeneration.
 Such a model would allow to improve the equipment sizing, as well as to better model the borehole's operating temperature and its dependency on the depth of the well.
  
 
 %%%%%%%%% References %%%%%%%%%
 \clearpage
 \bibliographystyle{unsrt} %other styles: https://www.sharelatex.com/learn/Bibtex_bibliography_styles
-\bibliography{bibliography.bib}
+\bibliography{bibliography}
 
 %%%%%%%%% Appendices %%%%%%%%%
 \clearpage
