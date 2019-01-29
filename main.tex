@@ -1241,7 +1241,7 @@ Even if for obvious reasons the exergy efficiency is considerably higher includi
 	\caption{Electricity demand of GS-CO2DEN system grouped in categories, sorted in decreasing order}
 	\label{fig:gsco2_el}
 \end{figure}
-
+\todo{percentage of elcons reduction between technologies??}
 Figure \ref{fig:gsco2_el} shows the shares of electricity consumption, on a sorted time axis. What is interesting to note is the repartition of electricity consumption between the CP and the decentralized HP. $E_{cp}$ represents around 10\% of the global electricity consumption, and around 30\% of the $E_{heat/cool}$.
 
 \subsection{Financial analysis}
@@ -1252,9 +1252,11 @@ Given that in this work the cost of operation (OC) depend only from the consumed
 
 The investment costs are shown more in detail in the clustered columns. It is easy to note that the GS-HP has much lower upfront costs ($179'884[Euro/yr]$)than the GS-CO2DEN solution ($222'603[Euro/yr]$). Indeed, the reduction in the cost of the HP - which is due to the higher COP values - is compensated by a higher cost for the geothermal wells and the additional cost of the CO2 network. The first also originates from the higher COP values, for which a larger share of energy will come from the source, and thus require a larger capacity installed. The latter is intrinsic to the CO2DEN system, that requires a physical network of CO2 pipes to connect all the user. In the SL-CO2DEN there are obviously no costs related to the geothermal wells, but the cost for the water pipes that allow the water to be brought to the CP. Given the actual distance of the Eglantine district from the lake, this solution leads to much higher upfront costs than the competing technologies ($310'103[Euro/yr]$).\\
 
-Despite the lower OC for the CO2DEN technologies, the total cost is clearly following the tendency of the IC, which present a larger difference. The GS-HP ends up being the cheapest variant with $470'717 [Euro/yr]$, followed by the GS-CO2DEN with an only slightly higher cost of $485'819 [Euro/yr]$. The SL-CO2DEN is the most expensive solution with $580'0831 [Euro/yr]$.\\
+Despite the lower OC for the CO2DEN technologies, the total cost is clearly following the tendency of the IC, which present a larger difference. The GS-HP ends up being the cheapest variant with $470'717 [Euro/yr]$, followed by the GS-CO2DEN with an only slightly higher cost of $485'819 [Euro/yr]$. The SL-CO2DEN is the most expensive solution with $580'831 [Euro/yr]$.\\
 
 Self consumption and autarchy do not vary much between the technologies, because no storage technology has been taken into account. Indeed, any kind of storage - thermal, electrical or CO2 - would enable to adapt the consumption to profit from the cheap domestic produced energy, as well as to reduce peak demands. Moreover, despite of the optimizer choosing install the maximum possible amount of PV - which corresponds to the roof surface - for the three technologies, in order to reduce the OC, the amount of electricity produced is seldom larger than the total electricity demand of the district. Thus, the three systems have an autarchy of about 25 \%, and a self consumption rate of around 75 \%.
+
+\todo{might be other reasons deciding, like space issue...}
 
 \begin{figure}[htp]
 	\centering
@@ -1305,6 +1307,46 @@ It can be seen that the GS-CO2DEN system in the Eglantine district presents a mu
 One reason for this difference is most likely the size difference between the energy systems. In fact, the Eglantine system is drastically smaller than the one at ETH or in Friesenberg, which have a heating demand which is respectively 12 and 15 times bigger. The specific investment costs for building the network and drilling the geothermal wells decreases with size - for example the costs of digging to place a pipe underground won't be strongly correlated with the pipe diameter. On the contrary, the specific costs for the heat pumps will stay about the same, given that the size of the decentralized heat pumps will not increase, only its number.
 
 On the other hand, it is not trivial to estimate the cost of building the CO2 network, given the lack of examples in the real world, and the resulting costs could be proven to be inaccurate. Also the sizing of the geothermal well, in order to account for yearly energy balance and recharge rate, and for the specific cost, according to depth and soil type would have to be verified and confirmed through further studies and simulations.
+
+
+\subsection{Heat source integration}
+
+\begin{figure}[thpb]
+	\centering
+	\includegraphics[width=1\linewidth]{Images/V_IR_Q}
+	\caption{Heat supplied (above) and heat source use (below)}
+	\label{fig:V_IR_Q}
+\end{figure}
+
+The integration of large external heat sources, as for example an ice rink, is very interesting for this technology, since it allows to recover heat, reducing the load of the CP, as well as for the heat source. It has been assumed that the existing facility already exists and thus its energy demands are not included in the model. The external heat source is purely considered as a free heat source.\\
+
+The added heat demand is shown in the upper part of Figure \ref{fig:V_IR_Q} in red. This refrigeration demand will be inject heat into the CO2, balancing out the heat extracted from it, in order to satisfy the heating demand. This translates in a lower amount of heat that has to be furnished by the CP - reducing the total energy demand of the system -, which in turn will require less heat to be extracted from the heat source - reducing the needed source capacity. This can be identified in the lower part of Figure \ref{fig:V_IR_Q}, where the orange area corresponds to the amount of heat that is extracted from the source, throughout the year.
+
+In fact, the integration of the ice rink lowers the electricity demand of the heating/cooling facility from $471'500$ to $433'900 [kWh/yr]$ - which corresponds to a reduction of 8\% -, for the same amount of heat demand (the ice rink has only been considered as a heat source and is not included in the heat demand of the system). Therefore, the global COP raises from 6.12 to 6.73.
+
+\begin{figure}[tph]
+	\centering
+	\includegraphics[width=0.45\linewidth]{Images/V_IR_exe}
+	\caption{Comparison of exergy values of the GS-CO2DEN technology with and without the integration of the ice rink (IR)}
+	\label{fig:virexe}
+\end{figure}
+
+From an exergy point of view, the integration of the external heat source replaces a share of the exergy value of the electricity. This translates in a higher exergy efficiency for those timesteps in which the external heat source is available, as shown in Figure \ref{fig:virexe}. The mean exergy efficiency increases from 22.4\% to 23.7\%.
+
+\begin{figure}[tph]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Images/V_IR_cost}
+	\caption{Cost difference of the GS-CO2DEN with and without ice rink. Positive values (+) reflect a higher, and negative values (-) a lower cost originated by the IR integration.}
+	\label{fig:V_IR_cost}
+\end{figure}
+
+However, as it had been analyzed in Figure \ref{gsco2_el}, the electricity demand of the CP corresponds to about 30\% of the demand of the heating/cooling facilities. This means that even a system having a perfectly balanced heating and cooling demand would not be able to reduce its OC of more than 30\%, since, as far as the temperature of the CO2 network remains constant, the operating conditions of the decentralized heat pumps remain unchanged too.\\
+
+An analysis of the economic differences caused by the integration of the ice rink is shown in Figure \ref{fig:V_IR_cost}. As discussed above, the additional heat reduces the required heat from the GTW, reducing its IC, and reduces the workload of the CP, resulting in lower OC. On the other hand, the integration of the external heat source requires the installation of additional CO2 pipes, which has an impact on the upfront costs. In this particular case, it can be seen that the balance of these difference is negative, i.e. the total cost of the GS-CO2DEN is lower if the ice rink is connected.\\
+
+Nevertheless, it is important to account for uncertainties bound to the external heat source. For example for an ice rink, the replacement of the obsolete and inefficient cooling facility, or an improvement in the facility management, can drastically reduce its energy. Same for other potential heat sources as industrial processes, which can be improved or replaced over time. This should be considered in the inclusion of external heat source, since a reduction, or the absence, of the additional heat could threaten the functioning of the system.
+
+\todo{still not enough to have lower TC, but better}
 
 
 \subsection{Ground temperature}
@@ -1363,44 +1405,6 @@ This threshold temperature varies in function of the ground temperature, and it 
 \todo{wrapfig}
 
 At $T_{borehole} = 12 \si{\celsius}$, as in the Eglantine district, the LS-CO2DEN would be a financially interesting solution against  GS-HP and GS-CO2DEN if the distance to the lake is respectively shorter than 328 and 484 meters.
-
-
-\subsection{External heat source}
-
-\begin{figure}[thpb]
-	\centering
-	\includegraphics[width=1\linewidth]{Images/V_IR_Q}
-	\caption{Heat supplied (above) and heat source use (below)}
-	\label{fig:V_IR_Q}
-\end{figure}
-
-The integration of large external heat sources, as for example an ice rink, is very interesting for this technology, since it allows to recover heat, reducing the load of the CP, as well as for the heat source. It has been assumed that the existing facility already exists and thus its energy demands are not included in the model. The external heat source is purely considered as a free heat source.\\
-
-The added heat demand is shown in the upper part of Figure \ref{fig:V_IR_Q} in red. This refrigeration demand will be inject heat into the CO2, balancing out the heat extracted from it, in order to satisfy the heating demand. This translates in a lower amount of heat that has to be furnished by the CP - reducing the total energy demand of the system -, which in turn will require less heat to be extracted from the heat source - reducing the needed source capacity. This can be identified in the lower part of Figure \ref{fig:V_IR_Q}, where the orange area corresponds to the amount of heat that is extracted from the source, throughout the year.
-
-In fact, the integration of the ice rink lowers the electricity demand of the heating/cooling facility from $471'500$ to $433'900 [kWh/yr]$, for the same amount of heat demand (the ice rink has only been considered as a heat source and is not included in the heat demand of the system). Therefore, the global COP raises from 6.12 to 6.73.
-
-\begin{figure}[tph]
-	\centering
-	\includegraphics[width=0.45\linewidth]{Images/V_IR_exe}
-	\caption{Comparison of exergy values of the GS-CO2DEN technology with and without the integration of the ice rink (IR)}
-	\label{fig:virexe}
-\end{figure}
-
-From an exergy point of view, the integration of the external heat source replaces a share of the exergy value of the electricity. This translates in a higher exergy efficiency for those timesteps in which the external heat source is available, as shown in Figure \ref{fig:virexe}. The mean exergy efficiency increases from 22.4\% to 23.7\%.
-
-\begin{figure}[tph]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Images/V_IR_cost}
-	\caption{Cost difference of the GS-CO2DEN with and without ice rink. Positive values (+) reflect a higher, and negative values (-) a lower cost originated by the IR integration.}
-	\label{fig:V_IR_cost}
-\end{figure}
-
-However, as it had been analyzed in Figure \ref{gsco2_el}, the electricity demand of the CP corresponds to about 30\% of the demand of the heating/cooling facilities. This means that even a system having a perfectly balanced heating and cooling demand would not be able to reduce its OC of more than 30\%, since, as far as the temperature of the CO2 network remains constant, the operating conditions of the decentralized heat pumps remain unchanged too.\\
-
-An analysis of the economic differences caused by the integration of the ice rink is shown in Figure \ref{fig:V_IR_cost}. As discussed above, the additional heat reduces the required heat from the GTW, reducing its IC, and reduces the workload of the CP, resulting in lower OC. On the other hand, the integration of the external heat source requires the installation of additional CO2 pipes, which has an impact on the upfront costs. In this particular case, it can be seen that the balance of these difference is negative, i.e. the total cost of the GS-CO2DEN is lower if the ice rink is connected.\\
-
-Nevertheless, it is important to account for uncertainties bound to the external heat source. For example for an ice rink, the replacement of the obsolete and inefficient cooling facility, or an improvement in the facility management, can drastically reduce its energy. Same for other potential heat sources as industrial processes, which can be improved or replaced over time. This should be considered in the inclusion of external heat source, since a reduction, or the absence, of the additional heat could threaten the functioning of the system.
 
 
 \subsection{Optimization of energy demand}
@@ -1520,11 +1524,17 @@ The GS-CO2DEN, shown in Figure \ref{fig:CUTg_CO2_OC}, shows a similar response t
 In general, the GS-CO2DEN achieves the highest energy performance, by being as close as possible to the free heating/cooling threshold temperatures, without crossing it. Depending on the demand, it will be more efficient to be on one side or the other of the thresholds, in order to use the more needed free energy. It has to be noted that the GS-CO2DEN performs better than the GS-HP for any given combination. 
 
 \section{Conclusion and outlook}
-District energy systems have a high potential to improve the energy and exergy efficiency of urban heating and cooling systems. 
-\todo{conclusion!}
-A thermoeconomic analysis of has been performed on the Eglantine district. 
+District energy systems have a high potential to improve the energy and exergy efficiency of urban heating and cooling systems. A particularly promising technology uses CO2 as a working fluid to exchange heat between buildings and a network of conversion technologies. A thermo-economic analysis of the technology has been performed, focusing on a test case district near Lausanne, the Eglantine district. This district composed of 13 buildings, with a total ERA of  43'350 $m^2$, and will host around 1'500 people. The building use is per 97\% dedicated to housing, presenting a total heating demand of 2'350 MWh/yr.
 
-This and this has been analyzed and results have shown.\\
+Three main energy conversion technologies have been considered, for the supply of the heating and cooling demand. The first one consist in a state of the art, modern energy system, based on decentralized geothermal heat pumps (GS-HP), in combination with geo-cooling and air-cooled refrigerators. This is a common choice among new built district and houses. The other two, are CO2 based district energy networks, connected to a set of decentralized heat pumps, and a centralized heat pump to balance out the heat of the network with the environment. One of them has the central pump exchanging heat with a geothermal field (GS-CO2DEN), while the other exchanges heat with the lake water (SL-CO2DEN). The different technologies have been modeled accurately, in order to have the most realistic and impartial evaluation and comparison. Moreover, the heat pump model has been improved with dynamical calculation of the compressor efficiencies.\\
+
+Results showed that the best performing technology is the GS-CO2DEN, with a global COP of 6.1 and an exergy efficiency of 22\%, which is a considerable improvement with respect to the GS-HP that has a global COP of 4.6 and an exergy efficiency of 17\%. This improvement is mainly due to the technology chosen for the central plant. In fact traditional geothermal heat pumps exchange heat with the ground through a secondary water loop, which is the case in the GS-HP. The CO2 network offers the possibility to expand the refrigerant directly into the ground. This cuts the need of an additional heat exchanger and, through the use of latent heat, avoids the additional temperature rise needed in the water loop. At last, but probably most relevant, liquid CO2 presents a much greater heat tranfer coefficient than water, reducing the needed minimum approach temperature to exchange with the ground from 14\si{\celsius} to 6.8 \si{\celsius}. Despite the lower compressor efficiencies for CO2, these measures considerably reduce exergy losses and improve the COP. The LS-CO2DEN has a slightly lower performance - global COP of 5.6 and exergy efficiency of 21\% -, due to the lower temperature of the heat source.
+
+Despite having the lowest COP, and thus the highest operating cost, the GS-HP presents the lowest total cost, with 470'717[Euro/yr]. The reason is straightforward: the reduction in operating cost do not compensate the upfront cost of the CO2 network, which has a total cost of 485'819 [Euro/yr]. Given the high distance to the lake (1'500 [m]), the LS-CO2DEN presents the highest total cost, with 580'831 [Euro/yr]. A sensitivity analysis on the lake distance has shown that this technology is cheaper than the others, if the lake water is at less than 328 [m]. Thus the arguments to opt for a CO2 network technology might not be purely financial. In fact, in cities an important argument is that often it might not be possible to drill boreholes for each building, since the space is simply not available.
+
+One of the advantages of the CO2 network is to recover heat from any kind of heat source. Thus, the integration of an ice rink, located close to the district, has been analyzed, showing that it induces a reduction in the electricity consumption of 8\%, which results in a increase in the global COP from 6.12 to 6.73. On a financial level, this reduces the needed size of the geothermal wells, but adds upfront costs for the CO2 pipes. Summed with the reduction in operating cost, the integration of the ice rink reduces the total cost of around 4'000 [Euro/yr].\\
+
+In the last part, it has been tried to find out how the CO2 network perform in function of different building uses.
 
 
 
