@@ -39,7 +39,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-
+\pagenumbering{Roman}
 
 %%%%%%%%% Title Page %%%%%%%%%
 \input{title}
@@ -63,8 +63,11 @@ The present work focuses on a specific type of district network, base on CO2 as 
 
 \textit{What are the characteristics of a typical district that favor the choice of the CO2 district energy network technology?}\\
 
-A comparative analysis shows that...\\
-Conclusions here
+The CO2 network technology has been modeled and analyzed exchanging heat with a geothermal field and the lake water, and it has been compared to a state of the art decentralized geothermal heat pump system. 
+The geothermal CO2 network showed a global COP of 6.1 and an exergy efficiency of 22\%, outperforming the other technologies, thanks to the implementation of a direct expansion system of CO2 into the ground. The performance increases even more when an external heat source is integrated.
+
+It has been shown that the CO2 technology performs best in this type of district.
+
 
 \end{abstract}
 \thispagestyle{empty}
@@ -83,7 +86,7 @@ Conclusions here
 	
 	I had the chance to work with Amoedo Rafael and Luise Middelhauve, who i thank for having supervised me and, most importantly, for having given me a good support and structure. A special thanks goes to Luc Girardin for the useful and interesting discussions we had, but also for the time he accorded me and the guidance given me throughout this project. \\
 	
-	I also thank all the doctor students and researchers at IPESE that might have answered some of my questions, or simply greeted me in the morning. It was a pleasure!
+	I also thank all the other doctor students and researchers at IPESE that might have answered some of my questions, or simply greeted me in the morning. It was a pleasure!
 \end{abstract}
 \thispagestyle{empty}
 
@@ -109,10 +112,23 @@ Conclusions here
 %\thispagestyle{empty}
 
 
+%%%%%%%%% Glossary %%%%%%%%%
+\newpage
+\section*{Glossary}
+\input{Tables/glossary.tex}
+%\thispagestyle{empty} 
+
+%%%%%%%%% Empty page %%%%%%%%%
+\newpage
+\null
+\thispagestyle{empty} % to have a page without page number
+\clearpage
+
 %%%%%%%%% Reset page counter %%%%%%%%%
+\newpage
 \setcounter{page}{1}
 \renewcommand{\thepage}{\arabic{page}}
-\newpage
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% CONTENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1536,6 +1552,9 @@ One of the advantages of the CO2 network is to recover heat from any kind of hea
 
 In the last part, it has been tried to find out how the CO2 network perform in function of different building uses.
 
+The response to the ground temperature, i.e. to the depth of the boreholes, has also been analyzed.
+
+The results show that, at the Eglantine conditions, optimum operating costs are found with a purely \textit{retail} district, due to the lower heating demand. However, the higher cooling demand, covered by free-cooling, strongly increases the investment costs for the geothermal wells. The optimum for the total cost, situates thus around 15\% retail and 85\% housing.\\
 
 
 
@@ -1555,6 +1574,7 @@ Such a model would allow to improve the equipment sizing, as well as to better m
 
 %%%%%%%%% Appendices %%%%%%%%%
 \clearpage
+\appendix	
 \input{appendix.tex}
 
 
