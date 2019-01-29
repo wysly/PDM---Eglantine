@@ -50,9 +50,9 @@
 \thispagestyle{empty} % to have a page without page number
 \clearpage
 
-%%%%%%%%% TODOS %%%%%%%%%
-\listoftodos
-\newpage
+%%%%%%%%%% TODOS %%%%%%%%%
+%\listoftodos
+%\newpage
 
 %%%%%%%%% Abstract %%%%%%%%%
 \begin{abstract}
@@ -333,14 +333,13 @@ One solution to do that is PtG, which defines the process of transforming electr
 Suciu et al. \cite{suciuEnergyIntegrationCO22018} studied the synergy between a CO2 based DEN, decentralized PV and such a PtG system. The CO2 network could be used to store the carbon dioxide, which is captured from CHPs or industrial processes during winter, needed for methanization. At the same time, the DEN can directly use and dispatch the heat produced from the CHPs. In their work, they analyzed the PV area, and thus the investment, required to achieve a completely autonomous energy system, for different European climatic zones. The results showed that decarbonized autonomous energy systems based on DENs and PtG tecnologies are possible, along with a very broad deployment of solar energy. It is also shown that the payback time of such a system is between 11 and 14 years, which makes it very attractive also from an economic point of view.
 
 \subsection{Direct-expansion ground source heat pump}\label{ss:dx}
-\todo{where to put this section?}
 
 For heat pumps based systems, sourcing heat from the sole, instead of from the ambient air, is a very interesting solution at our latitudes, especially, as it has been seen, for integration of a 5th generation DEN, since it improves heating and cooling COPs, and, to a certain extent, it allows heat storage. In traditional Ground-Source Heat Pumps (GSHP), the heat pump and the ground are connected by means of a closed loop, using water, or a water solution. This system, called the secondary loop GSHP (SL-GSHP), is shown on the right side of Figure \ref{fig:gshp}. However, it has been proved \cite{kruseStatusDevelopmentResearch, guoTechnoeconomicComparisonDirect2012} that the system efficiency can be improved, by allowing to directly expand the refrigerant into the ground and thus let the ground act as a condenser/evaporator. Shown on the left side of Figure \ref{fig:gshp}, this system is called Direct Expansion GSHP (DX-GSHP). 
 
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=0.6\textwidth]{Qt_dx.png}
+	\includegraphics[width=0.75\textwidth]{Qt_dx.png}
 	\caption{Schematic representation of heat exchanges and minimum approach temperatures for the central plant HP, comparing SL- and DX-GSHP}
 	\label{fig:Qt_dx}
 \end{figure}
@@ -747,17 +746,7 @@ Some pre-studies have been commissioned by the land-owner, in order to give, on 
 Detailed data from the call for tender can be found in the Appendix \ref{as:eglantine}.
 
 \subsubsection{Energy demand - Typical days}
-As per Section \ref{ss:typicalDays},
-using a threshold temperature for heating of $T_{th}^{heat} = 14\si{\celsius}$ and for cooling of $T_{th}^{cool} = 18 \si{\celsius}$
-\todo{write section eglantine calculations/energy demand}
-
-\begin{itemize}
-	\item typical days resulting profile
-	\item cooling demand deduced from SIa or minergie
-	\item ...
-\end{itemize}
-
-Figure \ref{fig:energyDemand}, including occurrencies. 
+The profile of the energy demand is calculated as explained in Section \ref{ss:typicalDays}. The used threshold temperature for heating is $T_{th}^{heat} = 14\si{\celsius}$ and for cooling $T_{th}^{cool} = 18 \si{\celsius}$. The resulting energy demand, already multiplied by the number of occurrencies for each timestep, is shown in Figure \ref{fig:energyDemand}.
 
 \begin{figure}[h!]
 	\centering
@@ -957,11 +946,19 @@ In order to evaluate the potential of alternative energy systems, three energy s
 \end{enumerate}
 
 \subsubsection{GS-HP}
+This energy conversion technology corresponds to a state of the art energy system for buildings and district, which is widespread in new buildings. Its schema is shown in Figure \ref{fig:energyschemaref}
+
+\begin{figure}[tph]
+	\centering
+	\includegraphics[width=1\linewidth]{Images/energy_schema_ref}
+	\caption{Schematic view of the GS-HP energy conversion system}
+	\label{fig:energyschemaref}
+\end{figure}
+
 The resource flows of the different units in the system are shown in Table \ref{tab:layers_ref}.
 \input{Tables/layers_ref.tex}
 
-This energy conversion technology corresponds to a state of the art energy system for buildings and district, which is widespread in new buildings.
-\missingfigure{energy schema ref scenario}
+
 
 The heating demand is supplied by a set of decentralized geothermal heat pumps, one for domestic hot water and one for space heating in every building. These heat pumps source the ambient heat from a secondary loop that exchanges heat with the ground through a system of geothermal wells, the SL-GSHP, which is described in Section \ref{ss:dx}. 
 
@@ -997,8 +994,15 @@ and the operating temperatures are defined in the following way:
 where $T_{amb}$ is the ambient temperature, $\Delta T_{air}$ is the temperature difference of the cooling air between the input and the output of the condenser, while $\Delta T_{min}^{ref/air}$ is the minimum approach temperature difference needed for heat transfer between a refrigerant and air.\\
 
 \subsubsection{CO2DEN}\label{sss:CO2DEN}
-CO2 network energy system showed in Figure...
-\missingfigure{energy syst schema CO2 DEN}
+The schema of the CO2 network energy system is shown in Figure \ref{fig:energyschema}
+
+\begin{figure}[tph]
+	\centering
+	\includegraphics[width=1\linewidth]{Images/energy_schema}
+	\caption{Schematic view of the CO2DEN energy conversion system}
+	\label{fig:energyschema}
+\end{figure}
+
 
 The main resource flows are shown in Table \ref{tab:layers_CO2}.
 \input{Tables/layers_CO2.tex}
@@ -1028,20 +1032,7 @@ where $\Delta T$ is the minimum temperature difference needed for the specific h
 The truth table is shown in Table \ref{tab:CP_tt}.
 \input{Tables/CP_tt.tex}
 
-
-Two different heat sources have been considered for this energy conversion technology: the lake and a geothermal field.
-
-%\subsubsection{Ground-sourced CP}
-Equations and modeling are the same as for the above described heat pumps. Direct expansion system is assumed (see Section \ref{ss:dx}).
-A schematic representation of the CO2 DEN with DX-GSHP technology is shown in Figure \ref{fig:co2_gshp}, in the Appendix \ref{as:co2den}.
-
-%\subsubsection{Lake-sourced CP}
-Equations and modeling are the same as for the above described heat pumps. R1234yf HP used
-
-
-%\input{Tables/cp_source.tex}
-\todo{summary table needed here (Ts, dTmin, Tevap, P...)? for cp or for CO2DEN or for Both scenarios???}
-
+Two different heat sources have been considered for this energy conversion technology: the lake and a geothermal field. For the geothermal CP a direct expansion system is assumed (see Section \ref{ss:dx}), while for the lake water CP a R1234yf HP is used. A schematic representation of the CO2 DEN with DX-GSHP technology is shown in Figure \ref{fig:co2_gshp}, in the Appendix \ref{as:co2den}.
 
 \subsection{Numerical application}
 
@@ -1128,21 +1119,16 @@ The simulation shows remarkable results. In fact, the real coefficient of perfor
 
 It has to be noted that this specific heat pump globally presents very low  exergy values. This is due to ratio between the high minimum approach temperatures and the very low temperature difference between the source temperature $T_{b} = 12 \si{\celsius}$ and the heat demand temperature $T_{vap}^{CO2} = 15 \si{\celsius}$.
 
-\subsection{Model improvement - thermodyn cycle}
-\todo{what todo with this section?}
-Comparison of results with simple Carnot model and with thermodyn model. Show difference in COPs\\
-
-Recalculation of $\eta_{COP}$ for all ETs. From the real COP calculated with help of coolprop and the thermodynamic cycle of the heat pump, the COP efficiency can easily be calculated
+\subsubsection{Recalculation of the COP efficiency}
+Running the optimization using heat pump models based on carnot cycle does not provide the same results, as with the thermodynamic cycle. This latter, in general, outputs higher COP values. Thus, it is found useful to recalculate the values for the COP efficiency $\eta_{COP}$ for all the concerned heat pumps. The calculation is straightforward, with the following equation:
 \begin{equation}
 \eta_{COP} = \frac{COP_{real}}{COP_{theoretical}}
 \end{equation}
 
-Table with new eta cop values.\\
+\input{Tables/etaCOP_new.tex}
 
-COP Comparison with values from literature?\\
+The new values are shown in Figure \ref{tab:eta_COP_new}.
 
-%with Coolprop CO2 transcritical cycle calculator COP ~= 5 (4.94-5.13) for $T_evap$ = 2deg and 8.5 (8.36-8.78) with $T_evap$ = 13deg
-%isentropic efficiency expansion valve = 0.8\cite{yangTheoreticalExperimentalInvestigation2016}
 
 \newpage
 \section{Results and discussion}
@@ -1238,8 +1224,8 @@ Also in this case the lowest total cost of the energy system is to be found in t
 	\label{fig:V_CO2_G_PO}
 \end{figure}
 
-If we take the stable middle, isolate PV costs we obtain a share of network and HP corresponding to... This is shown in  Table \ref{tab:anergynets_IC}, in comparison with existing anergy networks in Switzerland.
-\todo{rephrase}
+In order to benchmark these costs with other existing projects, the investment costs from column two are taken, and its share of the total cost is calculated. This allows to compare the Eglantine DEN in Figure \ref{tab:anergynets_IC}.
+
 \input{Tables/anergynets_IC.tex}
 
 It can be seen that the GS-CO2DEN system in the Eglantine district presents a much lower percentage of the investment cost  $IC_{Heating/cooling}$ attributed to the heating and cooling equipment (HP-SH, HP-DHW, HP-REF, HE-AC) than two reference anergy networks in Switzerland. 
@@ -1287,10 +1273,8 @@ From an exergy point of view, the integration of the external heat source replac
 	\caption{Electricity demand of GS-CO2DEN system grouped in categories, sorted in decreasing order}
 	\label{fig:gsco2_el}
 \end{figure}
-\todo{integrate figure and text}
-Figure \ref{fig:gsco2_el} shows the shares of electricity consumption, on a sorted time axis. What is interesting to note is the shares of electricity consumption between the CP and the decentralized HP. $E_{cp}$ represents around 10\% of the global electricity consumption, and around 30\% of the $E_{heat/cool}$.
 
-However, as it had been analyzed in Figure \ref{fig:gsco2_el}, the electricity demand of the CP corresponds to about 30\% of the demand of the heating/cooling facilities. This means that even a system having a perfectly balanced heating and cooling demand would not be able to reduce its OC of more than 30\%, since, as far as the temperature of the CO2 network remains constant, the operating conditions of the decentralized heat pumps remain unchanged too.\\
+Figure \ref{fig:gsco2_el} shows the shares of electricity consumption, on a sorted time axis. What is interesting to note is the shares of electricity consumption between the CP and the decentralized HP. $E_{cp}$ represents around 10\% of the global electricity consumption, and around 30\% of the $E_{heat/cool}$. This means that even a system having a perfectly balanced heating and cooling demand would not be able to reduce its OC of more than 30\%, since, as far as the temperature of the CO2 network remains constant, the operating conditions of the decentralized heat pumps remain unchanged too.\\
 
 An analysis of the economic differences caused by the integration of the ice rink is shown in Figure \ref{fig:V_IR_cost}. As discussed above, the additional heat reduces the required heat from the GTW, reducing its IC, and reduces the workload of the CP, resulting in lower OC. On the other hand, the integration of the external heat source requires the installation of additional CO2 pipes, which has an impact on the upfront costs. In this particular case, it can be seen that the balance of these difference is negative, i.e. the total cost of the GS-CO2DEN is lower if the ice rink is connected, by about 4'000 [Euro/yr]. This is not yet sufficient to have a lower cost than the GS-HP, but its reducing the gap to about 10'000 [Euro/yr].\\
 
@@ -1388,7 +1372,7 @@ A sensitivity analysis has been performed on a district composed by those two ca
 
 \begin{figure}[tph]
 	\centering
-	\includegraphics[width=0.65\linewidth]{Images/CU_el}
+	\includegraphics[width=0.55\linewidth]{Images/CU_el}
 	\caption{Electricity demand in function of the building use composition}
 	\label{fig:CU_el}
 \end{figure}
@@ -1415,7 +1399,7 @@ Table \ref{tab:CU_energy} shows the COP values for the energy system throughout 
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{CU_SA_TC.png}
+	\includegraphics[width=1\textwidth]{CU_SA_TC.png}
 	\caption{Cost comparison for different combinations of \textit{housing} and \textit{retail} building use, with the Eglantine district as a reference in the first column. The stacked columns show the investment costs.}
 	\label{fig:CU_TC}
 \end{figure}
@@ -1465,7 +1449,7 @@ To evaluate the system's performance, it has been chosen to analyze the operatin
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=\textwidth]{CUTg_SA_OC.png}
+	\includegraphics[width=0.75\textwidth]{CUTg_SA_OC.png}
 	\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-HP technology}
 	\label{fig:CUTg_OC}
 \end{figure}
@@ -1474,12 +1458,12 @@ Let's start looking at \ref{fig:CUTg_OC}, the performance of the GS-HP. The temp
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=\textwidth]{CUTg_SA_CO2_OC.png}
+	\includegraphics[width=0.75\textwidth]{CUTg_SA_CO2_OC.png}
 	\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-CO2DEN technology}
 	\label{fig:CUTg_CO2_OC}
 \end{figure}
 
-The GS-CO2DEN, shown in Figure \ref{fig:CUTg_CO2_OC}, shows a similar response to the temperature increase for \textit{retail} composition, with a stronger drop once the temperature rises to the free heating threshold. This scenario had already been discussed in the previous sections. Now it is interesting to see what happens when moving towards \textit{retail}. The COP at very low $T_{borehole}$ increases - thus the OC decrease - linearly with the decreasing share of heating demand and the increasing demand of free cooling. At very high $T_{borehole}$, on the contrary, the COP decreases - and OC increase - linearly with the increasing temperature drop that the refrigeration system has to perform in order to satisfy the cooling demand, which can not be free cooled. Nevertheless, the originated electricity consumption in this point is drastically lower than for the GS-HP, due to the much lower condensation temperature. In the temperature response for a purely \textit{retail} district, it is very easy to see the different operating conditions of the CP, described in Section  \ref{ss:cp}\todo{ref section CP}. 
+The GS-CO2DEN, shown in Figure \ref{fig:CUTg_CO2_OC}, shows a similar response to the temperature increase for \textit{retail} composition, with a stronger drop once the temperature rises to the free heating threshold. This scenario had already been discussed in the previous sections. Now it is interesting to see what happens when moving towards \textit{retail}. The COP at very low $T_{borehole}$ increases - thus the OC decrease - linearly with the decreasing share of heating demand and the increasing demand of free cooling. At very high $T_{borehole}$, on the contrary, the COP decreases - and OC increase - linearly with the increasing temperature drop that the refrigeration system has to perform in order to satisfy the cooling demand, which can not be free cooled. Nevertheless, the originated electricity consumption in this point is drastically lower than for the GS-HP, due to the much lower condensation temperature. In the temperature response for a purely \textit{retail} district, it is very easy to see the different operating conditions of the CP, described in Section \ref{sss:CO2DEN}. 
 
 In general, the GS-CO2DEN achieves the highest energy performance, by being as close as possible to the free heating/cooling threshold temperatures, without crossing it. Depending on the demand, it will be more efficient to be on one side or the other of the thresholds, in order to use the more needed free energy. It has to be noted that the GS-CO2DEN performs better than the GS-HP for any given combination. 
 
