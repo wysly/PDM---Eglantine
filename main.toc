@@ -3,13 +3,13 @@
 \contentsline {subsection}{\numberline {1.2}Scope}{2}{subsection.1.2}% 
 \contentsline {section}{\numberline {2}State of the art}{3}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}District heating}{3}{subsection.2.1}% 
-\contentsline {subsection}{\numberline {2.2}Fifth generation district energy networks}{4}{subsection.2.2}% 
-\contentsline {subsection}{\numberline {2.3}CO2 district energy network}{6}{subsection.2.3}% 
-\contentsline {subsubsection}{\numberline {2.3.1}The technology}{6}{subsubsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.2}Fifth generation district energy networks}{3}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}CO2 district energy network}{5}{subsection.2.3}% 
+\contentsline {subsubsection}{\numberline {2.3.1}The technology}{5}{subsubsection.2.3.1}% 
 \contentsline {subsubsection}{\numberline {2.3.2}Performance}{7}{subsubsection.2.3.2}% 
-\contentsline {subsubsection}{\numberline {2.3.3}Integration in smart energy system}{8}{subsubsection.2.3.3}% 
+\contentsline {subsubsection}{\numberline {2.3.3}Integration in smart energy system}{7}{subsubsection.2.3.3}% 
 \contentsline {subsection}{\numberline {2.4}Direct-expansion ground source heat pump}{8}{subsection.2.4}% 
-\contentsline {subsection}{\numberline {2.5}MILP optimization and Osmose}{9}{subsection.2.5}% 
+\contentsline {subsection}{\numberline {2.5}MILP optimization and Osmose}{10}{subsection.2.5}% 
 \contentsline {section}{\numberline {3}Methodology}{12}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}Energy demand - Typical days}{12}{subsection.3.1}% 
 \contentsline {subsection}{\numberline {3.2}Geothermal wells}{12}{subsection.3.2}% 
@@ -20,7 +20,7 @@
 \contentsline {subsubsection}{\numberline {3.6.1}Heat pump - Carnot cycle}{15}{subsubsection.3.6.1}% 
 \contentsline {subsubsection}{\numberline {3.6.2}Heat pump - Thermodynamic cycle}{15}{subsubsection.3.6.2}% 
 \contentsline {subsubsection}{\numberline {3.6.3}Heat pump - Supercritical CO2}{17}{subsubsection.3.6.3}% 
-\contentsline {subsubsection}{\numberline {3.6.4}Cooling tower}{19}{subsubsection.3.6.4}% 
+\contentsline {subsubsection}{\numberline {3.6.4}Outdoor condensing unit}{19}{subsubsection.3.6.4}% 
 \contentsline {subsubsection}{\numberline {3.6.5}Geo-cooling}{19}{subsubsection.3.6.5}% 
 \contentsline {subsubsection}{\numberline {3.6.6}PV}{19}{subsubsection.3.6.6}% 
 \contentsline {subsubsection}{\numberline {3.6.7}Network}{19}{subsubsection.3.6.7}% 
@@ -34,26 +34,28 @@
 \contentsline {subsubsection}{\numberline {4.2.2}Lake}{24}{subsubsection.4.2.2}% 
 \contentsline {subsubsection}{\numberline {4.2.3}Geothermal wells}{24}{subsubsection.4.2.3}% 
 \contentsline {subsection}{\numberline {4.3}External heat sources}{25}{subsection.4.3}% 
-\contentsline {subsubsection}{\numberline {4.3.1}Ice rink}{26}{subsubsection.4.3.1}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Ice rink}{25}{subsubsection.4.3.1}% 
 \contentsline {subsection}{\numberline {4.4}Energy conversion technologies}{27}{subsection.4.4}% 
 \contentsline {subsubsection}{\numberline {4.4.1}GS-HP}{28}{subsubsection.4.4.1}% 
 \contentsline {subsubsection}{\numberline {4.4.2}CO2DEN}{29}{subsubsection.4.4.2}% 
 \contentsline {subsection}{\numberline {4.5}Numerical application}{31}{subsection.4.5}% 
 \contentsline {subsubsection}{\numberline {4.5.1}Cost functions}{31}{subsubsection.4.5.1}% 
-\contentsline {subsubsection}{\numberline {4.5.2}Minimum approach temperature}{32}{subsubsection.4.5.2}% 
-\contentsline {subsubsection}{\numberline {4.5.3}Compressor efficiencies}{33}{subsubsection.4.5.3}% 
-\contentsline {subsubsection}{\numberline {4.5.4}Direct expansion HP}{33}{subsubsection.4.5.4}% 
+\contentsline {subsubsection}{\numberline {4.5.2}Minimum approach temperature}{31}{subsubsection.4.5.2}% 
+\contentsline {subsubsection}{\numberline {4.5.3}Compressor efficiencies}{32}{subsubsection.4.5.3}% 
+\contentsline {subsubsection}{\numberline {4.5.4}Direct expansion HP}{32}{subsubsection.4.5.4}% 
 \contentsline {subsubsection}{\numberline {4.5.5}Recalculation of the COP efficiency}{33}{subsubsection.4.5.5}% 
-\contentsline {section}{\numberline {5}Results and discussion}{35}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}Energy and exergy performance}{35}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}Financial analysis}{37}{subsection.5.2}% 
+\contentsline {section}{\numberline {5}Results and discussion}{34}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Energy and exergy performance}{34}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Financial analysis}{36}{subsection.5.2}% 
 \contentsline {subsubsection}{\numberline {5.2.1}Parametric optimization of GS-HP}{37}{subsubsection.5.2.1}% 
 \contentsline {subsubsection}{\numberline {5.2.2}Parametric optimization of GS-CO2DEN}{38}{subsubsection.5.2.2}% 
-\contentsline {subsection}{\numberline {5.3}Heat source integration}{40}{subsection.5.3}% 
+\contentsline {subsection}{\numberline {5.3}Heat source integration}{39}{subsection.5.3}% 
 \contentsline {subsection}{\numberline {5.4}Ground temperature response}{42}{subsection.5.4}% 
-\contentsline {subsection}{\numberline {5.5}Lake distance}{43}{subsection.5.5}% 
-\contentsline {subsection}{\numberline {5.6}Optimization of energy demand}{44}{subsection.5.6}% 
-\contentsline {section}{\numberline {6}Conclusion and outlook}{50}{section.6}% 
-\contentsline {section}{\numberline {A}Anergy nets Switzerland}{55}{appendix.A}% 
-\contentsline {section}{\numberline {B}Call for tender Eglantine - details}{58}{appendix.B}% 
-\contentsline {section}{\numberline {C}CO2DEN}{58}{appendix.C}% 
+\contentsline {subsection}{\numberline {5.5}Lake distance}{42}{subsection.5.5}% 
+\contentsline {subsection}{\numberline {5.6}Optimization of energy demand}{43}{subsection.5.6}% 
+\contentsline {section}{\numberline {6}Conclusions and outlook}{49}{section.6}% 
+\contentsline {section}{\numberline {A}Anergy nets Switzerland}{54}{appendix.A}% 
+\contentsline {section}{\numberline {B}Call for tender Eglantine - details}{57}{appendix.B}% 
+\contentsline {section}{\numberline {C}CO2DEN}{59}{appendix.C}% 
+\contentsline {section}{\numberline {D}Geothermal analysis for the Lemanic region}{60}{appendix.D}% 
+\contentsline {section}{\numberline {E}Geothermal models}{62}{appendix.E}% 

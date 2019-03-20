@@ -1,28 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
-The style file: plain.bst
-Illegal, another \bibstyle command---line 390 of file main.aux
- : \bibstyle
- :          {unsrt}
-I'm skipping whatever remains of this command
+The style file: unsrt.bst
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "lundDESIGNCLOSEDLOOPGEOTHERMAL"
-Warning--to sort, need author or key in NTBBuchsInstitut
-Warning--empty journal in birolFutureCooling2018
-Warning--empty journal in cavalliniPROPERTIESCO2REFRIGERANT
-Warning--empty year in cavalliniPROPERTIESCO2REFRIGERANT
-Warning--empty journal in gronqvistComparativeLifecycleCost
-Warning--empty year in gronqvistComparativeLifecycleCost
-Warning--empty journal in henchozPotentialRefrigerantBased
-Warning--empty year in henchozPotentialRefrigerantBased
-Warning--empty journal in karampourMEASUREMENTMODELLINGICE
-Warning--empty year in karampourMEASUREMENTMODELLINGICE
-Warning--empty journal in kolasniewskiEvaluationModellingIce
-Warning--empty year in kolasniewskiEvaluationModellingIce
-Warning--empty journal in kruseStatusDevelopmentResearch
-Warning--empty year in kruseStatusDevelopmentResearch
-Warning--empty journal in kruseStatusDevelopmentResearcha
-Warning--empty year in kruseStatusDevelopmentResearcha
+Warning--I didn't find a database entry for "veillehydro-meteorologiqueducantondevaudMorgesRiviereDebit"
+Warning--empty journal in cavalliniPropertiesCO2Refrigerant2004
+Warning--empty journal in henchozPotentialRefrigerantBased2016
+Warning--empty journal in kruseStatusDevelopmentResearch2010
 Warning--empty journal in steneINTEGRATEDCO2HEAT2007
-Warning--empty publisher in turtonrichardc.bailierichardwhitingwallace.AnalysisSynthesisDesign2003
-Warning--empty year in williamsMigrosDNA2018
-(There was 1 error message)
+Warning--empty journal in gronqvistComparativeLifecycleCost2016
+Warning--empty journal in kolasniewskiEvaluationModellingIce2017
+(There were 7 warnings)
