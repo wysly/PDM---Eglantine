@@ -9,21 +9,21 @@
 \contentsline {subsubsection}{\numberline {2.3.2}Performance}{7}{subsubsection.2.3.2}% 
 \contentsline {subsubsection}{\numberline {2.3.3}Integration in smart energy system}{7}{subsubsection.2.3.3}% 
 \contentsline {subsection}{\numberline {2.4}Direct-expansion ground source heat pump}{8}{subsection.2.4}% 
-\contentsline {subsection}{\numberline {2.5}MILP optimization and Osmose}{10}{subsection.2.5}% 
-\contentsline {section}{\numberline {3}Methodology}{12}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}Energy demand - Typical days}{12}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Geothermal wells}{12}{subsection.3.2}% 
-\contentsline {subsection}{\numberline {3.3}Investment cost function}{12}{subsection.3.3}% 
-\contentsline {subsection}{\numberline {3.4}Minimum approach temperature}{13}{subsection.3.4}% 
-\contentsline {subsection}{\numberline {3.5}Exergy}{14}{subsection.3.5}% 
-\contentsline {subsection}{\numberline {3.6}Energy technology models}{15}{subsection.3.6}% 
-\contentsline {subsubsection}{\numberline {3.6.1}Heat pump - Carnot cycle}{15}{subsubsection.3.6.1}% 
-\contentsline {subsubsection}{\numberline {3.6.2}Heat pump - Thermodynamic cycle}{15}{subsubsection.3.6.2}% 
-\contentsline {subsubsection}{\numberline {3.6.3}Heat pump - Supercritical CO2}{17}{subsubsection.3.6.3}% 
-\contentsline {subsubsection}{\numberline {3.6.4}Outdoor condensing unit}{19}{subsubsection.3.6.4}% 
-\contentsline {subsubsection}{\numberline {3.6.5}Geo-cooling}{19}{subsubsection.3.6.5}% 
-\contentsline {subsubsection}{\numberline {3.6.6}PV}{19}{subsubsection.3.6.6}% 
-\contentsline {subsubsection}{\numberline {3.6.7}Network}{19}{subsubsection.3.6.7}% 
+\contentsline {section}{\numberline {3}Methodology}{11}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Energy demand - Typical days}{11}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Geothermal wells}{11}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}Investment cost function}{11}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.4}Minimum approach temperature}{12}{subsection.3.4}% 
+\contentsline {subsection}{\numberline {3.5}Exergy}{13}{subsection.3.5}% 
+\contentsline {subsection}{\numberline {3.6}Energy technology models}{14}{subsection.3.6}% 
+\contentsline {subsubsection}{\numberline {3.6.1}Heat pump - Carnot cycle}{14}{subsubsection.3.6.1}% 
+\contentsline {subsubsection}{\numberline {3.6.2}Heat pump - Thermodynamic cycle}{14}{subsubsection.3.6.2}% 
+\contentsline {subsubsection}{\numberline {3.6.3}Heat pump - Supercritical CO2}{16}{subsubsection.3.6.3}% 
+\contentsline {subsubsection}{\numberline {3.6.4}Outdoor condensing unit}{18}{subsubsection.3.6.4}% 
+\contentsline {subsubsection}{\numberline {3.6.5}Geo-cooling}{18}{subsubsection.3.6.5}% 
+\contentsline {subsubsection}{\numberline {3.6.6}PV}{18}{subsubsection.3.6.6}% 
+\contentsline {subsubsection}{\numberline {3.6.7}Network}{18}{subsubsection.3.6.7}% 
+\contentsline {subsection}{\numberline {3.7}MILP optimization and Osmose}{19}{subsection.3.7}% 
 \contentsline {section}{\numberline {4}Application}{21}{section.4}% 
 \contentsline {subsection}{\numberline {4.1}Case-study Eglantine}{21}{subsection.4.1}% 
 \contentsline {subsubsection}{\numberline {4.1.1}Context}{21}{subsubsection.4.1.1}% 
@@ -46,13 +46,13 @@
 \contentsline {subsubsection}{\numberline {4.5.5}Recalculation of the COP efficiency}{33}{subsubsection.4.5.5}% 
 \contentsline {section}{\numberline {5}Results and discussion}{34}{section.5}% 
 \contentsline {subsection}{\numberline {5.1}Energy and exergy performance}{34}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}Financial analysis}{36}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.2}Financial analysis}{35}{subsection.5.2}% 
 \contentsline {subsubsection}{\numberline {5.2.1}Parametric optimization of GS-HP}{37}{subsubsection.5.2.1}% 
-\contentsline {subsubsection}{\numberline {5.2.2}Parametric optimization of GS-CO2DEN}{38}{subsubsection.5.2.2}% 
+\contentsline {subsubsection}{\numberline {5.2.2}Parametric optimization of GS-CO2DEN}{37}{subsubsection.5.2.2}% 
 \contentsline {subsection}{\numberline {5.3}Heat source integration}{39}{subsection.5.3}% 
-\contentsline {subsection}{\numberline {5.4}Ground temperature response}{42}{subsection.5.4}% 
+\contentsline {subsection}{\numberline {5.4}Ground temperature response}{41}{subsection.5.4}% 
 \contentsline {subsection}{\numberline {5.5}Lake distance}{42}{subsection.5.5}% 
-\contentsline {subsection}{\numberline {5.6}Optimization of energy demand}{43}{subsection.5.6}% 
+\contentsline {subsection}{\numberline {5.6}Optimization of energy demand}{42}{subsection.5.6}% 
 \contentsline {section}{\numberline {6}Conclusions and outlook}{49}{section.6}% 
 \contentsline {section}{\numberline {A}Anergy nets Switzerland}{54}{appendix.A}% 
 \contentsline {section}{\numberline {B}Call for tender Eglantine - details}{57}{appendix.B}% 

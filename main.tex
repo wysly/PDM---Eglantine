@@ -347,63 +347,6 @@ On of the main reasons for this efficiency gain is the elimination of the temper
 Moreover, CO2 presents a higher heat transfer coefficient, which again allows to either reduce the minimum approach temperature, or extract a higher power with respect to an equal exchange surface. The minimum approach temperature has to be determined in function of the thermal permeability of soil and is correlated to the length and total surface of the geothermal probes, as well as the refrigerant flow rate.
 
 
-\subsection{MILP optimization and Osmose}\label{ss:osmose}
-
-Mixed integer linear programming (MILP) is a mathematical optimization, in which some variables are restricted to be integers, while other are discrete. A MILP model can be written with AMPL (A Mathematical Programming Language), which is a modeling language specifically designed to describe and solve optimization problems. Once defined the model, this is passed to a solver, as for example Gurobi or GLPK, which solves the given problem.\\
-
-Osmose is a platform developed at IPESE for the study and the design of complex integrated energy systems. Its aim is to allow the user to model and compute an optimization problem using the same platform, which would normally require to access and transfer data between several programs. The coding language is \textit{lua}.
-
-Osmose allows to define a model for the different energy conversion technologies that want to be analyzed. It will then prepare the necessary files for the optimization of the energy system that will be handed over to AMPL. After the solving is complete, the results sent back to Osmose, allowing to post-process the data to run sensitivity analysis, multi-objective optimizations or simply calculate performance indicators.\\
-
-In first place, energy technologies have to be defined, with its set of equations that determine the supply and the demand of the unit. Moreover it is necessary to furnish the following cost parameters:
-\begin{itemize}
-	\item $c^{cinv1}$: fixed part of the IC, given in $[CHF/year]$. This can be found in Figure~\ref{fig:lin};
-	\item $c^{cinv2}$: variable part of the IC, given in $[CHF/year]$. This can be found in Figure~\ref{fig:lin};
-	\item $c^{cop1}$: fixed part of the OC, which corresponds to maintenance and service costs. 
-	\item $c^{cop2}$: variable part of the OC. This is calculated by the solver, also in $[CHF/h]$.
-\end{itemize}
-
-The sizing of the energy conversion technologies is constrained with the following equations~\cite{suciuEnergyIntegrationCO22018}:
-\begin{align}
-& f_{u,t} \leq f_{u} \forall \qquad \forall u \in U, \ \forall t \in T  \\
-& f_{u}^{min} \cdot y_{u} \leq f_{u} \leq f_{u}^{max} \cdot y_{u} \qquad \forall u \in U\\
-\end{align}
-
-For \textit{process units}, only the houses, $y_{u} = f_{u}^{min} = f_{u}^{max} = 1$\\
-
-A set of equations, called heat cascade, makes sure that heat is always transferred from a higher temperature to a lower one, also considering the respective minimum approach temperature for each stream.
-\begin{align}
-& \sum_{u}^{U} f_{u,t}  \cdot \dot{Q}_{u,t,k} + \dot{R}_{t,k+1} - \dot{R}_{t,k} = 0 \qquad \forall k \in K, \ \forall t \in T \\
-& \dot{R}_{t,k} \geq 0 \qquad \forall k \in K, \ \forall t \in T  \\
-& \dot{R}_{t,1} = \dot{R}_{t,k+1} = 0 \qquad \forall t \in T  \\
-\end{align}
-
-The demand $\dot{m}_{r,u,t}^{+}$ and the supply $\dot{m}_{r,u,t}^{-}$ of resource $r \in R$ of each unit $u \in U$ is computed:
-\begin{align}
-& \dot{M}_{r,u,t}^{-} = \dot{m}_{r,u,t}^{-} \cdot f_{u,t} \qquad \forall r \in R, \ \forall u \in U, \ \forall t \in T \\
-& \dot{M}_{r,u,t}^{+} = \dot{m}_{r,u,t}^{+} \cdot f_{u,t} \qquad \forall r \in R, \ \forall u \in U, \ \forall t \in T  \\
-\end{align}
-The balance of each resource has to be respected:
-\begin{equation}
-\sum_{u}^{U} \dot{M}_{r,u,t}^{-} = \dot{M}_{r,u,t}^{+} \qquad \forall r \in R, \ \forall t \in T
-\end{equation}
-Electricity is also balanced:
-\begin{equation}
-\dot{El}_{houses}^{+} + \dot{El}_{heating}^{+} + \dot{El}_{cooling}^{+} + \dot{El}_{grid}^{+} = \dot{El}_{PV}^{-} + \dot{El}_{grid}^{-}
-\end{equation}
-
-The optimization of a system is done in function of an objective function, which is chosen depending on the purpose. A possibility is to optimize the total cost of the system:
-
-\begin{align}
-& min \left( TotalCost \right)  = min \left(  CAPEX + OPEX \right) 
-\end{align}
-
-\begin{align}
-& min \left( Operating cost \right) \\
-& min \sum_{u}^{U} \left[ \sum_{t = 1}^{T} \left( c_{u}^{op1} \cdot y_{u,t} + c_{u}^{op2} \cdot f_{u,t} + C_{el}^{-} \cdot \dot{El}_{grid,t}^{-} - C_{el}^{+} \cdot \dot{El}_{grid,t}^{+} \right) \cdot t_{t}^{op} \right] \\
-\end{align}
-
-where $c_{u}^{op1}$ and $c_{u}^{op1}$ are the respectively the fixed and the variable operating cost, and $C_{el}^{-}$ and $C_{el}^{+}$ are the buying and selling price of electricity.
 
 \newpage
 \section{Methodology}
@@ -496,9 +439,10 @@ Heat transfer coefficients used in this work are shown in Table~\ref{tab:alphas}
 
 
 \subsection{Exergy}\label{ss:exergy}
-The exergy of an energy transfer is defined as the maximum amount of work that can be extracted from it, through reversible transformations that exchange with the environment. Thus the calculation of exergy losses is a very interesting indicator to analyze a given process or system, since it expresses the quality and the efficiency with which the system operates, with respect to the maximum possible. Therefore, other as for the coefficient of performance, these values are always lower than 100 \%. \\
+\todo{reference}
+The exergy of an energy transfer is defined as the maximum amount of work that can be extracted from it, through reversible transformations that exchange with the environment. Thus the calculation of exergy losses is a very interesting indicator to analyze a given process or system, since it expresses the quality and the efficiency with which the system operates, with respect to the maximum possible. Therefore these values are always lower than 100 \%. \\
 
-The exergy value, i.e. the maximum work that can be extracted from an energy transfer, is derived from the first two thermodynamic principles, and is given by the following formula:
+The exergy value, i.e. the maximum work that can be extracted from an energy transfer, or the minimum work needed satisfy an energy demand, is derived from the first two thermodynamic principles, and is given by the following formula:
 \begin{equation}
     \dot{E}^{-}_{max} = \sum_{i} \dot{Q_i}^{+} (1 - \frac{T_{a}}{T_i} ) + \sum_{r} \dot{M}_{r}^{+} (h_{r} - T_{a} s_{r})    
 \end{equation}
@@ -509,12 +453,12 @@ The exergy losses are thus given by the difference between the exergy value and 
 	& 	\dot{L} = (1-\eta_{exergy})\dot{E}^{-}_{max}
 \end{align}
 
-In our case this can be written as:
+In the case of a heat pump based energy system, the exergy is given by:
 \begin{align}
-    & \eta_{exergy} =  \frac{\dot{E}q_{cold,a} + \dot{E}q_{hot,r} + \dot{E}_{grid}^{-}}{\dot{Q}q_{cold,r} + \dot{Q}_{hot,a} + \dot{E}_{grid}^{+}}  \\
-    & \dot{L} = (1-\eta_{exergy})(\dot{E}q_{cold,r} + \dot{E}q_{hot,a} + \dot{E}_{grid}^{+})
+    & \eta_{exergy} =  \frac{\dot{E}q_{cold,a} + \dot{E}q_{hot,r}}{\dot{E}_{el}^{+}}  \\
+    & \dot{L} = (1-\eta_{exergy})\dot{E}_{el}^{+}
 \end{align}
-where $\dot{E}q$ are the exergy value of hot and cold streams, respectively above (a) and below (r) the ambient temperature. $\dot{E}_{grid}^{+}$ and $\dot{E}_{grid}^{-}$ are the electricity bought from and sold to the grid.
+where $\dot{E}q_{hot,r}$  and $\dot{E}q_{cold,a}$ are the exergy value of respectively the hot streams below (r) and the cold streams above (a) the ambient temperature; these correspond to the exergy value of the heating and cooling demand. $\dot{E}_{el}^{+}$ is the electricity consumed by the defined system, which corresponds to the energy furnished to the system in order to satisfy the demand.
 
 \subsection{Energy technology models}\label{ss:et}
 The models for the energy technologies are adapted from an existing source code~\cite{suciuEnergyautonomousCitiesUsing2016}
@@ -686,6 +630,63 @@ Operating temperature is assumed to be 13 \si{\celsius} for the liquid pipe and 
 
 The pressure losses, and thus the energy needed for the maintaining of the pressure, are assumed to be negligible.
 
+\subsection{MILP optimization and Osmose}\label{ss:osmose}
+
+Mixed integer linear programming (MILP) is a mathematical optimization, in which some variables are restricted to be integers, while other are discrete. A MILP model can be written with AMPL (A Mathematical Programming Language), which is a modeling language specifically designed to describe and solve optimization problems. Once defined the model, this is passed to a solver, as for example Gurobi or GLPK, which solves the given problem.\\
+
+Osmose is a platform developed at IPESE for the study and the design of complex integrated energy systems. Its aim is to allow the user to model and compute an optimization problem using the same platform, which would normally require to access and transfer data between several programs. The coding language is \textit{lua}.
+
+Osmose allows to define a model for the different energy conversion technologies that want to be analyzed. It will then prepare the necessary files for the optimization of the energy system that will be handed over to AMPL. After the solving is complete, the results sent back to Osmose, allowing to post-process the data to run sensitivity analysis, multi-objective optimizations or simply calculate performance indicators.\\
+
+In first place, energy technologies have to be defined, with its set of equations that determine the supply and the demand of the unit. Moreover it is necessary to furnish the following cost parameters:
+\begin{itemize}
+	\item $c^{inv1}$: fixed part of the IC, given in $[CHF/year]$. This can be found in Figure~\ref{fig:lin} in Section~\ref{ss:ic};
+	\item $c^{inv2}$: variable part of the IC, given in $[CHF/year]$. This can be found in Figure~\ref{fig:lin} in Section~\ref{ss:ic};
+	\item $c^{op1}$: fixed part of the OC, which corresponds to maintenance and service costs. 
+	\item $c^{op2}$: variable part of the OC. This is the operating cost resulting from the system optimization, also in $[CHF/h]$.
+\end{itemize}
+
+The sizing of the energy conversion technologies is constrained with the following equations~\cite{suciuEnergyIntegrationCO22018}:
+\begin{align}
+& f_{u,t} \leq f_{u} \qquad \forall u \in U, \ \forall t \in T  \\
+& f_{u}^{min} \cdot y_{u} \leq f_{u} \leq f_{u}^{max} \cdot y_{u} \qquad \forall u \in U\\
+\end{align}
+where $U$ is the set of units, and $T$ is the set of operating times.
+
+For \textit{process units} - i.e. the subset of units U with a defined sizing, as for example the units in the industrial production line of a product - $y_{u} = f_{u}^{min} = f_{u}^{max} = 1$. In a residential district only the houses, which are defining the energy demand, are considered as \textit{process units}.\\
+
+The total cost of the system is given by:
+\begin{align}
+& \sum_{u}^{U} \left[ \sum_{t = 1}^{T} \left( c_{u}^{inv1} \cdot y_{u,t} + c_{u}^{inv2} \cdot f_{u,t} + c_{u}^{op1} \cdot y_{u,t} + c_{u}^{op2} \cdot f_{u,t} \right) \cdot t_{t}^{op} \right] \\
+\end{align}
+
+A set of equations, called heat cascade, makes sure that heat is always transferred from a higher temperature to a lower one, also considering the respective minimum approach temperature for each stream.
+\begin{align}
+& \sum_{u}^{U} f_{u,t}  \cdot \dot{Q}_{u,t,k} + \dot{R}_{t,k+1} - \dot{R}_{t,k} = 0 \qquad \forall k \in K, \ \forall t \in T \\
+& \dot{R}_{t,k} \geq 0 \qquad \forall k \in K, \ \forall t \in T  \\
+& \dot{R}_{t,1} = \dot{R}_{t,k+1} = 0 \qquad \forall t \in T  \\
+\end{align}
+where $K$ is the set of temperature intervals.
+
+The demand $\dot{m}_{r,u,t}^{+}$ and the supply $\dot{m}_{r,u,t}^{-}$ of resource $r \in R$ of each unit $u \in U$ is computed:
+\begin{align}
+& \dot{M}_{r,u,t}^{-} = \dot{m}_{r,u,t}^{-} \cdot f_{u,t} \qquad \forall r \in R, \ \forall u \in U, \ \forall t \in T \\
+& \dot{M}_{r,u,t}^{+} = \dot{m}_{r,u,t}^{+} \cdot f_{u,t} \qquad \forall r \in R, \ \forall u \in U, \ \forall t \in T  \\
+\end{align}
+where $R$ is the set of resources. 
+The balance of each resource has to be respected:
+\begin{equation}
+\sum_{u}^{U} \dot{M}_{r,u,t}^{-} = \dot{M}_{r,u,t}^{+} \qquad \forall r \in R, \ \forall t \in T
+\end{equation}
+Electricity is also balanced:
+\begin{equation}
+\dot{El}_{houses}^{+} + \dot{El}_{heating}^{+} + \dot{El}_{cooling}^{+} + \dot{El}_{grid}^{+} = \dot{El}_{PV}^{-} + \dot{El}_{grid}^{-}
+\end{equation}
+
+The objective function defines which parameters have to be maximized or minimized during the optimization process. It is common to choose to minimize either the operating, the investment costs or a combination of them. However, other parameters, as for example the amount of carbon emissions, can be considered.
+
+
+
 \newpage
 \section{Application}
 
@@ -740,8 +741,8 @@ The profile of the energy demand is calculated as explained in Section~\ref{ss:t
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{energy_demand.png}
-	\caption{Total energy demand of the Eglantine district}
+	\includegraphics[width=0.8\textwidth]{energy_demand.png}
+	\caption{Total heating (+) and cooling (-) demand of the Eglantine district, for each time step}
 	\label{fig:energyDemand}
 \end{figure}
 
@@ -750,8 +751,7 @@ The profile of the energy demand is calculated as explained in Section~\ref{ss:t
 The heat pumps in a system can source heat from various sources. Its choice depends on the source temperatures and its investment costs. This chapter illustrates the different heat sources that have been considered in this work.
 
 \subsubsection{Stream}
-
-A small stream flows along the eastern boundary of the area, on which the Eglantine district is being built. However, the flow rate would not be sufficient to cover the heating/cooling demand, especially during the dry winter season~\cite{veillehydro-meteorologiqueducantondevaudMorgesRiviereDebit}. For example, the lowest value has been reached in August 2004 with $0.017 m^3/s$, and even in December 2005 the lowest daily flow was of $0.057 m^3/s$. \\
+A small stream flows along the eastern boundary of the area, on which the Eglantine district is being built. However, the flow rate would not be sufficient to cover the heating/cooling demand, especially during the dry winter season~\cite{veillehydro-meteorologiqueducantondevaudMorgesRiviere}. For example, the lowest value has been reached in August 2004 with $0.017 m^3/s$, and even in December 2005 the lowest daily flow was of $0.057 m^3/s$. \\
 For this reason, the stream has been excluded from further analysis and has not been considered as a viable solution.
 
 \subsubsection{Lake}
@@ -1078,13 +1078,9 @@ These values are similar to reference values found by Yang et al.\cite{yangTheor
 
 
 \subsubsection{Direct expansion HP}\label{sss:DX}
-As discussed in Section~\ref{ss:dx}, there is the possibility to directly expand the CO2 into the geothermal well, instead of exchanging with help of a secondary water loop. To grasp the increase in performance, a simulation is performed on the CP of the CO2DEN technology. The used parameters, refrigerants and temperatures are shown in Table~\ref{tab:dxVSsl}. The CO2 heat pump has lower efficiencies (see Table~\ref{tab:eta_comp}), which results in a lower $\eta_{COP}$. However it has a much lower temperature difference to cover, thanks to the direct expansion of the CO2.
+As discussed in Section~\ref{ss:dx}, there is the possibility to directly expand the CO2 into the geothermal well, instead of exchanging with help of a secondary water loop. To grasp the increase in performance, a simulation is performed on the CP of the CO2DEN technology. The used parameters, refrigerants and temperatures are shown in Table~\ref{tab:dxVSsl}. The CO2 heat pump has lower compressor efficiencies (see Table~\ref{tab:eta_comp}), which results in a lower $\eta_{COP}$. However it has a much lower temperature difference to cover, thanks to the direct expansion of the CO2, achieving a much higher COP value.
 
 \input{Tables/cp_comparison.tex}
-
-The simulation shows remarkable results. In fact, the real coefficient of performance, as well as the exergy efficiency, are clearly higher - about twice as much - for the DX-GSHP than for the SL-GSHP. 
-
-It has to be noted that the CP - given the above operating conditions - presents very low  exergy values for both the SL- and the DX-GSHP. This is due to ratio between the high minimum approach temperatures and the very low temperature difference between the source temperature $T_{b} = 12 \si{\celsius}$ and the heat demand temperature $T_{vap}^{CO2} = 15 \si{\celsius}$.
 
 \subsubsection{Recalculation of the COP efficiency}
 Running the optimization using heat pump models based on the thermodynamic cycle (see Section~\ref{sss:hp_thermo}) provides a very accurate results, but requires more time consuming calculations. Depending on the application - for example for rough estimations at the beginning - it can be interesting to use the simplified model based on the carnot cycle instead (see Section~\ref{sss:hp_carnot}). Thus, it is found useful to recalculate the COP efficiency $\eta_{COP}$ values for all the concerned heat pumps, with respect to the operating conditions needed in this work. The calculation is straightforward, with the following equation:
@@ -1101,41 +1097,49 @@ The new values are shown in Figure~\ref{tab:eta_COP_new}.
 \section{Results and discussion}
 
 \subsection{Energy and exergy performance}\label{ss:perf}
+\todo{read through the section again}
+A direct way to compare the performance of the different conversion technologies is the coefficient of performance, which is simply given by the ratio between the delivered heat $Q$ and the consumed electricity $E$. The \textit{heating}, \textit{cooling} and \textit{global} COP values are calculated in the following way:
 
-A direct way to compare the performance of the different conversion technologies is the coefficient of performance, which is simply given by the ration between the delivered heat $Q$ and the consumed electricity $E$. If the temperatures of evaporation and condensation of a heat pump are fixed, the operating cycle is also fixed, and thus the COP value. However, modern HP can adapt the operating cycle to fit the varying heat demand temperature. This allows to strongly improve the COP, as well as the exergy efficiency. The COP values, calculated in each time step, are shown in Figure~\ref{fig:v_cop}. 
-The heating heat pumps for SH and DHW are considerably higher in the CO2DEN. This is due to the "two stages" of the conversion technology: the heat is first furnished to the CO2 network by the CP and then brought up to the required temperature by the decentralized HP. 
-The COP of the central plant is higher in the GS CO2DEN, being the evaporation temperature higher than in the heat exchange with the lake. 
-The SH HP has COP that varies between 6 and 14. This is due to the fact that the temperature of the heat demand rises with the amount of heat required. Thus the COP of the HP is lower during winter.
-Moreover, the compression chillers in the GS-HP perform worse during summer, when they have to deliver heat to a higher ambient temperature, while the COP of refrigeration in the CO2DEN are constant, since heat is delivered the whole year to the CO2 network, which has at constant temperature.
+\begin{align}
+& COP_{heating} = \frac{Q_{SH}+ Q_{DHW}}{E_{SH} + E_{DHW} + E_{CP,winter}} \\
+& COP_{cooling} = \frac{Q_{REF} + Q_{AC}}{E_{REF} + E_{CP,summer}} \\
+& COP_{global} = \frac{Q_{SH}+ Q_{DHW} + Q_{REF} + Q_{AC}}{E_{SH} + E_{DHW} + E_{REF} + E_{CP,tot}}
+\end{align}
+
+where $E_{CP} = 0$ for the GS-HP. 
+
+The values, calculated in each time step, are shown in Figure~\ref{fig:v_cop}. If the temperatures of evaporation and condensation of a heat pump are fixed, the operating cycle is also fixed, and thus the COP value. However, the temperature of the heat demand rises with the amount of heat required and a fixed condensation temperature would imply high exergy losses, given that most of the time the approach temperature would be larger than the minimum required one. Modern HP can therefore adapt their operating cycle in order to fit the varying heat demand temperature. This results in non-constant COP value, as it can be seen for the SH HP (blue line), which varies between 6 and 14. The same happens to the compression chillers in the GS-HP, which perform worse during summer, when they have to deliver heat to a higher ambient temperature. In comparison, the COP of refrigeration in the CO2DEN are constant, since heat is delivered at a constant temperature throughout the year to the CO2 network.
 
 \begin{figure}[tph]
 	\centering
 	\includegraphics[width=1\linewidth]{Images/V_COP}
-	\caption{Comparison of COP values for each time step t and unit. The \textit{cooling } and the \textit{global} COP are not displayed for praticality reasons, given their very high values during free cooling}
+	\caption{Comparison of COP values for each time step t and unit. The \textit{cooling } and the \textit{global} COP are not displayed given the different order of magnitude due to the free cooling}
 	\label{fig:v_cop}
 \end{figure}
 
-The mean COP values for each technology are shown in Table~\ref{tab:V_cops}. The GS-CO2DEN shows the best performance with a global COP of 6.1. The LS-CO2DEN follows with 5.6 and the GS-HP with 4.6. All the conversion technologies perform well, but the combination of the DX-GSHP central plant with the decentralized HP in the GS-CO2DEN obtains excellent results. The increase in COP corresponds to a reduction of electricity consumption. With respect to the GS-HP, the GS-CO2DEN achieves a reduction of 24\%, and the LS-CO2DEN 17\%.
+The COP for the heating heat pumps SH and DHW are considerably higher in the CO2DEN. This is due to the "two stages" of the conversion technology: the heat is first furnished to the CO2 network by the CP and then brought up to the required temperature by the decentralized HP. Thus to consider the resulting COP for heating facilities, the values from the CP, SH and DHW would have to be combined. The COP of the central plant is higher in the GS CO2DEN, being the evaporation temperature higher than in the heat exchange with the lake. 
 
 \input{Tables/V_cops.tex}
 
-\begin{figure}[tph]
-	\centering
-	\includegraphics[width=0.875\linewidth]{Images/V_EXE}
-	\caption{Comparison of exergy efficiencies calculated in each time step - sorted in decreasing order - with the entire electricity demand on the left, and only with electricity bought from the grid on the right}
-	\label{fig:v_exe}
-\end{figure}
+The mean COP values for each technology are shown in Table~\ref{tab:V_cops}. The GS-CO2DEN shows the best performance with a global COP of 6.1. The LS-CO2DEN follows with 5.6 and the GS-HP with 4.6. The increase in the global COP is reflected in a reduced electricity consumption by the energy system; this is shown in Table~\ref{tab:V_el}. With respect to the GS-HP, the GS-CO2DEN requires 24\% and the LS-CO2DEN 17\% less electricity.\\
 
-The exergy values of supply and demand have been calculated for each conversion technology, as explained in Section~\ref{ss:exergy}. This analysis shows the real thermodynamic value of the required energy services, since not only the amount of heat is considered, but also the temperature level at which it happens. The exergy value of the demand is thus calculated in function of the varying ambient temperature and is the same for all technologies.\\
+\todo{find values for electricity consumption}
+\input{Tables/V_el.tex}
 
-The difference in the exergy efficiency between the different conversion technologies is shown in Figure~\ref{fig:v_exe}. On the left hand, the values are calculated without taking into account the domestic PV production of renewable electricity, while on the left hand this has been included in the calculation. It is clear to see that the GS-HP performs worse than than the CO2 DEN. The average exergy efficiency is of 17\%, against 35\% of the GS-CO2DEN. As it can be seen in Table~\ref{tab:V_exergy}, the exergy losses $\dot{L}_{\Delta T_{min}}$ due to the minimum approach temperature between the heat demand and the supply are small compared to the exergy losses occurring in the heat pumps $\dot{L}_{HP}$. The latter accounts for the COP of the heat pumps, which is as well dependent from the approach temperature with their respective heat sources. This explains the lower exergy efficiency of the GS-HP, for which its heat pumps require a much lower evaporation temperature, as discussed previously.\\
+The exergy values of supply and demand have been calculated for each conversion technology, as explained in Section~\ref{ss:exergy}. This analysis shows the real thermodynamic value of the required energy services, since not only the amount of heat is considered, but also the temperature level at which it happens. The exergy value of the demand is thus calculated in function of the varying ambient temperature and is the same for all technologies.
+
+The exergy efficiency for the different energy conversion technologies are shown in Table~\ref{tab:V_exergy}. It is clear to see that the GS-HP performs worse than the CO2 technologies with 24\%, against 32\% of the GS-CO2DEN and 30\% of the LS-CO2DEN. This difference is explained by the lower exergy efficiency of the GS-HP, which presents higher minimum approach temperatures, as well as a lower COP of the heat pumps. The reason for the high performance of the GS-CO2DEN, despite having two stages and thus some additional losses due to $\Delta T_{min}$ values, is the direct expansion of CO2. As shown in Section~\ref{sss:DX}, the energy and exergy gain, with respect to the conventional system based on a secondary water loop, are indeed remarkable.
 
 \input{Tables/V_exergy.tex}
 
-The reason for the high performance of the GS-CO2DEN, despite having two stages and thus some additional losses due to $\Delta T_{min}$ values, is the direct expansion of CO2. As shown in Section~\ref{sss:DX}, the energy and exergy gain, with respect to the conventional system based on a secondary water loop, are indeed remarkable.\\
+Figure~\ref{fig:v_exe} shows the exergy efficiency for the different conversion technologies, calculated for each time-step - the values are sorted in decreasing order. It can be seen that the exergy efficiency is dependent from the operating temperatures, as well as from the ambient temperature. Thus the exergy efficiencies vary between 10-50\% throughout the year. Moreover, the graph shows that the quality of the energy system, i.e. the order of best and worst performing technologies, remains the same during all time steps.
 
-Even if for obvious reasons the exergy efficiency is considerably higher including the domestic PV production, the difference in performance between the different technologies does not change. This is explained by the fact that the self consumption values are very similar, as it can be seen in Figure~\ref{fig:V_costs} in purple, and the increase of efficiency is thus shared among all technologies. In this case the average exergy efficiency for the GS-HP is 27\%, against 35\% and 33\% for respectively the GS- and the LS-CO2DEN.
-
+\begin{figure}[tph]
+	\centering
+	\includegraphics[width=0.5\linewidth]{exe}
+	\caption{Comparison of exergy efficiencies calculated in each time step - sorted in decreasing order}
+	\label{fig:v_exe}
+\end{figure}
 
 \subsection{Financial analysis}
 
@@ -1244,7 +1248,7 @@ Figure~\ref{fig:gsco2_el} shows the shares of electricity consumption, on a sort
 Furthermore, it is important to account for uncertainties bound to the external heat source. For example for an ice rink, the replacement of the obsolete and inefficient cooling facility, or an improvement in the facility management, can drastically reduce its energy. Same for other potential heat sources as industrial processes, which can be improved or replaced over time. This should be considered in the inclusion of external heat source, since a reduction, or the absence, of the additional heat could threaten the functioning of the system.
 
 
-\subsection{Ground temperature response}
+\subsection{Ground temperature response}\label{ss:Tg}
 
 %\begin{figure}[htp]
 %	\centering
@@ -1368,45 +1372,42 @@ To summarize, the optimum building use in districts, in function of the differen
 
 \input{Tables/CU_summary.tex}
 
-Now that the response to a variation in the ground temperature has been studied, and that the performance of the system has been studied in function of different energy demands, it would be very interesting to know how the two parameters might be correlated between each other. In other words, it would be interesting to study the variation of the optimum combination of building use, in function of the borehole temperature. 
+After having analyzed the response of the system in function of the ground temperature and of different energy demands, it would be very interesting to know how the two parameters might be correlated between each other. In other words, it would be interesting to study the variation of the optimum combination of building use, in function of the borehole temperature. 
 To do so, a sensitivity analysis has been performed on those two parameters, for the GS-HP and for the GS-CO2DEN. 
-
-%\begin{figure}[!htb]
-%	\centering
-%	\begin{minipage}{.45\textwidth}
-%		\centering
-%		\includegraphics[width=\textwidth]{CUTg_SA_OC.png}
-%		\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-HP technology}
-%		\label{fig:CUTg_OC}
-%	\end{minipage}%
-%	\hspace{1cm}
-%	\begin{minipage}{0.45\textwidth}
-%		\centering
-%		\includegraphics[width=\textwidth]{CUTg_SA_CO2_OC.png}
-%		\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-CO2DEN technology}
-%		\label{fig:CUTg_CO2_OC}
-%	\end{minipage}
-%\end{figure}
 
 To evaluate the system's performance, it has been chosen to analyze the operating costs. Given that they are directly proportional with the global COP of the energy system, they give a very good indicator of the operating conditions. To do so, the electricity consumption of the houses has been neglected. The results are shown in Figures~\ref{fig:CUTg_OC} and~\ref{fig:CUTg_CO2_OC}. It has to be noted that, for sake of visibility, the axis have been inverted between the two graphs. Moreover, the z axis is scaled differently.\\
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=0.75\textwidth]{CUTg_SA_OC.png}
+	\includegraphics[width=0.8\textwidth]{CUTg_SA_OC.png}
 	\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-HP technology}
 	\label{fig:CUTg_OC}
 \end{figure}
 
-Let's start looking at~\ref{fig:CUTg_OC}, the performance of the GS-HP. The temperature response to a \textit{housing} composition is linearly decreasing with the temperature increase. This is due to the increase of COP in the decentralized HP, given the lower temperature rise to harvest heat from the ground. When moving towards a \textit{retail} composition, i.e. introducing an increasing space cooling demand while lowering heating demand, the general plane has a decreasing slope, due to the lower heating demand. However, a strong increase appears for temperatures above 14 \si{\celsius}. The reason for that, is that the free cooling temperature threshold has been reached, requiring the use of the air cooled refrigeration system instead. This obviously engenders a considerable increase in electricity consumption, reflected in the operating cost.
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{CUTg_SA_OC.png}
+	\caption{Investment costs in function of the borehole temperature and the building use in the district, using GS-HP technology}
+	\label{fig:CUTg_IC}
+\end{figure}
+
+Figure~\ref{fig:CUTg_OC} shows the performance of the GS-HP. The temperature response to a \textit{housing} composition is linearly decreasing with the temperature increase. This is due to the increase of COP in the decentralized HP, given the lower temperature rise to harvest heat from the ground. Moving towards a district composition with a high share of \textit{retail} use, i.e. presenting a high space cooling and a low heating demand, the operating costs diminish, due to the lower heating demand. However, a strong increase appears for temperatures above 14 \si{\celsius}. The reason for this, is that the free cooling temperature threshold has been reached, requiring the use of the air cooled refrigeration system instead. This obviously engenders a considerable increase in electricity consumption, reflected in the operating cost.
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=0.75\textwidth]{CUTg_SA_CO2_OC.png}
+	\includegraphics[width=0.8\textwidth]{CUTg_SA_CO2_OC.png}
 	\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-CO2DEN technology}
 	\label{fig:CUTg_CO2_OC}
 \end{figure}
 
-The GS-CO2DEN, shown in Figure~\ref{fig:CUTg_CO2_OC}, shows a similar response to the temperature increase for \textit{retail} composition, with a stronger drop once the temperature rises to the free heating threshold. This scenario had already been discussed in the previous sections. Now it is interesting to see what happens when moving towards \textit{retail}. The COP at very low $T_{borehole}$ increases - thus the OC decrease - linearly with the decreasing share of heating demand and the increasing demand of free cooling. At very high $T_{borehole}$, on the contrary, the COP decreases - and OC increase - linearly with the increasing temperature drop that the refrigeration system has to perform in order to satisfy the cooling demand, which can not be free cooled. Nevertheless, the originated electricity consumption in this point is drastically lower than for the GS-HP, due to the much lower condensation temperature. In the temperature response for a purely \textit{retail} district, it is very easy to see the different operating conditions of the CP, described in Section~\ref{sss:CO2DEN}. 
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{CUTg_SA_CO2_OC.png}
+	\caption{Investment costs in function of the borehole temperature and the building use in the district, using GS-CO2DEN technology}
+	\label{fig:CUTg_CO2_IC}
+\end{figure}
+
+The GS-CO2DEN, shown in Figure~\ref{fig:CUTg_CO2_OC}, shows a similar response to the temperature increase for \textit{retail} composition, with a stronger drop once the temperature rises to the free heating threshold. This scenario had already been discussed in Section~\ref{ss:Tg}. A district dedicated entirely to retail shows a very interesiting response to the ground temperature variation. The COP at very low $T_{borehole}$ increases - thus the OC decrease - linearly with the decreasing share of heating demand and the increasing demand of free cooling. At very high $T_{borehole}$, on the contrary, the COP decreases - and OC increase - linearly with the increasing temperature drop that the refrigeration system has to perform in order to satisfy the cooling demand, which can not be free cooled. Nevertheless, the originated electricity consumption in this point is drastically lower than for the GS-HP, due to the much lower condensation temperature that has to be reached to exchange with the CO2 network. The different operating conditions of the CP, described in Section~\ref{sss:CO2DEN}, are easy to identify, thanks to the increased operating costs in between the free-cooling and free-heating threshold temperatures.
 
 In general, the GS-CO2DEN achieves the highest energy performance, by being as close as possible to the free heating/cooling threshold temperatures, without crossing it. Depending on the demand, it will be more efficient to be on one side or the other of the thresholds, in order to use the more needed free energy. It has to be noted that the GS-CO2DEN performs better than the GS-HP for any given combination. 
 

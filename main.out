@@ -9,21 +9,21 @@
 \BOOKMARK [3][-]{subsubsection.2.3.2}{Performance}{subsection.2.3}% 9
 \BOOKMARK [3][-]{subsubsection.2.3.3}{Integration in smart energy system}{subsection.2.3}% 10
 \BOOKMARK [2][-]{subsection.2.4}{Direct-expansion ground source heat pump}{section.2}% 11
-\BOOKMARK [2][-]{subsection.2.5}{MILP optimization and Osmose}{section.2}% 12
-\BOOKMARK [1][-]{section.3}{Methodology}{}% 13
-\BOOKMARK [2][-]{subsection.3.1}{Energy demand - Typical days}{section.3}% 14
-\BOOKMARK [2][-]{subsection.3.2}{Geothermal wells}{section.3}% 15
-\BOOKMARK [2][-]{subsection.3.3}{Investment cost function}{section.3}% 16
-\BOOKMARK [2][-]{subsection.3.4}{Minimum approach temperature}{section.3}% 17
-\BOOKMARK [2][-]{subsection.3.5}{Exergy}{section.3}% 18
-\BOOKMARK [2][-]{subsection.3.6}{Energy technology models}{section.3}% 19
-\BOOKMARK [3][-]{subsubsection.3.6.1}{Heat pump - Carnot cycle}{subsection.3.6}% 20
-\BOOKMARK [3][-]{subsubsection.3.6.2}{Heat pump - Thermodynamic cycle}{subsection.3.6}% 21
-\BOOKMARK [3][-]{subsubsection.3.6.3}{Heat pump - Supercritical CO2}{subsection.3.6}% 22
-\BOOKMARK [3][-]{subsubsection.3.6.4}{Outdoor condensing unit}{subsection.3.6}% 23
-\BOOKMARK [3][-]{subsubsection.3.6.5}{Geo-cooling}{subsection.3.6}% 24
-\BOOKMARK [3][-]{subsubsection.3.6.6}{PV}{subsection.3.6}% 25
-\BOOKMARK [3][-]{subsubsection.3.6.7}{Network}{subsection.3.6}% 26
+\BOOKMARK [1][-]{section.3}{Methodology}{}% 12
+\BOOKMARK [2][-]{subsection.3.1}{Energy demand - Typical days}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.2}{Geothermal wells}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.3}{Investment cost function}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.4}{Minimum approach temperature}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.5}{Exergy}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.6}{Energy technology models}{section.3}% 18
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Heat pump - Carnot cycle}{subsection.3.6}% 19
+\BOOKMARK [3][-]{subsubsection.3.6.2}{Heat pump - Thermodynamic cycle}{subsection.3.6}% 20
+\BOOKMARK [3][-]{subsubsection.3.6.3}{Heat pump - Supercritical CO2}{subsection.3.6}% 21
+\BOOKMARK [3][-]{subsubsection.3.6.4}{Outdoor condensing unit}{subsection.3.6}% 22
+\BOOKMARK [3][-]{subsubsection.3.6.5}{Geo-cooling}{subsection.3.6}% 23
+\BOOKMARK [3][-]{subsubsection.3.6.6}{PV}{subsection.3.6}% 24
+\BOOKMARK [3][-]{subsubsection.3.6.7}{Network}{subsection.3.6}% 25
+\BOOKMARK [2][-]{subsection.3.7}{MILP optimization and Osmose}{section.3}% 26
 \BOOKMARK [1][-]{section.4}{Application}{}% 27
 \BOOKMARK [2][-]{subsection.4.1}{Case-study Eglantine}{section.4}% 28
 \BOOKMARK [3][-]{subsubsection.4.1.1}{Context}{subsection.4.1}% 29
