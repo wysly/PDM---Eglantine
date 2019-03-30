@@ -1137,7 +1137,7 @@ Figure~\ref{fig:v_exe} shows the exergy efficiency for the different conversion 
 \begin{figure}[tph]
 	\centering
 	\includegraphics[width=0.5\linewidth]{exe}
-	\caption{Comparison of exergy efficiencies calculated in each time step - sorted in decreasing order}
+	\caption{Exergy efficiencies calculated in each time step - sorted in decreasing order}
 	\label{fig:v_exe}
 \end{figure}
 
@@ -1151,7 +1151,7 @@ The investment costs are shown more in detail in the clustered columns. It is ea
 
 Despite the lower OC for the CO2DEN technologies, the total cost is clearly following the tendency of the IC, which present a larger difference. The GS-HP ends up being the cheapest variant with $470'000 [Euro/yr]$, followed by the GS-CO2DEN with an only slightly higher cost of $485'000 [Euro/yr]$. The SL-CO2DEN is the most expensive solution with $580'000 [Euro/yr]$.\\
 
-Self consumption and autarchy do not vary much between the technologies, because no storage technology has been taken into account. Indeed, any kind of storage - thermal, electrical or CO2 - would enable to adapt the consumption to profit from the cheap domestic produced energy, as well as to reduce peak demands. Moreover, despite of the optimizer choosing install the maximum possible amount of PV - which corresponds to the roof surface - for the three technologies, in order to reduce the OC, the amount of electricity produced is seldom larger than the total electricity demand of the district. Thus, the three systems have an autarchy of about 25 \%, and a self consumption rate of around 75 \%.\\
+Self consumption and autarchy do not vary much between the technologies, because no storage technology has been taken into account. Indeed, any kind of storage - thermal, electrical or CO2 - would enable to adapt the consumption to profit from the cheap domestic produced energy, as well as to reduce peak demands. Moreover, despite of the optimizer choosing install the maximum possible amount of PV - which corresponds to the roof surface - for the three technologies, in order to reduce the OC, the amount of electricity produced is seldom larger than the total electricity demand of the district. Thus, the three systems have an autarchy of about 25\%, and a self consumption rate of around 95\%.\\
 
 For what has been seen in this section, the CO2 network showed an excellent energy performance. However, the reasons to opt for such a technology will have to go beyond financial arguments, since it remains a more expensive solution, even it this could quickly change if the price of electricity rises, which is not such a far-fetched scenario. Another strong argument in favor of this technology is the space planning. A city center might first of all not have the space for, but also not want everyone to drill boreholes under its house. The CO2 network would allow to profit from its benefits, while outsourcing and give flexibility to the planning and realization of the geothermal field.
 
@@ -1375,42 +1375,69 @@ To summarize, the optimum building use in districts, in function of the differen
 After having analyzed the response of the system in function of the ground temperature and of different energy demands, it would be very interesting to know how the two parameters might be correlated between each other. In other words, it would be interesting to study the variation of the optimum combination of building use, in function of the borehole temperature. 
 To do so, a sensitivity analysis has been performed on those two parameters, for the GS-HP and for the GS-CO2DEN. 
 
-To evaluate the system's performance, it has been chosen to analyze the operating costs. Given that they are directly proportional with the global COP of the energy system, they give a very good indicator of the operating conditions. To do so, the electricity consumption of the houses has been neglected. The results are shown in Figures~\ref{fig:CUTg_OC} and~\ref{fig:CUTg_CO2_OC}. It has to be noted that, for sake of visibility, the axis have been inverted between the two graphs. Moreover, the z axis is scaled differently.\\
+To evaluate the system's performance, it has been chosen to analyze the operating costs. Given that they are directly proportional with the global COP of the energy system, they give a very good indicator of the operating conditions. To do so, the electricity consumption of the houses has been neglected. The results are shown in Figures~\ref{fig:CUTg_OC} and~\ref{fig:CUTg_CO2_OC}. It has to be noted that the z axis is scaled differently.\\
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{CUTg_SA_OC.png}
+	\includegraphics[width=0.75\textwidth]{CUTg_SA_OC.png}
 	\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-HP technology}
 	\label{fig:CUTg_OC}
 \end{figure}
 
-\begin{figure}[htp]
-	\centering
-	\includegraphics[width=0.8\textwidth]{CUTg_SA_OC.png}
-	\caption{Investment costs in function of the borehole temperature and the building use in the district, using GS-HP technology}
-	\label{fig:CUTg_IC}
-\end{figure}
-
-Figure~\ref{fig:CUTg_OC} shows the performance of the GS-HP. The temperature response to a \textit{housing} composition is linearly decreasing with the temperature increase. This is due to the increase of COP in the decentralized HP, given the lower temperature rise to harvest heat from the ground. Moving towards a district composition with a high share of \textit{retail} use, i.e. presenting a high space cooling and a low heating demand, the operating costs diminish, due to the lower heating demand. However, a strong increase appears for temperatures above 14 \si{\celsius}. The reason for this, is that the free cooling temperature threshold has been reached, requiring the use of the air cooled refrigeration system instead. This obviously engenders a considerable increase in electricity consumption, reflected in the operating cost.
+Figure~\ref{fig:CUTg_OC} shows the performance of the GS-HP. The temperature response to a \textit{housing} composition is decreasing with the temperature increase. This is due to the increase of COP in the decentralized HP, given the lower temperature rise to harvest heat from the ground. Moving towards a district composition with a high share of \textit{retail} use, i.e. presenting a high space cooling and a low heating demand, the operating costs diminish, due to the lower heating demand. However, a strong increase appears for temperatures above 14 \si{\celsius}. The reason for this, is that the free cooling temperature threshold has been reached, requiring the use of the air cooled refrigeration system instead. This obviously engenders a considerable increase in electricity consumption, reflected in the operating cost.
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{CUTg_SA_CO2_OC.png}
+	\includegraphics[width=0.75\textwidth]{CUTg_SA_CO2_OC.png}
 	\caption{Operating costs in function of the borehole temperature and the building use in the district, using GS-CO2DEN technology}
 	\label{fig:CUTg_CO2_OC}
 \end{figure}
 
+The GS-CO2DEN, shown in Figure~\ref{fig:CUTg_CO2_OC}, shows a similar response to the temperature increase for \textit{retail} composition, with a stronger drop once the temperature rises to the free heating threshold. This scenario had already been discussed in Section~\ref{ss:Tg}. A district dedicated entirely to retail shows a very interesiting response to the ground temperature variation. The COP at very low $T_{borehole}$ increases - thus the OC decrease - with the decreasing share of heating demand and the increasing demand of free cooling. At very high $T_{borehole}$, on the contrary, the COP decreases - and OC increase - linearly with the increasing temperature drop that the refrigeration system has to perform in order to satisfy the cooling demand, which can not be free cooled. Nevertheless, the originated electricity consumption in this point is drastically lower than for the GS-HP, due to the much lower condensation temperature that has to be reached to exchange with the CO2 network. The different operating conditions of the CP, described in Section~\ref{sss:CO2DEN}, are easy to identify, thanks to the increased operating costs in between the free-cooling and free-heating threshold temperatures.
+
+In general, the GS-CO2DEN achieves the highest energy performance, by being as close as possible to the free heating/cooling threshold temperatures, without crossing it. Depending on the demand, it will be more efficient to be on one side or the other of the thresholds, in order to use the more needed free energy. It has to be noted that the GS-CO2DEN performs better than the GS-HP for any given combination. \\
+
+Take investment costs and explain\\
+
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{CUTg_SA_CO2_OC.png}
+	\includegraphics[width=0.75\textwidth]{CUTg_SA_IC.png}
+	\caption{Investment costs in function of the borehole temperature and the building use in the district, using GS-HP technology}
+	\label{fig:CUTg_IC}
+\end{figure}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{CUTg_SA_CO2_IC.png}
 	\caption{Investment costs in function of the borehole temperature and the building use in the district, using GS-CO2DEN technology}
 	\label{fig:CUTg_CO2_IC}
 \end{figure}
 
-The GS-CO2DEN, shown in Figure~\ref{fig:CUTg_CO2_OC}, shows a similar response to the temperature increase for \textit{retail} composition, with a stronger drop once the temperature rises to the free heating threshold. This scenario had already been discussed in Section~\ref{ss:Tg}. A district dedicated entirely to retail shows a very interesiting response to the ground temperature variation. The COP at very low $T_{borehole}$ increases - thus the OC decrease - linearly with the decreasing share of heating demand and the increasing demand of free cooling. At very high $T_{borehole}$, on the contrary, the COP decreases - and OC increase - linearly with the increasing temperature drop that the refrigeration system has to perform in order to satisfy the cooling demand, which can not be free cooled. Nevertheless, the originated electricity consumption in this point is drastically lower than for the GS-HP, due to the much lower condensation temperature that has to be reached to exchange with the CO2 network. The different operating conditions of the CP, described in Section~\ref{sss:CO2DEN}, are easy to identify, thanks to the increased operating costs in between the free-cooling and free-heating threshold temperatures.
+%
+%\begin{figure}[tph]
+%	\centering
+%	\includegraphics[width=0.75\linewidth]{Images/CUTg_SA_OC_diff}
+%	\caption{Difference in operating cost: GS-CO2DEN - GS-HP. Negative values reflect a lower cost of the GS-CO2DEN}
+%	\label{fig:cutgsadiff_OC}
+%\end{figure}
+%
+%\begin{figure}[tph]
+%	\centering
+%	\includegraphics[width=0.75\linewidth]{Images/CUTg_SA_IC_diff}
+%	\caption{Difference in investment cost: GS-CO2DEN - GS-HP. Negative values reflect a lower cost of the GS-CO2DEN}
+%	\label{fig:cutgsadiff_IC}
+%\end{figure}
 
-In general, the GS-CO2DEN achieves the highest energy performance, by being as close as possible to the free heating/cooling threshold temperatures, without crossing it. Depending on the demand, it will be more efficient to be on one side or the other of the thresholds, in order to use the more needed free energy. It has to be noted that the GS-CO2DEN performs better than the GS-HP for any given combination. 
+Now combining, the total cost difference shows that ic more relevant and gs hp has lower tc for all combinations, but the difference is relevant only for...
 
+\begin{figure}[tph]
+	\centering
+	\includegraphics[width=0.75\linewidth]{Images/CUTg_SA_TC_diff}
+	\caption{Difference in total cost: GS-CO2DEN - GS-HP. Negative values reflect a lower cost of the GS-CO2DEN}
+	\label{fig:cutgsadiff_TC}
+\end{figure}
+
+\clearpage
 \newpage
 \section{Conclusions and outlook}
 District energy systems have a high potential to improve the energy and exergy efficiency of urban heating and cooling systems. A particularly promising technology uses CO2 as a working fluid to exchange heat between buildings and a network of conversion technologies. A thermo-economic analysis of the technology has been performed, focusing on a test case district near Lausanne, the Eglantine district, which is composed of 13 buildings with a total ERA of  43'350 $m^2$, and will host around 1'500 people. The building use is per 97\% dedicated to housing, presenting a total heating demand of 2'350 [MWh/yr].
@@ -1423,7 +1450,7 @@ Despite having the lowest COP, and thus the highest operating cost, the GS-HP pr
 
 One of the advantages of the CO2 network is to recover heat from any kind of heat source. It has been shown that the integration of an ice rink, located close to the district, induces a reduction in the electricity consumption of 8\%, which results in a increase in the global COP from 6.12 to 6.73. On a financial level, this reduces the needed size of the geothermal wells, but adds upfront costs for the CO2 pipes. Summed with the reduction in operating cost, the integration of the ice rink reduces the total cost of around 4'000 [Euro/yr].\\
 
-Moreover, it has been shown that for different building uses in a district, there is an optimal ground temperature, or in other words an optimal borehole depth. The GS-CO2DEN at Eglantine conditions performs best, energetically as well as financially, at the borehole temperature of 16\si{\celsius}. The reasoning works also the other way around: it has been shown that, for a borehole temperature of 12 \si{\celsius}, the lowest total cost is given by a district composed by 85\% of buildings dedicated to housing, and 15\% to retail.\\
+Moreover, it has been shown that for different building uses in a district, there is an optimal ground temperature, or in other words an optimal borehole depth. The GS-CO2DEN at Eglantine conditions performs best, energetically as well as financially, at the borehole temperature of 16\si{\celsius}. The reasoning works also the other way around: it has been shown that, for a borehole temperature of 12 \si{\celsius}, the lowest total cost is given by a district composed by 85\% of buildings dedicated to housing, and 15\% to retail. This result is especially interesting given that the it corresponds to the average building use of a city.\\
 
 This work identifies the key parameters that the CO2 network technology can leverage, in order to compete against modern and well performing heat pump systems. The first, and probably the most important one, is a well designed integration of the geothermal field. The second is the knowledge and understanding of the system's performance response to the different type of energy demand.\\
 
