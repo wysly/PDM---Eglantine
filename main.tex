@@ -439,10 +439,9 @@ Heat transfer coefficients used in this work are shown in Table~\ref{tab:alphas}
 
 
 \subsection{Exergy}\label{ss:exergy}
-\todo{reference}
 The exergy of an energy transfer is defined as the maximum amount of work that can be extracted from it, through reversible transformations that exchange with the environment. Thus the calculation of exergy losses is a very interesting indicator to analyze a given process or system, since it expresses the quality and the efficiency with which the system operates, with respect to the maximum possible. Therefore these values are always lower than 100 \%. \\
 
-The exergy value, i.e. the maximum work that can be extracted from an energy transfer, or the minimum work needed satisfy an energy demand, is derived from the first two thermodynamic principles, and is given by the following formula:
+The exergy value, i.e. the maximum work that can be extracted from an energy transfer, or the minimum work needed satisfy an energy demand, is derived from the first two thermodynamic principles, and is given by the following formula~\cite{henchozPotentialRefrigerantBased2016}:
 \begin{equation}
     \dot{E}^{-}_{max} = \sum_{i} \dot{Q_i}^{+} (1 - \frac{T_{a}}{T_i} ) + \sum_{r} \dot{M}_{r}^{+} (h_{r} - T_{a} s_{r})    
 \end{equation}
@@ -461,7 +460,7 @@ In the case of a heat pump based energy system, the exergy is given by:
 where $\dot{E}q_{hot,r}$  and $\dot{E}q_{cold,a}$ are the exergy value of respectively the hot streams below (r) and the cold streams above (a) the ambient temperature; these correspond to the exergy value of the heating and cooling demand. $\dot{E}_{el}^{+}$ is the electricity consumed by the defined system, which corresponds to the energy furnished to the system in order to satisfy the demand.
 
 \subsection{Energy technology models}\label{ss:et}
-The models for the energy technologies are adapted from an existing source code~\cite{suciuEnergyautonomousCitiesUsing2016}
+The models for the energy technologies are adapted from an existing source code~\cite{suciuEnergyautonomousCitiesUsing2016}, as explained in detail, in this chapter.
 
 \subsubsection{Heat pump - Carnot cycle}\label{sss:hp_carnot}
 Heat pumps can be modeled in a simple way, using the principle of the Carnot cycle, with help of the following equations:
@@ -589,7 +588,7 @@ Geo-cooling is the use of fresh temperatures of the ground for space cooling. Th
 The energy needed for circulation pumps is assumed to be negligible. 
 
 
-\subsubsection{PV}
+\subsubsection{PV}\label{sss:pv}
 The efficiency of the PV panels $\eta_{PV}$ is given by the following equation~\cite{stadlerModelbasedOptimizationDistributed2016}:
 \begin{equation}
 	\eta_{PV} = \eta_{ref} - \eta_{var} (T_{panel}-T_{ref})
@@ -603,11 +602,11 @@ Thus, the produced energy is given by:
 \begin{equation}
 	E = GI \cdot A_{PV} \cdot  \eta_{PV}
 \end{equation}
-The area of installed PV $A_{PV}$ is limited by the maximum available roof area multiplied by the area factor $f_{area}$, which for flat roofs is assumed to be $\frac{1}{4}$:
+The area of installed PV $A_{PV}$ is expressed in function of the total roof area of the buildings $A_{roof}$:
 \begin{equation}
 	A_{PV} = A_{roof} \cdot f_{area}
 \end{equation}
-
+The area factor $f_{area}$ for flat roofs - which accounts for the optimal distance between the panels, obstacles and margins - is assumed to be $\frac{1}{4}$.
 
 \subsubsection{Network}\label{sss:net}
 The length is calculated, according to a simplified method~\cite{girardinEnerGisGeographicalInformation2010}:
@@ -902,9 +901,14 @@ The total resulting waste heat rejected by the ice rink throughout the year corr
 %	\label{fig:IR_profile}
 %\end{figure}
 
+\subsection{PV}\label{ss:pv}
+The optimizer chooses the amount of PV that has to be installed ($f_{u}^{PV}$), according to the chosen objective function and parameters. This decision variable is sized to the total available roof area (see Section~\ref{sss:pv}). In some cases $f_{u}^{PV}$ has been limited to 1, in order to let the optimizer use the total roof area, while in some other cases $f_{u}^{PV}$ has been limited to 2, assuming that additional area (facades, parking lots, free area, etc.) would be available for the installation of PV panels. 
+Table~\ref{tab:pv} shows the resulting PV area $A_{PV}$ for those numerical examples.
+\todo{check roof area in model}
+
+\input{Tables/pv.tex}
 
 \subsection{Energy conversion technologies}
-
 In order to evaluate the potential of alternative energy systems, three energy systems have been defined:
 \begin{enumerate}
 	\item GS-HP: a set of decentralized geothermal heat pumps for heating, geo-cooling for space cooling and air-cooled compression chillers for refrigeration
@@ -1001,22 +1005,19 @@ Two different heat sources have been considered for this energy conversion techn
 
 \subsection{Numerical application}
 
-\subsubsection{Cost functions}
+\subsubsection{Cost functions}\label{sss:cf}
 
 As described in Section~\ref{ss:osmose}, the model need investment cost parameters that can be calculated with the procedure explained in Section~\ref{ss:ic}.
-
 Values for the heat pumps are given in Henchoz et al., obtained by linearizing commercial products~\cite{henchozPerformanceProfitabilityPerspectives2015}. The cost function for heat exchangers has been interpolated in order to have a function dependent on the amount of exchanged heat.
 
 Values are summarized in Table~\ref{tab:ic}.
 
 \input{Tables/ic.tex}
 
-Operating costs are calculated through the exchange with the electricity grid using the following prices~\cite{StrompreisWebseiteElComVergleichen}:
-\begin{align}
-	& c_{el}^{+} = 0.2 [Euro/kWh]
-	& c_{el}^{-} = 0.1 [Euro/kWh]
-\end{align}
-It has also to be noted that for the scope of this work it has been assumed that the fixed part of the operating costs is negligible.
+Operating costs are calculated through the exchange with the electricity grid, using the cost of electricity shown in Table~\ref{tab:ec}.
+It has also to be noted that for the scope of this work it has been assumed that the fixed part of the operating costs $c^{op2}$ (see Section~\ref{ss:osmose}) is negligible.
+
+\input{Tables/ec.tex}
 
 \subsubsection{Minimum approach temperature}
 As seen in Table~\ref{tab:alphas}, CO2 (R744) has a higher heat transfer coefficient than other conventional refrigerants, as for example R1234yf. This has to be taken into account in the energy system through a different minimum approach temperature. To do so, there are two possible approaches:
@@ -1142,12 +1143,14 @@ Figure~\ref{fig:v_exe} shows the exergy efficiency for the different conversion 
 \end{figure}
 
 \subsection{Financial analysis}
-
 A financial analysis of the three conversion technologies is shown in Figure~\ref{fig:V_costs}. 
+The used cost functions, energy prices and maximal available PV area are given in Table~\ref{tab:cc}. \\
 
-Given that in this work the cost of operation (OC) depend only from the consumed electricity (no consumption of gas or other resources), this is directly correlated to the global COP of the system. As seen above (see Table~\ref{tab:V_cops}), GS-CO2DEN presents the highest coefficient of performance and thus also the lowest OC (dashed line), with $260'000[Euro/yr]$, and GS-HP the highest with $290'000[Euro/yr]$. The LS-CO2DEN presents an OC of $270'000[Euro/yr]$.\\
+\input{Tables/cc.tex}
 
-The investment costs are shown more in detail in the clustered columns. It is easy to note that the GS-HP has much lower upfront costs ($180'000[Euro/yr]$)than the GS-CO2DEN solution ($220'000[Euro/yr]$). Indeed, due to the higher COP values, a higher share of heat comes from the geothermal wells, which increases their investment cost. Moreover, there is the additional cost of the CO2 pipes needed to connect all the user. In the SL-CO2DEN there are obviously no costs related to the geothermal wells, but the cost for the water pipes that allow the water to be brought to the CP. Given the actual distance of the Eglantine district from the lake, this solution leads to much higher upfront costs than the competing technologies ($310'000[Euro/yr]$).\\
+Given that in this work the cost of operation (OC) depends only from the consumed electricity (no consumption of gas or other resources), this is directly correlated to the global COP of the system. As seen above (see Table~\ref{tab:V_cops}), GS-CO2DEN presents the highest coefficient of performance and thus also the lowest OC (dashed line), with $260'000[Euro/yr]$, and GS-HP the highest with $290'000[Euro/yr]$. The LS-CO2DEN presents an OC of $270'000[Euro/yr]$.\\
+
+The investment costs are shown more in detail in the clustered columns. It is easy to note that the GS-HP has much lower upfront costs ($180'000[Euro/yr]$) than the GS-CO2DEN solution ($220'000[Euro/yr]$). Indeed, due to the higher COP values, a larger share of heat comes from the geothermal wells, which increases their investment cost. Moreover, there is the additional cost of the CO2 pipes needed to connect all the user. In the SL-CO2DEN there are obviously no costs related to the geothermal wells, but the cost for the water pipes that allow the water to be brought to the CP. Given the actual distance of the Eglantine district from the lake, this solution leads to much higher upfront costs than the competing technologies ($310'000[Euro/yr]$).\\
 
 Despite the lower OC for the CO2DEN technologies, the total cost is clearly following the tendency of the IC, which present a larger difference. The GS-HP ends up being the cheapest variant with $470'000 [Euro/yr]$, followed by the GS-CO2DEN with an only slightly higher cost of $485'000 [Euro/yr]$. The SL-CO2DEN is the most expensive solution with $580'000 [Euro/yr]$.\\
 
@@ -1164,27 +1167,29 @@ For what has been seen in this section, the CO2 network showed an excellent ener
 
 
 \subsubsection{Parametric optimization of GS-HP}
-A parametric optimization of the costs of the reference energy system (GS-HP) is shown in Figure~\ref{fig:V_G_PO}. The optimizer is let to optimize the operating costs, while step-wise constraining the investment cost. This is a help for decision making.
+A parametric optimization of the costs of the reference energy system (GS-HP) is shown in Figure~\ref{fig:V_G_PO}. The optimizer is let to optimize the operating costs, while step-wise constraining the investment cost. This is a help for decision making. The used cost functions, energy prices and maximal available PV area are given in Table~\ref{tab:cc}. \\ 
 
-It can be seen that the biggest difference in investment and operating cost is due to the sizing of the PV. In fact, when constraining the investment costs, the model installs only a small share of PV, which increases the operational costs. On the contrary, a high share of PV increases the systems rate of auto-sufficiency, lowering the operational costs. 
+\input{Tables/cc_sa.tex}
 
-On the far right, the maximum allowed share of photovoltaic (PV) - set to twice the total roof area, which accounts for potential facades and free space PV - is reached. The operational are lowered thanks to a different handling of peak consumption. The optimal system installs a small share of electrical heater (R-EL) to cover peak demand, which allows to optimally size the heating heat pumps (HP-SH, HP-DHW). In the last column on the right, the system chose not to install the electrical heater but installing larger heat pumps, which strongly increases upfront costs, but allows to further reduce the operational costs.
+It can be seen that the biggest difference in investment and operating cost is due to the sizing of the PV - for which an increased area is considered in this case (see Table~\ref{tab:cc_sa}), accounting for potential facades and free space PV. When constraining the investment costs, the model installs only a small share of PV, which increases the operational costs. On the contrary, a high share of PV increases the systems rate of auto-sufficiency, lowering the operational costs. 
 
-On the far left, the opposite phenomenon happens. To reduce upfront costs, the system chose to cover the heat demand almost entirely with help of the electric heater, minimizing the size of the heating heat pumps.
+On the far right, the maximum allowed share of photovoltaic (PV) is reached. However, the operational are additionally lowered thanks to a different handling of peak consumption. The optimal system installs a small share of electrical heater (R-EL) to cover peak demand, which allows to optimally size the heating heat pumps (HP-SH, HP-DHW). In the last column on the right, the system chose not to install the electrical heater but installing larger heat pumps, which strongly increases upfront costs, but allows to further reduce the operational costs.
+
+On the far left, the opposite phenomenon happens, i.e. no PV are installed to reduce the investment costs. To further reduce upfront costs, the system chose to cover the heat demand almost entirely with help of the electric heater, minimizing the size of the heating heat pumps.
 
 The optimum, with respect to the total cost of the energy system, is in the very middle of the graph, between column 2 and 3. The optimum is analyzed in the following chapters.
 
 \begin{figure}[htp]
 	\centering
 	\includegraphics[width=1\textwidth]{V_G_PO1.png}
-	\caption{Parametric optimization of the reference energy system (GS-HP), showing the detailed investment costs, the operational cost and the total cost}
+	\caption{Parametric optimization of the reference energy system (GS-HP), showing the detailed investment costs, the operational cost and the total cost.}
 	\label{fig:V_G_PO}
 \end{figure}
 
 \subsubsection{Parametric optimization of GS-CO2DEN}
-A parametric optimization of the costs of the CO2 district energy system with ground sourced central plant (GS-CO2DEN) is shown in Figure~\ref{fig:V_CO2_G_PO}. The optimizer is let to optimize the operating costs, while step-wise constraining the investment cost. This is a help for decision making.
+A parametric optimization of the costs of the CO2 district energy system with ground sourced central plant (GS-CO2DEN) is shown in Figure~\ref{fig:V_CO2_G_PO}. The optimizer is let to optimize the operating costs, while step-wise constraining the investment cost. This is a help for decision making. The used cost functions, energy prices and maximal available PV area are given in Table~\ref{tab:cc}. \\ 
 
-The response of this system to the parametric optimization is very similar to the one of the GS-HP system. This means that the biggest difference in investment and operating cost is due to the sizing of the PV, while the extreme cases are determined by the ratio between the electrical heater and the heating heat pumps. The optimum is analyzed in the following chapters.\\
+The response of this system to the parametric optimization is very similar to the one of the GS-HP system. This means that the biggest difference in investment and operating cost is due to the sizing of the PV - for which an increased area is considered also in this case (see Table~\ref{tab:cc_sa}) -, while the extreme cases are determined by the ratio between the electrical heater and the heating heat pumps. The optimum is analyzed in the following chapters.\\
 
 \begin{figure}[htp]
 	\centering
@@ -1212,7 +1217,7 @@ On the other hand, it is not trivial to estimate the cost of building the CO2 ne
 \end{figure}
 
 
-The integration of large external heat sources, as for example an ice rink, is very interesting for a CO2 district energy network, since heat recovery allows to reduce the load of the CP, and thus the load of the heat source. It has been assumed that the existing facility already exists, and therefore its energy demands are not included in the model. This means that also the gain in performance of the cooling system, through the lower condensation temperature obtained by exchanging with the CO2 network, is not taken into account. The external heat source is purely considered as a free heat source.\\
+The integration of large external heat sources, as for example an ice rink, is very interesting for a CO2 district energy network, since heat recovery allows to reduce the load of the CP, and thus the load of the heat source. It has been assumed that the existing facility already exists, and therefore its energy demands are not included in the model. This means that also the gain in performance of the cooling system, through the lower condensation temperature obtained by exchanging with the CO2 network, is not taken into account. The external heat source is purely considered as a free heat source. The used cost functions, energy prices and maximal available PV area are given in Table~\ref{tab:cc}. \\ 
 
 Figure~\ref{fig:V_IR_Q} shows the heat demand of the system (upper row) and the heat exchange with the heat source (lower row), by comparing the system before (left column) and after (right column) the integration of the ice rink. The additional cooling demand of the ice rink is shown in red. The increased cooling demand reduces the amount of heat that has to be furnished by the CP, thus reducing the total energy demand of the system - the global COP raises from 6.12 to 6.73. This also means that less heat will be extracted from the geothermal wells: this is reflected in the reduction of the orange area in the lower row, which corresponds to the amount of heat that is extracted from the source, throughout the year.
 
@@ -1267,7 +1272,7 @@ Furthermore, it is important to account for uncertainties bound to the external 
 	\vspace{-10pt}
 \end{wrapfigure}
 
-A critical parameter for the efficiency of a ground sourced energy system is the ground temperature. As seen in Section~\ref{ss:gtw}, this temperature depends mainly on the depth, the temperature gradient in the given soil and the surface temperature. In other words, it is dependent from the location - including local climate and altitude - and the depth of drilling. In order to acknowledge the influence this temperature has on the system's performance, a sensitivity analysis has been performed. The results are shown in Figure~\ref{fig:V_SA_Tg}
+A critical parameter for the efficiency of a ground sourced energy system is the ground temperature. As seen in Section~\ref{ss:gtw}, this temperature depends mainly on the depth, the temperature gradient in the given soil and the surface temperature. In other words, it is dependent from the location - including local climate and altitude - and the depth of drilling. In order to acknowledge the influence this temperature has on the system's performance, a sensitivity analysis has been performed. The results are shown in Figure~\ref{fig:V_SA_Tg}. The used cost functions, energy prices and maximal available PV area are given in Table~\ref{tab:cc}. \\ 
 
 The GS-HP energy system seems to responds in a linear way to the temperature raise, as it can be expected, thanks to the lower required temperature raise for heating, which increases the COP of the system. In reality a small step can be identified between 14 and 15 \si{\celsius}, at which the IC drop and the OC rise. This step happens when the ground is not cool enough anymore to offer the option of free-cooling. The system is forced to use a refrigeration system instead, which increases the OC. However this utility is already installed, and thus the increase of $IC_{HP-REF}$ is lower than the reduction of the obsolete $IC_{HE-AC}$.
 
@@ -1304,10 +1309,14 @@ As it has been seen in the Section~\ref{ss:perf}, the LS-CO2DEN presents competi
 
 At $T_{borehole} = 12 \si{\celsius}$, as in the Eglantine district, the LS-CO2DEN would be a financially interesting solution against  GS-HP and GS-CO2DEN if the distance to the lake is respectively shorter than 328 and 484 meters.
 
+The used cost functions, energy prices and maximal available PV area are given in Table~\ref{tab:cc}.
+
 
 \subsection{Optimization of energy demand}
 
-The Eglantine district is composed for 97\% of buildings dedicated to residential use (see Section~\ref{ss:Eglantine}), resulting in a very low cooling and refrigeration demand. It is now legitimate to wonder how the different energy systems would perform in a different district, i.e. with a different building use and thus a differently composed energy demand. In this chapter, it will be tried to answer this question, finding out the optimum district composition for the performance of a GS-CO2DEN system.\\
+The Eglantine district is composed for 97\% of buildings dedicated to residential use (see Section~\ref{ss:Eglantine}), resulting in a very low cooling and refrigeration demand. It is now legitimate to wonder how the different energy systems would perform in a different district, i.e. with a different building use and thus a differently composed energy demand. In this chapter, it will be tried to answer this question, finding out the optimum district composition for the performance of a GS-CO2DEN system. The used cost functions, energy prices and maximal available PV area are given in Table~\ref{tab:cc_cu}. It has to be noted that, in order to focus on the energy performance of the heating and cooling energy system, the electricity consumption of the houses has been neglected in this subsection.\\ 
+
+\input{Tables/cc_cu.tex}
 
 As per Table~\ref{tab:ppa_buildinguse}, the building categories are:
 \begin{enumerate}
@@ -1375,7 +1384,7 @@ To summarize, the optimum building use in districts, in function of the differen
 After having analyzed the response of the system in function of the ground temperature and of different energy demands, it would be very interesting to know how the two parameters might be correlated between each other. In other words, it would be interesting to study the variation of the optimum combination of building use, in function of the borehole temperature. 
 To do so, a sensitivity analysis has been performed on those two parameters, for the GS-HP and for the GS-CO2DEN. 
 
-To evaluate the system's performance, it has been chosen to analyze the operating costs. Given that they are directly proportional with the global COP of the energy system, they give a very good indicator of the operating conditions. To do so, the electricity consumption of the houses has been neglected. The results are shown in Figures~\ref{fig:CUTg_OC} and~\ref{fig:CUTg_CO2_OC}. It has to be noted that the z axis is scaled differently.\\
+To evaluate the system's performance, it has been chosen to analyze the operating costs. Given that they are directly proportional with the global COP of the energy system, they give a very good indicator of the operating conditions. The results are shown in Figures~\ref{fig:CUTg_OC} and~\ref{fig:CUTg_CO2_OC}. It has to be noted that the z axis is scaled differently.\\
 
 \begin{figure}[htp]
 	\centering

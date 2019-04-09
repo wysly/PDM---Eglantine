@@ -35,27 +35,28 @@
 \contentsline {subsubsection}{\numberline {4.2.3}Geothermal wells}{24}{subsubsection.4.2.3}% 
 \contentsline {subsection}{\numberline {4.3}External heat sources}{25}{subsection.4.3}% 
 \contentsline {subsubsection}{\numberline {4.3.1}Ice rink}{25}{subsubsection.4.3.1}% 
-\contentsline {subsection}{\numberline {4.4}Energy conversion technologies}{27}{subsection.4.4}% 
-\contentsline {subsubsection}{\numberline {4.4.1}GS-HP}{28}{subsubsection.4.4.1}% 
-\contentsline {subsubsection}{\numberline {4.4.2}CO2DEN}{29}{subsubsection.4.4.2}% 
-\contentsline {subsection}{\numberline {4.5}Numerical application}{31}{subsection.4.5}% 
-\contentsline {subsubsection}{\numberline {4.5.1}Cost functions}{31}{subsubsection.4.5.1}% 
-\contentsline {subsubsection}{\numberline {4.5.2}Minimum approach temperature}{31}{subsubsection.4.5.2}% 
-\contentsline {subsubsection}{\numberline {4.5.3}Compressor efficiencies}{32}{subsubsection.4.5.3}% 
-\contentsline {subsubsection}{\numberline {4.5.4}Direct expansion HP}{32}{subsubsection.4.5.4}% 
-\contentsline {subsubsection}{\numberline {4.5.5}Recalculation of the COP efficiency}{33}{subsubsection.4.5.5}% 
-\contentsline {section}{\numberline {5}Results and discussion}{34}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}Energy and exergy performance}{34}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}Financial analysis}{35}{subsection.5.2}% 
-\contentsline {subsubsection}{\numberline {5.2.1}Parametric optimization of GS-HP}{37}{subsubsection.5.2.1}% 
-\contentsline {subsubsection}{\numberline {5.2.2}Parametric optimization of GS-CO2DEN}{37}{subsubsection.5.2.2}% 
-\contentsline {subsection}{\numberline {5.3}Heat source integration}{39}{subsection.5.3}% 
-\contentsline {subsection}{\numberline {5.4}Ground temperature response}{41}{subsection.5.4}% 
-\contentsline {subsection}{\numberline {5.5}Lake distance}{42}{subsection.5.5}% 
-\contentsline {subsection}{\numberline {5.6}Optimization of energy demand}{42}{subsection.5.6}% 
-\contentsline {section}{\numberline {6}Conclusions and outlook}{50}{section.6}% 
-\contentsline {section}{\numberline {A}Anergy nets Switzerland}{55}{appendix.A}% 
-\contentsline {section}{\numberline {B}Call for tender Eglantine - details}{58}{appendix.B}% 
-\contentsline {section}{\numberline {C}CO2DEN}{60}{appendix.C}% 
-\contentsline {section}{\numberline {D}Geothermal analysis for the Lemanic region}{61}{appendix.D}% 
-\contentsline {section}{\numberline {E}Geothermal models}{63}{appendix.E}% 
+\contentsline {subsection}{\numberline {4.4}PV}{27}{subsection.4.4}% 
+\contentsline {subsection}{\numberline {4.5}Energy conversion technologies}{28}{subsection.4.5}% 
+\contentsline {subsubsection}{\numberline {4.5.1}GS-HP}{28}{subsubsection.4.5.1}% 
+\contentsline {subsubsection}{\numberline {4.5.2}CO2DEN}{29}{subsubsection.4.5.2}% 
+\contentsline {subsection}{\numberline {4.6}Numerical application}{31}{subsection.4.6}% 
+\contentsline {subsubsection}{\numberline {4.6.1}Cost functions}{31}{subsubsection.4.6.1}% 
+\contentsline {subsubsection}{\numberline {4.6.2}Minimum approach temperature}{32}{subsubsection.4.6.2}% 
+\contentsline {subsubsection}{\numberline {4.6.3}Compressor efficiencies}{32}{subsubsection.4.6.3}% 
+\contentsline {subsubsection}{\numberline {4.6.4}Direct expansion HP}{33}{subsubsection.4.6.4}% 
+\contentsline {subsubsection}{\numberline {4.6.5}Recalculation of the COP efficiency}{33}{subsubsection.4.6.5}% 
+\contentsline {section}{\numberline {5}Results and discussion}{35}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Energy and exergy performance}{35}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Financial analysis}{36}{subsection.5.2}% 
+\contentsline {subsubsection}{\numberline {5.2.1}Parametric optimization of GS-HP}{38}{subsubsection.5.2.1}% 
+\contentsline {subsubsection}{\numberline {5.2.2}Parametric optimization of GS-CO2DEN}{39}{subsubsection.5.2.2}% 
+\contentsline {subsection}{\numberline {5.3}Heat source integration}{40}{subsection.5.3}% 
+\contentsline {subsection}{\numberline {5.4}Ground temperature response}{42}{subsection.5.4}% 
+\contentsline {subsection}{\numberline {5.5}Lake distance}{43}{subsection.5.5}% 
+\contentsline {subsection}{\numberline {5.6}Optimization of energy demand}{43}{subsection.5.6}% 
+\contentsline {section}{\numberline {6}Conclusions and outlook}{52}{section.6}% 
+\contentsline {section}{\numberline {A}Anergy nets Switzerland}{57}{appendix.A}% 
+\contentsline {section}{\numberline {B}Call for tender Eglantine - details}{60}{appendix.B}% 
+\contentsline {section}{\numberline {C}CO2DEN}{62}{appendix.C}% 
+\contentsline {section}{\numberline {D}Geothermal analysis for the Lemanic region}{63}{appendix.D}% 
+\contentsline {section}{\numberline {E}Geothermal models}{65}{appendix.E}% 
