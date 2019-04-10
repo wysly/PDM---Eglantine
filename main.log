@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.4)  9 APR 2019 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.4)  10 APR 2019 16:54
 entering extended mode
 **./main.tex
 (main.tex
@@ -1223,12 +1223,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--94
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [7] (Tables/glossary.tex) [8] [9] [10]
+ [7] (Tables/glossary.tex) [8] [9]
 Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
-<Images/cooling_energy.JPG, id=424, 743.77875pt x 261.22594pt>
+<Images/cooling_energy.JPG, id=420, 743.77875pt x 261.22594pt>
 File: Images/cooling_energy.JPG Graphic file (type jpg)
 <use Images/cooling_energy.JPG>
 Package pdftex.def Info: Images/cooling_energy.JPG  used on input line 152.
@@ -1238,7 +1238,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
-<Images/clima_CH.jpg, id=428, 796.47563pt x 317.68687pt>
+<Images/clima_CH.jpg, id=424, 796.47563pt x 317.68687pt>
 File: Images/clima_CH.jpg Graphic file (type jpg)
 <use Images/clima_CH.jpg>
 Package pdftex.def Info: Images/clima_CH.jpg  used on input line 161.
@@ -1259,7 +1259,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 176--177
  []
 
 [2 <./Images/clima_CH.jpg>]
-<Images/5GDH.jpg, id=451, 503.9628pt x 216.81pt>
+<Images/5GDH.jpg, id=446, 503.9628pt x 216.81pt>
 File: Images/5GDH.jpg Graphic file (type jpg)
 <use Images/5GDH.jpg>
 Package pdftex.def Info: Images/5GDH.jpg  used on input line 191.
@@ -1284,11 +1284,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
-<Images/refrigerants.JPG, id=466, 573.64313pt x 406.51875pt>
+<Images/refrigerants.JPG, id=462, 573.64313pt x 406.51875pt>
 File: Images/refrigerants.JPG Graphic file (type jpg)
 <use Images/refrigerants.JPG>
 Package pdftex.def Info: Images/refrigerants.JPG  used on input line 209.
-(pdftex.def)             Requested size: 256.07741pt x 181.47404pt.
+(pdftex.def)             Requested size: 298.75264pt x 211.71971pt.
 [4]
 Underfull \hbox (badness 10000) in paragraph at lines 214--217
 
@@ -1301,7 +1301,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
  []
 
-<Images/CO2schema.JPG, id=498, 629.35126pt x 341.02406pt>
+<Images/CO2schema.JPG, id=494, 629.35126pt x 341.02406pt>
 File: Images/CO2schema.JPG Graphic file (type jpg)
 <use Images/CO2schema.JPG>
 Package pdftex.def Info: Images/CO2schema.JPG  used on input line 248.
@@ -1317,12 +1317,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--256
  []
 
 [6 <./Images/CO2schema.JPG>]
-<Images/henchoz_gva.JPG, id=511, 561.59813pt x 294.34969pt>
+<Images/henchoz_gva.JPG, id=507, 561.59813pt x 294.34969pt>
 File: Images/henchoz_gva.JPG Graphic file (type jpg)
 <use Images/henchoz_gva.JPG>
 Package pdftex.def Info: Images/henchoz_gva.JPG  used on input line 267.
 (pdftex.def)             Requested size: 192.05484pt x 134.86353pt.
-<Images/henchoz_energydemand.JPG, id=514, 445.665pt x 341.77687pt>
+<Images/henchoz_energydemand.JPG, id=510, 445.665pt x 341.77687pt>
 File: Images/henchoz_energydemand.JPG Graphic file (type jpg)
 <use Images/henchoz_energydemand.JPG>
 Package pdftex.def Info: Images/henchoz_energydemand.JPG  used on input line 27
@@ -1338,233 +1338,235 @@ Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
-
+[7 <./Images/henchoz_gva.JPG> <./Images/henchoz_energydemand.JPG>]
 Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
 
-[7 <./Images/henchoz_gva.JPG> <./Images/henchoz_energydemand.JPG>]
-<Images/CO2-DX.png, id=533, 545.03625pt x 359.84438pt>
+<Images/CO2-DX.png, id=529, 545.03625pt x 359.84438pt>
 File: Images/CO2-DX.png Graphic file (type png)
 <use Images/CO2-DX.png>
 Package pdftex.def Info: Images/CO2-DX.png  used on input line 332.
-(pdftex.def)             Requested size: 426.79135pt x 281.77563pt.
-<Images/Qt_dx.png, id=535, 592.46344pt x 356.0803pt>
+(pdftex.def)             Requested size: 341.43437pt x 225.4183pt.
+[8]
+<Images/Qt_dx.png, id=553, 592.46344pt x 356.0803pt>
 File: Images/Qt_dx.png Graphic file (type png)
 <use Images/Qt_dx.png>
-Package pdftex.def Info: Images/Qt_dx.png  used on input line 339.
-(pdftex.def)             Requested size: 384.1096pt x 230.86266pt.
- [8] [9 <./Images/CO2-DX.png> <./Images/Qt_dx.png>] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+Package pdftex.def Info: Images/Qt_dx.png  used on input line 344.
+(pdftex.def)             Requested size: 341.43437pt x 205.21185pt.
+ [9 <./Images/CO2-DX.png> <./Images/Qt_dx.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
  []
 
-[11]
-<Images/linearization_expl.jpg, id=592, 492.33937pt x 331.99031pt>
+[10
+
+]
+<Images/linearization_expl.jpg, id=584, 492.33937pt x 331.99031pt>
 File: Images/linearization_expl.jpg Graphic file (type jpg)
 <use Images/linearization_expl.jpg>
-Package pdftex.def Info: Images/linearization_expl.jpg  used on input line 399.
+Package pdftex.def Info: Images/linearization_expl.jpg  used on input line 398.
 
 (pdftex.def)             Requested size: 295.40588pt x 199.19571pt.
-<Images/dtmin.png, id=596, 431.6125pt x 359.3425pt>
+<Images/dtmin.png, id=588, 431.6125pt x 359.3425pt>
 File: Images/dtmin.png Graphic file (type png)
 <use Images/dtmin.png>
-Package pdftex.def Info: Images/dtmin.png  used on input line 424.
+Package pdftex.def Info: Images/dtmin.png  used on input line 423.
 (pdftex.def)             Requested size: 215.80571pt x 179.6708pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--435
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
 
  []
 
-[12 <./Images/linearization_expl.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
+[11 <./Images/linearization_expl.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 (Tables/heatTransfCoeff.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 
  []
 
-[13 <./Images/dtmin.png>]
+[12 <./Images/dtmin.png>]
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 471.
+LaTeX Warning: Command \textendash invalid in math mode on input line 470.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 471.
+LaTeX Warning: Command \textendash invalid in math mode on input line 470.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 471.
+LaTeX Warning: Command \textendash invalid in math mode on input line 470.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 471--473
+LaTeX Warning: Command \textendash invalid in math mode on input line 470.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 470--472
 
  []
 
 (Tables/etaCOP.tex)
-<Images/HP_cylce_ref.png, id=632, 572.1375pt x 548.0475pt>
+<Images/HP_cylce_ref.png, id=624, 572.1375pt x 548.0475pt>
 File: Images/HP_cylce_ref.png Graphic file (type png)
 <use Images/HP_cylce_ref.png>
-Package pdftex.def Info: Images/HP_cylce_ref.png  used on input line 480.
+Package pdftex.def Info: Images/HP_cylce_ref.png  used on input line 479.
 (pdftex.def)             Requested size: 213.39568pt x 204.41345pt.
- [14]
-Underfull \hbox (badness 10000) in paragraph at lines 510--511
+ [13]
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
 
  []
 
-[15 <./Images/HP_cylce_ref.png>]
-<Images/HP_cylce_CO2.png, id=666, 567.11874pt x 543.02875pt>
+[14 <./Images/HP_cylce_ref.png>]
+<Images/HP_cylce_CO2.png, id=657, 567.11874pt x 543.02875pt>
 File: Images/HP_cylce_CO2.png Graphic file (type png)
 <use Images/HP_cylce_CO2.png>
-Package pdftex.def Info: Images/HP_cylce_CO2.png  used on input line 539.
+Package pdftex.def Info: Images/HP_cylce_CO2.png  used on input line 538.
 (pdftex.def)             Requested size: 213.39568pt x 204.33128pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 544--545
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
 
  []
 
-[16 <./Images/HP_cylce_CO2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 554--555
+[15 <./Images/HP_cylce_CO2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 553--554
 
  []
 
 
-Overfull \hbox (1.54279pt too wide) in paragraph at lines 556--558
+Overfull \hbox (1.54279pt too wide) in paragraph at lines 555--557
 \OT1/cmr/m/n/10 from the high ir-re-versibil-ity caused by the su-per-heated va
 -por horn and the high throt-tling losses [[]].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 556--558
+Underfull \hbox (badness 10000) in paragraph at lines 555--557
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 624--626
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 625--627
-
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 628--629
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 634--635
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--639
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 655--656
+Underfull \hbox (badness 10000) in paragraph at lines 654--655
 
  []
 
-[19] [20]
-<Images/morges.png, id=757, 739.563pt x 544.434pt>
+[18] [19]
+<Images/morges.png, id=748, 739.563pt x 544.434pt>
 File: Images/morges.png Graphic file (type png)
 <use Images/morges.png>
-Package pdftex.def Info: Images/morges.png  used on input line 699.
+Package pdftex.def Info: Images/morges.png  used on input line 698.
 (pdftex.def)             Requested size: 426.79135pt x 314.19353pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 704--705
+Underfull \hbox (badness 10000) in paragraph at lines 703--704
 
  []
 
-[21 <./Images/morges.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 715--716
+[20 <./Images/morges.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 714--715
 
  []
 
 (Tables/ppa_summary_tot.tex) (Tables/ppa_buildinguse_tot.tex)
-<Images/ppa_energydemand.JPG, id=773, 389.20406pt x 188.20313pt>
+<Images/ppa_energydemand.JPG, id=764, 389.20406pt x 188.20313pt>
 File: Images/ppa_energydemand.JPG Graphic file (type jpg)
 <use Images/ppa_energydemand.JPG>
-Package pdftex.def Info: Images/ppa_energydemand.JPG  used on input line 727.
+Package pdftex.def Info: Images/ppa_energydemand.JPG  used on input line 726.
 (pdftex.def)             Requested size: 341.43437pt x 165.10808pt.
 
-(Tables/ppa_prestudy_tot.tex) [22]
-<Images/energy_demand.png, id=786, 639.38875pt x 331.2375pt>
+(Tables/ppa_prestudy_tot.tex) [21]
+<Images/energy_demand.png, id=778, 639.38875pt x 331.2375pt>
 File: Images/energy_demand.png Graphic file (type png)
 <use Images/energy_demand.png>
-Package pdftex.def Info: Images/energy_demand.png  used on input line 743.
+Package pdftex.def Info: Images/energy_demand.png  used on input line 742.
 (pdftex.def)             Requested size: 341.43437pt x 176.88431pt.
- [23 <./Images/ppa_energydemand.JPG> <./Images/energy_demand.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 770--771
+ [22 <./Images/ppa_energydemand.JPG> <./Images/energy_demand.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
 
  []
 
-<Images/GTW_T_profile.png, id=806, 493.845pt x 539.01375pt>
+<Images/GTW_T_profile.png, id=798, 493.845pt x 539.01375pt>
 File: Images/GTW_T_profile.png Graphic file (type png)
 <use Images/GTW_T_profile.png>
-Package pdftex.def Info: Images/GTW_T_profile.png  used on input line 774.
+Package pdftex.def Info: Images/GTW_T_profile.png  used on input line 773.
 (pdftex.def)             Requested size: 213.39568pt x 232.90639pt.
-[24 <./Images/GTW_T_profile.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 782--784
+[23 <./Images/GTW_T_profile.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 781--783
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 810--812
+Underfull \hbox (badness 10000) in paragraph at lines 809--811
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 813--814
+Underfull \hbox (badness 10000) in paragraph at lines 812--813
 
  []
 
-<Images/IR_schema.JPG, id=829, 659.93921pt x 323.31316pt>
+<Images/IR_schema.JPG, id=821, 659.93921pt x 323.31316pt>
 File: Images/IR_schema.JPG Graphic file (type jpg)
 <use Images/IR_schema.JPG>
-Package pdftex.def Info: Images/IR_schema.JPG  used on input line 824.
+Package pdftex.def Info: Images/IR_schema.JPG  used on input line 823.
 (pdftex.def)             Requested size: 341.43437pt x 167.27032pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 829--830
+Underfull \hbox (badness 10000) in paragraph at lines 828--829
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 831--834
+Underfull \hbox (badness 10000) in paragraph at lines 830--833
 
  []
 
-[25]
-<Images/IR_energyDemand.JPG, id=850, 526.21594pt x 206.27063pt>
+[24]
+<Images/IR_energyDemand.JPG, id=842, 578.16pt x 226.59656pt>
 File: Images/IR_energyDemand.JPG Graphic file (type jpg)
 <use Images/IR_energyDemand.JPG>
-Package pdftex.def Info: Images/IR_energyDemand.JPG  used on input line 839.
-(pdftex.def)             Requested size: 298.75264pt x 117.1128pt.
+Package pdftex.def Info: Images/IR_energyDemand.JPG  used on input line 838.
+(pdftex.def)             Requested size: 298.75264pt x 117.0875pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 844--845
+Underfull \hbox (badness 10000) in paragraph at lines 843--844
 
  []
 
-<Images/IceRink_refrigeration.png, id=854, 990.70125pt x 594.22pt>
+<Images/IceRink_refrigeration.png, id=846, 990.70125pt x 594.22pt>
 File: Images/IceRink_refrigeration.png Graphic file (type png)
 <use Images/IceRink_refrigeration.png>
 Package pdftex.def Info: Images/IceRink_refrigeration.png  used on input line 8
-48.
+47.
 (pdftex.def)             Requested size: 426.79135pt x 255.99017pt.
-[26 <./Images/IR_schema.JPG> <./Images/IR_energyDemand.JPG>]
-<Images/IR_profile.png, id=869, 281.05pt x 211.79124pt>
+[25 <./Images/IR_schema.JPG> <./Images/IR_energyDemand.JPG>]
+<Images/IR_profile.png, id=860, 281.05pt x 211.79124pt>
 File: Images/IR_profile.png Graphic file (type png)
 <use Images/IR_profile.png>
-Package pdftex.def Info: Images/IR_profile.png  used on input line 889.
+Package pdftex.def Info: Images/IR_profile.png  used on input line 888.
 (pdftex.def)             Requested size: 192.0548pt x 144.7271pt.
- [27 <./Images/IceRink_refrigeration.png> <./Images/IR_profile.png>] (Tables/pv
+ [26 <./Images/IceRink_refrigeration.png> <./Images/IR_profile.png>] (Tables/pv
 .tex)
-<Images/energy_schema_ref.png, id=883, 754.82pt x 292.09125pt>
+<Images/energy_schema_ref.png, id=875, 754.82pt x 292.09125pt>
 File: Images/energy_schema_ref.png Graphic file (type png)
 <use Images/energy_schema_ref.png>
-Package pdftex.def Info: Images/energy_schema_ref.png  used on input line 924.
+Package pdftex.def Info: Images/energy_schema_ref.png  used on input line 925.
 (pdftex.def)             Requested size: 426.79135pt x 165.15219pt.
 
 (Tables/layers_ref.tex)
@@ -1572,53 +1574,48 @@ Package pdftex.def Info: Images/energy_schema_ref.png  used on input line 924.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 936--937
+Underfull \hbox (badness 10000) in paragraph at lines 937--938
 
  []
 
-[28 <./Images/energy_schema_ref.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 949--950
+[27 <./Images/energy_schema_ref.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 950--951
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 964--966
+Underfull \hbox (badness 10000) in paragraph at lines 965--967
 
  []
 
-<Images/energy_schema.png, id=902, 653.44125pt x 297.11pt>
+<Images/energy_schema.png, id=895, 653.44125pt x 297.11pt>
 File: Images/energy_schema.png Graphic file (type png)
 <use Images/energy_schema.png>
-Package pdftex.def Info: Images/energy_schema.png  used on input line 972.
+Package pdftex.def Info: Images/energy_schema.png  used on input line 973.
 (pdftex.def)             Requested size: 426.79135pt x 194.05312pt.
 (Tables/layers_CO2.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [29]
-Underfull \hbox (badness 10000) in paragraph at lines 989--990
+) [28]
+Underfull \hbox (badness 10000) in paragraph at lines 990--991
 
  []
 
-[30 <./Images/energy_schema.png>] (Tables/CP_tt.tex) (Tables/ic.tex)
-(Tables/ec.tex) [31]
-Overfull \hbox (27.15651pt too wide) in paragraph at lines 1037--1039
+[29 <./Images/energy_schema.png>] (Tables/CP_tt.tex) (Tables/ic.tex)
+(Tables/ec.tex) [30]
+Overfull \hbox (27.15651pt too wide) in paragraph at lines 1038--1040
 []\OT1/cmr/m/n/10 The im-ple-men-ta-tion of this al-go-rithm has been solved on
  \OT1/cmr/m/it/10 Mat-lab \OT1/cmr/m/n/10 with help of func-tion \OT1/cmr/m/it/
 10 solve(equation []5[],
  []
 
 (Tables/dTmins.tex)
-<Images/dtmin_wr.png, id=952, 421.575pt x 316.18124pt>
-File: Images/dtmin_wr.png Graphic file (type png)
-<use Images/dtmin_wr.png>
-Package pdftex.def Info: Images/dtmin_wr.png  used on input line 1050.
-(pdftex.def)             Requested size: 192.0548pt x 144.04118pt.
-<Images/dtmin_gtw.png, id=953, 421.575pt x 316.18124pt>
+<Images/dtmin_gtw.png, id=944, 421.575pt x 316.18124pt>
 File: Images/dtmin_gtw.png Graphic file (type png)
 <use Images/dtmin_gtw.png>
-Package pdftex.def Info: Images/dtmin_gtw.png  used on input line 1057.
-(pdftex.def)             Requested size: 192.0548pt x 144.04118pt.
+Package pdftex.def Info: Images/dtmin_gtw.png  used on input line 1049.
+(pdftex.def)             Requested size: 298.75264pt x 224.07051pt.
  (Tables/compressors_eff.tex
 Overfull \hbox (2.86835pt too wide) in paragraph at lines 5--15
  [][] 
@@ -1627,274 +1624,258 @@ Overfull \hbox (2.86835pt too wide) in paragraph at lines 5--15
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [32] (Tables/cp_comparison.tex) [33 <./Images/dtmin_wr.png (PNG copy)> <./Ima
-ges/dtmin_gtw.png (PNG copy)>] (Tables/etaCOP_new.tex) [34]
-<Images/V_COP.png, id=990, 727.71875pt x 224.84pt>
+) [31] (Tables/cp_comparison.tex) (Tables/etaCOP_new.tex) [32 <./Images/dtmin_g
+tw.png (PNG copy)>] [33]
+<Images/V_COP.png, id=980, 727.71875pt x 224.84pt>
 File: Images/V_COP.png Graphic file (type png)
 <use Images/V_COP.png>
-Package pdftex.def Info: Images/V_COP.png  used on input line 1116.
+Package pdftex.def Info: Images/V_COP.png  used on input line 1124.
 (pdftex.def)             Requested size: 426.79135pt x 131.86879pt.
  (Tables/V_cops.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1125--1126
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1134
 
  []
 
-(Tables/V_el.tex) [35 <./Images/V_COP.png>] (Tables/V_exergy.tex)
-<Images/exe.png, id=1008, 408.52625pt x 386.44376pt>
+(Tables/V_el.tex) [34
+
+ <./Images/V_COP.png>] (Tables/V_exergy.tex)
+<Images/exe.png, id=998, 408.52625pt x 386.44376pt>
 File: Images/exe.png Graphic file (type png)
 <use Images/exe.png>
-Package pdftex.def Info: Images/exe.png  used on input line 1139.
-(pdftex.def)             Requested size: 213.39568pt x 201.85999pt.
+Package pdftex.def Info: Images/exe.png  used on input line 1147.
+(pdftex.def)             Requested size: 192.0548pt x 181.67575pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1145--1147
+Underfull \hbox (badness 10000) in paragraph at lines 1153--1155
 
  []
 
 (Tables/cc.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1150--1151
+Underfull \hbox (badness 10000) in paragraph at lines 1158--1159
 
  []
 
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 1152--1153
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1154--1155
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 1160--1161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1156--1157
+Underfull \hbox (badness 10000) in paragraph at lines 1162--1163
 
  []
 
-[37 <./Images/exe.png>]
-<Images/V_costs.PNG, id=1031, 611.28375pt x 328.22626pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1164--1165
+
+ []
+
+[36 <./Images/exe.png>]
+<Images/V_costs.PNG, id=1021, 611.28375pt x 328.22626pt>
 File: Images/V_costs.PNG Graphic file (type png)
 <use Images/V_costs.PNG>
-Package pdftex.def Info: Images/V_costs.PNG  used on input line 1162.
+Package pdftex.def Info: Images/V_costs.PNG  used on input line 1170.
 (pdftex.def)             Requested size: 426.79135pt x 229.16081pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1169--1170
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1178
 
  []
 
-(Tables/cc_sa.tex) [38 <./Images/V_costs.PNG>]
-<Images/V_G_PO1.png, id=1049, 469.755pt x 234.8775pt>
+(Tables/cc_sa.tex) [37 <./Images/V_costs.PNG>]
+<Images/V_G_PO1.png, id=1038, 469.755pt x 234.8775pt>
 File: Images/V_G_PO1.png Graphic file (type png)
 <use Images/V_G_PO1.png>
-Package pdftex.def Info: Images/V_G_PO1.png  used on input line 1183.
+Package pdftex.def Info: Images/V_G_PO1.png  used on input line 1191.
 (pdftex.def)             Requested size: 426.79135pt x 213.39479pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1189--1190
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
 
  []
 
-<Images/V_CO2_G_PO1.png, id=1053, 466.74374pt x 229.60782pt>
+<Images/V_CO2_G_PO1.png, id=1042, 466.74374pt x 229.60782pt>
 File: Images/V_CO2_G_PO1.png Graphic file (type png)
 <use Images/V_CO2_G_PO1.png>
-Package pdftex.def Info: Images/V_CO2_G_PO1.png  used on input line 1195.
+Package pdftex.def Info: Images/V_CO2_G_PO1.png  used on input line 1203.
 (pdftex.def)             Requested size: 426.79135pt x 209.96297pt.
 (Tables/anergynets_IC.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [39 <./Images/V_G_PO1.png>]
-<Images/V_IR_Q.png, id=1062, 556.32843pt x 291.33844pt>
+) [38 <./Images/V_G_PO1.png>]
+<Images/V_IR_Q.png, id=1051, 556.32843pt x 291.33844pt>
 File: Images/V_IR_Q.png Graphic file (type png)
 <use Images/V_IR_Q.png>
-Package pdftex.def Info: Images/V_IR_Q.png  used on input line 1213.
+Package pdftex.def Info: Images/V_IR_Q.png  used on input line 1221.
 (pdftex.def)             Requested size: 426.79135pt x 223.50443pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1219--1220
+Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
 
  []
 
-[40 <./Images/V_CO2_G_PO1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1224--1225
+[39 <./Images/V_CO2_G_PO1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1232--1233
 
  []
 
-<Images/V_IR_cost.png, id=1072, 459.21562pt x 222.07968pt>
+<Images/V_IR_cost.png, id=1062, 459.21562pt x 222.07968pt>
 File: Images/V_IR_cost.png Graphic file (type png)
 <use Images/V_IR_cost.png>
-Package pdftex.def Info: Images/V_IR_cost.png  used on input line 1237.
+Package pdftex.def Info: Images/V_IR_cost.png  used on input line 1245.
 (pdftex.def)             Requested size: 298.75264pt x 144.48563pt.
-<Images/V_CO2_eldem_sorted.png, id=1073, 398.48875pt x 266.9975pt>
+<Images/V_CO2_eldem_sorted.png, id=1063, 398.48875pt x 266.9975pt>
 File: Images/V_CO2_eldem_sorted.png Graphic file (type png)
 <use Images/V_CO2_eldem_sorted.png>
-Package pdftex.def Info: Images/V_CO2_eldem_sorted.png  used on input line 1245
+Package pdftex.def Info: Images/V_CO2_eldem_sorted.png  used on input line 1253
 .
-(pdftex.def)             Requested size: 213.39568pt x 142.97871pt.
+(pdftex.def)             Requested size: 298.75264pt x 200.17836pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1250--1251
+Underfull \hbox (badness 10000) in paragraph at lines 1258--1259
 
  []
 
-[41 <./Images/V_IR_Q.png> <./Images/V_IR_cost.png>]
-<Images/V_SA_Tg.png, id=1083, 379.4175pt x 380.17032pt>
+[40 <./Images/V_IR_Q.png> <./Images/V_IR_cost.png>]
+<Images/V_SA_Tg.png, id=1073, 379.4175pt x 380.17032pt>
 File: Images/V_SA_Tg.png Graphic file (type png)
 <use Images/V_SA_Tg.png>
-Package pdftex.def Info: Images/V_SA_Tg.png  used on input line 1268.
+Package pdftex.def Info: Images/V_SA_Tg.png  used on input line 1276.
 (pdftex.def)             Requested size: 247.53976pt x 248.03592pt.
 
-Underfull \hbox (badness 2799) in paragraph at lines 1274--1275
-[]\OT1/cmr/m/n/10 A crit-i-cal pa-ram-e-ter for the ef-
- []
-
-
-Underfull \hbox (badness 1762) in paragraph at lines 1274--1275
-\OT1/cmr/m/n/10 fi-ciency of a ground sourced en-
- []
-
-
-Underfull \hbox (badness 2050) in paragraph at lines 1274--1275
-\OT1/cmr/m/n/10 a-ture. As seen in Sec-tion []3.2[],
- []
-
-
-Underfull \hbox (badness 2818) in paragraph at lines 1274--1275
-\OT1/cmr/m/n/10 sys-tem's per-for-mance, a sen-si-tiv-
- []
-
-
-Underfull \hbox (badness 2452) in paragraph at lines 1274--1275
-\OT1/cmr/m/n/10 ity anal-y-sis has been per-formed.
- []
-
-
-Underfull \hbox (badness 5667) in paragraph at lines 1274--1275
-\OT1/cmr/m/n/10 The re-sults are shown in Fig-
- []
-
-
-Underfull \hbox (badness 1571) in paragraph at lines 1274--1275
-\OT1/cmr/m/n/10 en-ergy prices and max-i-mal avail-
- []
-
-
-Underfull \hbox (badness 3000) in paragraph at lines 1274--1275
-\OT1/cmr/m/n/10 able PV area are given in Ta-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1275
+Underfull \hbox (badness 10000) in paragraph at lines 1282--1283
 
  []
 
-[42 <./Images/V_CO2_eldem_sorted.png> <./Images/V_SA_Tg.png>]
-<Images/lakeDist.png, id=1096, 434.37282pt x 447.17062pt>
+[41 <./Images/V_CO2_eldem_sorted.png>]
+Underfull \hbox (badness 1448) in paragraph at lines 1288--1289
+\OT1/cmr/m/n/10 words, the geother-mal model de-
+ []
+
+
+Overfull \hbox (0.36963pt too wide) in paragraph at lines 1290--1291
+[]\OT1/cmr/m/n/10 Nevertheless, this sen-si-tiv-ity anal-
+ []
+
+<Images/lakeDist.png, id=1085, 434.37282pt x 447.17062pt>
 File: Images/lakeDist.png Graphic file (type png)
 <use Images/lakeDist.png>
-Package pdftex.def Info: Images/lakeDist.png  used on input line 1293.
+Package pdftex.def Info: Images/lakeDist.png  used on input line 1301.
 (pdftex.def)             Requested size: 192.0548pt x 197.71776pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1316--1317
-
- []
-
-[43 <./Images/lakeDist.png>] (Tables/cc_cu.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1327--1328
+[42 <./Images/V_SA_Tg.png> <./Images/lakeDist.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1324--1325
 
  []
 
-(Tables/CU_energy.tex)
-<Images/CU.png, id=1118, 718.18312pt x 492.33937pt>
+(Tables/cc_cu.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1328--1329
+
+ []
+
+(Tables/specificE.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1332--1333
+
+ []
+
+(Tables/CU_energy.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+<Images/CU.png, id=1110, 718.18312pt x 492.33937pt>
 File: Images/CU.png Graphic file (type png)
 <use Images/CU.png>
-Package pdftex.def Info: Images/CU.png  used on input line 1335.
+Package pdftex.def Info: Images/CU.png  used on input line 1340.
 (pdftex.def)             Requested size: 426.79135pt x 292.5887pt.
-<Images/CU_SA_TC.png, id=1122, 670.75594pt x 404.26031pt>
+<Images/CU_SA_TC.png, id=1114, 670.75594pt x 404.26031pt>
 File: Images/CU_SA_TC.png Graphic file (type png)
 <use Images/CU_SA_TC.png>
-Package pdftex.def Info: Images/CU_SA_TC.png  used on input line 1344.
+Package pdftex.def Info: Images/CU_SA_TC.png  used on input line 1349.
 (pdftex.def)             Requested size: 426.79135pt x 257.2206pt.
-<Images/CU_el.png, id=1123, 332.74312pt x 380.17032pt>
+<Images/CU_el.png, id=1115, 332.74312pt x 380.17032pt>
 File: Images/CU_el.png Graphic file (type png)
 <use Images/CU_el.png>
-Package pdftex.def Info: Images/CU_el.png  used on input line 1351.
+Package pdftex.def Info: Images/CU_el.png  used on input line 1356.
 (pdftex.def)             Requested size: 234.73654pt x 268.19994pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1356--1357
+Underfull \hbox (badness 10000) in paragraph at lines 1361--1362
 
  []
 
-[44] [45 <./Images/CU.png> <./Images/CU_SA_TC.png>] [46 <./Images/CU_el.png>]
-(Tables/BU_ZH.tex) (Tables/CU_summary.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1386--1387
+[43] [44 <./Images/CU.png> <./Images/CU_SA_TC.png>] (Tables/BU_ZH.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (Tables/CU_summary.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [45]
+Underfull \hbox (badness 10000) in paragraph at lines 1391--1392
 
  []
 
-<Images/CUTg_SA_OC.png, id=1161, 430.60875pt x 388.45125pt>
+<Images/CUTg_SA_OC.png, id=1152, 430.60875pt x 388.45125pt>
 File: Images/CUTg_SA_OC.png Graphic file (type png)
 <use Images/CUTg_SA_OC.png>
-Package pdftex.def Info: Images/CUTg_SA_OC.png  used on input line 1390.
+Package pdftex.def Info: Images/CUTg_SA_OC.png  used on input line 1395.
 (pdftex.def)             Requested size: 320.0935pt x 288.75934pt.
-<Images/CUTg_SA_CO2_OC.png, id=1163, 432.11438pt x 371.88937pt>
+[46 <./Images/CU_el.png>]
+<Images/CUTg_SA_CO2_OC.png, id=1162, 432.11438pt x 371.88937pt>
 File: Images/CUTg_SA_CO2_OC.png Graphic file (type png)
 <use Images/CUTg_SA_CO2_OC.png>
-Package pdftex.def Info: Images/CUTg_SA_CO2_OC.png  used on input line 1399.
+Package pdftex.def Info: Images/CUTg_SA_CO2_OC.png  used on input line 1404.
 (pdftex.def)             Requested size: 320.0935pt x 275.48889pt.
-[47] [48 <./Images/CUTg_SA_OC.png> <./Images/CUTg_SA_CO2_OC.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1406--1407
+
+Underfull \hbox (badness 10000) in paragraph at lines 1411--1412
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1410--1411
+[47 <./Images/CUTg_SA_OC.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1415--1416
 
  []
 
-<Images/CUTg_SA_IC.png, id=1184, 440.39531pt x 362.85562pt>
+<Images/CUTg_SA_IC.png, id=1173, 440.39531pt x 362.85562pt>
 File: Images/CUTg_SA_IC.png Graphic file (type png)
 <use Images/CUTg_SA_IC.png>
-Package pdftex.def Info: Images/CUTg_SA_IC.png  used on input line 1414.
+Package pdftex.def Info: Images/CUTg_SA_IC.png  used on input line 1419.
 (pdftex.def)             Requested size: 320.0935pt x 263.74184pt.
-<Images/CUTg_SA_CO2_IC.png, id=1185, 421.575pt x 365.86688pt>
+<Images/CUTg_SA_CO2_IC.png, id=1174, 421.575pt x 365.86688pt>
 File: Images/CUTg_SA_CO2_IC.png Graphic file (type png)
 <use Images/CUTg_SA_CO2_IC.png>
-Package pdftex.def Info: Images/CUTg_SA_CO2_IC.png  used on input line 1421.
+Package pdftex.def Info: Images/CUTg_SA_CO2_IC.png  used on input line 1426.
 (pdftex.def)             Requested size: 320.0935pt x 277.79933pt.
-[49 <./Images/CUTg_SA_IC.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1443--1444
+
+Underfull \hbox (badness 10000) in paragraph at lines 1448--1449
 
  []
 
-<Images/CUTg_SA_TC_diff.png, id=1196, 420.82219pt x 371.13657pt>
+<Images/CUTg_SA_TC_diff.png, id=1177, 420.82219pt x 371.13657pt>
 File: Images/CUTg_SA_TC_diff.png Graphic file (type png)
 <use Images/CUTg_SA_TC_diff.png>
-Package pdftex.def Info: Images/CUTg_SA_TC_diff.png  used on input line 1447.
+Package pdftex.def Info: Images/CUTg_SA_TC_diff.png  used on input line 1452.
 (pdftex.def)             Requested size: 320.0935pt x 282.30457pt.
-[50 <./Images/CUTg_SA_CO2_IC.png>] [51 <./Images/CUTg_SA_TC_diff.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1457--1458
+[48 <./Images/CUTg_SA_CO2_OC.png>] [49 <./Images/CUTg_SA_IC.png> <./Images/CUTg
+_SA_CO2_IC.png>] [50 <./Images/CUTg_SA_TC_diff.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1462--1463
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1463--1464
+Underfull \hbox (badness 10000) in paragraph at lines 1470--1471
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1465--1466
-
- []
-
-[52
+[51
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1467--1468
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1473
 
  []
 
-[53] (main.bbl
+[52] (main.bbl
 Underfull \hbox (badness 6775) in paragraph at lines 55--59
 []\OT1/cmr/m/n/10 European Com-mis-sion for cli-mate ac-tion.  EU leg-is-la-tio
 n to con-trol F-gases.
@@ -1906,9 +1887,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--85
 ow-er-to-gas.
  []
 
-[54
+[53
 
-] [55]
+] [54]
 Underfull \hbox (badness 4819) in paragraph at lines 271--277
 []\OT1/cmr/m/n/10 Bawos.ch.  Mit Erd-son-den-bohrun-gen Kosten sparen | Bauen u
 nd Wohnen in
@@ -1920,7 +1901,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 296--298
 preis.
  []
 
-) [56] (appendix.tex (Tables/anergynets1.tex [57
+) [55] (appendix.tex (Tables/anergynets1.tex [56
 
 ]
 Overfull \hbox (81.91039pt too wide) in paragraph at lines 6--35
@@ -1933,12 +1914,12 @@ LaTeX Warning: Float too large for page by 63.12389pt on input line 35.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[58]) (Tables/anergynets2.tex
+[57]) (Tables/anergynets2.tex
 Overfull \hbox (35.38727pt too wide) in paragraph at lines 6--27
  [][] 
  []
 
-[59
+[58
 
 
 
@@ -1948,65 +1929,65 @@ Overfull \hbox (35.38727pt too wide) in paragraph at lines 6--27
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
-<Images/ppa_buildings.JPG, id=1259, 302.63063pt x 356.0803pt>
+<Images/ppa_buildings.JPG, id=1249, 302.63063pt x 356.0803pt>
 File: Images/ppa_buildings.JPG Graphic file (type jpg)
 <use Images/ppa_buildings.JPG>
 Package pdftex.def Info: Images/ppa_buildings.JPG  used on input line 14.
 (pdftex.def)             Requested size: 192.0548pt x 225.97807pt.
- [60
+ [59
 
 
-] [61 <./Images/ppa_buildings.JPG>]
-<Images/CO2-DX-GSHP.png, id=1270, 457.71pt x 747.79375pt>
+] [60 <./Images/ppa_buildings.JPG>]
+<Images/CO2-DX-GSHP.png, id=1260, 457.71pt x 747.79375pt>
 File: Images/CO2-DX-GSHP.png Graphic file (type png)
 <use Images/CO2-DX-GSHP.png>
 Package pdftex.def Info: Images/CO2-DX-GSHP.png  used on input line 23.
 (pdftex.def)             Requested size: 128.0387pt x 209.18684pt.
- [62
+ [61
 
  <./Images/CO2-DX-GSHP.png>]
-<Images/GTW_Ts.png, id=1277, 344.487pt x 241.3818pt>
+<Images/GTW_Ts.png, id=1266, 344.487pt x 241.3818pt>
 File: Images/GTW_Ts.png Graphic file (type png)
 <use Images/GTW_Ts.png>
 Package pdftex.def Info: Images/GTW_Ts.png  used on input line 32.
 (pdftex.def)             Requested size: 341.43437pt x 239.25232pt.
-<Images/GTW_grad.png, id=1279, 241.3818pt x 255.8358pt>
+<Images/GTW_grad.png, id=1268, 241.3818pt x 255.8358pt>
 File: Images/GTW_grad.png Graphic file (type png)
 <use Images/GTW_grad.png>
 Package pdftex.def Info: Images/GTW_grad.png  used on input line 38.
 (pdftex.def)             Requested size: 256.07741pt x 271.41498pt.
 
-[63
+[62
 
- <./Images/GTW_Ts.png>] [64 <./Images/GTW_grad.png>]
-<Images/gtw_model1.png, id=1292, 557.83406pt x 411.03563pt>
+ <./Images/GTW_Ts.png>] [63 <./Images/GTW_grad.png>]
+<Images/gtw_model1.png, id=1282, 557.83406pt x 411.03563pt>
 File: Images/gtw_model1.png Graphic file (type png)
 <use Images/gtw_model1.png>
 Package pdftex.def Info: Images/gtw_model1.png  used on input line 48.
 (pdftex.def)             Requested size: 298.75264pt x 220.13708pt.
-<Images/gtw_model2.png, id=1295, 580.59607pt x 349.98169pt>
+<Images/gtw_model2.png, id=1285, 580.59607pt x 349.98169pt>
 File: Images/gtw_model2.png Graphic file (type png)
 <use Images/gtw_model2.png>
 Package pdftex.def Info: Images/gtw_model2.png  used on input line 54.
 (pdftex.def)             Requested size: 298.75264pt x 180.08504pt.
-) [65
+) [64
 
  <./Images/gtw_model1.png> <./Images/gtw_model2.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1492.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1492.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1497.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1497.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1492.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1492.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1497.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1497.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A0EA21F54F59F84923EF3E45FF5D469B;4484.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1492.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1497.
  ) 
 Here is how much of TeX's memory you used:
- 29728 strings out of 492946
- 593177 string characters out of 3127155
- 628384 words of memory out of 3000000
- 32707 multiletter control sequences out of 15000+200000
+ 29720 strings out of 492946
+ 593124 string characters out of 3127155
+ 628359 words of memory out of 3000000
+ 32703 multiletter control sequences out of 15000+200000
  544456 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,20n,80p,1426b,1067s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2036,9 +2017,9 @@ type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Tob/AppData/Local/Programs/MiKTeX
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Tob/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/To
 b/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on main.pdf (76 pages, 5023262 bytes).
+Output written on main.pdf (74 pages, 5008019 bytes).
 PDF statistics:
- 1457 PDF objects out of 1728 (max. 8388607)
- 375 named destinations out of 1000 (max. 500000)
- 860 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1446 PDF objects out of 1728 (max. 8388607)
+ 369 named destinations out of 1000 (max. 500000)
+ 855 words of extra memory for PDF output out of 10000 (max. 10000000)
 
